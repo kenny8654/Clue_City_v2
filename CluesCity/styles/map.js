@@ -8,7 +8,7 @@ function addMarker(){
     var marker = new google.maps.Marker({
     position:  current,
     map: map,
-    icon: 'marker.png'
+    icon: '../images/Map/marker.png'
   });
   markersList.push(marker);
 }
