@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var stylus = require('stylus');
+const fs = require('fs');
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const urlencoderParser = bodyParser.urlencoded({ extended: false })
