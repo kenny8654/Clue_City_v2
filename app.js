@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var stylus = require('stylus');
 const fs = require('fs');
+const http = require('http')
 const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const urlencoderParser = bodyParser.urlencoded({ extended: false })
@@ -52,6 +53,7 @@ app.post("/upload", urlencoderParser, function (req, res, callback) {
     // 只处理图片文件
     if (file['Content-Type'].indexOf("image") !== -1) {
       //获取文件名
+      console.log("1")
       var fileInfo = file['Content-Disposition'].split('; ');
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
@@ -87,6 +89,7 @@ app.post("/upload", urlencoderParser, function (req, res, callback) {
       });
     } else {
       // res.send('只能上传图片文件');
+      console.log("2")
     }
     callback = runPython(res);
   })
