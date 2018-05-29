@@ -24,9 +24,6 @@
         function gotosetting(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
         }
-        function gotofriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
-        }
         function gotohome(){
            document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
         }
@@ -42,17 +39,17 @@
     </script>
 </head>
 <body>
-    <img src="images/Score/Main.png" id="background">
-    <div class="Score">
+    <img src="images/Gallery/Main.png" id="background">
+    <div class="Gallery">
         <div class="topbar">
-            <img src="images/Score/top.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Gallery/top.png" class="TopBarMid" id="ClueCityInMode">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
     </div>
     <div id="Bottom">
-            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclik="gotohome()">
-            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclik="gotogallery()">
-            <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
-            <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon">
+            <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+            <img src="images/Gallery/Gallery.png" class="BottomIcon" id="GalleryIcon" >
+            <img src="images/Gallery/Friend.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
+            <img src="images/Gallery/LeaderBoard.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
     </div>
 </body>

@@ -25,7 +25,19 @@
         } 
         function gobacksetting(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
-        } 
+        }
+        function gotohome(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+        }
+        function gotogallery(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
+        }
+        function gotofriend(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        }
+        function gotoScore(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score";
+        }
     </script>
 <body>
     <img src="images/Team/Background.png" id="TeamBackground">
@@ -80,10 +92,10 @@
             </div>
         </div>
         <div id="Bottom">
-                <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon">
-                <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon">
-                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon">
-                <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon">
+                <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+                <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
+                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+                <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
         </div>
     </div>
     
