@@ -28,6 +28,8 @@ app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'Cluescity')));
 app.use(express.static(path.join(__dirname, 'CluesCity')));
+app.use(express.static(__dirname + '/CluesCity'));
+
 
 app.use('/profile', indexRouter);
 app.use('/login',loginRouter);
@@ -37,7 +39,7 @@ app.use('/setting',settingRouter);
 app.use('/map',mapRouter);
 app.use('/result',resultRouter);
 
-app.post("/upload", urlencoderParser, function (req, res, callback) {
+app.post("/upload", urlencoderParser, function (req, res) {
   req.setEncoding('binary');
   var body = '';   // 文件数据
   var fileName = '';  // 文件名
@@ -53,7 +55,6 @@ app.post("/upload", urlencoderParser, function (req, res, callback) {
     // 只处理图片文件
     if (file['Content-Type'].indexOf("image") !== -1) {
       //获取文件名
-      console.log("1")
       var fileInfo = file['Content-Disposition'].split('; ');
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
@@ -89,20 +90,12 @@ app.post("/upload", urlencoderParser, function (req, res, callback) {
       });
     } else {
       // res.send('只能上传图片文件');
-      console.log("2")
     }
-    callback = runPython(res);
+    
+    runPython(res);
+
   })
 })
-
-// //用http模块创建一个http服务端
-// http.createServer(function(req, res) {
-//   if (req.url == '/upload' && req.method.toLowerCase() === 'post') {
-//     if(req.headers['content-type'].indexOf('multipart/form-data')!==-1){
-//       parseFile(req, res, runPython)    
-//     }
-//   }
-// }).listen(3000);
 
 function runPython(res) {
   console.log('Python is running')
@@ -110,8 +103,7 @@ function runPython(res) {
   var process = spawn('python3', ["./compare.py",]);
   process.stdout.on('data', function (data) {
     console.log(data.toString());
-    res.set('body','Image has been uploaded./n')
-    res.set('body', data.toString())
+    res.send(data.toString());
   })
 }
 
