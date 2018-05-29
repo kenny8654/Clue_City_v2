@@ -20,20 +20,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
     <script>
-    $(document).ready(function(){
-    });
+        function gobackfriend(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        } 
     </script>
 <body>
     <img src="images/Team/Background.png" id="TeamBackground">
     <div class="team">
         <div class="topbar">
-            <img src="images/Team/WhiteBack.png" id="WhiteBack">
+            <img src="images/Team/WhiteBack.png" id="WhiteBack" onclick="gobackfriend()">
             <img src="images/Team/adhoc mode.png" class="TopBarMid" id="AdhocMode">
             <img src="images/Team/wheel.png" class="TopBarWheel" id="Wheel">
         </div>
         
         <div class="FriendsOnline">
-            <img src="images/Team/GrayBack.png" id="GrayBack">
+            <img src="images/Team/GrayBack.png" id="GrayBack" onclick="gobackfriend()">
             <p id="Friendonline">ADD PEOPLE</p>
             <div id="OnlineList">
                 <p class="Online" id="FriendNum">加入好友</p>
@@ -74,9 +75,6 @@
                 </div>
                 </div>
             </div>
-        </div>
-        <div id="StartGame">
-                <img src="images/Team/StartTheGame.png" id="StartGameIcon">
         </div>
         <div id="Bottom">
                 <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon">

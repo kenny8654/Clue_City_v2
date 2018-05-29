@@ -1,92 +1,60 @@
-
-<html>
-    <head>
-
-        <meta charset="utf-8">
-        <title>Setting</title> 
-
-        <style>
-
-          #haslogout{display : none}
-        </style>
-        <script
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Clue City</title>
+  <link rel="stylesheet" type="text/css" href="styles/SettingStyle.css">
+  <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-title" content="Clue City">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">
-        </script>
-        
-    </head>
-    <body>
+    </script>
     <script>
-
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '177842309598524',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v3.0'
-    });
-                
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-                
-  };
-          
-  (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-
- function statusChangeCallback(response){
-   if( response.status === 'connected' ){
-     console.log( 'Logged in and authenticated' );
-     setElements(true);
-   } else {
-    console.log( 'Not authenticated' );
-    setElements(false);
-   }
- }
-
-
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
-}
-
-function setElements(isLogin){
-  if(isLogin){
-    document.getElementById('haslogout').style.display = 'none';
-    document.getElementById('logout').style.display = 'block';
-  }else{
-    document.getElementById('haslogout').style.display = 'block';
-    document.getElementById('logout').style.display = 'none';
-  }
-}
-
-function logout(){
-  FB.logout(function(response){
-    setElements(false);
-  });
-}
-
-function gotoabout_us(){
-  document.location.href="https://luffy.ee.ncku.edu.tw:10047/profile";
-}
-
-
-</script>
-
-      
-      <button id="about_us" onclick="gotoabout_us()">about_us</button>
-      <button id="logout" href="#" onclick="logout()">logout</button>
-      <a id="haslogout">haslogout</a>
-        
-
-        
-    </body>
-</html>
+        function GoToAboutUs(){
+              document.location.href="https://luffy.ee.ncku.edu.tw:10047/profile"; //待補上
+            } 
+    </script>
+</head>
+<body>
+    <img src="images/Setting/BackGround.png" id="background">
+    <div class="setting">
+        <img src="images/Setting/On.png" id="On">
+        <img src="images/Setting/Off.png" id="Off">
+        <div class="topbar">
+            <img src="images/Setting/top.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
+        </div>
+        <div class="Music">
+            <img src="images/Setting/Muse.png" id="Muse">
+            <img src="images/Setting/Music.png" id="Music">
+        </div>
+        <div class="List">
+            <div>
+                <img src="images/Setting/EndGame.png" class="Listt" id="EndGame">
+            </div>
+            <div>
+                <img src="images/Setting/AboutUs.png" class="Listt" id="AboutUs" onclick="GoToAboutUs()">
+            </div>
+            <div>
+                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut">
+            </div>
+        </div>
+    </div>
+    <div id="Bottom">
+            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon">
+            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon">
+            <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+            <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon">
+    </div>
+</body>
