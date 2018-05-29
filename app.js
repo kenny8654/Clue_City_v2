@@ -55,10 +55,10 @@ app.post("/upload", urlencoderParser, function (req, res) {
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
           //fileName = fileInfo[value].substring(10, fileInfo[value].length-1);
-          fileName = "./public/target.jpg"
+          fileName = "./CluesCity/target.jpg"
           if (fileName.indexOf('\\') != -1) {
             //fileName = fileName.substring(fileName.lastIndexOf('\\')+1);
-            fileName = "./public/target.jpg"
+            fileName = "./CluesCity/target.jpg"
           }
           console.log("File Name : " + fileName);
         }
