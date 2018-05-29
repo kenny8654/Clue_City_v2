@@ -50,6 +50,7 @@ app.post("/upload", urlencoderParser, function (req, res) {
     var file = querystring.parse(body, '\r\n', ':')
 
     if (file['Content-Type'].indexOf("image") !== -1) {
+      console.log("1")
       var fileInfo = file['Content-Disposition'].split('; ');
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
@@ -79,7 +80,8 @@ app.post("/upload", urlencoderParser, function (req, res) {
         // res.send('Image has been uploaded.');
       });
     } else {
-      // res.send('�u��W??�����');
+      console.log("2")
+       //res.send('�u��W??�����');
     }
     
     runPython(res);
