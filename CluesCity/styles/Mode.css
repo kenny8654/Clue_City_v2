@@ -1,9 +1,16 @@
 #background{
     position:absolute;
-    z-index:-1;
+    z-index:-2;
     width: 100%;
     left:0px;
     top:0px;
+}
+#ProfileBack{
+    position:absolute;
+    z-index:-1;
+    width:74%;
+    left:14vw;
+    top:19vw;
 }
 body{
     overflow: hidden;
@@ -36,8 +43,6 @@ body{
     background-size:80%;
     margin-left:15%;
     margin-top:20%;
-    background-image: url("/public/images/Mode/個人資料部分方框.png");
-    background-repeat:no-repeat;
 }
 #bighead{
     position:relative;

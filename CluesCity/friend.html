@@ -176,7 +176,7 @@
               document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"; //待補上
             } 
             function gotoaddfriend(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend"; //待補上
+              document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.html"; //待補上
             }
             function gotosetting(){
               document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting"; //待補上
@@ -185,16 +185,16 @@
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
             }
             function gotohome(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
             }
             function gotogallery(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
             }
             function gotofriend(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
             }
             function gotoScore(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
             }
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
@@ -223,7 +223,7 @@
                 <p class="Online" id="TotalNum">125</p>
                 <p class="Online" id="RightQuat">)</p>
             </div>
-            <img src="images/Team/Plus.png" id="Plus">
+            <img src="images/Team/Plus.png" id="Plus" onclick="gotoaddfriend()">
         </div>
         <div class="FriendList">
             <div class="ui middle aligned selection list">
@@ -307,7 +307,7 @@
         <div id="Bottom">
                 <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
                 <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon"  onclick="gotogallery()">
-                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" >
                 <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
         </div>
         <!--
