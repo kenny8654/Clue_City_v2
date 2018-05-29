@@ -209,3 +209,27 @@ html, body {
   cursor: pointer;
   z-index: 4;
 }
+
+#fb{
+  position: absolute;
+  height: 5%;
+  left: 35%;
+  top:66%;
+  visibility: hidden;
+}
+
+#ig{
+  position: absolute;
+  height: 5%;
+  left: 50%;
+  top:66%;
+  visibility: hidden;
+}
+
+#twitter{
+  position: absolute;
+  height: 5%;
+  left: 65%;
+  top:66%;
+  visibility: hidden;
+}
