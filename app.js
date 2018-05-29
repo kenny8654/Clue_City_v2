@@ -25,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Cluescity')));
 app.use(express.static(path.join(__dirname, 'CluesCity')));
 
 app.use('/profile', indexRouter);
@@ -37,6 +38,7 @@ app.use('/result',resultRouter);
 
 app.post("/upload", urlencoderParser, function (req, res) {
   req.setEncoding('binary');
+  console.log("uploading");
   var body = '';  
   var fileName = '';  
   var boundary = req.headers['content-type'].split('; ')[1].replace('boundary=', '');
