@@ -56,14 +56,12 @@
       <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg">
     </div>
 
-    <form id = "upload_form" 
-          action="/upload" 
-          method="post" enctype="multipart/form-data">
+    <form id = "upload_form"  enctype="multipart/form-data">
       <label id="submit_image_label" >
           <input id = "submit_image"type="file" name="image" accept="image/*" capture="user" >
       </label>
       <label id="submit_button_label" >
-          <input id = "submit_button" type="submit" value="upload" >
+          <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button>
       </label>
       
     </form>
