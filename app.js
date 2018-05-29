@@ -10,6 +10,8 @@ var indexRouter = require('./routes/index');
 var addfriendRouter = require('./routes/addfriend');
 var hardRouter = require('./routes/hard');
 var settingRouter = require('./routes/setting');
+var mapRouter = require('./routes/map');
+var resultRouter = require('./routes/result');
 
 var app = express();
 
@@ -26,7 +28,7 @@ app.use('/login',loginRouter);
 app.use('/hard',hardRouter);
 app.use('/friend',addfriendRouter);
 app.use('/setting',settingRouter);
-
-console.log('Express now listening to : https://luffy.ee.ncku.edu.tw:10047');
+app.use('/map',mapRouter);
+app.use('/result',resultRouter);
 
 module.exports = app;
