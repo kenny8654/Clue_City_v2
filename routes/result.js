@@ -8,14 +8,14 @@ let mongoOperation = require("../../cluescity/mongo-express/main.js");
 let mongoCollection = "user";
 
 router.get('/',function(req,res){
-  res.sendFile('map.html', {
+  res.sendFile('result.html', {
     root : 'CluesCity'
   });
 });
 
-router.post('/map', urlencodedParser,function(req,res){
+router.post('/result', urlencodedParser,function(req,res){
           
- //     mongoOperation.mongoFind( mongoCollection , req.body);
+//      mongoOperation.mongoFind( mongoCollection , req.body);
 });
 
 module.exports = router;
