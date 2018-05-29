@@ -1,0 +1,211 @@
+#map {
+  height: 77%;
+  z-index: 0;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#title_bar{
+  height: 8%;
+  background-color: rgba(0, 0, 0, 0.7);
+  vertical-align: top;
+  z-index: 1;
+}
+
+#title{
+  height: 55%;
+  margin-left: 30%;
+  margin-top: 3%;
+}
+
+#user_pic{
+  position: absolute;
+  height: 5%;
+  top:1.5%;
+  right: 3%;
+}
+#game_bar{
+  height: 8%;
+}
+
+#game_bar_background{
+  height: 500%;
+  z-index: 1;
+}
+
+#decoration1{
+  position: absolute;
+  top: 9.5%;
+  height: 5%;
+  z-index: 2;
+}
+
+#decoration2{
+  position: absolute;
+  top: 9.5%;
+  right: 1%;
+  height: 5%;
+  z-index: 2;
+}
+
+#team_name{
+  position: absolute;
+  font-family: Microsoft JhengHei;
+  font-size: 13px;
+  letter-spacing: 1px;
+  z-index: 2;
+  top: 10.5%;
+  left: 5%;
+}
+
+#game_count{
+  position: absolute;
+  top: 9%;
+  left: 33%;
+  height: 6%;
+  z-index: 2;
+}
+
+#time{
+  position: absolute;
+  top: 10.75%;
+  left: 46%;
+  z-index: 3;
+}
+
+#game_score{
+  position: absolute;
+  top: 8.75%;
+  left: 68%;
+  height: 6%;
+  z-index: 2;
+}
+
+#btn_camera{
+  position: absolute;
+  bottom: 8%;
+  height: 8%;
+  left: 2%;
+}
+
+#nav_home{
+  position: absolute;
+  bottom: 1.5%;
+  height: 4%;
+  left: 10%;
+}
+
+#nav_gallery{
+  position: absolute;
+  bottom: 1.5%;
+  height: 4%;
+  left: 33%;
+}
+
+#nav_group{
+  position: absolute;
+  bottom: 1%;
+  height: 4.5%;
+  left: 60%;
+}
+
+#nav_score{
+  position: absolute;
+  bottom: 1%;
+  height: 4.5%;
+  right: 10%;
+}
+
+#big_clue_background{
+  position: absolute;
+  height: 50%;
+  left: 6.5%;
+  top:25%;
+}
+
+#btn_hide{
+  position: absolute;
+  height: 3%;
+  left: 82%;
+  top:27%;
+}
+
+#btn_clue{
+  position: absolute;
+  height: 6%;
+  left: 76%;
+  top:66%;
+}
+
+#big_clues_picture{
+  position: absolute;
+  height: 28%;
+  left: 14%;
+  top:31%;
+}
+
+.big_clue{
+  visibility: visible;
+}
+
+#small_clue_background{
+  position: absolute;
+  height: 20%;
+  left: 2%;
+  top:63%;
+}
+
+#small_clue_picture{
+  position: absolute;
+  height: 15.5%;
+  left: 4.5%;
+  top:65.5%;
+}
+
+.small_clue{
+  visibility: hidden;
+}
+
+#submit_image{
+  position: absolute;
+  background: "submit_image.png";
+  height: 6%;
+  left: 30%;
+  top:62%;
+  display: none;
+}
+
+#submit_image_label{
+  position: absolute;
+  background-image: url(https://i.imgur.com/PYTVQM7.png);
+  height: 26px;
+  width: 80px;
+  left: 30%;
+  top:62%;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#submit_button{
+  position: absolute;
+  height: 3%;
+  left: 33%;
+  top:68%;
+  display: none;
+}
+
+#submit_button_label{
+  position: absolute;
+  background-image: url(https://i.imgur.com/6qdwuaf.png);
+  height: 26px;
+  width: 80px;
+  left: 30%;
+  top:68%;
+  cursor: pointer;
+  z-index: 4;
+}
