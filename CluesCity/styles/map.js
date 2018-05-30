@@ -16,6 +16,12 @@ function onSubmitButtonClicked(){
     data : formData,
     success : function(data){
       $('#upload_response').text(data);
+      if(data == "similar"){
+        document.getElementById('success').style.visibility = 'visible'
+      }
+      else{
+        document.getElementById('try_again').style.visibility = 'visible'
+      }
     },
     cache: false,
     contentType: false,
@@ -62,7 +68,7 @@ function initMap() {
   });
 }
 
-initMap();
+//initMap();
 
 function getCircle(magnitude) {
   return {
@@ -132,6 +138,8 @@ function btn_hide_onclick(){
   document.getElementById('submit_image').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
+  document.getElementById('try_again').style.visibility = 'hidden'
+  document.getElementById('success').style.visibility = 'hidden'
 }
 
 function Time()
