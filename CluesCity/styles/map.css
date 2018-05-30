@@ -242,3 +242,11 @@ html, body {
   z-index: 4;
   visibility: hidden;
 }
+
+#uploaded_image{
+  visibility: hidden;
+}
+
+#upload_response{
+  visibility: hidden;
+}
