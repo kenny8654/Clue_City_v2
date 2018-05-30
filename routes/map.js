@@ -11,8 +11,6 @@ const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const urlencoderParser = bodyParser.urlencoded({ extended: false })
 
-let bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 let mongoCollection = "user";
@@ -23,7 +21,7 @@ router.get('/',function(req,res){
   });
 });
 
-router.post('/map', urlencodedParser,function(req,res){
+router.post('/map', urlencoderParser,function(req,res){
           
  //     mongoOperation.mongoFind( mongoCollection , req.body);
 });
