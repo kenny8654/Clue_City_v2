@@ -3,6 +3,34 @@ var flag = 0;
 var time = 1800;
 var markersList = [];    
 
+$(document).ready(function () {
+});
+
+function onSubmitButtonClicked(){
+  event.preventDefault();
+  var formData = new FormData($('#upload_form')[0]);
+  console.log('post');
+  $.ajax({
+    url : '/upload',
+    type : 'post',
+    data : formData,
+    success : function(data){
+      $('#upload_response').text(data);
+    },
+    cache: false,
+    contentType: false,
+    processData: false,
+  })
+
+  // document.getElementById('btn_clue').style.visibility ='hidden'
+  // document.getElementById('submit_image_label').style.visibility ='hidden'
+  // document.getElementById('submit_button_label').style.visibility ='hidden'
+  // document.getElementById('fb').style.visibility ='visible'
+  // document.getElementById('ig').style.visibility ='visible'
+  // document.getElementById('twitter').style.visibility ='visible'
+  // document.getElementById('big_clue_background').style.background = "";
+}
+
 function addMarker(){
   console.log("mark")
     var marker = new google.maps.Marker({
@@ -134,29 +162,4 @@ function btn_camera_onclick(){
   document.getElementById('submit_image').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
   document.getElementById('submit_button').style.visibility = 'visible'
-}
-
-function onSubmitButtonClicked(){
-  event.preventDefault();
-  var formData = new FormData($('#upload_form')[0]);
-  console.log('post');
-  $.ajax({
-    url : '/upload',
-    type : 'post',
-    data : formData,
-    success : function(data){
-      $('#upload_response').text(data);
-    },
-    cache: false,
-    contentType: false,
-    processData: false,
-  })
-
-  // document.getElementById('btn_clue').style.visibility ='hidden'
-  // document.getElementById('submit_image_label').style.visibility ='hidden'
-  // document.getElementById('submit_button_label').style.visibility ='hidden'
-  // document.getElementById('fb').style.visibility ='visible'
-  // document.getElementById('ig').style.visibility ='visible'
-  // document.getElementById('twitter').style.visibility ='visible'
-  // document.getElementById('big_clue_background').style.background = "";
 }
