@@ -24,14 +24,14 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(stylus.middleware(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(stylus.middleware(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'CluesCity')));
 app.use(express.static(__dirname + '/CluesCity'));
 
 
 app.use('/profile', indexRouter);
-app.use('/login',loginRouter);
+app.use('/',loginRouter);
 app.use('/hard',hardRouter);
 app.use('/friend',addfriendRouter);
 app.use('/setting',settingRouter);
