@@ -28,8 +28,15 @@
        $(".Invite").click(function(){
            this.src="images/Team/invited.png";
        });
-        $(".Plus").click(function(){
-            
+        $(".TeamName").hide();
+        $("#VagueBack").hide();
+        $("#StartGameIcon").click(function(){
+            $(".TeamName").fadeIn();
+            $("#VagueBack").fadeIn();
+        });
+        $("#X").click(function(){
+            $(".TeamName").fadeOut();
+            $("#VagueBack").fadeOut();
         })
     });
     </script>
@@ -171,10 +178,9 @@
                 },
               });
             } 
-      
-            function gaming(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"; //待補上
-            } 
+            function gogaming(){
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.map";
+            }
             function gotoaddfriend(){
               document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.html"; //待補上
             }
@@ -198,6 +204,18 @@
             }
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
+    <div id="VagueBack"></div>
+    <div class="TeamName">
+        <img src="images/Team/SmallBackground.png" id="SmallBack">
+        <div id="SetTeamName">
+            <img src="images/Team/X.png" id="X">
+            <p id="TeamText">團隊名稱：</p>
+            <div class="ui input" id="input">
+                <input type="text" placeholder="最多七字">
+            </div>
+            <img src="images/Team/OK.png" id="OK" onclick="gogaming()">
+        </div>
+    </div>
     <div class="team">
         <div class="topbar">
             <img src="images/Team/WhiteBack.png" id="WhiteBack" onclick="gobackmode()">
@@ -302,7 +320,7 @@
             </div>
         </div>
         <div id="StartGame">
-                <img src="images/Team/StartTheGame.png" id="StartGameIcon" onclick = "gaming()">
+                <img src="images/Team/StartTheGame.png" id="StartGameIcon">
         </div>
         <div id="Bottom">
                 <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
