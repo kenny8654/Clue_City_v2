@@ -60,12 +60,16 @@
     </div>
 
     <form id = "upload_form"  enctype="multipart/form-data">
-      <label id="submit_image_label" >
-          <input id = "submit_image"type="file" name="image" accept="image/*" capture="user" >
+
+      <input id = "submit_image"type="file" name="image" accept="image/*" capture="user" >
+      <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button>
+
+      <!-- <label id="submit_image_label" >
+          
       </label>
       <label id="submit_button_label" >
-          <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button>
-      </label>
+          
+      </label> -->
     </form>
 
     <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg"   >

@@ -177,10 +177,10 @@ html, body {
   height: 6%;
   left: 30%;
   top:62%;
-  display: none;
+  /* display: none; */
 }
 
-#submit_image_label{
+/* #submit_image_label{
   position: absolute;
   background-image: url(https://i.imgur.com/PYTVQM7.png);
   height: 26px;
@@ -189,17 +189,17 @@ html, body {
   top:62%;
   cursor: pointer;
   z-index: 4;
-}
+} */
 
 #submit_button{
   position: absolute;
   height: 3%;
   left: 33%;
   top:68%;
-  display: none;
+  /* display: none; */
 }
 
-#submit_button_label{
+/* #submit_button_label{
   position: absolute;
   background-image: url(https://i.imgur.com/6qdwuaf.png);
   height: 26px;
@@ -208,7 +208,7 @@ html, body {
   top:68%;
   cursor: pointer;
   z-index: 4;
-}
+} */
 
 #fb{
   position: absolute;
