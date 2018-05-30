@@ -16,7 +16,8 @@ function onSubmitButtonClicked(){
     data : formData,
     success : function(data){
       //$('#upload_response').text(data);
-      console.log(data)
+      //console.log(data)
+      console.log("-************************")
       if(data == "similar"){
         document.getElementById('success').style.visibility = 'visible'
       }
@@ -24,6 +25,9 @@ function onSubmitButtonClicked(){
         document.getElementById('try_again').style.visibility = 'visible'
       }
     },  
+    error: function(){
+      console.log("error!!!!!!!!!")
+    },
     cache: false,
     contentType: false,
     processData: false,
@@ -171,4 +175,8 @@ function btn_camera_onclick(){
   document.getElementById('submit_image').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
   document.getElementById('submit_button').style.visibility = 'visible'
+}
+
+function end(){
+  document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
 }
