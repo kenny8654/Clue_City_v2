@@ -7,7 +7,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 var sender_info = "sender_info"; 
-var be_sender_id = "111"; 
+var be_sender_id = null; 
 var team;
 
 router.use(bodyParser.json());
@@ -33,8 +33,10 @@ router.post('/signal', urlencodedParser, function(req,res,callback){
     var mongoCollection = "user";
     console.log(be_sender_id);
     console.log("--------------");
-    let data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);
+    data = be_sender_id ;
+   // let data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);
     console.log(data);
+    console.log("--------------");
     res.send(data);
     //callback = a(res, data);
 });
@@ -46,7 +48,7 @@ function a(res, data){
 */
 router.post('/checkresponse', urlencodedParser,function(req,res,callback){
     var mongoCollection = "user";
-    console.log("test");
+    //console.log("test");
     let data = mongoOperation.mongoFind_checkresponse( mongoCollection , sender_info);
 //    callback = function(){
       res.send(data);
@@ -55,7 +57,7 @@ router.post('/checkresponse', urlencodedParser,function(req,res,callback){
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok
       sender_info = req.body.sender;
-      be_sender_id = req.body.to;      
+      be_sender_id = {sender:"994408210718019",to:"2054568394572464"};      
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);

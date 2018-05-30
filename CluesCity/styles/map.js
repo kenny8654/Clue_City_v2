@@ -14,6 +14,7 @@ function onSubmitButtonClicked(){
     url : '/upload',
     type : 'post',
     data : formData,
+    dataType : 'text',
     success : function(data){
       //$('#upload_response').text(data);
       //console.log(data)
@@ -28,6 +29,10 @@ function onSubmitButtonClicked(){
     error: function(){
       console.log("error!!!!!!!!!")
     },
+//    complete: function () {
+              //Handle the complete event
+//                       console.log("ajax completed ");
+//    }
     cache: false,
     contentType: false,
     processData: false,
