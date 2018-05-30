@@ -2,12 +2,43 @@ var current = { lat: 22.996950, lng: 120.222417 }
 var flag = 0;
 var time = 1800;
 var markersList = [];    
+var demo = 0;
+var s = 0;
 
 $(document).ready(function () {
 });
 
+function cheat(){
+  demo =  demo + 1
+  if(demo == 1){
+    setTimeout("error()",2000);
+  }
+  if(demo == 2){
+    document.getElementById('try_again').style.visibility = 'hidden'
+  }
+}
+
+function ss(){
+  s =  s + 1
+  if(s == 1){
+    setTimeout("success()",2000);
+  }
+  if(s == 2){
+    document.getElementById('success').style.visibility = 'hidden'
+  }
+}
+
+function error(){
+  document.getElementById('try_again').style.visibility = 'visible'
+}
+
+function success(){
+  document.getElementById('success').style.visibility = 'visible'
+}
+
 function onSubmitButtonClicked(){
   event.preventDefault();
+
   var formData = new FormData($('#upload_form')[0]);
   console.log('post');
   $.ajax({
