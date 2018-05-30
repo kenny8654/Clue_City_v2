@@ -1,5 +1,15 @@
 let express = require('express');
 let router = express.Router();
+var createError = require('http-errors');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+var stylus = require('stylus');
+const fs = require('fs');
+const http = require('http')
+const querystring = require('querystring');
+const bodyParser = require('body-parser');
+const urlencoderParser = bodyParser.urlencoded({ extended: false })
 
 let bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
@@ -20,9 +30,9 @@ router.post('/map', urlencodedParser,function(req,res){
 
 router.post("/upload", urlencoderParser, function (req, res) {
   req.setEncoding('binary');
-  var body = '';   // ¤å¥ó?Õu
-  var fileName = '';  // ¤å¥ó¦W
-  // ?¬É¦r²Å¦ê
+  var body = '';   // ï¿½ï¿½ï¿½?ï¿½u
+  var fileName = '';  // ï¿½ï¿½ï¿½W
+  // ?ï¿½É¦rï¿½Å¦ï¿½
   var boundary = req.headers['content-type'].split('; ')[1].replace('boundary=', '');
   req.on('data', function (chunk) {
     body += chunk;
@@ -31,9 +41,9 @@ router.post("/upload", urlencoderParser, function (req, res) {
   req.on('end', function () {
     var file = querystring.parse(body, '\r\n', ':')
 
-    // ¥u?²z?¤ù¤å¥ó
+    // ï¿½u?ï¿½z?ï¿½ï¿½ï¿½ï¿½ï¿½
     if (file['Content-Type'].indexOf("image") !== -1) {
-      //?¨ú¤å¥ó¦W
+      //?ï¿½ï¿½ï¿½ï¿½ï¿½W
       var fileInfo = file['Content-Disposition'].split('; ');
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
@@ -47,29 +57,29 @@ router.post("/upload", urlencoderParser, function (req, res) {
         }
       }
 
-      // ?¨ú?¤ù?«¬(¦p¡Gimage/gif ©Î image/png))
+      // ?ï¿½ï¿½?ï¿½ï¿½?ï¿½ï¿½(ï¿½pï¿½Gimage/gif ï¿½ï¿½ image/png))
       var entireData = body.toString();
       var contentTypeRegex = /Content-Type: image\/.*/;
 
       contentType = file['Content-Type'].substring(1);
 
-      //?¨ú¤å¥ó¤G?¨î?Õu?©l¦ì¸m¡A§YcontentTypeªº?§À
+      //?ï¿½ï¿½ï¿½ï¿½ï¿½G?ï¿½ï¿½?ï¿½u?ï¿½lï¿½ï¿½mï¿½Aï¿½YcontentTypeï¿½ï¿½?ï¿½ï¿½
       var upperBoundary = entireData.indexOf(contentType) + contentType.length;
       var shorterData = entireData.substring(upperBoundary);
 
-      // ´À??©l¦ì¸mªºªÅ®æ
+      // ï¿½ï¿½??ï¿½lï¿½ï¿½mï¿½ï¿½ï¿½Å®ï¿½
       var binaryDataAlmost = shorterData.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 
-      // ¥h°£?Õu¥½§Àªº?¥~?Õu¡A§Y: "--"+ boundary + "--"
+      // ï¿½hï¿½ï¿½?ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?ï¿½~?ï¿½uï¿½Aï¿½Y: "--"+ boundary + "--"
       var binaryData = binaryDataAlmost.substring(0, binaryDataAlmost.indexOf('--' + boundary + '--'));
 
-      // «O¦s¤å¥ó
+      // ï¿½Oï¿½sï¿½ï¿½ï¿½
       fs.writeFile(fileName, binaryData, 'binary', function (err) {
         console.log(err);
         // res.send('Image has been uploaded.');
       });
     } else {
-      // res.send('¥u¯à¤W??¤ù¤å¥ó');
+      // res.send('ï¿½uï¿½ï¿½W??ï¿½ï¿½ï¿½ï¿½ï¿½');
     }
     
     runPython(res);
