@@ -26,7 +26,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'Cluescity')));
 app.use(express.static(path.join(__dirname, 'CluesCity')));
 app.use(express.static(__dirname + '/CluesCity'));
 
