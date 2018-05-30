@@ -150,3 +150,11 @@ function onSubmitButtonClicked(){
     processData: false,
   })
 }
+  document.getElementById('btn_clue').style.visibility ='hidden'
+  document.getElementById('submit_image_label').style.visibility ='hidden'
+  document.getElementById('submit_button_label').style.visibility ='hidden'
+  document.getElementById('fb').style.visibility ='visible'
+  document.getElementById('ig').style.visibility ='visible'
+  document.getElementById('twitter').style.visibility ='visible'
+  //document.getElementById('big_clue_background').style.background = "";
+}
