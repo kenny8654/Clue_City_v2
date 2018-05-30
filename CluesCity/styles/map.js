@@ -98,9 +98,9 @@ function btn_hide_onclick(){
   document.getElementById('btn_hide').style.visibility = 'hidden'
   document.getElementById('small_clue_background').style.visibility = 'visible'
   document.getElementById('small_clue_picture').style.visibility = 'visible'
-  document.getElementById('submit_image_label').style.visibility = 'hidden'
   document.getElementById('submit_image').style.visibility = 'hidden'
-  document.getElementById('submit_button_label').style.visibility = 'hidden'
+  document.getElementById('submit_image').style.visibility = 'hidden'
+  document.getElementById('submit_button').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
 }
 
