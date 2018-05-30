@@ -34,6 +34,8 @@ function initMap() {
   });
 }
 
+initMap();
+
 function getCircle(magnitude) {
   return {
     path: google.maps.SymbolPath.CIRCLE,
