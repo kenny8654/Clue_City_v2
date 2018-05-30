@@ -22,7 +22,7 @@ function onSubmitButtonClicked(){
       else{
         document.getElementById('try_again').style.visibility = 'visible'
       }
-    },
+    },  
     cache: false,
     contentType: false,
     processData: false,
