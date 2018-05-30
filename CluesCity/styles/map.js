@@ -16,6 +16,7 @@ function onSubmitButtonClicked(){
     data : formData,
     success : function(data){
       $('#upload_response').text(data);
+      console("inside!!!!")
       if(data == "similar"){
         document.getElementById('success').style.visibility = 'visible'
       }
