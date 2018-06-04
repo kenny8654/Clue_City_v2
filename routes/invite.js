@@ -7,7 +7,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 var sender_info = "sender_info"; 
-var be_sender_id = "111"; 
+var be_sender_id = "be_sender_id" ; 
 var team;
 
 router.use(bodyParser.json());
@@ -31,11 +31,20 @@ router.post('/teammate', urlencodedParser,function(req,res){
 
 router.post('/signal', urlencodedParser, function(req,res,callback){
     var mongoCollection = "user";
+    console.log("--------------------------------------");
     console.log(be_sender_id);
-    console.log("--------------");
-    let data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);
-    console.log(data);
-    res.send(data);
+    console.log("--------------------------------------");
+    let data ;
+    new Promise((resolve,reject)=> {      
+      resolve(()=>{
+      data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);    
+      });
+    })
+    .then(()=>{
+      console.log("tttttttttttttttttttttttttttttttttttttttt");
+      console.log(data);
+      res.send(data);
+    });
 });
 router.post('/checkresponse', urlencodedParser,function(req,res,callback){
     var mongoCollection = "user";

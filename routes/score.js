@@ -12,17 +12,11 @@ router.get('/',function(req,res){
   });
 });
 
-router.post('/hard', urlencodedParser,function(req,res){
-    res.send(`${req.body.name}`);
+router.post('/getscore', urlencodedParser,function(req,res){
+    
+    databaseCollection = "user";
+    mongoOperation.mongoSort(databaseCollection); 
+
 });
 
-router.post('/check', urlencodedParser,function(req,res){
-//    console.log(req.body);
-    databaseCollection = "user";
-    mongoOperation.checkinvite(
-        databaseCollection ,
-        req.body.sender , 
-        req.body
-    ); 
-});
 module.exports = router;
