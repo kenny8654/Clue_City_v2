@@ -36,21 +36,12 @@ router.post('/signal', urlencodedParser, function(req,res,callback){
     let data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);
     console.log(data);
     res.send(data);
-    //callback = a(res, data);
 });
-/*
-function a(res, data){
-  res.send(data);
-  console.log(data);
-}
-*/
 router.post('/checkresponse', urlencodedParser,function(req,res,callback){
     var mongoCollection = "user";
     console.log("test");
     let data = mongoOperation.mongoFind_checkresponse( mongoCollection , sender_info);
-//    callback = function(){
       res.send(data);
-//    }
 });
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok

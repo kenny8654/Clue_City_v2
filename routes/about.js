@@ -8,7 +8,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 
 router.get('/',function(req,res){
-  res.sendFile('index.html', {
+  res.sendFile('about.html', {
     root : 'public'
   });
 });

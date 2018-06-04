@@ -26,7 +26,7 @@ router.post('/map', urlencoderParser,function(req,res){
  //     mongoOperation.mongoFind( mongoCollection , req.body);
 });
 
-app.post("/upload", urlencoderParser, function (req, res) {
+router.post("/upload", urlencoderParser, function (req, res) {
   req.setEncoding('binary');
   var body = '';   // 文件数据
   var fileName = '';  // 文件名

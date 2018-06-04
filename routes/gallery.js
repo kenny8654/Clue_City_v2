@@ -13,7 +13,7 @@ var team;
 router.use(bodyParser.json());
 
 router.get('/',function(req,res){
-  res.sendFile('gallary.html', {
+  res.sendFile('gallery.html', {
     root : 'public'
   });
 });

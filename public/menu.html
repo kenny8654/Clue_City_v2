@@ -21,17 +21,23 @@
             crossorigin="anonymous">
     </script>
     <script>
+        function gotosetting(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        }
+         function gotoinvite(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
+        }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
         }
         function gotofriend(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
         function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
     <script>
@@ -185,14 +191,6 @@
               function setElements(isLogin){
                 if(isLogin){}else{}
               }
-              
-              function gotosetting(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
-              }
-    
-              function gotofriend(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
-              }
     
               var responseData ;
     
@@ -211,7 +209,7 @@
                 console.log(Data);
                 $.ajax({
                   method : 'post',
-                  url: './hard/hard',
+                  url: './menu/hard',
                   data:Data,
                   success: function(data){
                     $('#name').text(data);
@@ -226,7 +224,7 @@
               function signal(){
                 $.ajax ({
                   type : 'post',
-                  url : './friend/signal',
+                  url : './invite/signal',
                   data : {},
                   success : function(data){
                     if( data == "" || data == null){
@@ -262,7 +260,7 @@
     
                 $.ajax({
                   method : 'post',
-                  url: './hard/check',
+                  url: './menu/check',
                   data:{
                     checkinvite : {
                       sender : sender ,
@@ -339,7 +337,7 @@
             </div>
 
             <div id="Start" >
-                <img src="images/Mode/start.png" id="StartIcon" onclick="gotofriend()">
+                <img src="images/Mode/start.png" id="StartIcon" onclick="gotoinvite()">
             </div>
         </div>
         <div id="Bottom">
