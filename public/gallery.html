@@ -21,15 +21,13 @@
             crossorigin="anonymous">
     </script>
     <script>
-        function GoToAboutUs(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/profile"; //待補上
-            }
+        function gotosetting(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+           document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
         }
-        function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
-        }
+        
         function gotofriend(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
@@ -39,34 +37,17 @@
     </script>
 </head>
 <body>
-    <img src="images/Setting/BackGround.png" id="background">
-    <div class="setting">
-        <img src="images/Setting/On.png" id="On">
-        <img src="images/Setting/Off.png" id="Off">
+    <img src="images/Gallery/Main.png" id="background">
+    <div class="Gallery">
         <div class="topbar">
-            <img src="images/Setting/top.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Gallery/top.png" class="TopBarMid" id="ClueCityInMode">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
-        </div>
-        <div class="Music">
-            <img src="images/Setting/Muse.png" id="Muse">
-            <img src="images/Setting/Music.png" id="Music">
-        </div>
-        <div class="List">
-            <div>
-                <img src="images/Setting/EndGame.png" class="Listt" id="EndGame">
-            </div>
-            <div>
-                <img src="images/Setting/AboutUs.png" class="Listt" id="AboutUs" onclick="GoToAboutUs()">
-            </div>
-            <div>
-                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut">
-            </div>
         </div>
     </div>
     <div id="Bottom">
-            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclik="gotohome()">
-            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
-            <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
-            <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
+            <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+            <img src="images/Gallery/Gallery.png" class="BottomIcon" id="GalleryIcon" >
+            <img src="images/Gallery/Friend.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
+            <img src="images/Gallery/LeaderBoard.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
     </div>
 </body>

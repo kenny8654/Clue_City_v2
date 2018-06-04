@@ -1,0 +1,352 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Clue City</title>
+  <link rel="stylesheet" type="text/css" href="styles/Mode.css">
+  <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-title" content="Clue City">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        function gotohome(){
+           document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+        }
+        function gotogallery(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
+        }
+        function gotofriend(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        }
+        function gotoScore(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+        }
+    </script>
+    <script>
+        var single=1;
+        $(document).ready(function(){
+            $("#SingleText").click(function(){
+                if(single==1){
+                    this.src="images/Mode/SingleTextG.png";
+                    single=0;
+                }
+                else{
+                    this.src="images/Mode/SingleText.png";
+                    single=1;
+                }
+            });
+        var multi=1;
+            $("#MultiText").click(function(){
+                if(multi==1){
+                    this.src="images/Mode/MultiTextG.png";
+                    multi=0;
+                }
+                else{
+                    this.src="images/Mode/MultiText.png";
+                    multi=1;
+                }
+            });
+        var twoP=1;
+            $("#2P").click(function(){
+                if(twoP==1){
+                    this.src="images/Mode/2PG.png";
+                    twoP=0;
+                }
+                else{
+                    this.src="images/Mode/2P.png";
+                    twoP=1;
+                }
+            });
+        var fourP=1;
+            $("#4P").click(function(){
+                if(fourP==1){
+                    this.src="images/Mode/4PG.png";
+                    fourP=0;
+                }
+                else{
+                    this.src="images/Mode/4P.png";
+                    fourP=1;
+                }
+            });
+        var sixP=1;
+            $("#6P").click(function(){
+                if(sixP==1){
+                    this.src="images/Mode/6PG.png";
+                    sixP=0;
+                }
+                else{
+                    this.src="images/Mode/6P.png";
+                    sixP=1;
+                }
+            });
+        var eightP=1;
+            $("#8P").click(function(){
+                if(eightP==1){
+                    this.src="images/Mode/8PG.png";
+                    eightP=0;
+                }
+                else{
+                    this.src="images/Mode/8P.png";
+                    eightP=1;
+                }
+            });
+        var easy=1;
+            $("#EasyText").click(function(){
+                if(easy==1){
+                    this.src="images/Mode/EasyTextG.png";
+                    easy=0;
+                }
+                else{
+                    this.src="images/Mode/EasyText.png";
+                    easy=1;
+                }
+            });
+        var normal=1;
+            $("#NormalText").click(function(){
+                if(normal==1){
+                    this.src="images/Mode/NormalTextG.png";
+                    normal=0;
+                }
+                else{
+                    this.src="images/Mode/NormalText.png";
+                    normal=1;
+                }
+            });
+        var hard=1;
+            $("#HardText").click(function(){
+                if(hard==1){
+                    this.src="images/Mode/HardTextG.png";
+                    hard=0;
+                }
+                else{
+                    this.src="images/Mode/HardText.png";
+                    hard=1;
+                }
+            });
+        });
+    </script>
+    
+</head>
+<body>
+        <script>
+
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '177842309598524',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v3.0'
+                  });
+                              
+                  FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                  });
+                              
+                };
+                        
+                (function(d, s, id){
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) {return;}
+                  js = d.createElement(s); js.id = id;
+                  js.src = "https://connect.facebook.net/en_US/sdk.js";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              
+               function statusChangeCallback(response){
+                 if( response.status === 'connected' ){
+                   console.log( 'Logged in and authenticated' );
+                  setElements(true);
+                  getProfile();
+                 } else {
+                  console.log( 'Not authenticated' );
+                  setElements(false);
+                 }
+               }
+              
+              
+              function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                  statusChangeCallback(response);
+                });
+              }
+              
+              function setElements(isLogin){
+                if(isLogin){}else{}
+              }
+              
+              function gotosetting(){
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+              }
+    
+              function gotofriend(){
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+              }
+    
+              var responseData ;
+    
+              function getProfile(){
+                FB.api('/me?fields=name,email',function(response){
+                  if(response && !response.error){
+                    console.log("has get profile");
+                  }
+                  responseData = response ;
+                  PassToMain(responseData);
+                })
+              }
+    
+              function PassToMain(Data)
+              {
+                console.log(Data);
+                $.ajax({
+                  method : 'post',
+                  url: './hard/hard',
+                  data:Data,
+                  success: function(data){
+                    $('#name').text(data);
+                  }
+                });
+              }
+              
+              var waitsignal = setInterval(signal , 1000);
+              var invite_info = 0;
+              var answer ;
+    
+              function signal(){
+                $.ajax ({
+                  type : 'post',
+                  url : './friend/signal',
+                  data : {},
+                  success : function(data){
+                    if( data == "" || data == null){
+                      console.log("listen whether has invitation");
+                    }else{
+                      console.log("someone send me invitation");
+                      invite_info = data ;
+                      join();
+                      clearInterval(waitsignal);
+                    }
+                  }
+                });
+              }
+    
+              function join(){
+                var r = confirm(`是否要加入 ${invite_info} ?`);
+                if( r == true ){
+                  answer = "1" ;
+                  PassTocheck(invite_info , answer);
+                }
+                else{
+                  answer = "0" ;
+                  PassTocheck(invite_info , answer);
+                }
+              }
+              
+              function PassTocheck(Data , yes_no)
+              {
+                //console.log(Data);
+                let sender = Data.sender;
+                let inviteto = Data.to;
+                let accept = yes_no ;
+    
+                $.ajax({
+                  method : 'post',
+                  url: './hard/check',
+                  data:{
+                    checkinvite : {
+                      sender : sender ,
+                      to : inviteto,
+                      accept : accept
+                    }
+                  }
+                });
+              }
+              
+              /*
+              var person = 0 ;
+              var difficulty = 0 ;
+              // choose person
+              for(var i = 2 ; i < 10 ; i+=2){
+                $(`${i}`).click(function(){
+                  person = i ;
+                })
+              }
+              $('#1').click(function(){
+                  person = 1 ;
+              })
+              // choose difficulty
+              for(var i = 1 ; i < 4 ; i++){
+                $(`${i}`).click(function(){
+                  difficulty = i ;
+                })
+              }
+              */
+              
+              </script>
+    <img src="images/Login/background.png" id="background">
+    <img src="images/Mode/ProfileBack.png" id="ProfileBack">
+    <div class="mode">
+        <div class="topbar">
+            <img src="images/Mode/上方標題.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
+        </div>
+        <div id="profile">
+            <img src="images/Mode/lisa.jpg" id="bighead">
+            <div id="NameAndID">
+            <font size=4.5% class="text" id="Name">Lisa Huang</font>
+            <font size=2% font color="#A9A9A9" class="text" id="ID">ID:lisahuang0908</font>
+            </div>
+        </div>
+        <div id="ChooseMode">
+            <div id="SingleMode">
+                <img src="images/Mode/單人圖示.png" class="ModeImg" id="Single">
+                <img src="images/Mode/SingleText.png" class="ModeText" id="SingleText">
+            </div>
+            <div id="MultiMode">
+                <img src="images/Mode/多人圖示.png" class="ModeImg" id="Multi">
+                <img src="images/Mode/MultiText.png" class="ModeText" id="MultiText">
+                <div id="PlayerNum">
+                <img src="images/Mode/2P.png" class="PlayNum" id="2P">
+                <img src="images/Mode/4P.png" class="PlayNum" id="4P">
+                <img src="images/Mode/6P.png" class="PlayNum" id="6P">
+                <img src="images/Mode/8P.png" class="PlayNum" id="8P">
+                </div>
+            </div>
+            <div id="Difficulty">
+                <div id="EasyMode">
+                    <img src="images/Mode/容易圖示.png" class="DifImg" id="EasyImg">
+                    <img src="images/Mode/EasyText.png" class="DifText" id="EasyText">
+                </div>
+                <div id="NormalMode">
+                    <img src="images/Mode/普通圖示.png" class="DifImg" id="NormalImg">
+                    <img src="images/Mode/NormalText.png" class="DifText" id="NormalText">
+                </div>
+                <div id="HardMode">
+                    <img src="images/Mode/困難圖示.png" class="DifImg" id="HardImg">
+                    <img src="images/Mode/HardText.png" class="DifText" id="HardText">
+                </div>
+            </div>
+
+            <div id="Start" >
+                <img src="images/Mode/start.png" id="StartIcon" onclick="gotofriend()">
+            </div>
+        </div>
+        <div id="Bottom">
+                <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" >
+                <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
+                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+                <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
+            </div>
+    </div>
+</body>
