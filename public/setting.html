@@ -39,6 +39,59 @@
     </script>
 </head>
 <body>
+        <script>
+        
+                window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '177842309598524',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.0'
+              });
+                
+              FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+                
+            };
+          
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "https://connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        
+        
+          
+         function statusChangeCallback(response){
+           if( response.status === 'connected' ){
+             console.log( 'Logged in and authenticated' );
+           } else {
+            console.log( 'Not authenticated' );
+            setElements(false);
+           }
+         }
+        
+        
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+        
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        }
+        function logout(){
+          FB.logout(function(response){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/";
+          });
+        }
+        
+        
+        </script>
     <img src="images/Setting/BackGround.png" id="background">
     <div class="setting">
         <img src="images/Setting/On.png" id="On">
@@ -59,7 +112,7 @@
                 <img src="images/Setting/AboutUs.png" class="Listt" id="AboutUs" onclick="GoToAboutUs()">
             </div>
             <div>
-                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut">
+                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut" href="#" onclick="logout()">
             </div>
         </div>
     </div>
