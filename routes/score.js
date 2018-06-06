@@ -1,4 +1,3 @@
-
 let express = require('express');
 let router = express.Router();
 
@@ -8,16 +7,16 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 
 router.get('/',function(req,res){
-  res.sendFile('setting.html', {
+  res.sendFile('Score.html', {
     root : 'public'
   });
 });
-/*
-router.post('/setting', urlencodedParser,function(req,res){
-    console.log(req.body);
-    mongoOperation.mongoInsert(req.body);
-    mongoOperation.mongoFind();
+
+router.post('/getscore', urlencodedParser,function(req,res){
+    
+    databaseCollection = "user";
+    mongoOperation.mongoSort(databaseCollection); 
 
 });
-*/
+
 module.exports = router;

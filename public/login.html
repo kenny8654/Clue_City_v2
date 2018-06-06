@@ -79,10 +79,8 @@
         function setElements(isLogin){
           if(isLogin){
             document.getElementById('fb-btn').style.display = 'none';
-            document.getElementById('start').style.display = 'block';
           }else{
             document.getElementById('fb-btn').style.display = 'block';
-            document.getElementById('start').style.display = 'none';
           }
         }
         function getProfile(){
@@ -99,13 +97,13 @@
         {
             $.ajax({
                 type: 'post',
-                url: './login/user',
+                url: './user',
                 data:Data
             });
         }
         
-        function gotohard(){
-          document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         
         
@@ -130,7 +128,7 @@
                 scope="public_profile,email"
                 onlogin="checkLoginState();"></div>
             
-            <img src="images/Login/start.png" onclick="gotohard()" id="Start">
+            <img src="images/Login/start.png" onclick="gotomenu()" id="Start">
         </div>
     </div>
 </body>

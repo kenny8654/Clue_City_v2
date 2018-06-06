@@ -8,16 +8,9 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 
 router.get('/',function(req,res){
-  res.sendFile('setting.html', {
+  res.sendFile('about.html', {
     root : 'public'
   });
 });
-/*
-router.post('/setting', urlencodedParser,function(req,res){
-    console.log(req.body);
-    mongoOperation.mongoInsert(req.body);
-    mongoOperation.mongoFind();
 
-});
-*/
 module.exports = router;
