@@ -37,7 +37,10 @@
         $("#X").click(function(){
             $(".TeamName").fadeOut();
             $("#VagueBack").fadeOut();
-        })
+        });
+        $("#Shihan").click(function(){
+            $("#FriendHead5").attr("src","images/Team/HsiHan.jpg");
+        });
     });
     </script>
 <body>
@@ -179,7 +182,7 @@
               });
             } 
             function gogaming(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.map";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
             }
             function gotoaddfriend(){
               document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.html"; //待補上
@@ -197,7 +200,7 @@
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
             }
             function gotofriend(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend.html";
             }
             function gotoScore(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
@@ -267,7 +270,7 @@
                     <div class="content">
                         <div class="header">Han Chen</div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png" onclick = "friend3()">
+                    <img class="Invite" src="images/Team/invite.png" id="Shihan" onclick = "friend3()">
                 </div>
                 <div class="item">
                     <img class="OnlineDot" src="images/Team/graydot.png">

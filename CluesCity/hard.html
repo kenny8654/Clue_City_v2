@@ -37,6 +37,14 @@
     <script>
         var single=1;
         $(document).ready(function(){
+            {
+                $("#2P").hide();
+                $("#4P").hide();
+                $("#6P").hide();
+                $("#8P").hide();
+                
+            }
+            
             $("#SingleText").click(function(){
                 if(single==1){
                     this.src="images/Mode/SingleTextG.png";
@@ -51,10 +59,18 @@
             $("#MultiText").click(function(){
                 if(multi==1){
                     this.src="images/Mode/MultiTextG.png";
+                    $("#2P").fadeIn(300);
+                    $("#4P").fadeIn(500);
+                    $("#6P").fadeIn(700);
+                    $("#8P").fadeIn(900);
                     multi=0;
                 }
                 else{
                     this.src="images/Mode/MultiText.png";
+                    $("#2P").fadeOut(900);
+                    $("#4P").fadeOut(700);
+                    $("#6P").fadeOut(500);
+                    $("#8P").fadeOut(300);
                     multi=1;
                 }
             });
