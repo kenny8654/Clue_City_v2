@@ -79,10 +79,8 @@
         function setElements(isLogin){
           if(isLogin){
             document.getElementById('fb-btn').style.display = 'none';
-            document.getElementById('start').style.display = 'block';
           }else{
             document.getElementById('fb-btn').style.display = 'block';
-            document.getElementById('start').style.display = 'none';
           }
         }
         function getProfile(){
@@ -99,7 +97,7 @@
         {
             $.ajax({
                 type: 'post',
-                url: './login/user',
+                url: './user',
                 data:Data
             });
         }

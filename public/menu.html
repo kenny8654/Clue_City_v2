@@ -173,23 +173,16 @@
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
-                  setElements(true);
                   getProfile();
                  } else {
                   console.log( 'Not authenticated' );
-                  setElements(false);
                  }
                }
-              
               
               function checkLoginState() {
                 FB.getLoginStatus(function(response) {
                   statusChangeCallback(response);
                 });
-              }
-              
-              function setElements(isLogin){
-                if(isLogin){}else{}
               }
     
               var responseData ;
@@ -201,18 +194,20 @@
                   }
                   responseData = response ;
                   PassToMain(responseData);
+                  let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+                  getPicture(url);
+                  getID(response.id);
                 })
               }
     
               function PassToMain(Data)
               {
-                console.log(Data);
                 $.ajax({
                   method : 'post',
-                  url: './menu/hard',
+                  url: './menu/menu',
                   data:Data,
                   success: function(data){
-                    $('#name').text(data);
+                    $('#Name').text(data);
                   }
                 });
               }
@@ -253,7 +248,6 @@
               
               function PassTocheck(Data , yes_no)
               {
-                //console.log(Data);
                 let sender = Data.sender;
                 let inviteto = Data.to;
                 let accept = yes_no ;
@@ -270,28 +264,13 @@
                   }
                 });
               }
-              
-              /*
-              var person = 0 ;
-              var difficulty = 0 ;
-              // choose person
-              for(var i = 2 ; i < 10 ; i+=2){
-                $(`${i}`).click(function(){
-                  person = i ;
-                })
+              function getPicture(url){
+                $("#bighead").attr("src",url);
               }
-              $('#1').click(function(){
-                  person = 1 ;
-              })
-              // choose difficulty
-              for(var i = 1 ; i < 4 ; i++){
-                $(`${i}`).click(function(){
-                  difficulty = i ;
-                })
+              function getID(id){
+                $("#ID").text(`ID: ${id}`);
               }
-              */
-              
-              </script>
+      </script>
     <img src="images/Login/background.png" id="background">
     <img src="images/Mode/ProfileBack.png" id="ProfileBack">
     <div class="mode">
@@ -300,10 +279,10 @@
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
         <div id="profile">
-            <img src="images/Mode/lisa.jpg" id="bighead">
+            <img src="" id="bighead">
             <div id="NameAndID">
-            <font size=4.5% class="text" id="Name">Lisa Huang</font>
-            <font size=2% font color="#A9A9A9" class="text" id="ID">ID:lisahuang0908</font>
+            <font size=4.5% class="text" id="Name"></font>
+            <font size=2% font color="#A9A9A9" class="text" id="ID"></font>
             </div>
         </div>
         <div id="ChooseMode">

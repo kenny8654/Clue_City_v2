@@ -30,22 +30,28 @@ router.post('/teammate', urlencodedParser,function(req,res){
 });
 
 router.post('/signal', urlencodedParser, function(req,res,callback){
-    var mongoCollection = "user";
     console.log("--------------------------------------");
     console.log(be_sender_id);
     console.log("--------------------------------------");
-    let data ;
-    new Promise((resolve,reject)=> {      
-      resolve(()=>{
-      data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);    
-      });
-    })
-    .then(()=>{
+    let data;
+
+    var get_data = findinvite(be_sender_id);
+    get_data.then( function(resolve,reject){
       console.log("tttttttttttttttttttttttttttttttttttttttt");
-      console.log(data);
-      res.send(data);
+      console.log(resolve);
+      res.send(resolve);
     });
 });
+
+function findinvite(be_sender_id){
+    var mongoCollection = "user";
+      return new Promise((resolve,reject)=> { 
+        data = mongoOperation.mongoFindinvite(mongoCollection, be_sender_id);    
+        resolve(data);
+      });
+
+}
+
 router.post('/checkresponse', urlencodedParser,function(req,res,callback){
     var mongoCollection = "user";
     console.log("test");

@@ -12,7 +12,7 @@ router.get('/',function(req,res){
   });
 });
 
-router.post('/hard', urlencodedParser,function(req,res){
+router.post('/menu', urlencodedParser,function(req,res){
     res.send(`${req.body.name}`);
 });
 
