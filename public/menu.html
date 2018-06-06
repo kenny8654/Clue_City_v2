@@ -55,6 +55,12 @@
                 if(single==1){
                     this.src="images/Mode/SingleTextG.png";
                     single=0;
+                    $("#MultiText").attr("src","images/Mode/MultiText.png");
+                    $("#2P").fadeOut(900);
+                    $("#4P").fadeOut(700);
+                    $("#6P").fadeOut(500);
+                    $("#8P").fadeOut(300);
+                    multi=1;
                 }
                 else{
                     this.src="images/Mode/SingleText.png";
@@ -70,6 +76,8 @@
                     $("#6P").fadeIn(700);
                     $("#8P").fadeIn(900);
                     multi=0;
+                    $("#SingleText").attr("src","images/Mode/SingleText.png");
+                    single=1;
                 }
                 else{
                     this.src="images/Mode/MultiText.png";
@@ -85,6 +93,12 @@
                 if(twoP==1){
                     this.src="images/Mode/2PG.png";
                     twoP=0;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/2P.png";
@@ -96,6 +110,12 @@
                 if(fourP==1){
                     this.src="images/Mode/4PG.png";
                     fourP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/4P.png";
@@ -107,6 +127,12 @@
                 if(sixP==1){
                     this.src="images/Mode/6PG.png";
                     sixP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/6P.png";
@@ -118,6 +144,12 @@
                 if(eightP==1){
                     this.src="images/Mode/8PG.png";
                     eightP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
                 }
                 else{
                     this.src="images/Mode/8P.png";
@@ -129,6 +161,10 @@
                 if(easy==1){
                     this.src="images/Mode/EasyTextG.png";
                     easy=0;
+                    $("#NormalText").attr("src","images/Mode/NormalText.png");
+                    normal=1;
+                    $("#HardText").attr("src","images/Mode/HardText.png");
+                    hard=1;
                 }
                 else{
                     this.src="images/Mode/EasyText.png";
@@ -140,6 +176,10 @@
                 if(normal==1){
                     this.src="images/Mode/NormalTextG.png";
                     normal=0;
+                    $("#EasyText").attr("src","images/Mode/EasyText.png");
+                    easy=1;
+                    $("#HardText").attr("src","images/Mode/HardText.png");
+                    hard=1;
                 }
                 else{
                     this.src="images/Mode/NormalText.png";
@@ -151,6 +191,10 @@
                 if(hard==1){
                     this.src="images/Mode/HardTextG.png";
                     hard=0;
+                    $("#NormalText").attr("src","images/Mode/NormalText.png");
+                    normal=1;
+                    $("#EasyText").attr("src","images/Mode/EasyText.png");
+                    easy=1;
                 }
                 else{
                     this.src="images/Mode/HardText.png";
