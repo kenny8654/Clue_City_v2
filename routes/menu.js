@@ -17,7 +17,6 @@ router.post('/menu', urlencodedParser,function(req,res){
 });
 
 router.post('/check', urlencodedParser,function(req,res){
-//    console.log(req.body);
     databaseCollection = "user";
     mongoOperation.checkinvite(
         databaseCollection ,

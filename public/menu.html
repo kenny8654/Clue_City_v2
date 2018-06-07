@@ -250,17 +250,14 @@
               {
                 let sender = Data.sender;
                 let inviteto = Data.to;
-                let accept = yes_no ;
-    
+                let accepted = yes_no ;
                 $.ajax({
                   method : 'post',
                   url: './menu/check',
                   data:{
-                    checkinvite : {
                       sender : sender ,
                       to : inviteto,
-                      accept : accept
-                    }
+                      accepted : accepted
                   }
                 });
               }
