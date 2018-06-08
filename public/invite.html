@@ -69,11 +69,9 @@
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
-                   setElements(true); 
                    getProfile();
                  } else {
                   console.log( 'Not authenticated' );
-                  setElements(false);
                  }
                }
               
@@ -82,10 +80,6 @@
                 FB.getLoginStatus(function(response) {
                   statusChangeCallback(response);
                 });
-              }
-              
-              function setElements(isLogin){
-                if(isLogin){}else{}
               }
               
               var responseData  ;
