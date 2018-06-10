@@ -13,7 +13,7 @@ router.get('/',function(req,res){
 });
 
 router.post('/getscore', urlencodedParser,function(req,res){
-    databaseCollection = "user";
+    databaseCollection = req.body.col;
     let object = mongoOperation.mongoSort(databaseCollection);
     object.then((val)=>{
       res.send(val);

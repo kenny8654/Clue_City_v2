@@ -39,7 +39,7 @@
     </script>
 </head>
 <body>
-<script>
+  <script>
                 window.fbAsyncInit = function() {
                     FB.init({
                       appId      : '177842309598524',
@@ -61,13 +61,19 @@
                      fjs.parentNode.insertBefore(js, fjs);
                    }(document, 'script', 'facebook-jssdk'));
               
-              
-                
+               var TeamOrPerson = 0;// 0 for person 1 for team
+               var choose ;
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
                    getProfile();
-                   get_leaderboard();
+                   if(TeamOrPerson == 0){
+                      choose = "user";
+                   }
+                   else{
+                      choose = "team";
+                   }
+                   get_leaderboard(choose);
                  } else {
                   console.log( 'Not authenticated' );
                  }
@@ -105,11 +111,13 @@
               
               var profile ;
 
-              function get_leaderboard(){
+              function get_leaderboard(team_or_person){
                 $.ajax ({
                   type : 'post',
                   url : './score/getscore',
-                  data : {},
+                  data : {
+                    col : team_or_person,
+                  },
                   success : function(data){
                     profile = data;
                     let url ;
@@ -134,8 +142,9 @@
               }
       
   
-</script>
-    <!--img src="images/Score/Main.png" id="background"-->
+            </script>
+
+    <img src="images/Score/Main.png" id="background"-->
     <div class="Score">
         <div class="topbar">
             <img src="images/Score/top.png" class="TopBarMid" id="ClueCityInMode">

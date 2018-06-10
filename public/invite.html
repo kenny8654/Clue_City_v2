@@ -128,8 +128,8 @@
                       type: 'post',
                       url: './invite/team',
                       data:{
-                        team_id : $("input[name='team_id']").val(),
-                        leader  : responseData.id,
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
                       }
                   });
               }
@@ -139,7 +139,8 @@
               var be_invited = 0;
               var invite_info = 0;
               var answer ;
-      
+              var num = 0;
+
               function checkresponse(){ 
                   $.ajax ({
                     type : 'post',
@@ -151,7 +152,8 @@
                         invite_info = data ;
                         if( invite_info.accepted == "1" ){
                           console.log("agree jion");
-                        //  join( invite_info.to);
+                        //  num++; 
+                        //  join( invite_info.to,num);
                         }
                         else{
                           console.log("reject jion");
@@ -161,12 +163,12 @@
                 });
               }
       
-            function join(teammate){
+            function join(teammate,num){
               $.ajax({
                 method : 'post',
                 url : './invite/teammate',
                 data : {
-                  id : teammate
+                  `teammate${num}` : teammate
                 },
               });
             } 

@@ -21,12 +21,13 @@ router.get('/',function(req,res){
 router.post('/team', urlencodedParser,function(req,res){
     let mongoCollection = "team";
     team = req.body; 
-    mongoOperation.mongoFind( mongoCollection , req.body);
+    mongoOperation.mongoFind( mongoCollection , team);
 });
 
 router.post('/teammate', urlencodedParser,function(req,res){
     let mongoCollection = "team";
-    mongoOperation.addteammate( mongoCollection , team , req.body);
+    let teammate = req.body ;
+    mongoOperation.addteammate( mongoCollection , team , teammate);
 });
 
 router.post('/signal', urlencodedParser, function(req,res){
