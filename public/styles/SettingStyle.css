@@ -5,6 +5,7 @@ body{
     position:absolute;
     z-index:-1;
     width: 100%;
+    height: 100%;
     left:0px;
     top:0px;
 }
@@ -12,6 +13,8 @@ body{
     position:absolute;
     left:0px;
     top: 0px;
+    width:100%;
+    height:5%;
     background-color:#4c4b4b;
 }
 .Music{
@@ -22,38 +25,37 @@ body{
 #Muse{
     width:50%;
 }
-#On{
+#SoundEffect{
     width:4%;
     position:absolute;
     top:40.55vw;
     left:62vw;
     z-index:1;
 }
-#Off{
+#MusicEffect{
     width:4%;
     position:absolute;
     top:49.5vw;
-    left:57vw;
+    left:62vw;
     z-index:1;
 }
 #Music{
     width:50%;
     margin-top:5%;
 }
-#ClueCityInMode{
+#Setting{
     position:relative;
-    margin-left:9%;
+    margin-left:0%;
     margin-top:0%;
     margin-bottom:0%;
-    width:80%;
-    height:8%;
+    width:100%;
 }
 #SettingIcon{
     position:relative;
     width:7%;
     margin-top:3%;
     margin-bottom:3%;
-    margin-left:0%;
+    margin-left:12%;
 }
 .List{
     margin-left:35%;
