@@ -133,9 +133,11 @@ function runPython(res) {
     console.log(data.toString());
     res.send(data.toString());
   })
-  wait(5000);
-  null_response.status(200).send();
-  null_response.redirect('./map');
+  setTimeout(function () {
+    null_response.status(200).send();
+    null_response.redirect('./map');
+  }, 5000);
+
 }
 
 module.exports = router;
