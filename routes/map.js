@@ -54,7 +54,7 @@ router.post('/map', urlencoderParser,function(req,res){
 // });
 
 router.post('/NULL', function(req, res){
-  res.end();
+
 });
 
 
@@ -84,7 +84,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
           fileName = "./CluesCity/target.jpg"
           if (fileName.indexOf('\\') != -1) {
             //fileName = fileName.substring(fileName.lastIndexOf('\\')+1);
-            fileName = "./CluesCity/target.jpg"
+            fileName = "./target.jpg"
           }
           console.log("File Name : " + fileName);
         }
