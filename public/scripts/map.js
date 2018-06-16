@@ -175,7 +175,8 @@ $(document).ready(function () {
 //   })
 // }
 
-function onSubmitButtonClicked() {
+function onSubmitButtonClicked(event) {
+  event.preventDefault();
   //上傳圖片的input
   var file = document.getElementById("submit_image")
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
