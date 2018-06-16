@@ -217,10 +217,10 @@ function onSubmitButtonClicked() {
       if (200 === data.code) {
         console.log("上傳成功！");
         if (data == "similar") {
-          document.getElementById('success').style.visibility = 'visible'
+          //document.getElementById('success').style.visibility = 'visible'
         }
         else {
-          document.getElementById('try_again').style.visibility = 'visible'
+          //document.getElementById('try_again').style.visibility = 'visible'
         }
       } else {
         console.log("上傳失敗！");
