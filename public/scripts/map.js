@@ -172,12 +172,19 @@ function small_clue_onclick() {
 //     processData: false,
 //   })
 // }
-$(document).on('click','submit_button',function(e){
+// $(document).on('click','submit_button',function(e){
 
-  e.preventDefault();
-  onSubmitButtonClicked();
-  //code here 
+//   e.preventDefault();
+ 
+//   //code here 
+//  });
+
+$(document).ready(function(){
+  $( 'submit_button' ).click( function( e ) {
+     e.preventDefault();
+     //do some other stuff here
  });
+})
 
 function onSubmitButtonClicked() {
   //上傳圖片的input
