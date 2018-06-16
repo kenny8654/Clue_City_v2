@@ -161,7 +161,7 @@ function onSubmitButtonClicked() {
       //$('#upload_response').text(data);
       //console.log(data)
       if (data == "similar") {
-        console.log("Similar")
+        console.log("similar")
       }
       else {
         console.log("not similar")
@@ -169,6 +169,7 @@ function onSubmitButtonClicked() {
     },
     error: function () {
       console.log("error!!!!!!!!!")
+      onSubmitButtonClicked();
     },
     cache: false,
     contentType: false,
