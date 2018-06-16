@@ -56,7 +56,11 @@ router.post('/map', urlencoderParser, function (req, res) {
 // });
 
 router.post('/NULL', function (req, res) {
-  null_response = res;
+
+  setTimeout(function () {
+    res.status(200).send('Success!');
+    res.redirect('./map');
+  }, 5000);  
   // res.status(200).send('Success!');
   // res.redirect('./map')
   // console.log('redirect');
@@ -133,10 +137,6 @@ function runPython(res) {
     console.log(data.toString());
     res.send(data.toString());
   })
-  setTimeout(function () {
-    null_response.status(200).send('Success!');
-    null_response.redirect('./map');
-  }, 5000);
 
 }
 
