@@ -190,7 +190,7 @@ $(document).ready(function () {
     e.preventDefault();
     return false;
   });
-  $('submit_button').on('submit', function (e) {
+  $('upload_form').on('post', function (e) {
     e.preventDefault();
     //do some other stuff here
   });
