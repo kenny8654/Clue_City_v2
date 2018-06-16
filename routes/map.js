@@ -54,8 +54,7 @@ router.post('/map', urlencoderParser,function(req,res){
 // });
 
 router.post('/NULL', function(req, res){
-    res.end();
-    res.redirect('./map');
+    res.status(200).redirect('./map').end();
     console.log('redirect');
 });
 
