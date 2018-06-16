@@ -179,6 +179,23 @@ function small_clue_onclick() {
 //   //code here 
 //  });
 
+$(document).ready(function () {
+  $('submit_button').on('click', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
+  $('upload_form').on('submit', function (e) {
+    e.preventDefault();
+  });
+  $('upload_form').on('get', function (e) {
+    e.preventDefault();
+    return false;
+  });
+  $('submit_button').on('submit', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
+})
 
 function onSubmitButtonClicked() {
   //上傳圖片的input
@@ -209,8 +226,7 @@ function onSubmitButtonClicked() {
         console.log("上傳失敗！");
       }
     },
-    error: function (e) {
-      console.log(e);
+    error: function () {
       console.log("與服務器通信發生錯誤");
     }
   });
