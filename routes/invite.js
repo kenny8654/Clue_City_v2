@@ -6,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let Promise = require("es6-promise").Promise;
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
-var sender_info = "sender_info"; 
+var sender_info = "sender_info";
 var be_sender_id = "be_sender_id" ; 
 var team;
 
@@ -19,15 +19,14 @@ router.get('/',function(req,res){
 });
 
 router.post('/team', urlencodedParser,function(req,res){
-    let mongoCollection = "team";
-    team = req.body; 
-    mongoOperation.mongoFind( mongoCollection , team);
+    team = req.body.name; 
 });
 
 router.post('/teammate', urlencodedParser,function(req,res){
     let mongoCollection = "team";
     let teammate = req.body ;
     mongoOperation.addteammate( mongoCollection , team , teammate);
+    res.send(team);
 });
 
 router.post('/signal', urlencodedParser, function(req,res){
@@ -47,11 +46,20 @@ router.post('/checkresponse', urlencodedParser,function(req,res){
 });
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok
+
       sender_info = req.body.sender;
-      be_sender_id = req.body.to;      
+      be_sender_id = {sender:"994408210718019",to:"2054568394572464"};      
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);
 });
+
+router.post('/tellteam',urlencodedParser,function(req,req){     
+    let mongoCollection = "team";
+    let entry = req.body;
+    console.log("---------------------------------------");
+    console.log(entry);
+    mongoOperation.addteammate( mongoCollection , team , entry);
+})
 
 module.exports = router;

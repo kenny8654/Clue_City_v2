@@ -16,6 +16,12 @@ router.post('/menu', urlencodedParser,function(req,res){
     res.send(`${req.body.name}`);
 });
 
+router.post('/team', urlencodedParser,function(req,res){
+    let mongoCollection = "team";
+    team = req.body; 
+    mongoOperation.mongoFind( mongoCollection , team);
+});
+
 router.post('/check', urlencodedParser,function(req,res){
     databaseCollection = "user";
     mongoOperation.checkinvite(

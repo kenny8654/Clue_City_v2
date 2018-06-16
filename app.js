@@ -40,9 +40,4 @@ app.use('/score',scoreRouter);
 app.use('/friend',friendRouter);
 app.use('/gallery',galleryRouter);
 
-
-
-
-
-
 module.exports = app;

@@ -2,85 +2,17 @@ var current = { lat: 22.996950, lng: 120.222417 }
 var flag = 0;
 var time = 1800;
 var markersList = [];    
-var demo = 0;
-var s = 0;
-
-$(document).ready(function () {
-});
-
-function cheat(){
-  demo =  demo + 1
-  if(demo == 1){
-    setTimeout("error()",2000);
-  }
-  if(demo == 2){
-    document.getElementById('try_again').style.visibility = 'hidden'
-  }
-}
-
-function ss(){
-  s =  s + 1
-  if(s == 1){
-    setTimeout("success()",2000);
-  }
-  if(s == 2){
-    document.getElementById('success').style.visibility = 'hidden'
-  }
-}
-
-function error(){
-  document.getElementById('try_again').style.visibility = 'visible'
-}
-
-function success(){
-  document.getElementById('success').style.visibility = 'visible'
-}
-
-function onSubmitButtonClicked(){
-  event.preventDefault();
-
-  var formData = new FormData($('#upload_form')[0]);
-  console.log('post');
-  $.ajax({
-    url : '/upload',
-    type : 'post',
-    data : formData,
-    success : function(data){
-      //$('#upload_response').text(data);
-      //console.log(data)
-      console.log("-************************")
-      if(data == "similar"){
-        document.getElementById('success').style.visibility = 'visible'
-      }
-      else{
-        document.getElementById('try_again').style.visibility = 'visible'
-      }
-    },  
-    error: function(){
-      console.log("error!!!!!!!!!")
-    },
-    cache: false,
-    contentType: false,
-    processData: false,
-  })
-
-  // document.getElementById('btn_clue').style.visibility ='hidden'
-  // document.getElementById('submit_image_label').style.visibility ='hidden'
-  // document.getElementById('submit_button_label').style.visibility ='hidden'
-  // document.getElementById('fb').style.visibility ='visible'
-  // document.getElementById('ig').style.visibility ='visible'
-  // document.getElementById('twitter').style.visibility ='visible'
-  // document.getElementById('big_clue_background').style.background = "";
-}
 
 function addMarker(){
   console.log("mark")
     var marker = new google.maps.Marker({
     position:  current,
     map: map,
-    icon: '../images/Map/marker.png'
+    icon: './images/Map/marker.png'
   });
   markersList.push(marker);
+
+  
 }
 
 function initMap() {
@@ -103,8 +35,6 @@ function initMap() {
     };
   });
 }
-
-//initMap();
 
 function getCircle(magnitude) {
   return {
@@ -160,10 +90,24 @@ function errorCallback(error) {
 }
 
 function doFallback() {
-
 }
 
+function Time()
+{
+    time -= 1;
+    if(Math.floor(time % 60) < 10)
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":0" +  Math.floor(time % 60);
+    else
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
+    if(time!=0)
+    {
+        setTimeout("Time()",1000);
+    }
+}
+Time();
+
 function btn_hide_onclick(){
+  console.log("click")
   document.getElementById('btn_clue').style.visibility = 'hidden'
   document.getElementById('big_clues_picture').style.visibility = 'hidden'
   document.getElementById('big_clue_background').style.visibility = 'hidden'
@@ -174,26 +118,8 @@ function btn_hide_onclick(){
   document.getElementById('submit_image').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
-  document.getElementById('try_again').style.visibility = 'hidden'
   document.getElementById('success').style.visibility = 'hidden'
 }
-
-function Time()
-{
-    time -= 1;
-    document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
-    if(time!=0)
-    {
-        setTimeout("Time()",1000);
-    }
-      
-}
-Time();
-
-$('#submit_button').click(function(event){
-  event.preventDefault();    
-  $('#upload_form').submit();
-});
 
 function btn_camera_onclick(){
   document.getElementById('btn_clue').style.visibility = 'visible'
@@ -202,12 +128,60 @@ function btn_camera_onclick(){
   document.getElementById('btn_hide').style.visibility = 'visible'
   document.getElementById('small_clue_background').style.visibility = 'hidden'
   document.getElementById('small_clue_picture').style.visibility = 'hidden'
-  document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_image').style.visibility = 'visible'
-  document.getElementById('submit_button_label').style.visibility = 'visible'
   document.getElementById('submit_button').style.visibility = 'visible'
 }
 
-function end(){
-  document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+function small_clue_onclick(){
+  document.getElementById('btn_clue').style.visibility = 'visible'
+  document.getElementById('big_clues_picture').style.visibility = 'visible'
+  document.getElementById('big_clue_background').style.visibility = 'visible'
+  document.getElementById('btn_hide').style.visibility = 'visible'
+  document.getElementById('small_clue_background').style.visibility = 'hidden'
+  document.getElementById('small_clue_picture').style.visibility = 'hidden'
+  document.getElementById('submit_image').style.visibility = 'visible'
+  document.getElementById('submit_button').style.visibility = 'visible'
 }
+
+//----------Han-----------------//
+$(document).ready(function () {
+});
+
+function onSubmitButtonClicked(){
+  event.preventDefault();
+
+  var formData = new FormData($('#upload_form')[0]);
+  console.log('post');
+  $.ajax({
+    url : '/upload',
+    type : 'post',
+    data : formData,
+    dataType : 'text',
+    success : function(data){
+      //$('#upload_response').text(data);
+      //console.log(data)
+      console.log("-************************")
+      if(data == "similar"){
+        document.getElementById('success').style.visibility = 'visible'
+      }
+      else{
+        document.getElementById('try_again').style.visibility = 'visible'
+      }
+    },  
+    error: function(){
+      console.log("error!!!!!!!!!")
+    },
+//    complete: function () {
+              //Handle the complete event
+//                       console.log("ajax completed ");
+//    }
+    cache: false,
+    contentType: false,
+    processData: false,
+  })
+}
+
+$('#submit_button').click(function(event){
+  event.preventDefault();    
+  $('#upload_form').submit();
+});
