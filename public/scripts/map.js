@@ -109,7 +109,10 @@ function btn_hide_onclick(){
 function Time()
 {
     time -= 1;
-    document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
+    if(Math.floor(time % 60) < 10)
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":0" +  Math.floor(time % 60);
+    else
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
     if(time!=0)
     {
         setTimeout("Time()",1000);
