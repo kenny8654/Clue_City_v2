@@ -175,15 +175,18 @@ function small_clue_onclick() {
 // $(document).on('click','submit_button',function(e){
 
 //   e.preventDefault();
- 
+
 //   //code here 
 //  });
 
-$(document).ready(function(){
-  $( 'submit_button' ).click( function( e ) {
-     e.preventDefault();
-     //do some other stuff here
- });
+$(document).ready(function () {
+  $('submit_button').on('click', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
+  $('upload_form').on('submit', function (e) {
+    e.preventDefault();
+  });
 })
 
 function onSubmitButtonClicked() {
