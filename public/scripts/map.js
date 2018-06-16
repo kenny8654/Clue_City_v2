@@ -11,6 +11,8 @@ function addMarker(){
     icon: './images/Map/marker.png'
   });
   markersList.push(marker);
+
+  
 }
 
 function initMap() {
@@ -88,8 +90,21 @@ function errorCallback(error) {
 }
 
 function doFallback() {
-
 }
+
+function Time()
+{
+    time -= 1;
+    if(Math.floor(time % 60) < 10)
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":0" +  Math.floor(time % 60);
+    else
+      document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
+    if(time!=0)
+    {
+        setTimeout("Time()",1000);
+    }
+}
+Time();
 
 function btn_hide_onclick(){
   console.log("click")
@@ -106,21 +121,6 @@ function btn_hide_onclick(){
   document.getElementById('success').style.visibility = 'hidden'
 }
 
-function Time()
-{
-    time -= 1;
-    if(Math.floor(time % 60) < 10)
-      document.getElementById('time').innerHTML= Math.floor(time / 60) +":0" +  Math.floor(time % 60);
-    else
-      document.getElementById('time').innerHTML= Math.floor(time / 60) +":" +  Math.floor(time % 60);
-    if(time!=0)
-    {
-        setTimeout("Time()",1000);
-    }
-      
-}
-Time();
-
 function btn_camera_onclick(){
   document.getElementById('btn_clue').style.visibility = 'visible'
   document.getElementById('big_clues_picture').style.visibility = 'visible'
@@ -128,9 +128,7 @@ function btn_camera_onclick(){
   document.getElementById('btn_hide').style.visibility = 'visible'
   document.getElementById('small_clue_background').style.visibility = 'hidden'
   document.getElementById('small_clue_picture').style.visibility = 'hidden'
-  document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_image').style.visibility = 'visible'
-  document.getElementById('submit_button_label').style.visibility = 'visible'
   document.getElementById('submit_button').style.visibility = 'visible'
 }
 
