@@ -61,19 +61,12 @@
                      fjs.parentNode.insertBefore(js, fjs);
                    }(document, 'script', 'facebook-jssdk'));
               
-               var TeamOrPerson = 0;// 0 for person 1 for team
                var choose ;
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
                    getProfile();
-                   if(TeamOrPerson == 0){
-                      choose = "user";
-                   }
-                   else{
-                      choose = "team";
-                   }
-                   get_leaderboard(choose);
+                   chooseMode(0);
                  } else {
                   console.log( 'Not authenticated' );
                  }
@@ -96,7 +89,18 @@
                   }
                 })
               }
-              
+
+              function chooseMode(TeamOrPerson){
+                    
+                   if( TeamOrPerson == 0){
+                      choose = "user";
+                   }
+                   else{
+                      choose = "team";
+                   }
+                   get_leaderboard(choose);
+              }
+
               function getMyScore(myprofile){
                 $.ajax({
                   type : 'post',
