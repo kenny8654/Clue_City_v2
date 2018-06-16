@@ -134,7 +134,7 @@ function runPython(res) {
     res.send(data.toString());
   })
   setTimeout(function () {
-    null_response.status(200).send();
+    null_response.status(200).send('Success!');
     null_response.redirect('./map');
   }, 5000);
 
