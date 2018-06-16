@@ -15,15 +15,17 @@ const multer = require('multer')
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 let mongoCollection = "user";
 
-router.get('/',function(req,res){
+var null_response;
+
+router.get('/', function (req, res) {
   res.sendFile('map.html', {
-    root : 'public'
+    root: 'public'
   });
 });
 
-router.post('/map', urlencoderParser,function(req,res){
-          
- //     mongoOperation.mongoFind( mongoCollection , req.body);
+router.post('/map', urlencoderParser, function (req, res) {
+
+  //     mongoOperation.mongoFind( mongoCollection , req.body);
 });
 
 // //配置diskStorage來控制文檔存儲的位置以及文檔名字等
@@ -53,10 +55,11 @@ router.post('/map', urlencoderParser,function(req,res){
 //   res.send();
 // });
 
-router.post('/NULL', function(req, res){
-    res.status(200).send('Success!');
-    res.redirect('./map')
-    console.log('redirect');
+router.post('/NULL', function (req, res) {
+  null_response = res;
+  // res.status(200).send('Success!');
+  // res.redirect('./map')
+  // console.log('redirect');
 });
 
 
@@ -116,7 +119,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
     } else {
       console.log('只能上传图片文件');
     }
-    
+
     runPython(res);
 
   })
@@ -130,6 +133,9 @@ function runPython(res) {
     console.log(data.toString());
     res.send(data.toString());
   })
+  wait(5000);
+  null_response.status(200).send();
+  null_response.redirect('./map');
 }
 
 module.exports = router;
