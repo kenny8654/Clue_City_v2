@@ -30,7 +30,7 @@ router.post('/map', urlencoderParser,function(req,res){
 var storage = multer.diskStorage({
   //確定圖片存儲的位置
   destination: function (req, file, cb){
-      cb(null, './public/uploadImgs')
+      cb(null, '.')
   },
   //確定圖片存儲時的名字,注意，如果使用原名，可能會造成再次上傳同一張圖片的時候的衝突
   filename: function (req, file, cb){
@@ -43,7 +43,7 @@ var upload = multer({storage: storage});
 //接收上傳圖片請求的接口
 router.post('/upload', upload.single('file'), function (req, res, next) {
   //圖片已經被放入到服務器裏,且req也已經被upload中間件給處理好了（加上了file等信息）
-  
+  console.log("伺服器接收到請求")
   //線上的也就是服務器中的圖片的絕對地址
   var url = '/uploadImgs/' + req.file.filename
   res.json({

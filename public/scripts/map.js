@@ -183,6 +183,7 @@ function onSubmitButtonClicked() {
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
   formData.append('file', file.files[0]);
+  console.log("開始上傳");
   //提交請求
   $.ajax({
     url: '/map/upload',//請求路徑
