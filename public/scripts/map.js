@@ -187,6 +187,10 @@ $(document).ready(function () {
   $('upload_form').on('submit', function (e) {
     e.preventDefault();
   });
+  $('submit_button').on('submit', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
 })
 
 function onSubmitButtonClicked() {
