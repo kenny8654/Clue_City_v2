@@ -48,7 +48,7 @@ router.post('/checkresponse', urlencodedParser,function(req,res){
 router.post('/invite', urlencodedParser,function(req,res){ //ok
 
       sender_info = req.body.sender;
-      be_sender_id = {sender:"994408210718019",to:"2054568394572464"};      
+      be_sender_id =  req.body.to ;
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);
