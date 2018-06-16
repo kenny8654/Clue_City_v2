@@ -143,41 +143,39 @@ function small_clue_onclick() {
 
 //----------Han-----------------//
 
-// function onSubmitButtonClicked() {
-//   event.preventDefault();
+function onSubmitButtonClicked() {
 
-//   var formData = new FormData($('#upload_form')[0]);
-//   console.log('post');
-//   $.ajax({
-//     url: '/upload',
-//     type: 'post',
-//     data: formData,
-//     dataType: 'text',
-//     success: function (data) {
-//       //$('#upload_response').text(data);
-//       //console.log(data)
-//       console.log("-************************")
-//       if (data == "similar") {
-//         document.getElementById('success').style.visibility = 'visible'
-//       }
-//       else {
-//         document.getElementById('try_again').style.visibility = 'visible'
-//       }
-//     },
-//     error: function () {
-//       console.log("error!!!!!!!!!")
-//     },
-//     cache: false,
-//     contentType: false,
-//     processData: false,
-//   })
-// }
-// $(document).on('click','submit_button',function(e){
+  var file = document.getElementById("submit_image")
+  //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
+  //創建formdata對象
+  var formData = new FormData();
+  //給formdata對象中放入數據(鍵值對的方式)
+  formData.append('file', file.files[0]);  console.log('post');
+  $.ajax({
+    url: './map/upload',
+    type: 'post',
+    data: formData,
+    dataType: 'text',
+    success: function (data) {
+      //$('#upload_response').text(data);
+      //console.log(data)
+      console.log("-************************")
+      if (data == "similar") {
+        document.getElementById('success').style.visibility = 'visible'
+      }
+      else {
+        document.getElementById('try_again').style.visibility = 'visible'
+      }
+    },
+    error: function () {
+      console.log("error!!!!!!!!!")
+    },
+    cache: false,
+    contentType: false,
+    processData: false,
+  })
+}
 
-//   e.preventDefault();
-
-//   //code here 
-//  });
 
 $(document).ready(function () {
   $('submit_button').on('click', function (e) {
@@ -197,38 +195,38 @@ $(document).ready(function () {
   });
 })
 
-function onSubmitButtonClicked() {
-  //上傳圖片的input
-  var file = document.getElementById("submit_image")
-  //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
-  //創建formdata對象
-  var formData = new FormData();
-  //給formdata對象中放入數據(鍵值對的方式)
-  formData.append('file', file.files[0]);
-  console.log("開始上傳");
-  //提交請求
-  $.ajax({
-    url: './map/upload',//請求路徑
-    type: 'POST',
-    data: formData,
-    contentType: false,//為了讓瀏覽器根據傳入的formdata來判斷contentType
-    processData: false,//同上
-    success: function (data) {
-      if (200 === data.code) {
-        console.log("上傳成功！");
-        if (data == "similar") {
-          //document.getElementById('success').style.visibility = 'visible'
-        }
-        else {
-          //document.getElementById('try_again').style.visibility = 'visible'
-        }
-      } else {
-        console.log("上傳失敗！");
-      }
-    },
-    error: function () {
-      console.log("與服務器通信發生錯誤");
-    }
-  });
-  console.log(1)
-}
+// function onSubmitButtonClicked() {
+//   //上傳圖片的input
+//   var file = document.getElementById("submit_image")
+//   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
+//   //創建formdata對象
+//   var formData = new FormData();
+//   //給formdata對象中放入數據(鍵值對的方式)
+//   formData.append('file', file.files[0]);
+//   console.log("開始上傳");
+//   //提交請求
+//   $.ajax({
+//     url: './map/upload',//請求路徑
+//     type: 'POST',
+//     data: formData,
+//     contentType: false,//為了讓瀏覽器根據傳入的formdata來判斷contentType
+//     processData: false,//同上
+//     success: function (data) {
+//       if (200 === data.code) {
+//         console.log("上傳成功！");
+//         if (data == "similar") {
+//           //document.getElementById('success').style.visibility = 'visible'
+//         }
+//         else {
+//           //document.getElementById('try_again').style.visibility = 'visible'
+//         }
+//       } else {
+//         console.log("上傳失敗！");
+//       }
+//     },
+//     error: function () {
+//       console.log("與服務器通信發生錯誤");
+//     }
+//   });
+//   console.log(1)
+// }
