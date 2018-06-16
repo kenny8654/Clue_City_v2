@@ -34,7 +34,8 @@ var storage = multer.diskStorage({
   },
   //確定圖片存儲時的名字,注意，如果使用原名，可能會造成再次上傳同一張圖片的時候的衝突
   filename: function (req, file, cb){
-      cb(null, Date.now()+file.originalname)
+    cb(null, 'target.jpg')  
+    //cb(null, file.originalname)
   }
 });
 //生成的專門處理上傳的一個工具，可以傳入storage、limits等配置
