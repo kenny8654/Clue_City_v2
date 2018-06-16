@@ -112,7 +112,6 @@
                 invite(sendto);         
               }       
       
-      
               function invite(sendto){
                 let sender =  responseData ;
                 let inviteto = sendto.id ;
@@ -125,19 +124,18 @@
                   }
                 });
               }
-      
-              function passtodatabase(){
-                  $.ajax({
-                      type: 'post',
-                      url: './invite/team',
-                      data:{
-                        name : $("input[name='team_id']").val(),
-                        id  : responseData.id,
-                      }
-                  });
+
+              function starting(){
+                $.ajax({
+                  type: 'post',
+                  url : './invite/tellteam',
+                  data : {
+                    enter : 1 ,
+                  }
+                })
+                gogaming();
               }
-              
-              
+
               var waitsignal = setInterval(checkresponse , 1000);
               var be_invited = 0;
               var invite_info = 0;
@@ -154,26 +152,42 @@
                       else{
                         invite_info = data ;
                         if( invite_info.accepted == "1" ){
-                          console.log("agree jion");
-                        //  num++; 
-                        //  join( invite_info.to,num);
+                          console.log("agree join");
+                          num++;
+                          if(num == 1){
+                            join1( invite_info.to);
+                          }
+                          else if(num ==2){
+                            join2( invite_info.to);
+                          }
                         }
                         else{
-                          console.log("reject jion");
+                          console.log("reject join");
                         }
                       }
                     }
                 });
               }
-      
-            function join(teammate,num){
+            
+            function join1(teammate){
               $.ajax({
                 method : 'post',
                 url : './invite/teammate',
                 data : {
-                  `teammate${num}` : teammate
+                  teammate1 : teammate,
                 },
               });
+              console.log("join1");
+            } 
+            function join2(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate2 : teammate,
+                },
+              });
+              console.log("join2");
             } 
             function gogaming(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
@@ -199,17 +213,6 @@
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
     <div id="VagueBack"></div>
-    <div class="TeamName">
-        <img src="images/Team/SmallBackground.png" id="SmallBack">
-        <div id="SetTeamName">
-            <img src="images/Team/X.png" id="X">
-            <p id="TeamText">團隊名稱：</p>
-            <div class="ui input" id="input">
-                <input type="text" placeholder="最多七字">
-            </div>
-            <img src="images/Team/OK.png" id="OK" onclick="gogaming()">
-        </div>
-    </div>
     <div class="team">
         <div class="topbar">
             <img src="images/Team/WhiteBack.png" id="WhiteBack" onclick="gobackmode()">
@@ -314,7 +317,7 @@
             </div>
         </div>
         <div id="StartGame">
-                <img src="images/Team/StartTheGame.png" id="StartGameIcon">
+                <img src="images/Team/StartTheGame.png" id="StartGameIcon" onclick = "starting()">
         </div>
         <div id="Bottom">
                 <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
@@ -322,9 +325,6 @@
                 <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" >
                 <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
         </div>
-        <!--
-        team ID: <input type="text" name = "team_id"><br>
-      <button type = "submit" onclick = "passtodatabase()">OK</button-->
     </div>
     
 </body>

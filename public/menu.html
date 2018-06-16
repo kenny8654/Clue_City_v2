@@ -337,6 +337,27 @@
               function getID(id){
                 $("#ID").text(`ID: ${id}`);
               }
+
+              function passtodatabase(){
+                  $.ajax({
+                      type: 'post',
+                      url: './menu/team',
+                      data:{
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
+                      }
+                  });
+
+                  $.ajax({
+                      type: 'post',
+                      url: './invite/team',
+                      data:{
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
+                      }
+                  });
+                  gotoinvite();
+              }
       </script>
     
     <div id="VagueBack"></div>
@@ -346,9 +367,9 @@
             <img src="images/Team/X.png" id="X">
             <p id="TeamText">團隊名稱：</p>
             <div class="ui input" id="input">
-                <input type="text" placeholder="最多七字">
+                <input type="text" name = "team_id" placeholder="最多七字">
             </div>
-            <img src="images/Team/OK.png" id="OK" onclick="gotoinvite()">
+            <img src="images/Team/OK.png" id="OK" type= "submit" onclick="passtodatabase()">
         </div>
     </div>
     <img src="images/Login/background.png" id="background">
