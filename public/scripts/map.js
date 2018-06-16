@@ -175,15 +175,11 @@ function small_clue_onclick() {
 $(document).on('click','submit_button',function(e){
 
   e.preventDefault();
- 
-  //code here
- 
-  return false;
- 
+  onSubmitButtonClicked();
+  //code here 
  });
 
 function onSubmitButtonClicked() {
-  event_.preventDefault();
   //上傳圖片的input
   var file = document.getElementById("submit_image")
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
