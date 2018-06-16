@@ -6,7 +6,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let Promise = require("es6-promise").Promise;
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
-var sender_info = "sender_info"; 
+var sender_info = "sender_info";
 var be_sender_id = "be_sender_id" ; 
 var team;
 
@@ -46,8 +46,9 @@ router.post('/checkresponse', urlencodedParser,function(req,res){
 });
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok
-    sender_info = req.body.sender;
-    be_sender_id = req.body.to;      
+
+      sender_info = req.body.sender;
+      be_sender_id = {sender:"994408210718019",to:"2054568394572464"};      
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);

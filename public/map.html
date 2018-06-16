@@ -45,7 +45,7 @@
     </div>
 
     <div id="big_clue">
-      <img id="big_clue_background" class="big_clue" src="./images/Map/user.jpg">
+      <img id="big_clue_background" class="big_clue" src="./images/Map/big_clue_background.png">
       <img id="btn_hide" class="big_clue" src="./images/Map/btn_hide.png" onclick="btn_hide_onclick()">
       <img id="btn_clue" class="big_clue" src="./images/Map/btn_clue.png">
       <img id="big_clues_picture" class="big_clue" src="./images/Map/clues_picture.jpg">
@@ -56,8 +56,8 @@
     </div>
 
     <div id="small_clue">
-      <img id="small_clue_background" class="small_clue" src="./images/Map/user.jpg">
-      <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg">
+      <img id="small_clue_background" class="small_clue" src="./images/Map/small_clue_background.png" onclick="small_clue_onclick()">
+      <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg" onclick="small_clue_onclick()">
     </div>
 
     <form id = "upload_form"  enctype="multipart/form-data">
@@ -72,14 +72,13 @@
           
       </label> -->
     </form>
-    <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg" width="200">
+    <!-- <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg" width="200"> -->
     <h1 id = "upload_response">  </h1>
-
-    <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg"   >
-    <h1 id = "upload_response">  </h1>
+    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi5IZ6geUCsf8gaf2olTlfXDxZw4K340&callback=initMap"
     async defer></script>
+    <script src="./scripts/map.js"></script>
     <script src="../routes/map.js" > </script>
-    <script src="./styles/map.js"></script>
+    
   </body>
 </html>
