@@ -142,7 +142,7 @@ html, body {
   top:66%;
 }
 
-#big_clues_picture{
+#big_clue_picture{
   position: absolute;
   height: 28%;
   left: 13%;
@@ -150,7 +150,7 @@ html, body {
 }
 
 .big_clue{
-  visibility: visible;
+  visibility: hidden;
 }
 
 #small_clue_background{
