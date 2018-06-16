@@ -145,37 +145,37 @@ function small_clue_onclick() {
 $(document).ready(function () {
 });
 
+// function onSubmitButtonClicked() {
+//   event.preventDefault();
+
+//   var formData = new FormData($('#upload_form')[0]);
+//   console.log('post');
+//   $.ajax({
+//     url: '/upload',
+//     type: 'post',
+//     data: formData,
+//     dataType: 'text',
+//     success: function (data) {
+//       //$('#upload_response').text(data);
+//       //console.log(data)
+//       console.log("-************************")
+//       if (data == "similar") {
+//         document.getElementById('success').style.visibility = 'visible'
+//       }
+//       else {
+//         document.getElementById('try_again').style.visibility = 'visible'
+//       }
+//     },
+//     error: function () {
+//       console.log("error!!!!!!!!!")
+//     },
+//     cache: false,
+//     contentType: false,
+//     processData: false,
+//   })
+// }
+
 function onSubmitButtonClicked() {
-  event.preventDefault();
-
-  var formData = new FormData($('#upload_form')[0]);
-  console.log('post');
-  $.ajax({
-    url: '/upload',
-    type: 'post',
-    data: formData,
-    dataType: 'text',
-    success: function (data) {
-      //$('#upload_response').text(data);
-      //console.log(data)
-      console.log("-************************")
-      if (data == "similar") {
-        document.getElementById('success').style.visibility = 'visible'
-      }
-      else {
-        document.getElementById('try_again').style.visibility = 'visible'
-      }
-    },
-    error: function () {
-      console.log("error!!!!!!!!!")
-    },
-    cache: false,
-    contentType: false,
-    processData: false,
-  })
-}
-
-function uploadFile() {
   //上傳圖片的input
   var file = document.getElementById("submit_image")
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
