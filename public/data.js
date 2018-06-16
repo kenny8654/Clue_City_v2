@@ -5,6 +5,3 @@ eqfeed_callback({"type":"FeatureCollection","features":[
     {"type":"Feature","properties":{"mag":7},"geometry":{"type":"Point","coordinates":[ 120.2224,22.9969,0]}}
 
 ]});
-
-
-
