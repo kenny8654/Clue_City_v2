@@ -142,10 +142,6 @@ function small_clue_onclick() {
 }
 
 //----------Han-----------------//
-$(document).ready(function (event) {
-    var event_ = event;
-    event.preventDefault();
-});
 
 // function onSubmitButtonClicked() {
 //   event.preventDefault();
@@ -176,6 +172,15 @@ $(document).ready(function (event) {
 //     processData: false,
 //   })
 // }
+$(document).on('click','submit_button',function(e){
+
+  e.preventDefault();
+ 
+  //code here
+ 
+  return false;
+ 
+ });
 
 function onSubmitButtonClicked() {
   event_.preventDefault();
