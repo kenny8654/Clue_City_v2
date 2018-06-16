@@ -28,30 +28,155 @@
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+           document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
-        }
-        function gotofriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
         }
         function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
 </head>
 <body>
-    <img src="images/Score/Main.png" id="background">
+  <script>
+                window.fbAsyncInit = function() {
+                    FB.init({
+                      appId      : '177842309598524',
+                      cookie     : true,
+                      xfbml      : true,
+                      version    : 'v3.0'
+                    });
+                      
+                    FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                  });               
+                };
+                
+                  (function(d, s, id){
+                     var js, fjs = d.getElementsByTagName(s)[0];
+                     if (d.getElementById(id)) {return;}
+                     js = d.createElement(s); js.id = id;
+                     js.src = "https://connect.facebook.net/en_US/sdk.js";
+                     fjs.parentNode.insertBefore(js, fjs);
+                   }(document, 'script', 'facebook-jssdk'));
+              
+               var TeamOrPerson = 0;// 0 for person 1 for team
+               var choose ;
+               function statusChangeCallback(response){
+                 if( response.status === 'connected' ){
+                   console.log( 'Logged in and authenticated' );
+                   getProfile();
+                   if(TeamOrPerson == 0){
+                      choose = "user";
+                   }
+                   else{
+                      choose = "team";
+                   }
+                   get_leaderboard(choose);
+                 } else {
+                  console.log( 'Not authenticated' );
+                 }
+               }
+              
+            
+              function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                  statusChangeCallback(response);
+                });
+              }
+              
+              var responseData  ;
+      
+              function getProfile(){
+                FB.api('/me?fields=name,email',function(response){
+                  if(response && !response.error){
+                    responseData = response ;
+                    getMyScore(responseData);
+                  }
+                })
+              }
+              
+              function getMyScore(myprofile){
+                $.ajax({
+                  type : 'post',
+                  url : './score/myscore',
+                  data : myprofile,
+                  success : function(data){
+                    console.log(data.score);
+                    $("#myScore").text(data.score);
+                  }
+                });
+              }
+              
+              var profile ;
+
+              function get_leaderboard(team_or_person){
+                $.ajax ({
+                  type : 'post',
+                  url : './score/getscore',
+                  data : {
+                    col : team_or_person,
+                  },
+                  success : function(data){
+                    profile = data;
+                    let url ;
+                    for(let i = 0; i < 3 ; i++){
+                      url = `https://graph.facebook.com/${profile[i].id}/picture?type-normal`;
+                      getPicture(url,(i+1));
+                      getName( profile[i].name,(i+1));
+                      getScore( profile[i].score,(i+1));
+                    }
+                  } 
+                });
+              }
+            
+              function getPicture(url,num){
+                $(`#bighead${num}`).attr("src",url);
+              }
+              function getName(getname,num){
+                $(`#name${num}`).text(getname);
+              }
+              function getScore(score,num){
+                $(`#score${num}`).text(score);
+              }
+      
+  
+            </script>
+
+    <img src="images/Score/Main.png" id="background"-->
     <div class="Score">
         <div class="topbar">
-            <img src="images/Score/top.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Score/top.png" class="TopBarMid" id="Setting">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
     </div>
+
+      <div>
+        <font id = "myScore"></font>
+      </div>
+
+      <div id = "No1">
+        <img src="" id = "bighead1">
+        <font id = "name1"></font>
+        <font id = "score1"></font>
+      </div>
+
+      <div id = "No2">
+        <img src="" id = "bighead2">
+        <font id = "name2"></font>
+        <font id = "score2"></font>
+      </div>
+
+      <div id = "No3">
+        <img src="" id = "bighead3">
+        <font id = "name3"></font>
+        <font id = "score3"></font>
+      </div>
+
     <div id="Bottom">
-            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclik="gotohome()">
-            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclik="gotogallery()">
+            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
             <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
             <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon">
     </div>

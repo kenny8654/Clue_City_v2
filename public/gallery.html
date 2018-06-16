@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/SettingStyle.css">
+  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
   <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
@@ -25,25 +25,29 @@
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
         }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+           document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         
         function gotofriend(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
         function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
 </head>
 <body>
-    <img src="images/Gallery/Main.png" id="background">
+    <img src="images/Gallery/Background.png" id="background">
     <div class="Gallery">
         <div class="topbar">
-            <img src="images/Gallery/top.png" class="TopBarMid" id="ClueCityInMode">
+            <img src="images/Gallery/top.png" class="TopBarMid" id="Gallery">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
     </div>
+    <div class="photos">
+        
+    </div>
+    
     <div id="Bottom">
             <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
             <img src="images/Gallery/Gallery.png" class="BottomIcon" id="GalleryIcon" >

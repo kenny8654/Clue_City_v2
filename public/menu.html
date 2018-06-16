@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/Mode.css">
+  <link rel="stylesheet" type="text/css" href="styles/MenuStyle.css">
   <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
@@ -21,26 +21,56 @@
             crossorigin="anonymous">
     </script>
     <script>
+        function gotosetting(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        }
+         function gotoinvite(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
+        }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
         }
         function gotofriend(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
         function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
     <script>
         var single=1;
         $(document).ready(function(){
+               $(".TeamName").hide();
+        $("#VagueBack").hide();
+        $("#Start").click(function(){
+            $(".TeamName").fadeIn();
+            $("#VagueBack").fadeIn();
+        });
+        $("#X").click(function(){
+            $(".TeamName").fadeOut();
+            $("#VagueBack").fadeOut();
+        });
+            {
+                $("#2P").hide();
+                $("#4P").hide();
+                $("#6P").hide();
+                $("#8P").hide();
+                
+            }
+            
             $("#SingleText").click(function(){
                 if(single==1){
                     this.src="images/Mode/SingleTextG.png";
                     single=0;
+                    $("#MultiText").attr("src","images/Mode/MultiText.png");
+                    $("#2P").fadeOut(900);
+                    $("#4P").fadeOut(700);
+                    $("#6P").fadeOut(500);
+                    $("#8P").fadeOut(300);
+                    multi=1;
                 }
                 else{
                     this.src="images/Mode/SingleText.png";
@@ -51,10 +81,20 @@
             $("#MultiText").click(function(){
                 if(multi==1){
                     this.src="images/Mode/MultiTextG.png";
+                    $("#2P").fadeIn(300);
+                    $("#4P").fadeIn(500);
+                    $("#6P").fadeIn(700);
+                    $("#8P").fadeIn(900);
                     multi=0;
+                    $("#SingleText").attr("src","images/Mode/SingleText.png");
+                    single=1;
                 }
                 else{
                     this.src="images/Mode/MultiText.png";
+                    $("#2P").fadeOut(900);
+                    $("#4P").fadeOut(700);
+                    $("#6P").fadeOut(500);
+                    $("#8P").fadeOut(300);
                     multi=1;
                 }
             });
@@ -63,6 +103,12 @@
                 if(twoP==1){
                     this.src="images/Mode/2PG.png";
                     twoP=0;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/2P.png";
@@ -74,6 +120,12 @@
                 if(fourP==1){
                     this.src="images/Mode/4PG.png";
                     fourP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/4P.png";
@@ -85,6 +137,12 @@
                 if(sixP==1){
                     this.src="images/Mode/6PG.png";
                     sixP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#8P").attr("src","images/Mode/8P.png");
+                    eightP=1;
                 }
                 else{
                     this.src="images/Mode/6P.png";
@@ -96,6 +154,12 @@
                 if(eightP==1){
                     this.src="images/Mode/8PG.png";
                     eightP=0;
+                    $("#2P").attr("src","images/Mode/2P.png");
+                    twoP=1;
+                    $("#4P").attr("src","images/Mode/4P.png");
+                    fourP=1;
+                    $("#6P").attr("src","images/Mode/6P.png");
+                    sixP=1;
                 }
                 else{
                     this.src="images/Mode/8P.png";
@@ -107,6 +171,10 @@
                 if(easy==1){
                     this.src="images/Mode/EasyTextG.png";
                     easy=0;
+                    $("#NormalText").attr("src","images/Mode/NormalText.png");
+                    normal=1;
+                    $("#HardText").attr("src","images/Mode/HardText.png");
+                    hard=1;
                 }
                 else{
                     this.src="images/Mode/EasyText.png";
@@ -118,6 +186,10 @@
                 if(normal==1){
                     this.src="images/Mode/NormalTextG.png";
                     normal=0;
+                    $("#EasyText").attr("src","images/Mode/EasyText.png");
+                    easy=1;
+                    $("#HardText").attr("src","images/Mode/HardText.png");
+                    hard=1;
                 }
                 else{
                     this.src="images/Mode/NormalText.png";
@@ -129,6 +201,10 @@
                 if(hard==1){
                     this.src="images/Mode/HardTextG.png";
                     hard=0;
+                    $("#NormalText").attr("src","images/Mode/NormalText.png");
+                    normal=1;
+                    $("#EasyText").attr("src","images/Mode/EasyText.png");
+                    easy=1;
                 }
                 else{
                     this.src="images/Mode/HardText.png";
@@ -167,31 +243,16 @@
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
-                  setElements(true);
                   getProfile();
                  } else {
                   console.log( 'Not authenticated' );
-                  setElements(false);
                  }
                }
-              
               
               function checkLoginState() {
                 FB.getLoginStatus(function(response) {
                   statusChangeCallback(response);
                 });
-              }
-              
-              function setElements(isLogin){
-                if(isLogin){}else{}
-              }
-              
-              function gotosetting(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
-              }
-    
-              function gotofriend(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
               }
     
               var responseData ;
@@ -203,18 +264,20 @@
                   }
                   responseData = response ;
                   PassToMain(responseData);
+                  let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+                  getPicture(url);
+                  getID(response.id);
                 })
               }
     
               function PassToMain(Data)
               {
-                console.log(Data);
                 $.ajax({
                   method : 'post',
-                  url: './hard/hard',
+                  url: './menu/menu',
                   data:Data,
                   success: function(data){
-                    $('#name').text(data);
+                    $('#Name').text(data);
                   }
                 });
               }
@@ -226,7 +289,7 @@
               function signal(){
                 $.ajax ({
                   type : 'post',
-                  url : './friend/signal',
+                  url : './invite/signal',
                   data : {},
                   success : function(data){
                     if( data == "" || data == null){
@@ -255,45 +318,39 @@
               
               function PassTocheck(Data , yes_no)
               {
-                //console.log(Data);
                 let sender = Data.sender;
                 let inviteto = Data.to;
-                let accept = yes_no ;
-    
+                let accepted = yes_no ;
                 $.ajax({
                   method : 'post',
-                  url: './hard/check',
+                  url: './menu/check',
                   data:{
-                    checkinvite : {
                       sender : sender ,
                       to : inviteto,
-                      accept : accept
-                    }
+                      accepted : accepted
                   }
                 });
               }
-              
-              /*
-              var person = 0 ;
-              var difficulty = 0 ;
-              // choose person
-              for(var i = 2 ; i < 10 ; i+=2){
-                $(`${i}`).click(function(){
-                  person = i ;
-                })
+              function getPicture(url){
+                $("#bighead").attr("src",url);
               }
-              $('#1').click(function(){
-                  person = 1 ;
-              })
-              // choose difficulty
-              for(var i = 1 ; i < 4 ; i++){
-                $(`${i}`).click(function(){
-                  difficulty = i ;
-                })
+              function getID(id){
+                $("#ID").text(`ID: ${id}`);
               }
-              */
-              
-              </script>
+      </script>
+    
+    <div id="VagueBack"></div>
+    <div class="TeamName">
+        <img src="images/Team/SmallBackground.png" id="SmallBack">
+        <div id="SetTeamName">
+            <img src="images/Team/X.png" id="X">
+            <p id="TeamText">團隊名稱：</p>
+            <div class="ui input" id="input">
+                <input type="text" placeholder="最多七字">
+            </div>
+            <img src="images/Team/OK.png" id="OK" onclick="gotoinvite()">
+        </div>
+    </div>
     <img src="images/Login/background.png" id="background">
     <img src="images/Mode/ProfileBack.png" id="ProfileBack">
     <div class="mode">
@@ -302,10 +359,10 @@
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
         <div id="profile">
-            <img src="images/Mode/lisa.jpg" id="bighead">
+            <img src="" id="bighead">
             <div id="NameAndID">
-            <font size=4.5% class="text" id="Name">Lisa Huang</font>
-            <font size=2% font color="#A9A9A9" class="text" id="ID">ID:lisahuang0908</font>
+            <font size=4.5% class="text" id="Name"></font>
+            <font size=2% font color="#A9A9A9" class="text" id="ID"></font>
             </div>
         </div>
         <div id="ChooseMode">
@@ -339,7 +396,7 @@
             </div>
 
             <div id="Start" >
-                <img src="images/Mode/start.png" id="StartIcon" onclick="gotofriend()">
+                <img src="images/Mode/start.png" id="StartIcon" >
             </div>
         </div>
         <div id="Bottom">

@@ -1,13 +1,13 @@
-
 let express = require('express');
 let router = express.Router();
 
 let bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
+let Promise = require("es6-promise").Promise;
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
-var sender_info = "sender_info"; 
-var be_sender_id = null; 
+var sender_info = "sender_info";
+var be_sender_id = "be_sender_id" ; 
 var team;
 
 router.use(bodyParser.json());
@@ -21,38 +21,29 @@ router.get('/',function(req,res){
 router.post('/team', urlencodedParser,function(req,res){
     let mongoCollection = "team";
     team = req.body; 
-    mongoOperation.mongoFind( mongoCollection , req.body);
+    mongoOperation.mongoFind( mongoCollection , team);
 });
 
 router.post('/teammate', urlencodedParser,function(req,res){
     let mongoCollection = "team";
-    mongoOperation.addteammate( mongoCollection , team , req.body);
+    let teammate = req.body ;
+    mongoOperation.addteammate( mongoCollection , team , teammate);
 });
 
-router.post('/signal', urlencodedParser, function(req,res,callback){
+router.post('/signal', urlencodedParser, function(req,res){
     var mongoCollection = "user";
-    console.log(be_sender_id);
-    console.log("--------------");
-    data = be_sender_id ;
-   // let data = mongoOperation.mongoFindinvite( mongoCollection , be_sender_id);
-    console.log(data);
-    console.log("--------------");
-    res.send(data);
-    //callback = a(res, data);
+    let object = mongoOperation.mongoFindinvite(mongoCollection, be_sender_id);
+    object.then((val)=>{
+      res.send(val);
+    });
 });
-/*
-function a(res, data){
-  res.send(data);
-  console.log(data);
-}
-*/
-router.post('/checkresponse', urlencodedParser,function(req,res,callback){
+
+router.post('/checkresponse', urlencodedParser,function(req,res){
     var mongoCollection = "user";
-    //console.log("test");
-    let data = mongoOperation.mongoFind_checkresponse( mongoCollection , sender_info);
-//    callback = function(){
-      res.send(data);
-//    }
+    let object = mongoOperation.mongoFind_checkresponse(mongoCollection,sender_info);
+    object.then((val)=>{
+      res.send(val);
+    });
 });
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok

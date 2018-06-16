@@ -7,22 +7,25 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false});
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 
 router.get('/',function(req,res){
-  res.sendFile('score.html', {
+  res.sendFile('Score.html', {
     root : 'public'
   });
 });
 
-router.post('/hard', urlencodedParser,function(req,res){
-    res.send(`${req.body.name}`);
+router.post('/getscore', urlencodedParser,function(req,res){
+    databaseCollection = req.body.col;
+    let object = mongoOperation.mongoSort(databaseCollection);
+    object.then((val)=>{
+      res.send(val);
+    });
 });
 
-router.post('/check', urlencodedParser,function(req,res){
-//    console.log(req.body);
+router.post('/myscore', urlencodedParser,function(req,res){
+    let myProfile = req.body;
     databaseCollection = "user";
-    mongoOperation.checkinvite(
-        databaseCollection ,
-        req.body.sender , 
-        req.body
-    ); 
+    let object = mongoOperation.Findone(databaseCollection,myProfile);
+    object.then((val)=>{
+      res.send(val);
+    });
 });
 module.exports = router;

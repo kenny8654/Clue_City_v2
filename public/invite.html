@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/FriendStyle.css">
+  <link rel="stylesheet" type="text/css" href="styles/InviteStyle.css">
   <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
@@ -73,11 +73,9 @@
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
-                   setElements(true); 
                    getProfile();
                  } else {
                   console.log( 'Not authenticated' );
-                  setElements(false);
                  }
                }
               
@@ -88,14 +86,6 @@
                 });
               }
               
-              function setElements(isLogin){
-                if(isLogin){}else{}
-              }
-              
-              function gotoabout_us(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/profile";
-              }
-      
               var responseData  ;
       
               function getProfile(){
@@ -107,7 +97,6 @@
               }
       
               function friend1(){
-                console.log(12344444);
                 let sendto = {"id":"1854028224617790"}; //致賢
                 invite(sendto);
               }       
@@ -130,7 +119,7 @@
                 let inviteto = sendto.id ;
                 $.ajax ({
                   type : 'post',
-                  url : './friend/invite',
+                  url : './invite/invite',
                   data : {
                       sender : sender.id,
                       to : inviteto,
@@ -141,10 +130,10 @@
               function passtodatabase(){
                   $.ajax({
                       type: 'post',
-                      url: './friend/team',
+                      url: './invite/team',
                       data:{
-                        team_id : $("input[name='team_id']").val(),
-                        leader  : responseData.id,
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
                       }
                   });
               }
@@ -154,57 +143,59 @@
               var be_invited = 0;
               var invite_info = 0;
               var answer ;
-      
-              function checkresponse(){
-      
+              var num = 0;
+
+              function checkresponse(){ 
                   $.ajax ({
                     type : 'post',
-                    url : './friend/checkresponse',
+                    url : './invite/checkresponse',
                     data : {},
                     success : function(data){
                       if( data == "" || data==null){}
                       else{
                         invite_info = data ;
-                        if( invite_info.checkinvite.accept == "1" ){
-                          join( invite_info.checkinvite.to);
+                        if( invite_info.accepted == "1" ){
+                          console.log("agree jion");
+                        //  num++; 
+                        //  join( invite_info.to,num);
+                        }
+                        else{
+                          console.log("reject jion");
                         }
                       }
                     }
                 });
               }
       
-            function join(teammate){
+            function join(teammate,num){
               $.ajax({
                 method : 'post',
-                url : './friend/teammate',
+                url : './invite/teammate',
                 data : {
-                  "id" : teammate
+                  `teammate${num}` : teammate
                 },
               });
             } 
             function gogaming(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/camera.html";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
             }
-            function gotoaddfriend(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/addfriend.html"; //待補上
+            function gotoinvite(){
+              document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite"; 
             }
             function gotosetting(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting"; //待補上
-            }
-            function gobackmode(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+              document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting"; 
             }
             function gotohome(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
             }
             function gotogallery(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
             }
             function gotofriend(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend.html";
             }
             function gotoScore(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
             }
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
@@ -279,7 +270,7 @@
                     <div class="content">
                         <div class="header">Chia Lin</div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png">
+                    <img class="Invite" src="images/Team/invite.png" onclick = "friend4()">
                 </div>
                 <div class="item">
                     <img class="OnlineDot" src="images/Team/greendot.png">
@@ -314,12 +305,12 @@
                     <img class="Invite" src="images/Team/invite.png">
                 </div>
                 <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
+                    <img class="OnlineDot" src="">
                     <img class="ui avatar image" src="images/Team/HsiHan.jpg">
                     <div class="content">
-                        <div class="header">Han Chen</div>
+                        <div class="header"></div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png">
+                    <img class="Invite" src="">
                 </div>
             </div>
         </div>

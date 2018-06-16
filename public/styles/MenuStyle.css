@@ -1,7 +1,61 @@
+.TeamName{
+    position:absolute;
+    z-index:3;
+    width:80vw;
+    height:70vw;
+    left:10vw;
+    top:70vw;
+    
+}
+#SmallBack{
+    position:absolute;
+    width:100%;
+}
+#VagueBack{
+    position:absolute;
+    z-index:2;
+    background-color:black;
+    opacity: 0.6;
+    width:100vw;
+    height:100%;
+    left:0px;
+    top:0px;
+}
+#input{
+    position:absolute;
+    top:16vw;
+    left:33vw;
+    width:50%;
+}
+#SetTeamName{
+    
+}
+#TeamText{
+    position:absolute;
+    top:17.5vw;
+    left:9vw;
+    font-size: large;
+    font-family: Microsoft JhengHei;
+    font-weight: 900;
+}
+#X{
+    position:absolute;
+    width:7%;
+    left:71vw;
+    top:3.5vw;
+}
+#OK{
+    position:absolute;
+    width:28%;
+    top:30vw;
+    left:33vw
+}
+
 #background{
     position:absolute;
     z-index:-2;
     width: 100%;
+    height: 100%;
     left:0px;
     top:0px;
 }

@@ -22,30 +22,116 @@
     </script>
     <script>
         function GoToAboutUs(){
-              document.location.href="https://luffy.ee.ncku.edu.tw:10047/profile"; //待補上
+              document.location.href="https://luffy.ee.ncku.edu.tw:10047/about"; 
             }
         function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/mode";
+           document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
         }
         function gotofriend(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
         }
         function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score.html";
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/Score";
         }
     </script>
 </head>
 <body>
+        <script>
+        
+                window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '177842309598524',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.0'
+              });
+                
+              FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+                
+            };
+          
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "https://connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        
+        
+          
+         function statusChangeCallback(response){
+           if( response.status === 'connected' ){
+             console.log( 'Logged in and authenticated' );
+           } else {
+            console.log( 'Not authenticated' );
+           }
+         }
+        
+        
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+        
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        }
+        function logout(){
+          FB.logout(function(response){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/";
+          });
+        }
+        
+        
+        </script>
+        <script> 
+            var SoundEffect=1;
+            var Music=1;
+            $(document).ready(function(){
+                $("#SoundEffect").click(function(){
+                    
+                    if(SoundEffect==1)
+                    {
+                        $("#SoundEffect").animate({left: '57vw'});
+                        this.src="images/Setting/Off.png";
+                        SoundEffect=0;
+                    }
+                    else
+                    {
+                        $("#SoundEffect").animate({left: '62vw'});
+                        this.src="images/Setting/On.png";
+                        SoundEffect=1;
+                    }
+                });
+                $("#MusicEffect").click(function(){
+                    if(Music==1)
+                    {
+                        $("#MusicEffect").animate({left: '57vw'});
+                        this.src="images/Setting/Off.png";
+                        Music=0;
+                    }
+                    else
+                    {
+                        $("#MusicEffect").animate({left: '62vw'});
+                        this.src="images/Setting/On.png";
+                        Music=1;
+                    }
+                });
+            });
+        </script> 
     <img src="images/Setting/BackGround.png" id="background">
     <div class="setting">
-        <img src="images/Setting/On.png" id="On">
-        <img src="images/Setting/Off.png" id="Off">
+        <img src="images/Setting/On.png" id="SoundEffect" >
+        <img src="images/Setting/On.png" id="MusicEffect">
         <div class="topbar">
-            <img src="images/Setting/top.png" class="TopBarMid" id="ClueCityInMode">
-            <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
+            <img src="images/Setting/top.png" class="TopBarMid" id="Setting">
         </div>
         <div class="Music">
             <img src="images/Setting/Muse.png" id="Muse">
@@ -59,7 +145,7 @@
                 <img src="images/Setting/AboutUs.png" class="Listt" id="AboutUs" onclick="GoToAboutUs()">
             </div>
             <div>
-                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut">
+                <img src="images/Setting/LogOut.png"  class="Listt" id="LogOut" href="#" onclick="logout()">
             </div>
         </div>
     </div>

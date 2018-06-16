@@ -5,36 +5,29 @@ var markersList = [];
 var demo = 0;
 var s = 0;
 
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 17,
+  center: current,
+  mapTypeId: 'terrain'
+});
+ addMarker()
+
+var script = document.createElement('script');
+
+script.src = './data.js';
+document.getElementsByTagName('head')[0].appendChild(script);
+
+map.data.setStyle(function (feature) {
+  var magnitude = feature.getProperty('mag');
+  return {
+    icon: getCircle(magnitude)
+  };
+});
+}
+
 $(document).ready(function () {
 });
-
-function cheat(){
-  demo =  demo + 1
-  if(demo == 1){
-    setTimeout("error()",2000);
-  }
-  if(demo == 2){
-    document.getElementById('try_again').style.visibility = 'hidden'
-  }
-}
-
-function ss(){
-  s =  s + 1
-  if(s == 1){
-    setTimeout("success()",2000);
-  }
-  if(s == 2){
-    document.getElementById('success').style.visibility = 'hidden'
-  }
-}
-
-function error(){
-  document.getElementById('try_again').style.visibility = 'visible'
-}
-
-function success(){
-  document.getElementById('success').style.visibility = 'visible'
-}
 
 function onSubmitButtonClicked(){
   event.preventDefault();
@@ -68,48 +61,18 @@ function onSubmitButtonClicked(){
     contentType: false,
     processData: false,
   })
-
-  // document.getElementById('btn_clue').style.visibility ='hidden'
-  // document.getElementById('submit_image_label').style.visibility ='hidden'
-  // document.getElementById('submit_button_label').style.visibility ='hidden'
-  // document.getElementById('fb').style.visibility ='visible'
-  // document.getElementById('ig').style.visibility ='visible'
-  // document.getElementById('twitter').style.visibility ='visible'
-  // document.getElementById('big_clue_background').style.background = "";
 }
 
 function addMarker(){
   console.log("mark")
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
     position:  current,
-    map: map,
-    icon: '../images/Map/marker.png'
+    setMap: map,
+    icon: './images/Map/marker.png'
   });
   markersList.push(marker);
 }
-
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 17,
-    center: current,
-    mapTypeId: 'terrain'
-  });
-   addMarker()
-
-  var script = document.createElement('script');
-
-  script.src = './data.js';
-  document.getElementsByTagName('head')[0].appendChild(script);
-
-  map.data.setStyle(function (feature) {
-    var magnitude = feature.getProperty('mag');
-    return {
-      icon: getCircle(magnitude)
-    };
-  });
-}
-
-//initMap();
+addMarker();
 
 function getCircle(magnitude) {
   return {
@@ -132,7 +95,7 @@ gps = function(){
     { maximumAge: 1000, timeout: 0 });
     setTimeout(gps,2000)
 }
-gps()
+gps();
 
 function successCallback(position) {
   var crd = position.coords;
@@ -165,7 +128,6 @@ function errorCallback(error) {
 }
 
 function doFallback() {
-
 }
 
 function btn_hide_onclick(){
@@ -179,7 +141,6 @@ function btn_hide_onclick(){
   document.getElementById('submit_image').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
   document.getElementById('submit_button').style.visibility = 'hidden'
-  document.getElementById('try_again').style.visibility = 'hidden'
   document.getElementById('success').style.visibility = 'hidden'
 }
 
@@ -191,7 +152,6 @@ function Time()
     {
         setTimeout("Time()",1000);
     }
-      
 }
 Time();
 
@@ -210,6 +170,17 @@ function btn_camera_onclick(){
   document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_image').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
+  document.getElementById('submit_button').style.visibility = 'visible'
+}
+
+function small_clue_onclick(){
+  document.getElementById('btn_clue').style.visibility = 'visible'
+  document.getElementById('big_clues_picture').style.visibility = 'visible'
+  document.getElementById('big_clue_background').style.visibility = 'visible'
+  document.getElementById('btn_hide').style.visibility = 'visible'
+  document.getElementById('small_clue_background').style.visibility = 'hidden'
+  document.getElementById('small_clue_picture').style.visibility = 'hidden'
+  document.getElementById('submit_image').style.visibility = 'visible'
   document.getElementById('submit_button').style.visibility = 'visible'
 }
 

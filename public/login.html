@@ -15,23 +15,36 @@
   <link rel="apple-touch-icon" href="images/logo.png">
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
+   <link rel="stylesheet" type="text/css" href="styles/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="styles/slick/slick-theme.css">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="styles/slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
   </script>
+        
+    </head>
+<body>
         <script>
             $(document).ready(function(){
-                $("#start").hide();
                 $(".fb-login-button").click(function(){
                     this.hide();
-                    $("#start").show();
+                    $("#Start").show();
+                });
+                
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).on('ready', function() {
+                $(".lazy").slick({
+                lazyLoad: 'ondemand', // ondemand progressive anticipated
+                infinite: true  
                 });
             });
         </script>
-    </head>
-<body>
         <script>
         
                 window.fbAsyncInit = function() {
@@ -79,10 +92,8 @@
         function setElements(isLogin){
           if(isLogin){
             document.getElementById('fb-btn').style.display = 'none';
-            document.getElementById('start').style.display = 'block';
           }else{
             document.getElementById('fb-btn').style.display = 'block';
-            document.getElementById('start').style.display = 'none';
           }
         }
         function getProfile(){
@@ -99,39 +110,44 @@
         {
             $.ajax({
                 type: 'post',
-                url: './login/user',
+                url: './user',
                 data:Data
             });
         }
         
-        function gotohard(){
-          document.location.href="https://luffy.ee.ncku.edu.tw:10047/hard";
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
         }
         
         
         </script>
-
+<section class="lazy slider" data-sizes="50vw">
+                <img src="images/Login/firstdes.png" class="loginDes" id="firstdes" >
+                <img src="images/Login/seconddes.png" class="loginDes" id="seconddes" >
+                <img src="images/Login/thirddes.png" class="loginDes" id="thirddes" >
+            </section>
     <img src="images/Login/background.png" id="background">
     <div class="login">
         <img src="images/Login/ClueCity.png" id="ClueCity">
-        <div>
-            <img  src="images/Login/firstdes.png" class="loginDes" id="firstdes" >
-            <img src="images/Login/seconddes.png" class="loginDes" id="seconddes" >
-            <img src="images/Login/thirddes.png" class="loginDes" id="thirddes" >
-                <div class="fb-login-button" 
-                id = "fb-btn"
-                data-width="200" 
-                data-max-rows="1" 
-                data-size="medium"
-                data-button-type="login_with"  
-                data-show-faces="false" 
-                data-auto-logout-link="false" 
-                data-use-continue-as="false"
-                scope="public_profile,email"
-                onlogin="checkLoginState();"></div>
+        <div class="container">
             
-            <img src="images/Login/start.png" onclick="gotohard()" id="Start">
         </div>
-    </div>
+            <div id="fb">
+                    <div class="fb-login-button" 
+                    id = "fb-btn"
+                    data-width="200" 
+                    data-max-rows="1" 
+                    data-size="medium"
+                    data-button-type="login_with"  
+                    data-show-faces="false" 
+                    data-auto-logout-link="false" 
+                    data-use-continue-as="false"
+                    scope="public_profile,email"
+                    onlogin="checkLoginState();">
+                    </div>
+            </div>
+            
+            <img src="images/Login/start.png" onclick="gotomenu()" id="Start">
+        </div>
 </body>
 </html>

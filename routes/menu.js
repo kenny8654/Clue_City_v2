@@ -12,12 +12,11 @@ router.get('/',function(req,res){
   });
 });
 
-router.post('/hard', urlencodedParser,function(req,res){
+router.post('/menu', urlencodedParser,function(req,res){
     res.send(`${req.body.name}`);
 });
 
 router.post('/check', urlencodedParser,function(req,res){
-//    console.log(req.body);
     databaseCollection = "user";
     mongoOperation.checkinvite(
         databaseCollection ,
