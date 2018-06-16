@@ -185,7 +185,7 @@ function uploadFile() {
   formData.append('file', file.files[0]);
   //提交請求
   $.ajax({
-    url: '/upload',//請求路徑
+    url: '/map/upload',//請求路徑
     type: 'POST',
     data: formData,
     contentType: false,//為了讓瀏覽器根據傳入的formdata來判斷contentType
