@@ -43,7 +43,7 @@ var upload = multer({storage: storage});
 //接收上傳圖片請求的接口
 router.post('/upload', upload.single('file'), function (req, res, next) {
   //圖片已經被放入到服務器裏,且req也已經被upload中間件給處理好了（加上了file等信息）
-  console.log("伺服器接收到請求")
+  console.log("Server start running....... *****************************************");
   //線上的也就是服務器中的圖片的絕對地址
   var url = '/uploadImgs/' + req.file.filename
   res.json({
