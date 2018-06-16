@@ -61,6 +61,7 @@ router.post('/NULL', function(req, res){
 
 
 router.post("/upload", urlencoderParser, function (req, res) {
+  console.log("Server receive request...")
   req.setEncoding('binary');
   var body = '';   // 文件数据
   var fileName = '';  // 文件名
@@ -108,10 +109,10 @@ router.post("/upload", urlencoderParser, function (req, res) {
       // 保存文件
       fs.writeFile(fileName, binaryData, 'binary', function (err) {
         console.log(err);
-        // res.send('Image has been uploaded.');
+        console.log('Image has been uploaded.');
       });
     } else {
-      // res.send('只能上传图片文件');
+      console.log('只能上传图片文件');
     }
     
     runPython(res);

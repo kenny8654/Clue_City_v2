@@ -150,7 +150,8 @@ function onSubmitButtonClicked() {
   //創建formdata對象
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
-  formData.append('file', file.files[0]);  console.log('post');
+  formData.append('file', file.files[0]);
+  console.log('開始圖片上傳');
   $.ajax({
     url: './map/upload',
     type: 'post',
@@ -159,12 +160,11 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       //console.log(data)
-      console.log("-************************")
       if (data == "similar") {
-        document.getElementById('success').style.visibility = 'visible'
+        console.log("Similar")
       }
       else {
-        document.getElementById('try_again').style.visibility = 'visible'
+        console.log("not similar")
       }
     },
     error: function () {
