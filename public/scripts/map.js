@@ -159,8 +159,8 @@ function onSubmitButtonClicked() {
     dataType: 'text',
     success: function (data) {
       //$('#upload_response').text(data);
-      //console.log(data)
-      if (data == "similar") {
+      console.log(data)
+      if (data == 'similar') {
         console.log("similar")
       }
       else {

@@ -54,7 +54,7 @@ router.post('/map', urlencoderParser,function(req,res){
 // });
 
 router.post('/NULL', function(req, res){
-
+    res.sendStatus(200);
 });
 
 
