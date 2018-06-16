@@ -55,10 +55,16 @@ router.post('/invite', urlencodedParser,function(req,res){ //ok
 
 router.post('/tellteam',urlencodedParser,function(req,req){     
     let mongoCollection = "team";
-    let entry = req.body;
-    console.log("---------------------------------------");
-    console.log(entry);
+    let entry = {clicked : '1'};
     mongoOperation.addteammate( mongoCollection , team , entry);
 })
 
+router.post('/teamstart', urlencodedParser,function(req,res){
+
+    let mongoCollection = "team";
+    let promise = mongoOperation.mongoFindstart( mongoCollection , team);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
 module.exports = router;

@@ -21,6 +21,9 @@
             crossorigin="anonymous">
     </script>
     <script>
+        function gogaming(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
+        }
         function gotosetting(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
         }
@@ -304,6 +307,22 @@
                 });
               }
     
+              var startsignal = setInterval(teamstart , 1000);
+    
+              function teamstart(){
+                $.ajax ({
+                  type : 'post',
+                  url : './invite/teamstart',
+                  data : {},
+                  success : function(data){
+                    if( data == "" || data == null){
+                    }else{
+                      clearInterval(startsignal);
+                      gogaming();
+                    }
+                  }
+                });
+              }
               function join(){
                 var r = confirm(`是否要加入 ${invite_info} ?`);
                 if( r == true ){
