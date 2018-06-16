@@ -72,11 +72,9 @@
                function statusChangeCallback(response){
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
-                   setElements(true); 
                    getProfile();
                  } else {
                   console.log( 'Not authenticated' );
-                  setElements(false);
                  }
                }
               
@@ -85,10 +83,6 @@
                 FB.getLoginStatus(function(response) {
                   statusChangeCallback(response);
                 });
-              }
-              
-              function setElements(isLogin){
-                if(isLogin){}else{}
               }
               
               var responseData  ;
@@ -137,8 +131,8 @@
                       type: 'post',
                       url: './invite/team',
                       data:{
-                        team_id : $("input[name='team_id']").val(),
-                        leader  : responseData.id,
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
                       }
                   });
               }
@@ -148,9 +142,9 @@
               var be_invited = 0;
               var invite_info = 0;
               var answer ;
-      
-              function checkresponse(){
-      
+              var num = 0;
+
+              function checkresponse(){ 
                   $.ajax ({
                     type : 'post',
                     url : './invite/checkresponse',
@@ -159,20 +153,25 @@
                       if( data == "" || data==null){}
                       else{
                         invite_info = data ;
-                        if( invite_info.checkinvite.accept == "1" ){
-                          join( invite_info.checkinvite.to);
+                        if( invite_info.accepted == "1" ){
+                          console.log("agree jion");
+                        //  num++; 
+                        //  join( invite_info.to,num);
+                        }
+                        else{
+                          console.log("reject jion");
                         }
                       }
                     }
                 });
               }
       
-            function join(teammate){
+            function join(teammate,num){
               $.ajax({
                 method : 'post',
                 url : './invite/teammate',
                 data : {
-                  "id" : teammate
+                  `teammate${num}` : teammate
                 },
               });
             } 
@@ -270,7 +269,7 @@
                     <div class="content">
                         <div class="header">Chia Lin</div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png">
+                    <img class="Invite" src="images/Team/invite.png" onclick = "friend4()">
                 </div>
                 <div class="item">
                     <img class="OnlineDot" src="images/Team/greendot.png">

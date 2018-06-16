@@ -13,10 +13,19 @@ router.get('/',function(req,res){
 });
 
 router.post('/getscore', urlencodedParser,function(req,res){
-    
-    databaseCollection = "user";
-    mongoOperation.mongoSort(databaseCollection); 
-
+    databaseCollection = req.body.col;
+    let object = mongoOperation.mongoSort(databaseCollection);
+    object.then((val)=>{
+      res.send(val);
+    });
 });
 
+router.post('/myscore', urlencodedParser,function(req,res){
+    let myProfile = req.body;
+    databaseCollection = "user";
+    let object = mongoOperation.Findone(databaseCollection,myProfile);
+    object.then((val)=>{
+      res.send(val);
+    });
+});
 module.exports = router;
