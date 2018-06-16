@@ -46,10 +46,12 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
   console.log("Server start running....... *****************************************");
   //線上的也就是服務器中的圖片的絕對地址
   var url = '/uploadImgs/' + req.file.filename
+  res.setContentType("text/javascript");
   res.json({
       code : 200,
       data : url
   })
+  res.send();
 });
 
 
