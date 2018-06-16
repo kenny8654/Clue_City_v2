@@ -57,13 +57,13 @@ router.post('/map', urlencoderParser, function (req, res) {
 
 router.post('/NULL', function (req, res) {
 
-  setTimeout(function () {
-    res.status(200).send('Success!');
-    res.redirect('./map');
-  }, 5000);  
-  // res.status(200).send('Success!');
-  // res.redirect('./map')
-  // console.log('redirect');
+  // setTimeout(function () {
+  //   res.status(200).send('Success!');
+  //   res.redirect('./map');
+  // }, 5000);  
+  // // res.status(200).send('Success!');
+  // // res.redirect('./map')
+  // // console.log('redirect');
 });
 
 
