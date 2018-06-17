@@ -1,0 +1,199 @@
+#background{
+    position:absolute;
+    z-index:-2;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    top:0px;
+}
+.topbar{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    background-color:#4c4b4b;
+}
+#topscore{
+    position:relative;
+    height:7%;
+    width:80%;
+    margin-left:10%;
+}
+#SettingIcon{
+    position:relative;
+    width:7%;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+#BigScore{
+    margin-top:32vw;
+    margin-left:34vw;
+    width:35vw;
+}
+#Billboard{
+    margin-left:25vw;
+    margin-top:3vw;
+    width:55vw;
+}
+#myScore{
+    position:absolute;
+    font-size: 11vw;
+    left:41.5vw;
+    top:59vw;
+    color:#4c4b4b;
+}
+#smallback{
+    position:absolute;
+    z-index:0;
+    width: 100%;
+    height: 100%;
+    left:0px;
+    top:0px;
+}
+.rank{
+    position:relative;
+    width:10vw;
+}
+.name{
+    font-weight:999;
+    font-size:4.5vw;
+    margin-left:3vw;
+    color:#4c4b4b;
+}
+.teamname{
+    font-weight:999;
+    font-size:4.5vw;
+    margin-left:15vw;
+    color:#4c4b4b;
+}
+.score{
+    color:#4c4b4b;
+    font-weight:999;
+    font-size:4.5vw;
+}
+#Second{
+    position:absolute;
+    top:27.5vw;
+}
+#Third{
+    position:absolute;
+    top:46.5vw;
+}
+#name1{
+    position:absolute;
+    top:13vw;
+}
+#name2{
+    position:absolute;
+    top:32vw;
+}
+#name3{
+    position:absolute;
+    top:51vw;
+}
+#score1{
+    position:absolute;
+    right:6vw;
+    top:13vw;
+}
+#score2{
+    position:absolute;
+    right:6vw;
+    top:32vw;
+}
+#score3{
+    position:absolute;
+    right:6vw;
+    top:51vw;
+}
+.LeaderBoard{
+    position:relative;
+    display:flex;
+    background-color:white;
+    width:67vw;
+    margin-left:16%;
+}
+#Leaderboard{
+    position:relative;
+    font-weight:999;
+    font-size:3.4vw;
+    background-color:white;
+    margin-top:2vw;
+    margin-left:24.8vw;
+    margin-bottom:2vw;
+}
+.ScoreList-single{
+    width:67vw;
+    height:63vw;
+    position:relative;
+    overflow:auto;
+    margin-left:16%;
+    background-image:url(/public/images/Score/smallback.png);
+    
+}
+.ScoreList-team{
+    width:67vw;
+    height:63vw;
+    position:relative;
+    overflow:auto;
+    margin-left:16%;
+    background-image:url(/public/images/Score/smallback.png);
+}
+.item{
+    top:10vw;
+}
+
+#Champ{
+    position:relative;
+    margin-top:3vw;
+    top:4vw;
+    margin-left:2vw;
+    width:7vw;
+    height:11vw;
+}
+.rank{
+    position:relative;
+    margin-top:3vw;
+    top:4vw;
+    margin-left:2vw;
+    width:6vw;
+    height:7vw;
+}
+#bighead1{
+    margin-left:2vw;
+    width:13vw;
+    height:13vw;
+}
+#bighead2{
+    margin-left:11.5vw;
+    margin-top:2.5vw;
+    width:13vw;
+    height:13vw;
+}
+#bighead3{
+    margin-left:11.5vw;
+    margin-top:2.5vw;
+    width:13vw;
+    height:13vw;
+}
+.mode{
+    width:30vw;
+}
+#Single{
+    margin-left:20vw;
+}
+#Team{
+    margin-left:2vw;
+}
+#Bottom{
+    position:absolute;
+    background-color:#c4dcc9;
+    bottom:0px;
+    left:0px;
+}
+.BottomIcon{
+    width:7%;
+    margin-left:8.5%;
+    margin-right:8.5%;
+    margin-top:2%;
+    margin-bottom:2%;
+}

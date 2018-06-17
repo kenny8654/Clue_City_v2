@@ -67,7 +67,7 @@
     top:19vw;
 }
 body{
-    overflow: hidden;
+    overflow:auto;
 }
 
 .topbar{
@@ -133,7 +133,7 @@ body{
     position:relative;
     margin-left:11%;
     margin-bottom:5%;
-    width:40%;
+    width:41vw;
 }
 #MultiMode{
     display:flex;
@@ -151,8 +151,8 @@ body{
     position:relative;
     margin-left:8%;
     margin-bottom:5%;
-    width:41%;
-    height:13%;
+    width:41vw;
+    height:22vw;
 }
 .PlayNum{
     position:relative;

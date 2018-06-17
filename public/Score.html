@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/SettingStyle.css">
+  <link rel="stylesheet" type="text/css" href="styles/ScoreStyle.css">
   <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
@@ -147,36 +147,94 @@
       
   
             </script>
-
-    <img src="images/Score/Main.png" id="background"-->
+    <script>
+        $(document).ready(function(){
+            $(".ScoreList-team").hide();
+            $("#Single").click(function(){
+                this.src="images/Score/SINGLE_1.png";
+                $("#Team").attr("src","images/Score/TEAM_2.png");
+                $(".ScoreList-single").show();
+                $(".ScoreList-team").hide();
+            });
+            $("#Team").click(function(){
+                this.src="images/Score/TEAM_1.png";
+                $("#Single").attr("src","images/Score/SINGLE_2.png");
+                $(".ScoreList-single").hide();
+                $(".ScoreList-team").show();
+            });
+        });
+    </script>
+    <img src="images/Score/BackGround.png" id="background">
     <div class="Score">
         <div class="topbar">
-            <img src="images/Score/top.png" class="TopBarMid" id="Setting">
+            <img src="images/Score/top.png" class="TopBarMid" id="topscore">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
     </div>
-
-      <div>
-        <font id = "myScore"></font>
-      </div>
-
-      <div id = "No1">
-        <img src="" id = "bighead1">
-        <font id = "name1"></font>
-        <font id = "score1"></font>
-      </div>
-
-      <div id = "No2">
-        <img src="" id = "bighead2">
-        <font id = "name2"></font>
-        <font id = "score2"></font>
-      </div>
-
-      <div id = "No3">
-        <img src="" id = "bighead3">
-        <font id = "name3"></font>
-        <font id = "score3"></font>
-      </div>
+        <img src="images/Score/SCORE.png" id="BigScore">
+        <img src="images/Score/billboard.png" id="Billboard">
+        <font id = "myScore">980</font>
+    <div class="LeaderBoard">
+        <font id="Leaderboard">Leaderboard</font>
+    </div>
+        <div class="ScoreList-single">
+            <div class="ui middle aligned selection list">
+                <div class="item" id="No1">
+                    <img src="images/Score/Champ.png" id="Champ">
+                    <img class="ui avatar image" src="images/Team/Glen.jpg" id = "bighead1" >
+                    <div class="content">
+                        <font class="name" id = "name1">Glen</font>
+                        <font class="score" id = "score1">900</font>
+                    </div>
+                </div>
+                <div class="item" id="No2">
+                    <img src="images/Score/Second.png" class="rank" id="Second">
+                    <img class="ui avatar image" src="images/Team/Lewis.jpg" id = "bighead2" >
+                    <div class="content">
+                        <font class="name" id = "name2">Lewis</font>
+                        <font class="score" id = "score2">850</font>
+                    </div>
+                </div>
+                <div class="item" id="No3">
+                    <img src="images/Score/Third.png" class="rank" id="Third">
+                    <img class="ui avatar image" src="images/Team/lisa.jpg" id = "bighead3" >
+                    <div class="content">
+                        <font class="name" id = "name3">Lisa</font>
+                        <font class="score" id = "score3">777</font>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ScoreList-team">
+            <div class="ui middle aligned selection list">
+                <div class="item" id="No1">
+                    <img src="images/Score/Champ.png" id="Champ">
+                    <div class="content">
+                        <font class="teamname" id = "name1">吃飯睡覺懶惰蟲</font>
+                        <font class="score" id = "score1">789</font>
+                    </div>
+                </div>
+                <div class="item" id="No2">
+                    <img src="images/Score/Second.png" class="rank" id="Second">
+                    <div class="content">
+                        <font class="teamname" id = "name2">拍拍捧胚</font>
+                        <font class="score" id = "score2">456</font>
+                    </div>
+                </div>
+                <div class="item" id="No3">
+                    <img src="images/Score/Third.png" class="rank" id="Third">
+                    <div class="content">
+                        <font class="teamname" id = "name3">滴滴哩叭哩低督</font>
+                        <font class="score" id = "score3">123</font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="chosemode">
+        <img src="images/Score/SINGLE_1.png" class="mode" id="Single">
+        <img src="images/Score/TEAM_2.png" class="mode" id="Team">
+    </div>
+      
 
     <div id="Bottom">
             <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
