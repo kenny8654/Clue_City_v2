@@ -32,8 +32,16 @@ router.post('/teammate', urlencodedParser,function(req,res){
 router.post('/signal', urlencodedParser, function(req,res){
     var mongoCollection = "user";
     let object = mongoOperation.mongoFindinvite(mongoCollection, be_sender_id);
+    let hi ;
     object.then((val)=>{
-      res.send(val);
+      if(val == null){
+        res.send(val);
+      }
+      else{
+        hi = { sender : val.sender , to : val.to , name : team};
+        console.log(hi);
+        res.send(hi);
+      }
     });
 });
 
@@ -68,4 +76,14 @@ router.post('/teamstart', urlencodedParser,function(req,res){
       res.send(val);
     })
 });
+
+router.post('/friend', urlencodedParser,function(req,res){
+
+    let mongoCollection = "user";
+    let promise = mongoOperation.GetFriend(mongoCollection);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
+
 module.exports = router;
