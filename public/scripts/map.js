@@ -417,6 +417,8 @@ function onSubmitButtonClicked() {
   document.getElementById("btn_clue").style.visibility = "hidden";
   document.getElementById("message").style.visibility = "hidden";
 
+  document.getElementById("loader_message").setAttribute('style', 'white-space: pre;');
+
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading ."
   }, 750);  
