@@ -417,6 +417,9 @@ function onSubmitButtonClicked() {
   document.getElementById("btn_clue").style.visibility = "hidden";
   document.getElementById("message").style.visibility = "hidden";
 
+  updateMessage();
+  
+
   var file = document.getElementById("submit_image");
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
   //創建formdata對象
@@ -456,10 +459,32 @@ function onSubmitButtonClicked() {
   })
 }
 
+function updateMessage(){
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading."
+  }, 750);  
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . "
+  }, 750); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . "
+  }, 750); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  .  <br> Image Processing ."
+  }, 750); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . ."
+  }, 750); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . . ."
+  }, 750); 
+}
+
 function onSelectClicked(){
   console.log("onSelectClicked()")
-  sleep(1000);
-  document.getElementById("message").style.visibility = "visible";
+  setTimeout(function(){
+    document.getElementById("message").style.visibility = "visible";
+  }, 1000);  
 }
 
 

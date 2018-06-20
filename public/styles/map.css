@@ -284,6 +284,13 @@ html, body {
   100% { transform: rotate(360deg); }
 }
 
+#loader_message{
+  position: absolute;
+  left : 27%;
+  top : 45%;
+  z-index: 4;
+}
+
 #message{
   position: absolute;
   height: 6%;
