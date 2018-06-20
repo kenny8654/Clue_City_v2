@@ -438,86 +438,113 @@ function onSubmitButtonClicked() {
     document.getElementById("loader_message").textContent = "Uploading . . . "
   }, 4500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 5250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 6000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 6750); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 7500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 8250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 9000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 9750); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 10500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 11250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 12000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 12750); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 13500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 14250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 15000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 15750);
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 16500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 17250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 18000);  
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 18750); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 19500); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 20250); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 21000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 22000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 230000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
   }, 24000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . ."
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
   }, 25000); 
   setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . . \r\n Processing . . ."
-  }, 260000); 
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
+  }, 26000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
+  }, 27000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
+  }, 28000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
+  }, 29000);
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
+  }, 30000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
+  }, 31000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
+  }, 32000);
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
+  }, 33000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
+  }, 34000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
+  }, 35000);   
 
   //updateMessage();
   
@@ -539,6 +566,8 @@ function onSubmitButtonClicked() {
       console.log(data)
       document.getElementById("loader").style.visibility = "hidden";
       document.getElementById("btn_hide").style.visibility = "visible";
+      document.getElementById("loader_message").style.visibility = "hidden";
+
 
       if (data.trim() == "similar") {
         document.getElementById("success").src = "./images/PhotoSharing/success.png"
@@ -569,7 +598,7 @@ function onSelectClicked(){
   console.log("onSelectClicked()")
   setTimeout(function(){
     document.getElementById("message").style.visibility = "visible";
-  }, 1000);  
+  }, 2500);  
 }
 
 
