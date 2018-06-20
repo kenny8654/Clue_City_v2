@@ -284,5 +284,6 @@ html, body {
   height: 6%;
   left: 40%;
   top:62%;
-  display: none;
+  z-index: 4;
+  visibility: hidden;
 }
