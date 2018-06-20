@@ -160,7 +160,7 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      if (data == 'similar') {
+      if (data == '1') {
         console.log("similar")
       }
       else {
@@ -195,39 +195,3 @@ $(document).ready(function () {
     //do some other stuff here
   });
 })
-
-// function onSubmitButtonClicked() {
-//   //上傳圖片的input
-//   var file = document.getElementById("submit_image")
-//   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
-//   //創建formdata對象
-//   var formData = new FormData();
-//   //給formdata對象中放入數據(鍵值對的方式)
-//   formData.append('file', file.files[0]);
-//   console.log("開始上傳");
-//   //提交請求
-//   $.ajax({
-//     url: './map/upload',//請求路徑
-//     type: 'POST',
-//     data: formData,
-//     contentType: false,//為了讓瀏覽器根據傳入的formdata來判斷contentType
-//     processData: false,//同上
-//     success: function (data) {
-//       if (200 === data.code) {
-//         console.log("上傳成功！");
-//         if (data == "similar") {
-//           //document.getElementById('success').style.visibility = 'visible'
-//         }
-//         else {
-//           //document.getElementById('try_again').style.visibility = 'visible'
-//         }
-//       } else {
-//         console.log("上傳失敗！");
-//       }
-//     },
-//     error: function () {
-//       console.log("與服務器通信發生錯誤");
-//     }
-//   });
-//   console.log(1)
-// }

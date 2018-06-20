@@ -29,10 +29,10 @@ for i,(m,n) in enumerate(matches):
                         flags = 0)
         count = count + 1
 if count >= 500:
-    print("similar")
+    print("1")
     sys.stdout.flush()
 else:
-    print("not similar")
+    print("0")
     sys.stdout.flush()
 img3 = cv2.drawMatchesKnn(img1,kp1,img2,kp2,matches,None,**draw_params)
 plt.imshow(img3,),plt.show()
