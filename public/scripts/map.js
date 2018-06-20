@@ -156,7 +156,7 @@ function onSubmitButtonClicked() {
     url: './map/upload',
     type: 'post',
     data: formData,
-    dataType: 'String',
+    dataType: 'text',
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
