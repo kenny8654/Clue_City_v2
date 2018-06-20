@@ -458,6 +458,7 @@ function onSubmitButtonClicked() {
 
 function onSelectClicked(){
   console.log("onSelectClicked()")
+  sleep(1000);
   document.getElementById("message").style.visibility = "visible";
 }
 
