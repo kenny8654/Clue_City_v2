@@ -410,6 +410,12 @@ function test() {
 function onSubmitButtonClicked() {
 
   document.getElementById("processing").style.visibility = "visible";
+  document.getElementById("submit_button_label").style.visibility = "hidden";
+  document.getElementById("submit_image_label").style.visibility = "hidden";
+  document.getElementById("big_clue_picture").style.visibility = "hidden";
+  document.getElementById("btn_hide").style.visibility = "hidden";
+  document.getElementById("btn_clue").style.visibility = "hidden";
+
   var file = document.getElementById("submit_image");
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
   //創建formdata對象
