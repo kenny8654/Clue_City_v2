@@ -422,135 +422,135 @@ function onSubmitButtonClicked() {
 
   document.getElementById("loader_message").setAttribute('style', 'white-space: pre;');
 
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading ."
-  }, 750);  
-  setTimeout(function(){
+  }, 750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . "
-  }, 1500); 
-  setTimeout(function(){
+  }, 1500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . "
-  }, 2250); 
-  setTimeout(function(){
+  }, 2250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading ."
-  }, 3000);  
-  setTimeout(function(){
+  }, 3000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . "
-  }, 3750); 
-  setTimeout(function(){
+  }, 3750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . "
-  }, 4500); 
-  setTimeout(function(){
+  }, 4500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 5250); 
-  setTimeout(function(){
+  }, 5250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 6000); 
-  setTimeout(function(){
+  }, 6000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 6750); 
-  setTimeout(function(){
+  }, 6750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 7500); 
-  setTimeout(function(){
+  }, 7500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 8250); 
-  setTimeout(function(){
+  }, 8250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 9000); 
-  setTimeout(function(){
+  }, 9000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 9750); 
-  setTimeout(function(){
+  }, 9750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 10500); 
-  setTimeout(function(){
+  }, 10500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 11250); 
-  setTimeout(function(){
+  }, 11250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 12000); 
-  setTimeout(function(){
+  }, 12000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 12750); 
-  setTimeout(function(){
+  }, 12750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 13500); 
-  setTimeout(function(){
+  }, 13500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 14250); 
-  setTimeout(function(){
+  }, 14250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 15000); 
-  setTimeout(function(){
+  }, 15000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 15750);
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 16500); 
-  setTimeout(function(){
+  }, 16500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 17250); 
-  setTimeout(function(){
+  }, 17250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 18000);  
-  setTimeout(function(){
+  }, 18000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 18750); 
-  setTimeout(function(){
+  }, 18750);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 19500); 
-  setTimeout(function(){
+  }, 19500);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 20250); 
-  setTimeout(function(){
+  }, 20250);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 21000); 
-  setTimeout(function(){
+  }, 21000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 22000); 
-  setTimeout(function(){
+  }, 22000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 230000); 
-  setTimeout(function(){
+  }, 230000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 24000); 
-  setTimeout(function(){
+  }, 24000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 25000); 
-  setTimeout(function(){
+  }, 25000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 26000); 
-  setTimeout(function(){
+  }, 26000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 27000); 
-  setTimeout(function(){
+  }, 27000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 28000); 
-  setTimeout(function(){
+  }, 28000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 29000);
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 30000); 
-  setTimeout(function(){
+  }, 30000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 31000); 
-  setTimeout(function(){
+  }, 31000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
   }, 32000);
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing ."
-  }, 33000); 
-  setTimeout(function(){
+  }, 33000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . ."
-  }, 34000); 
-  setTimeout(function(){
+  }, 34000);
+  setTimeout(function () {
     document.getElementById("loader_message").textContent = "Uploading . . . \r\nProcessing . . ."
-  }, 35000);   
+  }, 35000);
 
   //updateMessage();
-  
+
 
   var file = document.getElementById("submit_image");
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
@@ -571,21 +571,20 @@ function onSubmitButtonClicked() {
       document.getElementById("btn_hide").style.visibility = "visible";
       document.getElementById("loader_message").style.visibility = "hidden";
 
-
       if (data.trim() == "similar") {
         document.getElementById("success").src = "./images/PhotoSharing/success.png"
         document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
-        document.getElementById("success").style.visibility = "visible";
-        document.getElementById("success_message").style.visibility = "visible";
         console.log("similar")
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
         document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
-        document.getElementById("success").style.visibility = "visible";
-        document.getElementById("success_message").style.visibility = "visible";
         console.log("not similar")
       }
+      setTimeout(function () {
+        document.getElementById("success").style.visibility = "visible";
+        document.getElementById("success_message").style.visibility = "visible";
+      }, 800);
     },
     error: function () {
       console.log("error!!!!!!!!!")
@@ -597,15 +596,15 @@ function onSubmitButtonClicked() {
   })
 }
 
-function updateMessage(){
-  
+function updateMessage() {
+
 }
 
-function onSelectClicked(){
+function onSelectClicked() {
   console.log("onSelectClicked()")
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("message").style.visibility = "visible";
-  }, 2500);  
+  }, 2500);
 }
 
 
