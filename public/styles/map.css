@@ -262,7 +262,7 @@ html, body {
 
 #loader {
   position: absolute;
-  left: 40%;
+  left: 42%;
   top:35%;
   z-index: 4;
   border: 8px solid #f3f3f3; /* Light grey */
@@ -277,4 +277,12 @@ html, body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+#message{
+  position: absolute;
+  height: 6%;
+  left: 40%;
+  top:62%;
+  display: none;
 }

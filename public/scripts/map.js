@@ -435,12 +435,12 @@ function onSubmitButtonClicked() {
       document.getElementById("btn_hide").style.visibility = "visible";
 
       if (data.trim() == "similar") {
-        document.getElementById("success").style.src = "./images/PhotoSharing/try_again.png"
+        document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
         document.getElementById("success").style.visibility = "show";
         console.log("similar")
       }
       else {
-        document.getElementById("success").style.src = "./images/PhotoSharing/success.png"
+        document.getElementById("success").src = "./images/PhotoSharing/success.png"
         document.getElementById("success").style.visibility = "show";
         console.log("not similar")
       }
@@ -453,6 +453,10 @@ function onSubmitButtonClicked() {
     contentType: false,
     processData: false,
   })
+}
+
+function onSelectClicked(){
+  document.getElementById("message").style.visibility = "visible";
 }
 
 
