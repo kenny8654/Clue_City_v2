@@ -8,6 +8,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande", sans-serif;
 }
 
 #title_bar{
@@ -282,7 +283,7 @@ html, body {
 #message{
   position: absolute;
   height: 6%;
-  left: 40%;
+  left: 45%;
   top:62%;
   z-index: 4;
   visibility: hidden;
