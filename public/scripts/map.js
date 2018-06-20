@@ -419,22 +419,22 @@ function onSubmitButtonClicked() {
 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading."
-  }, 1000);  
+  }, 750);  
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . . "
-  }, 1000); 
+  }, 1500); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . "
-  }, 1000); 
+  }, 2250); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  .  <br> Image Processing ."
-  }, 1000); 
+  }, 3000); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . ."
-  }, 1000); 
+  }, 3750); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . . ."
-  }, 1000); 
+  }, 4500); 
 
   //updateMessage();
   
