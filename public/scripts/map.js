@@ -160,7 +160,7 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      if (data.valueOf() == "1") {
+      if (data.trim() == "1") {
         console.log("similar")
       }
       else {
