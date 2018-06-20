@@ -571,12 +571,16 @@ function onSubmitButtonClicked() {
 
       if (data.trim() == "similar") {
         document.getElementById("success").src = "./images/PhotoSharing/success.png"
+        document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
         document.getElementById("success").style.visibility = "visible";
+        document.getElementById("success_message").style.visibility = "visible";
         console.log("similar")
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
+        document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
         document.getElementById("success").style.visibility = "visible";
+        document.getElementById("success_message").style.visibility = "visible";
         console.log("not similar")
       }
     },

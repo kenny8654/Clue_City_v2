@@ -247,6 +247,14 @@ html, body {
   z-index: 4;
   visibility: hidden;
 }
+#success_message{
+  position: absolute;
+  height: 12%;
+  left: 25%;
+  top:65%;
+  z-index: 4;
+  visibility: hidden;
+}
 
 #try_again{
   position: absolute;
@@ -286,8 +294,8 @@ html, body {
 
 #loader_message{
   position: absolute;
-  left : 35%;
-  top : 46%;
+  left : 38%;
+  top : 49%;
   z-index: 4;
 }
 
