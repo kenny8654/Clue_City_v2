@@ -417,7 +417,26 @@ function onSubmitButtonClicked() {
   document.getElementById("btn_clue").style.visibility = "hidden";
   document.getElementById("message").style.visibility = "hidden";
 
-  updateMessage();
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading."
+  }, 1000);  
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . . "
+  }, 1000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . "
+  }, 1000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  .  <br> Image Processing ."
+  }, 1000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . ."
+  }, 1000); 
+  setTimeout(function(){
+    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . . ."
+  }, 1000); 
+
+  //updateMessage();
   
 
   var file = document.getElementById("submit_image");
@@ -460,24 +479,7 @@ function onSubmitButtonClicked() {
 }
 
 function updateMessage(){
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading."
-  }, 1000);  
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . . "
-  }, 1000); 
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . .  . "
-  }, 1000); 
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . .  .  <br> Image Processing ."
-  }, 1000); 
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . ."
-  }, 1000); 
-  setTimeout(function(){
-    document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . . ."
-  }, 1000); 
+  
 }
 
 function onSelectClicked(){
