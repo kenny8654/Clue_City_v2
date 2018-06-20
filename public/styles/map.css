@@ -286,8 +286,8 @@ html, body {
 
 #loader_message{
   position: absolute;
-  left : 27%;
-  top : 45%;
+  left : 35%;
+  top : 55%;
   z-index: 4;
 }
 
