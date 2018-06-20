@@ -122,6 +122,9 @@ function btn_hide_onclick() {
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('submit_image_label').style.visibility = 'hidden'
   document.getElementById('submit_button_label').style.visibility = 'hidden'
+  document.getElementById('message').style.visibility = 'hidden'
+  document.getElementById('success_message').style.visibility = 'hidden'
+
 }
 
 function btn_camera_onclick() {
@@ -135,6 +138,8 @@ function btn_camera_onclick() {
   document.getElementById('submit_button').style.visibility = 'visible'
   document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
+  document.getElementById('message').style.visibility = 'visible'
+  document.getElementById('success_message').style.visibility = 'visible'
 }
 
 function small_clue_onclick() {
@@ -149,6 +154,8 @@ function small_clue_onclick() {
   document.getElementById('submit_button').style.visibility = 'visible'
   document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
+  document.getElementById('message').style.visibility = 'visible'
+  document.getElementById('success_message').style.visibility = 'visible'
 }
 
 function clue() {
