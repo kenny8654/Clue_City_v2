@@ -431,6 +431,9 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
+      document.getElementById("loader").style.visibility = "hidden";
+      document.getElementById("btn_hide").style.visibility = "visible";
+
       if (data.trim() == "similar") {
         console.log("similar")
       }
