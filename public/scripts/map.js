@@ -1,7 +1,10 @@
 var current = { lat: 22.996950, lng: 120.222417 }
 var flag = 0;
 var time = 1800;
+<<<<<<< HEAD
 var is_big_clue = 0;
+=======
+>>>>>>> feature/image_process
 var markersList = [];
 
 function addMarker() {
@@ -94,6 +97,7 @@ function doFallback() {
 }
 
 function Time() {
+
   clue();
   time -= 1;
   if (Math.floor(time % 60) < 10)
@@ -399,44 +403,59 @@ function test() {
 }
 
 //----------Han-----------------//
-$(document).ready(function () {
-});
 
 function onSubmitButtonClicked() {
-  event.preventDefault();
 
-  var formData = new FormData($('#upload_form')[0]);
-  console.log('post');
+
+  var file = document.getElementById("submit_image")
+  //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
+  //創建formdata對象
+  var formData = new FormData();
+  //給formdata對象中放入數據(鍵值對的方式)
+  formData.append('file', file.files[0]);
+  console.log('開始圖片上傳');
   $.ajax({
-    url: '/upload',
+    url: './map/upload',
     type: 'post',
     data: formData,
     dataType: 'text',
     success: function (data) {
       //$('#upload_response').text(data);
-      //console.log(data)
-      console.log("-************************")
-      if (data == "similar") {
-        document.getElementById('success').style.visibility = 'visible'
+
+      console.log(data)
+      if (data.trim() == "similar") {
+        console.log("similar")
       }
       else {
-        document.getElementById('try_again').style.visibility = 'visible'
+        console.log("not similar")
       }
     },
     error: function () {
       console.log("error!!!!!!!!!")
+      onSubmitButtonClicked();
     },
-    //    complete: function () {
-    //Handle the complete event
-    //                       console.log("ajax completed ");
-    //    }
     cache: false,
     contentType: false,
     processData: false,
   })
 }
 
-$('#submit_button').click(function (event) {
-  event.preventDefault();
-  $('#upload_form').submit();
-});
+
+$(document).ready(function () {
+  $('submit_button').on('click', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
+  $('upload_form').on('submit', function (e) {
+    e.preventDefault();
+  });
+  $('upload_form').on('get', function (e) {
+    e.preventDefault();
+    return false;
+  });
+  $('upload_form').on('post', function (e) {
+    e.preventDefault();
+    //do some other stuff here
+  });
+})
+

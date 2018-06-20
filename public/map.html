@@ -60,10 +60,12 @@
       <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg" onclick="small_clue_onclick()">
     </div>
 
-    <form id = "upload_form"  enctype="multipart/form-data">
+    <form id = "upload_form"  enctype="multipart/form-data" method="POST" action="./map/NULL"> -->
 
       <input id = "submit_image"type="file" class="big_clue" name="image" accept="image/*" capture="user" >
       <button id = "submit_button" class="big_clue"  onClick = "onSubmitButtonClicked()">Upload </button>
+
+      <!-- <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button> -->
 
       <!-- <label id="submit_image_label" >
           
@@ -77,8 +79,7 @@
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi5IZ6geUCsf8gaf2olTlfXDxZw4K340&callback=initMap"
     async defer></script>
-    <script src="./scripts/map.js"></script>
-    <script src="../routes/map.js" > </script>
+    <script src="./scripts/map.js" type="text/javascript"></script>
     
   </body>
 </html>
