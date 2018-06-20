@@ -259,3 +259,7 @@ html, body {
 #upload_response{
   visibility: hidden;
 }
+
+#processing{
+  visibility: hidden;
+}

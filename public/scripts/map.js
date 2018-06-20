@@ -409,7 +409,7 @@ function test() {
 
 function onSubmitButtonClicked() {
 
-
+  getElementById("processing").setStyle(" visibility: visable ")
   var file = document.getElementById("submit_image")
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
   //創建formdata對象
@@ -424,7 +424,6 @@ function onSubmitButtonClicked() {
     dataType: 'text',
     success: function (data) {
       //$('#upload_response').text(data);
-
       console.log(data)
       if (data.trim() == "similar") {
         console.log("similar")
