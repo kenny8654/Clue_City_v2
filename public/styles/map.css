@@ -249,9 +249,9 @@ html, body {
 }
 #success_message{
   position: absolute;
-  height: 12%;
-  left: 25%;
-  top:65%;
+  height: 15%;
+  left: 30%;
+  top:55%;
   z-index: 4;
   visibility: hidden;
 }
