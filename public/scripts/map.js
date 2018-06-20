@@ -462,22 +462,22 @@ function onSubmitButtonClicked() {
 function updateMessage(){
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading."
-  }, 750);  
+  }, 1000);  
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . . "
-  }, 750); 
+  }, 1000); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . "
-  }, 750); 
+  }, 1000); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  .  <br> Image Processing ."
-  }, 750); 
+  }, 1000); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . ."
-  }, 750); 
+  }, 1000); 
   setTimeout(function(){
     document.getElementById("loader_message").textContent = "Uploading . .  . <br> Image Processing . . ."
-  }, 750); 
+  }, 1000); 
 }
 
 function onSelectClicked(){
