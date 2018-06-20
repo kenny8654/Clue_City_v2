@@ -156,11 +156,11 @@ function onSubmitButtonClicked() {
     url: './map/upload',
     type: 'post',
     data: formData,
-    dataType: 'text',
+    dataType: 'String',
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      if (data.valueOf() === "1") {
+      if (data.valueOf() == "1") {
         console.log("similar")
       }
       else {
