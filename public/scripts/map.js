@@ -409,7 +409,7 @@ function test() {
 
 function onSubmitButtonClicked() {
 
-  document.getElementsByClassName("loader").style.visibility = "visible";
+  document.getElementById("loader").style.visibility = "visible";
   document.getElementById("submit_button_label").style.visibility = "hidden";
   document.getElementById("submit_image_label").style.visibility = "hidden";
   document.getElementById("big_clue_picture").style.visibility = "hidden";

@@ -260,7 +260,7 @@ html, body {
   visibility: hidden;
 }
 
-.loader {
+#loader {
   position: absolute;
   left: 40%;
   top:35%;
