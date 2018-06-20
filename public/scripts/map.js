@@ -415,6 +415,7 @@ function onSubmitButtonClicked() {
   document.getElementById("big_clue_picture").style.visibility = "hidden";
   document.getElementById("btn_hide").style.visibility = "hidden";
   document.getElementById("btn_clue").style.visibility = "hidden";
+  document.getElementById("message").style.visibility = "hidden";
 
   var file = document.getElementById("submit_image");
   //因為準備用post提交，又因為圖片的內容比較大，所以我們選擇使用formdata來承載數據
@@ -435,12 +436,12 @@ function onSubmitButtonClicked() {
       document.getElementById("btn_hide").style.visibility = "visible";
 
       if (data.trim() == "similar") {
-        document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
+        document.getElementById("success").src = "../images/PhotoSharing/try_again.png"
         document.getElementById("success").style.visibility = "show";
         console.log("similar")
       }
       else {
-        document.getElementById("success").src = "./images/PhotoSharing/success.png"
+        document.getElementById("success").src = "../images/PhotoSharing/success.png"
         document.getElementById("success").style.visibility = "show";
         console.log("not similar")
       }
