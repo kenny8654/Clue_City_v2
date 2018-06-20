@@ -5,7 +5,7 @@
     height:70vw;
     left:10vw;
     top:70vw;
-    
+        
 }
 #SmallBack{
     position:absolute;
@@ -48,7 +48,7 @@
     position:absolute;
     width:28%;
     top:30vw;
-    left:33vw
+    left:33vw;
 }
 
 #background{
@@ -67,11 +67,12 @@
     top:19vw;
 }
 body{
-    overflow:auto;
+    overflow:hidden;
 }
 
 .topbar{
-    position:absolute;
+    position:fixed;
+    
     left:0px;
     top: 0px;
     background-color:#4c4b4b;
@@ -193,7 +194,7 @@ body{
     width:80%;
 }
 #Bottom{
-    position:absolute;
+    position:fixed;
     background-color:#c4dcc9;
     bottom:0px;
     left:0px;
