@@ -250,8 +250,8 @@ html, body {
 #success_message{
   position: absolute;
   height: 15%;
-  left: 30%;
-  top:55%;
+  left: 27%;
+  top:60%;
   z-index: 4;
   visibility: hidden;
 }
