@@ -11,6 +11,7 @@ const querystring = require('querystring');
 const bodyParser = require('body-parser');
 const urlencoderParser = bodyParser.urlencoded({ extended: false });
 const multer = require('multer')
+var teamname = null;
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 let mongoCollection = "user";
@@ -66,8 +67,13 @@ router.post('/NULL', function (req, res) {
   // // console.log('redirect');
 });
 
+router.post("/team",urlencoderParser,function(req,res){
+  teamname = req.body.name;
+})
 
-
+router.post("/return_teamname",urlencoderParser,function(req,res){
+  res.send(teamname);
+})
 
 router.post("/upload", urlencoderParser, function (req, res) {
   console.log("Server receive request...")

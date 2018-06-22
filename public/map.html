@@ -18,7 +18,85 @@
 
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        
+                window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '177842309598524',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.0'
+              });
+                
+              FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+                
+            };
+          
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "https://connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        
+        
+          
+         function statusChangeCallback(response){
+           if( response.status === 'connected' ){
+             console.log( 'Logged in and authenticated' );
+             getProfile();
+             GetTeamName();
+           } else {
+            console.log( 'Not authenticated' );
+           }
+         }
+        
+        
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+        function getProfile(){
+          FB.api('/me?fields=name,email',function(response){
+            if(response && !response.error){
+              let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+              getPicture(url);
+              console.log("has get profile");
+            }    
+          })
+        }
+        
+        var team_name ;
+        function GetTeamName()
+        {
+            $.ajax({
+                type: 'post',
+                url: './map/return_teamname',
+                data:{},
+                success : function(data){
+                  team_name = data ;
+                  $('#team_name').text(data);
+                }
+            });
+        }
+        
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        }
+        
+        function getPicture(url){
+          $('#user_pic').attr("src",url);
+        }
+        
 
+        </script>
+  <script>
+    
+  </script>
   <div id="title_bar">
     <img id="title" src="./images/Map/clues_city.png">
     <img id="user_pic" src="./images/Map/user.jpg">
