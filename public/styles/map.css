@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande", sans-serif;
+}
 #map {
   height: 77%;
   z-index: 0;
@@ -8,6 +12,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande", sans-serif;
 }
 
 #title_bar{
@@ -142,7 +147,7 @@ html, body {
   top:66%;
 }
 
-#big_clues_picture{
+#big_clue_picture{
   position: absolute;
   height: 28%;
   left: 13%;
@@ -150,7 +155,7 @@ html, body {
 }
 
 .big_clue{
-  visibility: visible;
+  visibility: hidden;
 }
 
 #small_clue_background{
@@ -177,10 +182,10 @@ html, body {
   height: 6%;
   left: 30%;
   top:62%;
-  /* display: none; */
+  display: none;
 }
 
-/* #submit_image_label{
+#submit_image_label{
   position: absolute;
   background-image: url(https://i.imgur.com/PYTVQM7.png);
   height: 26px;
@@ -189,17 +194,17 @@ html, body {
   top:62%;
   cursor: pointer;
   z-index: 4;
-} */
+}
 
 #submit_button{
   position: absolute;
   height: 3%;
   left: 33%;
   top:68%;
-  /* display: none; */
+  display: none;
 }
 
-/* #submit_button_label{
+#submit_button_label{
   position: absolute;
   background-image: url(https://i.imgur.com/6qdwuaf.png);
   height: 26px;
@@ -208,7 +213,7 @@ html, body {
   top:68%;
   cursor: pointer;
   z-index: 4;
-} */
+}
 
 #fb{
   position: absolute;
@@ -242,6 +247,14 @@ html, body {
   z-index: 4;
   visibility: hidden;
 }
+#success_message{
+  position: absolute;
+  height: 15%;
+  left: 26%;
+  top:60%;
+  z-index: 4;
+  visibility: hidden;
+}
 
 #try_again{
   position: absolute;
@@ -257,5 +270,40 @@ html, body {
 }
 
 #upload_response{
+  visibility: hidden;
+}
+
+#loader {
+  position: absolute;
+  left: 42%;
+  top:35%;
+  z-index: 4;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #00bb73; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  visibility: hidden;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader_message{
+  position: absolute;
+  left : 38%;
+  top : 49%;
+  z-index: 4;
+}
+
+#message{
+  position: absolute;
+  height: 6%;
+  left: 55%;
+  top:62%;
+  z-index: 4;
   visibility: hidden;
 }
