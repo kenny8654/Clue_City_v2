@@ -22,6 +22,10 @@ router.post('/team', urlencodedParser,function(req,res){
     team = req.body.name; 
 });
 
+router.post('/get_teamname', urlencodedParser,function(req,res){
+    res.send(team);
+    team = null ;
+});
 router.post('/teammate', urlencodedParser,function(req,res){
     let mongoCollection = "team";
     let teammate = req.body ;
@@ -31,14 +35,15 @@ router.post('/teammate', urlencodedParser,function(req,res){
 
 router.post('/signal', urlencodedParser, function(req,res){
     var mongoCollection = "user";
-    let object = mongoOperation.mongoFindinvite(mongoCollection, be_sender_id);
+    let myId = req.body.id ;
+    let object = mongoOperation.mongoFindinvite(mongoCollection, myId);
     let hi ;
     object.then((val)=>{
       if(val == null){
         res.send(val);
       }
       else{
-        hi = { sender : val.sender , to : val.to , name : team};
+        hi = val ;
         console.log(hi);
         res.send(hi);
       }
@@ -47,31 +52,31 @@ router.post('/signal', urlencodedParser, function(req,res){
 
 router.post('/checkresponse', urlencodedParser,function(req,res){
     var mongoCollection = "user";
-    let object = mongoOperation.mongoFind_checkresponse(mongoCollection,sender_info);
+    let sender = req.body.sender ;
+    let object = mongoOperation.mongoFind_checkresponse(mongoCollection,sender);
     object.then((val)=>{
       res.send(val);
     });
 });
 
 router.post('/invite', urlencodedParser,function(req,res){ //ok
-
-      sender_info = req.body.sender;
-      be_sender_id =  req.body.to ;
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);
 });
 
-router.post('/tellteam',urlencodedParser,function(req,req){     
+router.post('/tellteam',urlencodedParser,function(req,res){     
     let mongoCollection = "team";
     let entry = {clicked : '1'};
-    mongoOperation.addteammate( mongoCollection , team , entry);
+    let teamname = req.body.name ;
+    mongoOperation.addteammate( mongoCollection , teamname , entry);
 })
 
 router.post('/teamstart', urlencodedParser,function(req,res){
 
     let mongoCollection = "team";
-    let promise = mongoOperation.mongoFindstart( mongoCollection , team);
+    let teamname = req.body.name ;
+    let promise = mongoOperation.mongoFindstart( mongoCollection , teamname);
     promise.then((val)=>{
       res.send(val);
     })

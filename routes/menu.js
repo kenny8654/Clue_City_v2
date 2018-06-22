@@ -5,15 +5,11 @@ let bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
-
+let team ;
 router.get('/',function(req,res){
   res.sendFile('menu.html', {
     root : 'public'
   });
-});
-
-router.post('/menu', urlencodedParser,function(req,res){
-    res.send(`${req.body.name}`);
 });
 
 router.post('/team', urlencodedParser,function(req,res){

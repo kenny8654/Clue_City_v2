@@ -259,32 +259,23 @@
               }
     
               var responseData ;
-    
+
+              var myId;
+
               function getProfile(){
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     console.log("has get profile");
                   }
                   responseData = response ;
-                  PassToMain(responseData);
+                  myId = response.id ;
+                  $('#Name').text(response.name);
                   let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
                   getPicture(url);
                   getID(response.id);
                 })
               }
-    
-              function PassToMain(Data)
-              {
-                $.ajax({
-                  method : 'post',
-                  url: './menu/menu',
-                  data:Data,
-                  success: function(data){
-                    $('#Name').text(data);
-                  }
-                });
-              }
-              
+
               var waitsignal = setInterval(signal , 1000);
               var invite_info = 0;
               var answer ;
@@ -293,7 +284,9 @@
                 $.ajax ({
                   type : 'post',
                   url : './invite/signal',
-                  data : {},
+                  data : {
+                      id : myId ,
+                  },
                   success : function(data){
                     if( data == "" || data == null){
                       console.log("listen whether has invitation");
@@ -308,12 +301,12 @@
               }
     
               var startsignal = setInterval(teamstart , 1000);
-    
+              var teamname = "0" ;
               function teamstart(){
                 $.ajax ({
                   type : 'post',
                   url : './invite/teamstart',
-                  data : {},
+                  data : {name : teamname},
                   success : function(data){
                     if( data == "" || data == null){
                     }else{
@@ -325,6 +318,7 @@
               }
               function join(){
                 var r = confirm("是否要加入 吃飯睡覺懶惰蟲 ?");
+                teamname = invite_info.name;
                 console.log(invite_info.name);
                 if( r == true ){
                   answer = "1" ;

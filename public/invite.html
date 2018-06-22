@@ -70,6 +70,7 @@
                    console.log( 'Logged in and authenticated' );
                    getProfile();
                    friends();
+                   getteamname();
                  } else {
                   console.log( 'Not authenticated' );
                  }
@@ -90,6 +91,20 @@
                     responseData = response ;
                   }
                 })
+              }
+
+              var teamname ;
+
+              function getteamname(){
+                $.ajax({
+                  type : 'post',
+                  url : './invite/get_teamname',
+                  data:{},
+                  success : function(data){
+                    teamname = data ;
+                    console.log(teamname);
+                  }
+                });
               }
 
               var choose_friend;
@@ -132,6 +147,7 @@
                   data : {
                       sender : sender.id,
                       to : inviteto,
+                      name : teamname,
                   }
                 });
               }
@@ -141,7 +157,7 @@
                 $.ajax ({
                   type : 'post',
                   url : './invite/tellteam',
-                  data : {}
+                  data : {name:teamname}
                 });
                 gogaming();
               }
@@ -156,7 +172,7 @@
                   $.ajax ({
                     type : 'post',
                     url : './invite/checkresponse',
-                    data : {},
+                    data : { sender : responseData.id},
                     success : function(data){
                       if( data == "" || data==null){}
                       else{
