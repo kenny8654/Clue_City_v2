@@ -2,6 +2,12 @@
   box-sizing: border-box;
   font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande", sans-serif;
 }
+
+#facebook_id{
+  display: none;
+  visibility: hidden;
+}
+
 #map {
   height: 77%;
   z-index: 0;
