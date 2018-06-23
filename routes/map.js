@@ -81,7 +81,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('../' + ID + '/1.jpg'));
+  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir+ '/1.jpg'));
 })
 router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";
