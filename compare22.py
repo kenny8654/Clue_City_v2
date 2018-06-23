@@ -4,7 +4,7 @@ import sys
 from matplotlib import pyplot as plt
 
 img1 = cv2.imread('clue22.jpg',0)          # queryImage
-img2 = cv2.imread('target.jpg',0)
+img2 = cv2.imread('./public/target.jpg',0)
 # Initiate SIFT detector
 sift = cv2.xfeatures2d.SIFT_create()
 # find the keypoints and descriptors with SIFT
