@@ -674,19 +674,6 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      facebook_id = document.getElementById("facebook_id").textContent;
-      $.ajax({
-        url: './map/createAlbum',
-        type: 'post',
-        data: {ID :　facebook_id},
-        dataType: 'text',
-        success: function () {
-          console.log("album_success!!!!!!!!!");
-        },
-        error: function () {
-          console.log("album_error!!!!!!!!!");
-        }
-      })
       document.getElementById("loader").style.visibility = "hidden";
       document.getElementById("btn_hide").style.visibility = "visible";
       document.getElementById("loader_message").style.visibility = "hidden";
@@ -744,17 +731,19 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
-  function get_Score(sendto){
-    let sender =  responseData ;
-    let inviteto = sendto.id ;
-    $.ajax ({
-      type : 'post',
-      url : './invite/invite',
-      data : {
-          sender : sender.id,
-          to : inviteto,
-      }
-    });
-  }
 })
 
+message = document.getElementById("share_message").textContent;
+facebook_id = document.getElementById("facebook_id").textContent;
+$.ajax({
+  url: './map/createAlbum',
+  type: 'post',
+  data: {ID :　facebook_id},
+  dataType: 'text',
+  success: function () {
+    console.log("album_success!!!!!!!!!");
+  },
+  error: function () {
+    console.log("album_error!!!!!!!!!");
+  }
+})

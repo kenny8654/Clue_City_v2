@@ -3,7 +3,7 @@ import cv2
 import sys
 from matplotlib import pyplot as plt
 
-img1 = cv2.imread('source.jpg',0)          # queryImage
+img1 = cv2.imread('clue17.jpg',0)          # queryImage
 img2 = cv2.imread('target.jpg',0)
 # Initiate SIFT detector
 sift = cv2.xfeatures2d.SIFT_create()
