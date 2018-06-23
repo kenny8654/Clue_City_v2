@@ -6,6 +6,7 @@
   <title>Clue City</title>
   <link rel="stylesheet" type="text/css" href="styles/LoginStyle.css">
   <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+        
   <!-- TODO add manifest here -->
   <link rel="manifest" href="/manifest.json">
   <!-- Add to home screen for Safari on iOS -->
@@ -27,14 +28,16 @@
 <body>  
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="scripts/jquery.slides.min.js"></script>
-
+        <script src="semantic/out/semantic.min.js"></script>
         <script>
             $(document).ready(function(){
                 $(".fb-login-button").click(function(){
                     this.hide();
                     $("#Start").show();
                 });
-                
+                $("#ClueCity").click(function(){
+                    this.transition('jiggle');
+                })
             });
             $(function() {
                 $('#slides').slidesjs({
