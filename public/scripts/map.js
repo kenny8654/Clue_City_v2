@@ -780,6 +780,8 @@ function update_score() {
 
     }
   });
+  setTimeout("update_score()", 1000);
 }
+update_score();
 
 
