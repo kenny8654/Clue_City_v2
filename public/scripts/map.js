@@ -248,6 +248,13 @@ function btn_share_onclick() {
 function btn_share_submit_onclick() {
   Message = document.getElementById("share_word").value;
   facebook_id = document.getElementById("facebook_id").textContent;
+  document.getElementById('success_paragraph').style.visibility = 'hidden'
+  document.getElementById('share_word').style.visibility = 'hidden'
+  document.getElementById('btn_share_submit').style.visibility = 'hidden'
+  for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
+  document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
+for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
+  document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
   $.ajax({
     url: './map/createAlbum',
     type: 'post',
@@ -263,6 +270,7 @@ function btn_share_submit_onclick() {
       console.log("album_error!!!!!!!!!");
     }
   })
+
 }
 
 function clue() {
