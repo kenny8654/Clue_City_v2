@@ -56,57 +56,52 @@
 #profile{
     position:relative;
     display:flex;
-    margin-left:10vw;
+    margin-top:1vw;
+    margin-left:1vw;
 }
 #bighead{
     position:relative;
-    margin-top:3vw;
-    margin-left:2vw;
-    width:13%;
-    height:6%;
+    width:10vw;
+    height:10vw;
 }
 #NameAndID{
     position:relative;
-    margin-top:4%;
-    margin-left:3%;
 }
 .text{
+    position:relative;
     font-family: Microsoft JhengHei;
+    color: #555556;
 }
-#Name{
-    position:absolute;
-    left:1vw;
+.Name{
+    position:relative;
     font-weight:bold;
-    font-size: 5vw;
-    width:20vw;
+    font-size: 4vw;
 }
-#ID{
-    position:absolute;
-    left:20vw;
-    margin-top:2vw;
-    font-weight:500;
-    font-size: 3vw;
+.YOYO{
+    background-color:white;
+    width:70vw;
+    height:60vw;
+    margin-left:13vw;
+    margin-top:4vw;
 }
-.container{
-}
-
 .slides{
     position:relative;
     margin-top:2vw;
-    left:10vw;
-    width: 80vw;
+    left:1vw;
+    width:67vw;
     display: none;
 }
 .slideDiv{
-    display:flex;
 }
 .Des{
     position:absolute;
+    margin-top:3vw;
+    margin-bottom: 3vw;
 }
 .photo{
     position:absolute;
-    margin-top:8vw;
-    width:90vw;
+    margin-top:10vw;
+    width:115vw;
 }
 
 
@@ -114,7 +109,7 @@ body {
     -webkit-font-smoothing: antialiased;
     font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #232525;
-    padding-top:70px;
+    padding-top:700px;
 }
 #slides {
     display: none;
@@ -147,9 +142,9 @@ body {
 
 .slidesjs-pagination li a {
     display: block;
-    width: 13px;
+    width: 12px;
     height: 0;
-    padding-top: 13px;
+    padding-top: 12px;
     background-image: url("/public/images/pagination.png");
     background-position: 0 0;
     float: left;
@@ -168,46 +163,8 @@ body {
 .navbar {
     overflow: hidden
 }
-<!-- End SlidesJS Optional-->
-
-<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-<style>
-#slides {
-    display: none
-}
 
 .container {
-    margin: 0 auto
+    
 }
 
-/* For tablets & smart phones */
-@media (max-width: 767px) {
-    body {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-    .container {
-        width: auto
-      }
-    }
-
-    /* For smartphones */
-    @media (max-width: 480px) {
-      .container {
-        width: auto
-      }
-    }
-
-    /* For smaller displays like laptops */
-    @media (min-width: 768px) and (max-width: 979px) {
-      .container {
-        width: 724px
-      }
-    }
-
-    /* For larger displays */
-    @media (min-width: 1200px) {
-      .container {
-        width: 1170px
-      }
-    }
