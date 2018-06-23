@@ -250,7 +250,7 @@ function clue() {
     if (current.lng <= 120.223217 && current.lng >= 120.221617 && current.lat <= 22.997750 && current.lat >= 22.996150) {//系館
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
         document.getElementsByClassName('small_clue')[i].style.visibility = 'visible'
-      for (var i = 0; i < document.getElementsByClassName('big_clue').git length; i++)
+      for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clues_picture.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clues_picture.jpg"
