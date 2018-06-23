@@ -43,8 +43,7 @@
 <body>
             <script>
                 
-                var myid;
-        var myname;
+
         
                 window.fbAsyncInit = function() {
               FB.init({
@@ -90,6 +89,8 @@
         
         var waitsignal;
         function getProfile(){
+                            var myid;
+        var myname;
             FB.api('/me?fields=name,email',function(response){
                 if(response && !response.error){
                     responseData = response ;
