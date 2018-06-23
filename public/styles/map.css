@@ -58,6 +58,10 @@ html, body {
   z-index: 2;
 }
 
+#facebook_id{
+  visibility : hidden;
+}
+
 #team_name{
   position: absolute;
   font-family: Microsoft JhengHei;
