@@ -165,7 +165,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
 function runPython(res) {
   console.log('Python is running')
   var spawn = require("child_process").spawn;
-  var process = spawn('python3', ["./compare.py",]);
+  var process = spawn('python3', ["./compare0.py",]);
   process.stdout.on('data', function (data) {
     console.log(data.toString());
     res.send(data.toString());
