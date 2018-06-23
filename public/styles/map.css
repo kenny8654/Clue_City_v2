@@ -374,6 +374,26 @@ html, body {
   visibility: hidden;
 }
 
+#btn_share{
+  position: absolute;
+  height: 4%;
+  left: 72%;
+  top:83%;
+  z-index: 6;
+  visibility: hidden;
+}
+
+#share_word{
+  position: absolute;
+  height: 28%;
+  left: 20%;
+  top:53%;
+  z-index: 6;
+  width: 60%;
+  opacity: 0.5;
+  visibility: hidden;
+}
+
 #setting_background{
   position: absolute;
   height: 25%;

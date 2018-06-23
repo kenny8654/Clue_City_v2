@@ -203,6 +203,9 @@ function btn_exit(){
   document.getElementById('btn_exit').style.visibility = 'hidden'
   document.getElementById('success_clue_picture').style.visibility = 'hidden'
   document.getElementById('success_paragraph').style.visibility = 'hidden'
+  document.getElementById('share_word').style.visibility = 'hidden'
+  document.getElementById('btn_share').style.visibility = 'hidden'
+  
 }
 
 function setting_onclick(){
@@ -230,6 +233,13 @@ function btn_no(){
   document.getElementById('p_end_game').style.visibility = 'hidden'
   document.getElementById('btn_yes').style.visibility = 'hidden'
   document.getElementById('btn_no').style.visibility = 'hidden'
+  
+}
+
+function btn_share_onclick(){
+  document.getElementById('success_paragraph').style.visibility = 'hidden'
+
+  
 }
 
 function clue() {
