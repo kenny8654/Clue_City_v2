@@ -29,14 +29,19 @@
            this.src="images/Team/invited.png";
        });
         $(".TeamName").hide();
-        $("#VagueBack").hide();
-        $("#X").click(function(){
+        $(".VagueBack").hide();
+        $("#Seeee").hide();
+        $("#Plus").click(function(){
+            $(".TeamName").fadeIn();
+            $(".VagueBack").fadeIn();
+        })
+        $(".X").click(function(){
             $(".TeamName").fadeOut();
-            $("#VagueBack").fadeOut();
+            $(".VagueBack").fadeOut();
         });
-        $("#Shihan").click(function(){
-          $("#FriendHead5").attr("src","images/Team/HsiHan.jpg");
-        });
+        $("#Searching").click(function(){
+            $("#Seeee").show();
+        })
     });
     </script>
 <body>
@@ -113,6 +118,7 @@
               }
 
               var choose_friend;
+              var friendnumber = 0 ;
 
               function friends(){
                 $.ajax({
@@ -122,10 +128,10 @@
                     id : myid , 
                   },
                   success : function(data){
-                    console.log(data);
                     choose_friend = data.friend ;
                     let url ;
-                    for(let i = 0; i < data.friend.length ; i++){
+                    for(let i = friendnumber ; i < data.friend.length ; i++){
+                      friendnumber = data.friend.length;
                       url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
                       getName( data.friend[i].name,(i+1));
@@ -142,13 +148,15 @@
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
               }
-              function getPicture(url){
+
+              function getpicture(url){
                 $("#bighead").attr("src",url);
               }
+
               function getID(id){
                 $("#ID").text(`ID: ${id}`);
               }
-              function getName(name){
+              function getname(name){
                 $("#name").text(`${name}`);
               }
                 
@@ -279,8 +287,8 @@
                         if(data != null || data != ""){
                           console.log("find this one");
                           let url =  `https://graph.facebook.com/${data.id}/picture?type-normal`;
-                          getPicture(url);
-                          getName(data.name);
+                          getpicture(url);
+                          getname(data.name);
                           getID(data.id);
                           friend_id = data.id;
                           friend_name= data.name;
@@ -290,7 +298,32 @@
               }
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
-    <div id="VagueBack"></div>
+    
+    <div class="VagueBack" id="invite"></div>
+    <div class="TeamName" id="invite1">
+        <img src="images/Team/SmallBackground.png" class="SmallBack">
+        <div id="SetTeamName">
+            <img src="images/Team/X.png" class="X" id="inviteX" onclick="friends()">
+            <div class="ui search" id="Search">
+                <div class="ui icon input" id="Search1">
+                    <input class="prompt" name = "friend_id" type="text" placeholder="Search By Name or ID" id="Search2">
+                    <button class="search icon" type = "submit" onclick="Findindb()" id="Searching">搜尋</button>
+                </div>
+                <div class="results"></div>
+            </div>
+            <div class="ui celled list">
+                <div class="item" id="Seeee">
+                    <img class="ui avatar image" id= "bighead" src="images/Team/Glen.jpg">
+                    <div class="content">
+                        <div class="header" id = "name">Glen</div>
+                        <p class="ID" id="ID" >glen84910</p>
+                    </div>
+                    <img class="Add" src="images/Team/Plus.png" onclick= "addfriend()">
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="team">
         <div class="topbar">
             <img src="images/Team/WhiteBack.png" id="WhiteBack" onclick="gobackmode()">
@@ -316,7 +349,7 @@
                 <p class="Online" id="TotalNum">125</p>
                 <p class="Online" id="RightQuat">)</p>
             </div>
-            <img src="images/Team/Plus.png" id="Plus" onclick="gotofriend()">
+            <img src="images/Team/Plus.png" id="Plus">
         </div>
         <div class="FriendList">
             <div class="ui middle aligned selection list">
