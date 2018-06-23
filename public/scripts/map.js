@@ -724,6 +724,26 @@ function onSelectClicked() {
   }, 2500);
 }
 
+function btn_share_onclick(){
+  Message = document.getElementById("share_word").value;
+  facebook_id = document.getElementById("facebook_id").textContent;
+  $.ajax({
+    url: './map/createAlbum',
+    type: 'post',
+    data: {
+      ID :　facebook_id,
+      message : Message
+    },
+    dataType: 'text',
+    success: function () {
+      console.log("album_success!!!!!!!!!");
+    },
+    error: function () {
+      console.log("album_error!!!!!!!!!");
+    }
+  })
+}
+
 
 $(document).ready(function () {
   $('submit_button').on('click', function (e) {
@@ -743,17 +763,4 @@ $(document).ready(function () {
   });
 })
 
-message = document.getElementById("share_message").textContent;
-facebook_id = document.getElementById("facebook_id").textContent;
-$.ajax({
-  url: './map/createAlbum',
-  type: 'post',
-  data: {ID :　facebook_id},
-  dataType: 'text',
-  success: function () {
-    console.log("album_success!!!!!!!!!");
-  },
-  error: function () {
-    console.log("album_error!!!!!!!!!");
-  }
-})
+
