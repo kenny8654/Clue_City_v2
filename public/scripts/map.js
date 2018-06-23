@@ -767,6 +767,3 @@ $(document).ready(function () {
     });
   }
 })
-
-fu
-
