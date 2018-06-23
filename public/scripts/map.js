@@ -206,6 +206,7 @@ function btn_exit(){
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'hidden'
   document.getElementById('btn_share').style.visibility = 'hidden'
+  document.getElementById('btn_share_submit').style.visibility = 'hidden'
   
 }
 
@@ -242,7 +243,6 @@ function btn_share_onclick(){
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'visible'
   document.getElementById('btn_share_submit').style.visibility = 'visible'
-
 }
 
 function clue() {
@@ -698,6 +698,7 @@ function onSubmitButtonClicked() {
         success_or_failure = 1;
         score +=100
         document.getElementById("score_text").textContent = score;
+
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
