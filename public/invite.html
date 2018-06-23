@@ -142,16 +142,18 @@
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
               }
+/*
               function getPicture(url){
                 $("#bighead").attr("src",url);
               }
+
               function getID(id){
                 $("#ID").text(`ID: ${id}`);
               }
               function getName(name){
                 $("#name").text(`${name}`);
               }
-                
+*/                
               function getPecture_team(num,id){
                   let Url = `https://graph.facebook.com/${id}/picture?type-normal`;
                   $(`#FriendHead${num}`).attr("src",Url);
