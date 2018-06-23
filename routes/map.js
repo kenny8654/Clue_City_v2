@@ -77,11 +77,24 @@ router.post("/return_teamname", urlencoderParser, function (req, res) {
 
 router.post("/createAlbum", urlencoderParser, function (req, res) {
   ID = req.body.ID;
-  var dir = './public/' + ID;
+  var dir = './public/gallery' + ID;
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir+ '/1.jpg'));
+  let message = req.body.message;
+  let image_size;
+  let mongoCollection = "user";
+  let object = mongoOperation.GetFriend(mongoCollection, ID);
+  object.then((value) => {
+    if (value == null) {
+      image_size = 0;
+    }
+    else {
+      image_size = value.image.length;
+    }
+  })
+  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
+  mongoOperation.addimage(mongoCollection, ID, message)
 })
 router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";

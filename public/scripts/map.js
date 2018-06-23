@@ -674,7 +674,6 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      facebook_id = document.getElementById("facebook_id").textContent;
       document.getElementById("loader").style.visibility = "hidden";
       document.getElementById("btn_hide").style.visibility = "visible";
       document.getElementById("loader_message").style.visibility = "hidden";
@@ -734,6 +733,8 @@ $(document).ready(function () {
   });
 })
 
+message = document.getElementById("share_message").textContent;
+facebook_id = document.getElementById("facebook_id").textContent;
 $.ajax({
   url: './map/createAlbum',
   type: 'post',
