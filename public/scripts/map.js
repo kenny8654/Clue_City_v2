@@ -5,6 +5,7 @@ var is_big_clue = 0;
 var markersList = [];
 var clue_index = 0;//系館
 var success_or_failure = 0;
+var score = 0;
 
 function addMarker() {
   console.log("mark")
@@ -654,6 +655,8 @@ function onSubmitButtonClicked() {
         document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
         console.log("similar")
         success_or_failure = 1;
+        score +=100
+        document.getElementById("score_text").textContent = score;
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
