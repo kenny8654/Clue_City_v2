@@ -93,6 +93,7 @@
                     getPecture_team(1,myid);
                     waitsignal = setInterval(checkresponse , 1000);
                     friends();
+                    console.log("has get profile");
                   }
                 })
               }
@@ -140,6 +141,15 @@
 
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
+              }
+              function getPicture(url){
+                $("#bighead").attr("src",url);
+              }
+              function getID(id){
+                $("#ID").text(`ID: ${id}`);
+              }
+              function getName(name){
+                $("#name").text(`${name}`);
               }
                 
               function getPecture_team(num,id){
@@ -241,6 +251,43 @@
             function gotoScore(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
             }
+              var friend_id ;
+              var friend_name;
+
+              function addfriend(){
+                console.log("clicked");
+                  $.ajax({
+                      type: 'post',
+                      url: './invite/addfriend',
+                      data:{
+                        myid : responseData.id,
+                        id  : friend_id,
+                        name : friend_name ,
+                      }
+                  });
+              }
+
+              function Findindb(){
+                  $.ajax({
+                      type: 'post',
+                      url: './invite/find_friend',
+                      data:{
+                        name : $("input[name='friend_id']").val(),
+                        id : $("input[name='friend_id']").val(),
+                      },
+                      success : function(data){
+                        if(data != null || data != ""){
+                          console.log("find this one");
+                          let url =  `https://graph.facebook.com/${data.id}/picture?type-normal`;
+                          getPicture(url);
+                          getName(data.name);
+                          getID(data.id);
+                          friend_id = data.id;
+                          friend_name= data.name;
+                        }
+                      }
+                  });
+              }
           </script>
     <img src="images/Team/Background.png" id="TeamBackground">
     <div id="VagueBack"></div>
