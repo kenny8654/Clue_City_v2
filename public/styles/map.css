@@ -59,8 +59,10 @@ html, body {
 }
 
 #facebook_id{
+  position: absolute;
+  float: none;
   visibility: hidden;
-  display: gone;
+  display: none;
 }
 
 #team_name{
