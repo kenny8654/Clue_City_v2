@@ -239,8 +239,8 @@ function btn_no(){
 
 function btn_share_onclick(){
   document.getElementById('success_paragraph').style.visibility = 'hidden'
+  document.getElementById('share_word').style.visibility = 'visible'
 
-  
 }
 
 function clue() {
@@ -763,5 +763,3 @@ $(document).ready(function () {
     //do some other stuff here
   });
 })
-
-
