@@ -41,7 +41,7 @@ function initMap() {
   });
 
   google.maps.event.addListener(map, 'zoom_changed', function () {
-    console.log("zoom change", zoom)
+    console.log("zoom change")
     map.data.setStyle(function (feature) {
       var magnitude = feature.getProperty('mag');
       return {
@@ -203,6 +203,33 @@ function btn_exit(){
   document.getElementById('btn_exit').style.visibility = 'hidden'
   document.getElementById('success_clue_picture').style.visibility = 'hidden'
   document.getElementById('success_paragraph').style.visibility = 'hidden'
+}
+
+function setting_onclick(){
+  document.getElementById('setting_background').style.visibility = 'visible'
+  document.getElementById('p_end_game').style.visibility = 'visible'
+  document.getElementById('btn_yes').style.visibility = 'visible'
+  document.getElementById('btn_no').style.visibility = 'visible'
+}
+
+function btn_yes(){
+  var facebook_id = document.getElementById("facebook_id").textContent
+  $.ajax ({
+    type : 'post',
+    url : './map/tellscore',
+    data : {
+      name:score,
+      id : facebook_id,
+    }
+  });
+  document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+}
+
+function btn_no(){
+  document.getElementById('setting_background').style.visibility = 'hidden'
+  document.getElementById('p_end_game').style.visibility = 'hidden'
+  document.getElementById('btn_yes').style.visibility = 'hidden'
+  document.getElementById('btn_no').style.visibility = 'hidden'
 }
 
 function clue() {
@@ -637,10 +664,6 @@ function onSubmitButtonClicked() {
   //創建formdata對象
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
-  formData.sender = {
-    facebookID : document.getElementById("facebook_id").textContent
-  }
-  console.log(formData.sender.facebookID);
   formData.append('file', file.files[0]);
   console.log('開始圖片上傳');
   $.ajax({
@@ -708,17 +731,19 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
-  function get_Score(sendto){
-    let sender =  responseData ;
-    let inviteto = sendto.id ;
-    $.ajax ({
-      type : 'post',
-      url : './invite/invite',
-      data : {
-          sender : sender.id,
-          to : inviteto,
-      }
-    });
-  }
 })
 
+message = document.getElementById("share_message").textContent;
+facebook_id = document.getElementById("facebook_id").textContent;
+$.ajax({
+  url: './map/createAlbum',
+  type: 'post',
+  data: {ID :　facebook_id},
+  dataType: 'text',
+  success: function () {
+    console.log("album_success!!!!!!!!!");
+  },
+  error: function () {
+    console.log("album_error!!!!!!!!!");
+  }
+})

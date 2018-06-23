@@ -67,12 +67,40 @@ router.post('/NULL', function (req, res) {
   // // console.log('redirect');
 });
 
-router.post("/team",urlencoderParser,function(req,res){
+router.post("/team", urlencoderParser, function (req, res) {
   teamname = req.body.name;
 })
 
-router.post("/return_teamname",urlencoderParser,function(req,res){
+router.post("/return_teamname", urlencoderParser, function (req, res) {
   res.send(teamname);
+})
+
+router.post("/createAlbum", urlencoderParser, function (req, res) {
+  ID = req.body.ID;
+  var dir = './public/gallery' + ID;
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
+  let message = req.body.message;
+  let image_size;
+  let mongoCollection = "user";
+  let object = mongoOperation.GetFriend(mongoCollection, ID);
+  object.then((value) => {
+    if (value == null) {
+      image_size = 0;
+    }
+    else {
+      image_size = value.image.length;
+    }
+  })
+  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
+  mongoOperation.addimage(mongoCollection, ID, message)
+})
+router.post('/tellscore', urlencoderParser, function (req, res) {
+  let mongoCollection = "user";
+  let score = req.body.name;
+  let profile = { id: req.body.id };
+  mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
 router.post("/upload", urlencoderParser, function (req, res) {
