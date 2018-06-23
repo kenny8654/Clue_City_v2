@@ -118,6 +118,7 @@
               }
 
               var choose_friend;
+              var friendnumber = 0 ;
 
               function friends(){
                 $.ajax({
@@ -129,7 +130,8 @@
                   success : function(data){
                     choose_friend = data.friend ;
                     let url ;
-                    for(let i = 0; i < data.friend.length ; i++){
+                    for(let i = friendnumber ; i < data.friend.length ; i++){
+                      friendnumber = data.friend.length;
                       url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
                       getName( data.friend[i].name,(i+1));
