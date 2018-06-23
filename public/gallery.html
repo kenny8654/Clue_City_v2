@@ -83,18 +83,50 @@
                 statusChangeCallback(response);
             });
         }
-
+        var image_size;
+        function friends(){
+                $.ajax({
+                  type : 'post',
+                  url : './invite/friend',
+                  data : {
+                    id : myid , 
+                  },
+                  success : function(data){
+                    console.log(data);
+                    choose_friend = data.friend ;
+                        if(data.image == null){
+                            image_size =0;
+                        }
+                      else{
+                        image_size = data.image.length;
+                        for(let i=0;i<data.friend.length;i++){
+                            $("#gg").append(
+                                '<p>Friend name : ' + data.firend[i].name + '</p>' +
+                                '<img src = "./' + data.friend[i].id + '/0.jpg">'+
+                                '<p>Friend img length:'+ data.friend[i].image.length+'</p>'
+                            );
+                        }
+                      }
+                    let url ;
+                    for(let i = 0; i < data.friend.length ; i++){
+                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
+                      getPicture(url,(i+1));
+                      getName( data.friend[i].name,(i+1));
+                    }
+                  }
+                })
+              }
         var responseData;
-
+        var myid;
+        var myname;
         var waitsignal;
         function getProfile() {
-            var myid;
-            var myname;
             FB.api('/me?fields=name,email', function (response) {
                 if (response && !response.error) {
                     responseData = response;
                     myid = response.id;
                     myname = response.name;
+                    friends();
                     console.log(myid + "," + myname + "has get profile");
                     $("#gg").append(
                 '<p>My name : ' + myname + '</p>' +
