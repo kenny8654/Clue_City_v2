@@ -67,23 +67,27 @@ router.post('/NULL', function (req, res) {
   // // console.log('redirect');
 });
 
-router.post("/team",urlencoderParser,function(req,res){
+router.post("/team", urlencoderParser, function (req, res) {
   teamname = req.body.name;
 })
 
-router.post("/return_teamname",urlencoderParser,function(req,res){
+router.post("/return_teamname", urlencoderParser, function (req, res) {
   res.send(teamname);
 })
 
-router.post("/createAlbum",urlencoderParser,function(req,res){
+router.post("/createAlbum", urlencoderParser, function (req, res) {
   ID = req.body.ID;
+  var dir = './public/' + ID;
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
   fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('../' + ID + '/1.jpg'));
 })
-router.post('/tellscore',urlencoderParser,function(req,res){     
+router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";
-  let score = req.body.name ;
-  let profile ={ id : req.body.id};
-  mongoOperation.updatescore( mongoCollection , profile , score);
+  let score = req.body.name;
+  let profile = { id: req.body.id };
+  mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
 router.post("/upload", urlencoderParser, function (req, res) {
