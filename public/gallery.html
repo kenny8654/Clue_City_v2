@@ -104,18 +104,17 @@
 //                                '<p>Friend name : ' + data.firend[i].name + '</p>' +
 //                                '<img src = "./' + data.friend[i].id + '/0.jpg">'+
 //                                '<p>Friend img length:'+ data.friend[i].image.length+'</p>'
+                                '<a>'+data.firend[i].name+ + data.friend[i].id + data.friend[i].image.length +'</a>'
                             );
-                            console.log('<p>Friend name : ' + data.firend[i].name + '</p>' +
-                                '<img src = "./' + data.friend[i].id + '/0.jpg">'+
-                                '<p>Friend img length:'+ data.friend[i].image.length+'</p>');
+                            
                         }
                       }
                     let url ;
-                    for(let i = 0; i < data.friend.length ; i++){
-                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
-                      getPicture(url,(i+1));
-                      getName( data.friend[i].name,(i+1));
-                    }
+//                    for(let i = 0; i < data.friend.length ; i++){
+//                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
+//                      getPicture(url,(i+1));
+//                      getName( data.friend[i].name,(i+1));
+//                    }
                   }
                 })
               }
