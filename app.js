@@ -43,7 +43,7 @@ app.use('/score', scoreRouter);
 app.use('/friend', friendRouter);
 app.use('/gallery', galleryRouter);
 
-router.post("/createAlbum", urlencoderParser, function (req, res) {
+app.post("/createAlbum", urlencoderParser, function (req, res) {
     ID = req.body.ID;
     fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('public/'+ID+'/1.jpg'));
 })
