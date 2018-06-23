@@ -5,15 +5,11 @@ let bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
-
+let team ;
 router.get('/',function(req,res){
   res.sendFile('menu.html', {
     root : 'public'
   });
-});
-
-router.post('/menu', urlencodedParser,function(req,res){
-    res.send(`${req.body.name}`);
 });
 
 router.post('/team', urlencodedParser,function(req,res){
@@ -29,5 +25,30 @@ router.post('/check', urlencodedParser,function(req,res){
         req.body.sender , 
         req.body
     ); 
+});
+router.post('/teamstart', urlencodedParser,function(req,res){
+
+    let mongoCollection = "team";
+    let teamname = req.body.name ;
+    let promise = mongoOperation.mongoFindstart( mongoCollection , teamname);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
+router.post('/signal', urlencodedParser, function(req,res){
+    var mongoCollection = "user";
+    let myId = req.body.id ;
+    let object = mongoOperation.mongoFindinvite(mongoCollection, myId);
+    let hi ;
+    object.then((val)=>{
+      if(val == null){
+        res.send(val);
+      }
+      else{
+        hi = val ;
+        console.log(hi);
+        res.send(hi);
+      }
+    });
 });
 module.exports = router;

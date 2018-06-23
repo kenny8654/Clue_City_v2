@@ -69,7 +69,7 @@
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
                    getProfile();
-                   friends();
+                   getteamname();
                  } else {
                   console.log( 'Not authenticated' );
                  }
@@ -83,14 +83,31 @@
               }
               
               var responseData  ;
-      
+              var myid;
+              var waitsignal;
               function getProfile(){
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     responseData = response ;
-                     getPecture_team(1,responseData.id);
+                    myid = response.id ;
+                    waitsignal = setInterval(checkresponse , 1000);
+                    friends();
                   }
                 })
+              }
+
+              var teamname ;
+
+              function getteamname(){
+                $.ajax({
+                  type : 'post',
+                  url : './invite/get_teamname',
+                  data:{},
+                  success : function(data){
+                    teamname = data ;
+                    console.log(teamname);
+                  }
+                });
               }
 
               var choose_friend;
@@ -99,14 +116,17 @@
                 $.ajax({
                   type : 'post',
                   url : './invite/friend',
-                  data : {},
+                  data : {
+                    id : myid , 
+                  },
                   success : function(data){
-                    choose_friend = data ;
+                    console.log(data);
+                    choose_friend = data.friend ;
                     let url ;
-                    for(let i = 0; i < data.length ; i++){
-                      url = `https://graph.facebook.com/${data[i].id}/picture?type-normal`;
+                    for(let i = 0; i < data.friend.length ; i++){
+                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
-                      getName( data[i].name,(i+1));
+                      getName( data.friend[i].name,(i+1));
                     }
                   }
                 })
@@ -139,6 +159,7 @@
                   data : {
                       sender : sender.id,
                       to : inviteto,
+                      name : teamname,
                   }
                 });
               }
@@ -148,12 +169,11 @@
                 $.ajax ({
                   type : 'post',
                   url : './invite/tellteam',
-                  data : {}
+                  data : {name:teamname}
                 });
                 gogaming();
               }
 
-              var waitsignal = setInterval(checkresponse , 1000);
               var be_invited = 0;
               var invite_info = 0;
               var answer ;
@@ -163,35 +183,14 @@
                   $.ajax ({
                     type : 'post',
                     url : './invite/checkresponse',
-                    data : {},
+                    data : { sender : myid},
                     success : function(data){
                       if( data == "" || data==null){}
                       else{
                         invite_info = data ;
                         if( invite_info.accepted == "1" ){
                           console.log("agree join");
-                          num++;
-                          if(num == 1){
-                            join1( invite_info.to);
-                          }
-                          else if(num ==2){
-                            join2( invite_info.to);
-                          }
-                          else if(num ==3){
-                            join3( invite_info.to);
-                          }
-                          else if(num ==4){
-                            join4( invite_info.to);
-                          }
-                          else if(num ==5){
-                            join5( invite_info.to);
-                          }
-                          else if(num ==6){
-                            join6( invite_info.to);
-                          }
-                          else if(num ==7){
-                            join7( invite_info.to);
-                          }
+                          join(invite_info.to);
                         }
                         else{
                           console.log("reject join");
@@ -201,82 +200,16 @@
                 });
               }
             
-            function join1(teammate){
+            function join(teammate){
               $.ajax({
                 method : 'post',
                 url : './invite/teammate',
                 data : {
-                  teammate1 : teammate,
+                  name : teamname,
+                  id : teammate,
                 },
               });
-              getPecture_team(2,teamate);
-              console.log("join1");
-            } 
-            function join2(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate2 : teammate,
-                },
-              });
-                 getPecture_team(3,teamate);
-              console.log("join2");
-            } 
-            function join3(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate3 : teammate,
-                },
-              });
-                 getPecture_team(4,teamate);
-              console.log("join3");
-            } 
-            function join4(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate4 : teammate,
-                },
-              });
-                 getPecture_team(5,teamate);
-              console.log("join4");
-            } 
-            function join5(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate5 : teammate,
-                },
-              });
-                 getPecture_team(6,teamate);
-              console.log("join5");
-            } 
-            function join6(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate6 : teammate,
-                },
-              });
-                 getPecture_team(7,teamate);
-              console.log("join6");
-            } 
-            function join7(teammate){
-              $.ajax({
-                method : 'post',
-                url : './invite/teammate',
-                data : {
-                  teammate7 : teammate,
-                },
-              });
-                 getPecture_team(8,teamate);
-              console.log("join7");
+              console.log("finish jion");
             } 
 
             function gogaming(){
