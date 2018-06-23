@@ -182,7 +182,7 @@ function success_message_onclick() {
     for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
       document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
     document.getElementById('success_background').style.visibility = 'visible'
-    document.getElementById('btn_exit').style.visibility = 'hidden'
+    document.getElementById('btn_exit').style.visibility = 'visible'
     document.getElementById('success_clue_picture').style.visibility = 'visible'
     document.getElementById('success_paragraph').style.visibility = 'visible'
     document.getElementById('btn_share').style.visibility = 'visible'
@@ -686,7 +686,7 @@ function onSubmitButtonClicked() {
       //$('#upload_response').text(data);
       console.log(data)
       document.getElementById("loader").style.visibility = "hidden";
-      document.getElementById("btn_hide").style.visibility = "visible";
+      // document.getElementById("btn_hide").style.visibility = "visible";
       document.getElementById("loader_message").style.visibility = "hidden";
 
       if (data.trim() == "similar") {
