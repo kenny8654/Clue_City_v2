@@ -65,7 +65,7 @@
         if (response && !response.error) {
           let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
           getPicture(url);
-          getElementById("facebook_id").text = response.id;
+          document.getElementById("facebook_id").text = response.id;
           console.log("has get profile");
         }
       })
