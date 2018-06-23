@@ -90,6 +90,12 @@ html, body {
   height: 6%;
   z-index: 2;
 }
+#score_text{
+  position: absolute;
+  top: 10.5%;
+  left: 83%;
+  z-index: 3;
+}
 
 #btn_camera{
   position: absolute;
