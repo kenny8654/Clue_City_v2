@@ -93,10 +93,12 @@
               function chooseMode(TeamOrPerson){
                     
                    if( TeamOrPerson == 0){
-                      choose = "user";
+                     choose = "user";
+                     getMyScore(responseData);
                    }
                    else{
-                      choose = "team";
+                     choose = "team"; 
+                     getTeamScore(responseData);
                    }
                    get_leaderboard(choose);
               }
@@ -105,6 +107,17 @@
                 $.ajax({
                   type : 'post',
                   url : './score/myscore',
+                  data : myprofile,
+                  success : function(data){
+                    console.log(data.score);
+                    $("#myScore").text(data.score);
+                  }
+                });
+              }
+              function getTeamScore(myprofile){
+                $.ajax({
+                  type : 'post',
+                  url : './score/teamscore',
                   data : myprofile,
                   success : function(data){
                     console.log(data.score);

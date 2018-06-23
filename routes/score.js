@@ -28,4 +28,12 @@ router.post('/myscore', urlencodedParser,function(req,res){
       res.send(val);
     });
 });
+router.post('/teamscore', urlencodedParser,function(req,res){
+    let myProfile = req.body;
+    databaseCollection = "team";
+    let object = mongoOperation.Findone(databaseCollection,myProfile);
+    object.then((val)=>{
+      res.send(val);
+    });
+});
 module.exports = router;
