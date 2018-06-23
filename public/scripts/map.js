@@ -174,6 +174,9 @@ function small_clue_onclick() {
 }
 
 function success_message_onclick() {
+  setTimeout(function(){
+    document.getElementById("success_clue_picture").src = "./target.jpg";
+  },1000)
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
@@ -248,11 +251,25 @@ function btn_share_onclick() {
 function btn_share_submit_onclick() {
   Message = document.getElementById("share_word").value;
   facebook_id = document.getElementById("facebook_id").textContent;
+  document.getElementById('success_paragraph').style.visibility = 'hidden'
+  document.getElementById('share_word').style.visibility = 'hidden'
+  document.getElementById('btn_share_submit').style.visibility = 'hidden'
+  document.getElementById('btn_exit').style.visibility = 'hidden'
+  document.getElementById('success_clue_picture').style.visibility = 'hidden'
+  document.getElementById('btn_share').style.visibility = 'hidden'
+  document.getElementById('success_background').style.visibility = 'hidden'
+
+
+  for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
+    document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
+  for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
+    document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
+  
   $.ajax({
     url: './map/createAlbum',
     type: 'post',
     data: {
-      ID: 　facebook_id,
+      ID: facebook_id,
       message: Message
     },
     dataType: 'text',
@@ -263,6 +280,7 @@ function btn_share_submit_onclick() {
       console.log("album_error!!!!!!!!!");
     }
   })
+
 }
 
 function clue() {
