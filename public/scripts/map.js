@@ -5,6 +5,8 @@ var is_big_clue = 0;
 var markersList = [];
 var clue_index = 0;//系館
 var success_or_failure = 0;
+const fs = require('fs');
+
 
 function addMarker() {
   console.log("mark")
