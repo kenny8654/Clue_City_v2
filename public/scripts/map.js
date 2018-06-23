@@ -4,6 +4,7 @@ var time = 1800;
 var is_big_clue = 0;
 var markersList = [];
 var clue_index = 0;//系館
+var success_or_failure = 0;
 
 function addMarker() {
   console.log("mark")
@@ -38,7 +39,7 @@ function initMap() {
   });
 
   google.maps.event.addListener(map, 'zoom_changed', function () {
-    console.log("zoom change",zoom)
+    console.log("zoom change", zoom)
     map.data.setStyle(function (feature) {
       var magnitude = feature.getProperty('mag');
       return {
@@ -55,10 +56,10 @@ function getCircle(magnitude) {
     fillColor: 'red',
     fillOpacity: .2,
     //scale: Math.pow(2, magnitude) / 2,
-    scale: Math.pow(2, magnitude+zoom-17) / 2,
+    scale: Math.pow(2, magnitude + zoom - 17) / 2,
     strokeColor: 'white',
     strokeWeight: .5
-    
+
   };
 }
 
@@ -164,10 +165,28 @@ function small_clue_onclick() {
   document.getElementById('btn_hide').style.visibility = 'visible'
   document.getElementById('small_clue_background').style.visibility = 'hidden'
   document.getElementById('small_clue_picture').style.visibility = 'hidden'
-  document.getElementById('submit_image').style.visibility = 'visible'
-  document.getElementById('submit_button').style.visibility = 'visible'
+  //document.getElementById('submit_image').style.visibility = 'visible'
+  //document.getElementById('submit_button').style.visibility = 'visible'
   document.getElementById('submit_image_label').style.visibility = 'visible'
   document.getElementById('submit_button_label').style.visibility = 'visible'
+}
+
+function success_message_onclick() {
+  document.getElementById('success').style.visibility = 'hidden'
+  document.getElementById('success_message').style.visibility = 'hidden'
+  if (success_or_failure == 1) {
+
+  }
+  else {
+    document.getElementById('submit_image_label').style.visibility = 'visible'
+    document.getElementById('submit_button_label').style.visibility = 'visible'
+    document.getElementById('btn_clue').style.visibility = 'visible'
+    document.getElementById('big_clue_picture').style.visibility = 'visible'
+    document.getElementById('big_clue_background').style.visibility = 'visible'
+    document.getElementById('btn_hide').style.visibility = 'visible'
+    document.getElementById('small_clue_background').style.visibility = 'hidden'
+    document.getElementById('small_clue_picture').style.visibility = 'hidden'
+  }
 }
 
 function clue() {
@@ -620,11 +639,13 @@ function onSubmitButtonClicked() {
         document.getElementById("success").src = "./images/PhotoSharing/success.png"
         document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
         console.log("similar")
+        success_or_failure = 1;
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
         document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
         console.log("not similar")
+        success_or_failure = 0;
       }
       setTimeout(function () {
         document.getElementById("success").style.visibility = "visible";
