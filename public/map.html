@@ -17,86 +17,89 @@
 </head>
 
 <body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-        
-                window.fbAsyncInit = function() {
-              FB.init({
-                appId      : '177842309598524',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v3.0'
-              });
-                
-              FB.getLoginStatus(function(response) {
-              statusChangeCallback(response);
-            });
-                
-            };
-          
-            (function(d, s, id){
-               var js, fjs = d.getElementsByTagName(s)[0];
-               if (d.getElementById(id)) {return;}
-               js = d.createElement(s); js.id = id;
-               js.src = "https://connect.facebook.net/en_US/sdk.js";
-               fjs.parentNode.insertBefore(js, fjs);
-             }(document, 'script', 'facebook-jssdk'));
-        
-        
-          
-         function statusChangeCallback(response){
-           if( response.status === 'connected' ){
-             console.log( 'Logged in and authenticated' );
-             getProfile();
-             GetTeamName();
-           } else {
-            console.log( 'Not authenticated' );
-           }
-         }
-        
-        
-        function checkLoginState() {
-          FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-          });
-        }
-        function getProfile(){
-          FB.api('/me?fields=name,email',function(response){
-            if(response && !response.error){
-              let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
-              getPicture(url);
-              console.log("has get profile");
-            }    
-          })
-        }
-        
-        var team_name ;
-        function GetTeamName()
-        {
-            $.ajax({
-                type: 'post',
-                url: './map/return_teamname',
-                data:{},
-                success : function(data){
-                  team_name = data ;
-                  $('#team_name').text(data);
-                }
-            });
-        }
-        
-        function gotomenu(){
-          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
-        }
-        
-        function getPicture(url){
-          $('#user_pic').attr("src",url);
-        }
-        
+  <script type="text/javascript" src="server.js"></script>
 
-        </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '177842309598524',
+        cookie: true,
+        xfbml: true,
+        version: 'v3.0'
+      });
+
+      FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+      });
+
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+
+    function statusChangeCallback(response) {
+      if (response.status === 'connected') {
+        console.log('Logged in and authenticated');
+        getProfile();
+        GetTeamName();
+      } else {
+        console.log('Not authenticated');
+      }
+    }
+
+
+    function checkLoginState() {
+      FB.getLoginStatus(function (response) {
+        statusChangeCallback(response);
+      });
+    }
+    function getProfile() {
+      FB.api('/me?fields=name,email', function (response) {
+        if (response && !response.error) {
+          let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+          getPicture(url);
+          document.getElementById("facebook_id").text = response.id;
+          console.log("has get profile");
+        }
+      })
+    }
+
+    var team_name;
+    function GetTeamName() {
+      $.ajax({
+        type: 'post',
+        url: './map/return_teamname',
+        data: {},
+        success: function (data) {
+          team_name = data;
+          $('#team_name').text(data);
+        }
+      });
+    }
+
+    function gotomenu() {
+      document.location.href = "https://luffy.ee.ncku.edu.tw:10047/menu";
+    }
+
+    function getPicture(url) {
+      $('#user_pic').attr("src", url);
+    }
+
+
   </script>
+
+  <a id="facebook_id" visibility="hidden"></a>
+
+
   <div id="title_bar">
     <img id="title" src="./images/Map/clues_city.png">
     <img id="user_pic" src="./images/Map/user.jpg">
@@ -125,8 +128,8 @@
   </div>
 
   <div id="big_clue">
-      <div id="loader"></div> 
-    <a id = "loader_message"></a>
+    <div id="loader"></div>
+    <a id="loader_message"></a>
     <img id="big_clue_background" class="big_clue" src="./images/Map/big_clue_background.png">
     <img id="btn_hide" class="big_clue" src="./images/Map/btn_hide.png" onclick="btn_hide_onclick()">
     <img id="btn_clue" class="big_clue" src="./images/Map/btn_clue.png">
@@ -136,7 +139,7 @@
     <img id="success_background" src="./images/Map/success_background.png">
     <img id="btn_exit" src="./images/Map/exit.png" onclick="btn_exit()">
     <img id="success_clue_picture" src="./images/Map/clues_picture.jpg">
-    <a id="success_paragraph" >國立成功大學電機資訊學院源自成立於1931年之電氣工程學系，承擔培育電機、電子、資訊與電信方面之產業及研究界極為殷切之高科技人才的重責大任，培育一萬多位優秀畢業生，貢獻台灣經濟奇蹟的創造</a>
+    <a id="success_paragraph">國立成功大學電機資訊學院源自成立於1931年之電氣工程學系，承擔培育電機、電子、資訊與電信方面之產業及研究界極為殷切之高科技人才的重責大任，培育一萬多位優秀畢業生，貢獻台灣經濟奇蹟的創造</a>
   </div>
 
 
@@ -151,7 +154,7 @@
     <label id="submit_image_label" class="big_clue" onclick="onSelectClicked()">
       <input id="submit_image" type="file" class="big_clue" name="image" accept="image/*" capture="user">
     </label>
-    <a id = "message" class="big_clue">已選擇圖片</a>
+    <a id="message" class="big_clue">已選擇圖片</a>
     <label id="submit_button_label" class="big_clue">
       <button id="submit_button" class="big_clue" onClick="onSubmitButtonClicked()">Upload </button>
     </label>

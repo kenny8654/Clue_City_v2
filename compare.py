@@ -28,7 +28,7 @@ for i,(m,n) in enumerate(matches):
                         matchesMask = matchesMask,
                         flags = 0)
         count = count + 1
-if count >= 500:
+if count >= 350:
     print("similar")
     sys.stdout.flush()
 else:
