@@ -80,7 +80,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
   req.setEncoding('binary');
   var body = '';   // 文件数据
   var fileName = '';  // 文件名
-  var facebookid = querystring.parse(sender, '\r\n', ':');
+  var facebookid = req.sender.facebookID;
   console("FacebookID : " + facebookid);
   // 边界字符串
   var boundary = req.headers['content-type'].split('; ')[1].replace('boundary=', '');
