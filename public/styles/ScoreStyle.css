@@ -55,8 +55,6 @@
 }
 .name{
     font-weight:999;
-    font-size:4.5vw;
-    margin-left:3vw;
     color:#4c4b4b;
 }
 .teamname{
@@ -80,29 +78,33 @@
 }
 #name1{
     position:absolute;
+    width:25vw;
     top:13vw;
 }
 #name2{
     position:absolute;
+    width:25vw;
     top:32vw;
 }
 #name3{
     position:absolute;
+    width:25vw;
+    object-position: center;
     top:51vw;
 }
 #score1{
     position:absolute;
-    right:6vw;
+    right:3vw;
     top:13vw;
 }
 #score2{
     position:absolute;
-    right:6vw;
+    right:3vw;
     top:32vw;
 }
 #score3{
     position:absolute;
-    right:6vw;
+    right:3vw;
     top:51vw;
 }
 .LeaderBoard{

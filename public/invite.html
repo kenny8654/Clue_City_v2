@@ -88,6 +88,7 @@
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     responseData = response ;
+                     getPecture_team(1,responseData.id);
                   }
                 })
               }
@@ -119,6 +120,12 @@
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
               }
+                
+              function getPecture_team(num,id){
+                  let Url = `https://graph.facebook.com/${id}/picture?type-normal`;
+                  $(`#FriendHead${num}`).attr("src",Url);
+              }
+            
               function getName(getname,num){
                 $(`#name${num}`).text(getname);
               }
@@ -202,6 +209,7 @@
                   teammate1 : teammate,
                 },
               });
+              getPecture_team(2,teamate);
               console.log("join1");
             } 
             function join2(teammate){
@@ -212,6 +220,7 @@
                   teammate2 : teammate,
                 },
               });
+                 getPecture_team(3,teamate);
               console.log("join2");
             } 
             function join3(teammate){
@@ -222,6 +231,7 @@
                   teammate3 : teammate,
                 },
               });
+                 getPecture_team(4,teamate);
               console.log("join3");
             } 
             function join4(teammate){
@@ -232,6 +242,7 @@
                   teammate4 : teammate,
                 },
               });
+                 getPecture_team(5,teamate);
               console.log("join4");
             } 
             function join5(teammate){
@@ -242,6 +253,7 @@
                   teammate5 : teammate,
                 },
               });
+                 getPecture_team(6,teamate);
               console.log("join5");
             } 
             function join6(teammate){
@@ -252,6 +264,7 @@
                   teammate6 : teammate,
                 },
               });
+                 getPecture_team(7,teamate);
               console.log("join6");
             } 
             function join7(teammate){
@@ -262,6 +275,7 @@
                   teammate7 : teammate,
                 },
               });
+                 getPecture_team(8,teamate);
               console.log("join7");
             } 
 
@@ -296,10 +310,10 @@
             <img src="images/Team/wheel.png" class="TopBarWheel" id="Wheel" onclick="gotosetting()">
         </div>
         <div class="FriendsIn">
-            <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead1">
+            <img src="images/Team/lisa.jpg"      class="FriendHead" id="FriendHead1">
             <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead2">
             <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead3">
-            <img src="images/Team/lisa.jpg"      class="FriendHead" id="FriendHead4">
+            <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead4">
             <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead5">
             <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead6">
             <img src="images/Team/Blankhead.png" class="FriendHead" id="FriendHead7">
@@ -365,30 +379,6 @@
                         <div class="header"id="name6"></div>
                     </div>
                     <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[5])">
-                </div>
-                <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/HsiHan.jpg">
-                    <div class="content">
-                        <div class="header">Han Chen</div>
-                    </div>
-                    <img class="Invite" src="images/Team/invite.png">
-                </div>
-                <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/HsiHan.jpg">
-                    <div class="content">
-                        <div class="header">Han Chen</div>
-                    </div>
-                    <img class="Invite" src="images/Team/invite.png">
-                </div>
-                <div class="item">
-                    <img class="OnlineDot" src="">
-                    <img class="ui avatar image" src="images/Team/HsiHan.jpg">
-                    <div class="content">
-                        <div class="header"></div>
-                    </div>
-                    <img class="Invite" src="">
                 </div>
             </div>
         </div>

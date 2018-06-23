@@ -28,7 +28,10 @@
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
         }
          function gotoinvite(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
+             if(multi==1)
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
+             else
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"
         }
         function gotohome(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
@@ -44,53 +47,57 @@
         }
     </script>
     <script>
-        var single=1;
         $(document).ready(function(){
-               $(".TeamName").hide();
-        $("#VagueBack").hide();
-        $("#Start").click(function(){
-            $(".TeamName").fadeIn();
-            $("#VagueBack").fadeIn();
-        });
-        $("#X").click(function(){
-            $(".TeamName").fadeOut();
-            $("#VagueBack").fadeOut();
-        });
+            $("#invite").hide();
+            $("#invite1").hide();
+            $("#invited").hide();
+            $("#invited1").hide();
+            $("#Start").click(function(){
+                $("#invite").fadeIn();
+                $("#invite1").fadeIn();
+            });
+            $("#inviteX").click(function(){
+                $("#invite").fadeOut();
+                $("#invite1").fadeOut();
+            });
+            $("#invitedX").click(function(){
+                $("#invited").fadeOut();
+                $("#invited1").fadeOut();
+            });
             {
                 $("#2P").hide();
                 $("#4P").hide();
                 $("#6P").hide();
                 $("#8P").hide();
-                
             }
-            
-            $("#SingleText").click(function(){
-                if(single==1){
+        var single=0;    
+        $("#SingleText").click(function(){
+                if(single==0){
                     this.src="images/Mode/SingleTextG.png";
-                    single=0;
+                    single=1;
                     $("#MultiText").attr("src","images/Mode/MultiText.png");
                     $("#2P").fadeOut(900);
                     $("#4P").fadeOut(700);
                     $("#6P").fadeOut(500);
                     $("#8P").fadeOut(300);
-                    multi=1;
+                    multi=0;
                 }
                 else{
                     this.src="images/Mode/SingleText.png";
-                    single=1;
+                    single=0;
                 }
             });
-        var multi=1;
+        var multi=0;
             $("#MultiText").click(function(){
-                if(multi==1){
+                if(multi==0){
                     this.src="images/Mode/MultiTextG.png";
                     $("#2P").fadeIn(300);
                     $("#4P").fadeIn(500);
                     $("#6P").fadeIn(700);
                     $("#8P").fadeIn(900);
-                    multi=0;
+                    multi=1;
                     $("#SingleText").attr("src","images/Mode/SingleText.png");
-                    single=1;
+                    single=0;
                 }
                 else{
                     this.src="images/Mode/MultiText.png";
@@ -98,120 +105,120 @@
                     $("#4P").fadeOut(700);
                     $("#6P").fadeOut(500);
                     $("#8P").fadeOut(300);
-                    multi=1;
+                    multi=0;
                 }
             });
-        var twoP=1;
+        var twoP=0;
             $("#2P").click(function(){
-                if(twoP==1){
+                if(twoP==0){
                     this.src="images/Mode/2PG.png";
-                    twoP=0;
+                    twoP=1;
                     $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=1;
+                    fourP=0;
                     $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=1;
+                    sixP=0;
                     $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=1;
+                    eightP=0;
                 }
                 else{
                     this.src="images/Mode/2P.png";
-                    twoP=1;
+                    twoP=0;
                 }
             });
-        var fourP=1;
+        var fourP=0;
             $("#4P").click(function(){
-                if(fourP==1){
+                if(fourP==0){
                     this.src="images/Mode/4PG.png";
-                    fourP=0;
+                    fourP=1;
                     $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=1;
+                    twoP=0;
                     $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=1;
+                    sixP=0;
                     $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=1;
+                    eightP=0;
                 }
                 else{
                     this.src="images/Mode/4P.png";
-                    fourP=1;
+                    fourP=0;
                 }
             });
-        var sixP=1;
+        var sixP=0;
             $("#6P").click(function(){
-                if(sixP==1){
+                if(sixP==0){
                     this.src="images/Mode/6PG.png";
-                    sixP=0;
+                    sixP=1;
                     $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=1;
+                    twoP=0;
                     $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=1;
+                    fourP=0;
                     $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=1;
+                    eightP=0;
                 }
                 else{
                     this.src="images/Mode/6P.png";
-                    sixP=1;
+                    sixP=0;
                 }
             });
-        var eightP=1;
+        var eightP=0;
             $("#8P").click(function(){
-                if(eightP==1){
+                if(eightP==0){
                     this.src="images/Mode/8PG.png";
-                    eightP=0;
+                    eightP=1;
                     $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=1;
+                    twoP=0;
                     $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=1;
+                    fourP=0;
                     $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=1;
+                    sixP=0;
                 }
                 else{
                     this.src="images/Mode/8P.png";
-                    eightP=1;
+                    eightP=0;
                 }
             });
-        var easy=1;
+        var easy=0;
             $("#EasyText").click(function(){
-                if(easy==1){
+                if(easy==0){
                     this.src="images/Mode/EasyTextG.png";
-                    easy=0;
+                    easy=1;
                     $("#NormalText").attr("src","images/Mode/NormalText.png");
-                    normal=1;
+                    normal=0;
                     $("#HardText").attr("src","images/Mode/HardText.png");
-                    hard=1;
+                    hard=0;
                 }
                 else{
                     this.src="images/Mode/EasyText.png";
-                    easy=1;
+                    easy=0;
                 }
             });
-        var normal=1;
+        var normal=0;
             $("#NormalText").click(function(){
-                if(normal==1){
+                if(normal==0){
                     this.src="images/Mode/NormalTextG.png";
-                    normal=0;
+                    normal=1;
                     $("#EasyText").attr("src","images/Mode/EasyText.png");
-                    easy=1;
+                    easy=0;
                     $("#HardText").attr("src","images/Mode/HardText.png");
-                    hard=1;
+                    hard=0;
                 }
                 else{
                     this.src="images/Mode/NormalText.png";
-                    normal=1;
+                    normal=0;
                 }
             });
-        var hard=1;
+        var hard=0;
             $("#HardText").click(function(){
-                if(hard==1){
+                if(hard==0){
                     this.src="images/Mode/HardTextG.png";
-                    hard=0;
+                    hard=1;
                     $("#NormalText").attr("src","images/Mode/NormalText.png");
-                    normal=1;
+                    normal=0;
                     $("#EasyText").attr("src","images/Mode/EasyText.png");
-                    easy=1;
+                    easy=0;
                 }
                 else{
                     this.src="images/Mode/HardText.png";
-                    hard=1;
+                    hard=0;
                 }
             });
         });
@@ -324,8 +331,21 @@
                 });
               }
               function join(){
-                var r = confirm("是否要加入 吃飯睡覺懶惰蟲 ?");
+                var r=false;
                 console.log(invite_info.name);
+                $("#invited").fadeIn();
+                $("#invited1").fadeIn();
+                $("#YES").click(function(){
+                    r=true;
+                    $("#invited").fadeOut();
+                    $("#invited1").fadeOut();
+                })
+                $("#NO").click(function(){
+                    r=false;
+                    $("#invited").fadeOut();
+                    $("#invited1").fadeOut();
+                })
+                
                 if( r == true ){
                   answer = "1" ;
                   PassTocheck(invite_info , answer);
@@ -334,6 +354,8 @@
                   answer = "0" ;
                   PassTocheck(invite_info , answer);
                 }
+                
+                  
               }
               
               function PassTocheck(Data , yes_no)
@@ -388,16 +410,30 @@
               }
       </script>
     
-    <div id="VagueBack"></div>
-    <div class="TeamName">
-        <img src="images/Team/SmallBackground.png" id="SmallBack">
+    <div class="VagueBack" id="invite"></div>
+    <div class="TeamName" id="invite1">
+        <img src="images/Team/SmallBackground.png" class="SmallBack">
         <div id="SetTeamName">
-            <img src="images/Team/X.png" id="X">
-            <p id="TeamText">團隊名稱：</p>
+            <img src="images/Team/X.png" class="X" id="inviteX">
+            <p class="TeamText">團隊名稱：</p>
             <div class="ui input" id="input">
                 <input type="text" name = "team_id" placeholder="最多七字">
             </div>
             <img src="images/Team/OK.png" id="OK" type= "submit" onclick="passtodatabase()">
+        </div>
+    </div>
+    <div class="VagueBack" id="invited"></div>
+    <div class="TeamName" id="invited1">
+        <img src="images/Team/SmallBackground.png" class="SmallBack">
+        <div id="SetTeamName">
+            <img src="images/Team/X.png" class="X" id="invitedX">
+            <img src="images/Team/lisa.jpg" id="photo">
+            <div id="TextinTeam">
+                <p class="TeamText" id="Whether">是否加入</p>
+                <p class="TeamText" id="name">吃飯睡覺懶惰蟲</p>
+            </div>
+            <img src="images/Team/YES.png" id="YES" onclick="">
+            <img src="images/Team/NO.png" id="NO" onclick="">
         </div>
     </div>
     <img src="images/Login/background.png" id="background">

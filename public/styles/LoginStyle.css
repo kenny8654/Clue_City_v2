@@ -23,39 +23,137 @@
     margin-top:5%;
     margin-left:15%;
 }
-#FBlink{
-    position:relative;
-    width:80%;
-    height:10%;
-    margin-top:20%;
-    margin-left:10%;
-}
-#start{
+#Start{
+    position:absolute;
     width:55%;
-    margin-top:20%;
-    margin-left:22%;
+    margin-top:40vw;
+    margin-left:22vw;
 }
 #fb-btn{
     position:absolute;
-    margin-top:10vw;
-    margin-left:22vw;
+    margin-top:30vw;
+    margin-left:23vw;
+}
+#slides{
+    position:relative;
+    top:10vw;
+    left:18vw;
+    width: 70%;
+}
+.photo{
+    position:relative;
+    margin-top:15vw;
 }
 
+body {
+    -webkit-font-smoothing: antialiased;
+    font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #232525;
+    padding-top:70px;
+}
+#slides {
+    display: none;
+}
 
-    
-   
-    
+#slides .slidesjs-navigation {
+    margin-top:3px;
+}
 
+#slides .slidesjs-previous {
+    margin-right: 5px;
+    float: left;
+}
 
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
+#slides .slidesjs-next {
+    margin-right: 5px;
+    float: left;
+}
+
+.slidesjs-pagination {
+    margin-tio:10vw;
+    margin-right:30vw;
+    float: right;
+    list-style:none;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 12px;
+    height: 0;
+    padding-top: 12px;
+    background-image: url("/public/images/pagination.png");
+    background-position: 0 0;
+    float: left;
+    overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+    background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+    color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+    color: #9e2020
+}
+
+.navbar {
+    overflow: hidden
+}
+<!-- End SlidesJS Optional-->
+
+<!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
+<style>
+#slides {
+    display: none
+}
+
+.container {
+    margin: 0 auto
+}
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    .container {
+        width: auto
+      }
     }
-    
-    .slick-active {
-      opacity: .5;
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
     }
 
-    .slick-current {
-      opacity: 1;
-    }   
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays */
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }
