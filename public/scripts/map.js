@@ -251,15 +251,22 @@ function btn_share_submit_onclick() {
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'hidden'
   document.getElementById('btn_share_submit').style.visibility = 'hidden'
+  document.getElementById('btn_exit').style.visibility = 'hidden'
+  document.getElementById('success_clue_picture').style.visibility = 'hidden'
+  document.getElementById('btn_share').style.visibility = 'hidden'
+  document.getElementById('success_background').style.visibility = 'hidden'
+
+
   for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
-  document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
-for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
-  document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
+    document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
+  for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
+    document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
+  
   $.ajax({
     url: './map/createAlbum',
     type: 'post',
     data: {
-      ID: 　facebook_id,
+      ID: facebook_id,
       message: Message
     },
     dataType: 'text',

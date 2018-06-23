@@ -86,7 +86,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
   let mongoCollection = "user";
   console.log("facebookID : ");
   console.log(ID);
-  let object = mongoOperation.GetFriend(mongoCollection, { id : ID });
+  let object = mongoOperation.GetFriend(mongoCollection, { id: ID });
   object.then((value) => {
     console.log("value : ");
     console.log(value);
@@ -96,11 +96,12 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
     else {
       image_size = value.image.length;
     }
+    console.log("imageSize : ");
+    console.log(image_size);
+    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
+    mongoOperation.addimage(mongoCollection, ID, message)
   })
-  console.log("imageSize : ");
-  console.log(image_size);
-  fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
-  mongoOperation.addimage(mongoCollection, ID, message)
+
 })
 router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";
@@ -109,12 +110,12 @@ router.post('/tellscore', urlencoderParser, function (req, res) {
   mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
-router.post('/update_score',urlencoderParser,function(req,res){     
+router.post('/update_score', urlencoderParser, function (req, res) {
   let mongoCollection = "team";
-  let team = req.body.name ;
+  let team = req.body.name;
 
-  let object = mongoOperation.mongoGetScore( mongoCollection ,team );
-  object.then((val)=>{
+  let object = mongoOperation.mongoGetScore(mongoCollection, team);
+  object.then((val) => {
     res.send(val);
   });
 })
