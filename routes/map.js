@@ -98,7 +98,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
     }
     console.log("imageSize : ");
     console.log(image_size);
-    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
+    fs.createReadStream('./public/target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
     mongoOperation.addimage(mongoCollection, ID, message)
   })
 
@@ -141,10 +141,10 @@ router.post("/upload", urlencoderParser, function (req, res) {
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
           //fileName = fileInfo[value].substring(10, fileInfo[value].length-1);
-          fileName = "./target.jpg"
+          fileName = "./public/target.jpg"
           if (fileName.indexOf('\\') != -1) {
             //fileName = fileName.substring(fileName.lastIndexOf('\\')+1);
-            fileName = "./target.jpg"
+            fileName = "./public/target.jpg"
           }
           console.log("File Name : " + fileName);
         }
@@ -174,7 +174,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
     } else {
       console.log('只能上传图片文件');
     }
-    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/target.jpg'));
+    // fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/target.jpg'));
     runPython(res);
 
   })
