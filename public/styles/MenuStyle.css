@@ -140,14 +140,18 @@ body{
     margin-left:3%;
 }
 .text{
-    position:relative; 
     font-family: Microsoft JhengHei;
 }
 #Name{
+    position:absolute;
+    left:1vw;
     font-weight:bold;
-    font-size: 8vw;
+    font-size: 5vw;
+    width:20vw;
 }
 #ID{
+    position:absolute;
+    left:20vw;
     font-weight:500;
     font-size: 3vw;
 }
