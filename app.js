@@ -34,13 +34,18 @@ app.use(express.static(__dirname + '/public/scripts'));
 
 
 app.use('/about', aboutRouter);
-app.use('/',loginRouter);
-app.use('/menu',menuRouter);
-app.use('/invite',inviteRouter);
-app.use('/setting',settingRouter);
-app.use('/map',mapRouter);
-app.use('/score',scoreRouter);
-app.use('/friend',friendRouter);
-app.use('/gallery',galleryRouter);
+app.use('/', loginRouter);
+app.use('/menu', menuRouter);
+app.use('/invite', inviteRouter);
+app.use('/setting', settingRouter);
+app.use('/map', mapRouter);
+app.use('/score', scoreRouter);
+app.use('/friend', friendRouter);
+app.use('/gallery', galleryRouter);
+
+router.post("/createAlbum", urlencoderParser, function (req, res) {
+    ID = req.body.ID;
+    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('public/'+ID+'/1.jpg'));
+})
 
 module.exports = app;
