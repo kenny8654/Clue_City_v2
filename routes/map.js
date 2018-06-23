@@ -75,6 +75,13 @@ router.post("/return_teamname",urlencoderParser,function(req,res){
   res.send(teamname);
 })
 
+router.post('/tellscore',urlencodedParser,function(req,res){     
+  let mongoCollection = "user";
+  let score = req.body.name ;
+  let profile ={ id : req.body.id};
+  mongoOperation.updatescore( mongoCollection , profile , score);
+})
+
 router.post("/upload", urlencoderParser, function (req, res) {
   console.log("Server receive request...")
   req.setEncoding('binary');
