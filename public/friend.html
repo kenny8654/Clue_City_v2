@@ -20,6 +20,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
     <script>
+        $(document).ready(function(){
+            $("#search icon").click(function(){
+                alert("YO");
+                Findindb();
+            })
+        })
         function gobackinvite(){
             history.back();
         } 
@@ -117,6 +123,7 @@
               }
 
               function Findindb(){
+                console.log("clicked");
                   $.ajax({
                       type: 'post',
                       url: './friend/find_friend',
@@ -157,7 +164,7 @@
             <div class="ui search" id="Search">
                 <div class="ui icon input" id="Search1">
                     <input class="prompt" name = "friend_id" type="text" placeholder="Search By Name or ID" id="Search2">
-                    <button class="search icon" type = "submit" onclick="Findindb()"></button>
+                    <button class="search icon" type = "submit" onclick="Findindb()">搜尋</button>
                 </div>
                 <div class="results"></div>
             </div>
@@ -168,7 +175,7 @@
                         <div class="header" id = "name">Glen</div>
                         <p class="ID" id="ID" >glen84910</p>
                     </div>
-                    <button class="Add" src="images/Team/Plus.png" onclick= "addfriend()">
+                    <img class="Add" src="images/Team/Plus.png" onclick= "addfriend()">
                 </div>
                 <div class="item">
                     <img class="ui avatar image" src="images/Team/Wang.jpg">
@@ -176,7 +183,7 @@
                         <div class="header">KennyWang</div>
                         <p class="ID">HandsomeWang</p>
                     </div>
-                    <img class="Add" src="images/Team/Plus.png">
+                    <img class="Add" src="images/Team/Plus.png" onclick="addfriend()">
                 </div>
                 <div class="item">
                     <img class="ui avatar image" src="images/Team/HsiHan.jpg">
