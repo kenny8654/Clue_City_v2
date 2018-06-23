@@ -86,7 +86,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
   let mongoCollection = "user";
   console.log("facebookID : ");
   console.log(ID);
-  let object = mongoOperation.GetFriend(mongoCollection, ID);
+  let object = mongoOperation.GetFriend(mongoCollection, { id : ID });
   object.then((value) => {
     console.log("value : ");
     console.log(value);
