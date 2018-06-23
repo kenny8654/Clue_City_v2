@@ -32,8 +32,16 @@ router.post('/teammate', urlencodedParser,function(req,res){
 router.post('/signal', urlencodedParser, function(req,res){
     var mongoCollection = "user";
     let object = mongoOperation.mongoFindinvite(mongoCollection, be_sender_id);
+    let hi ;
     object.then((val)=>{
-      res.send(val);
+      if(val == null){
+        res.send(val);
+      }
+      else{
+        hi = { sender : val.sender , to : val.to , name : team};
+        console.log(hi);
+        res.send(hi);
+      }
     });
 });
 
@@ -48,7 +56,7 @@ router.post('/checkresponse', urlencodedParser,function(req,res){
 router.post('/invite', urlencodedParser,function(req,res){ //ok
 
       sender_info = req.body.sender;
-      be_sender_id = {sender:"994408210718019",to:"2054568394572464"};      
+      be_sender_id =  req.body.to ;
     let receiver = req.body.to;
     let mongoCollection = "user";
     mongoOperation.invitation( mongoCollection , receiver ,req.body);
@@ -56,10 +64,26 @@ router.post('/invite', urlencodedParser,function(req,res){ //ok
 
 router.post('/tellteam',urlencodedParser,function(req,req){     
     let mongoCollection = "team";
-    let entry = req.body;
-    console.log("---------------------------------------");
-    console.log(entry);
+    let entry = {clicked : '1'};
     mongoOperation.addteammate( mongoCollection , team , entry);
 })
+
+router.post('/teamstart', urlencodedParser,function(req,res){
+
+    let mongoCollection = "team";
+    let promise = mongoOperation.mongoFindstart( mongoCollection , team);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
+
+router.post('/friend', urlencodedParser,function(req,res){
+
+    let mongoCollection = "user";
+    let promise = mongoOperation.GetFriend(mongoCollection);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
 
 module.exports = router;

@@ -21,6 +21,9 @@
             crossorigin="anonymous">
     </script>
     <script>
+        function gogaming(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
+        }
         function gotosetting(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
         }
@@ -304,8 +307,25 @@
                 });
               }
     
+              var startsignal = setInterval(teamstart , 1000);
+    
+              function teamstart(){
+                $.ajax ({
+                  type : 'post',
+                  url : './invite/teamstart',
+                  data : {},
+                  success : function(data){
+                    if( data == "" || data == null){
+                    }else{
+                      clearInterval(startsignal);
+                      gogaming();
+                    }
+                  }
+                });
+              }
               function join(){
                 var r = confirm("是否要加入 吃飯睡覺懶惰蟲 ?");
+                console.log(invite_info.name);
                 if( r == true ){
                   answer = "1" ;
                   PassTocheck(invite_info , answer);
@@ -351,6 +371,14 @@
                   $.ajax({
                       type: 'post',
                       url: './invite/team',
+                      data:{
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
+                      }
+                  });
+                  $.ajax({
+                      type: 'post',
+                      url: './map/team',
                       data:{
                         name : $("input[name='team_id']").val(),
                         id  : responseData.id,

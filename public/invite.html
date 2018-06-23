@@ -30,11 +30,6 @@
        });
         $(".TeamName").hide();
         $("#VagueBack").hide();
-        $("#StartGameIcon").click(function(){
-            $(".TeamName").fadeIn();
-            $("#VagueBack").fadeIn();
-            
-        });
         $("#X").click(function(){
             $(".TeamName").fadeOut();
             $("#VagueBack").fadeOut();
@@ -74,6 +69,7 @@
                  if( response.status === 'connected' ){
                    console.log( 'Logged in and authenticated' );
                    getProfile();
+                   friends();
                  } else {
                   console.log( 'Not authenticated' );
                  }
@@ -95,24 +91,38 @@
                   }
                 })
               }
-      
-              function friend1(){
-                let sendto = {"id":"1854028224617790"}; //致賢
+
+              var choose_friend;
+
+              function friends(){
+                $.ajax({
+                  type : 'post',
+                  url : './invite/friend',
+                  data : {},
+                  success : function(data){
+                    choose_friend = data ;
+                    let url ;
+                    for(let i = 0; i < data.length ; i++){
+                      url = `https://graph.facebook.com/${data[i].id}/picture?type-normal`;
+                      getPicture(url,(i+1));
+                      getName( data[i].name,(i+1));
+                    }
+                  }
+                })
+              }
+
+              function Friends(number){
+                let sendto = { "id": number.id };
                 invite(sendto);
-              }       
-              function friend2(){
-                let sendto = {"id":"2039314459655494"}; //jack
-                invite(sendto);         
-              }       
-              function friend3(){
-                let sendto = {"id":"2054568394572464"}; //仕翰
-                invite(sendto);         
-              }       
-              function friend4(){
-                let sendto = {"id":"994408210718019"}; //志嘉
-                invite(sendto);         
-              }       
-      
+              }
+
+              function getPicture(url,num){
+                $(`#bighead${num}`).attr("src",url);
+              }
+              function getName(getname,num){
+                $(`#name${num}`).text(getname);
+              }
+
               function invite(sendto){
                 let sender =  responseData ;
                 let inviteto = sendto.id ;
@@ -127,13 +137,12 @@
               }
 
               function starting(){
-                $.ajax({
-                  type: 'post',
+            
+                $.ajax ({
+                  type : 'post',
                   url : './invite/tellteam',
-                  data : {
-                    enter : 1 ,
-                  }
-                })
+                  data : {}
+                });
                 gogaming();
               }
 
@@ -160,6 +169,21 @@
                           }
                           else if(num ==2){
                             join2( invite_info.to);
+                          }
+                          else if(num ==3){
+                            join3( invite_info.to);
+                          }
+                          else if(num ==4){
+                            join4( invite_info.to);
+                          }
+                          else if(num ==5){
+                            join5( invite_info.to);
+                          }
+                          else if(num ==6){
+                            join6( invite_info.to);
+                          }
+                          else if(num ==7){
+                            join7( invite_info.to);
                           }
                         }
                         else{
@@ -190,6 +214,57 @@
               });
               console.log("join2");
             } 
+            function join3(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate3 : teammate,
+                },
+              });
+              console.log("join3");
+            } 
+            function join4(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate4 : teammate,
+                },
+              });
+              console.log("join4");
+            } 
+            function join5(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate5 : teammate,
+                },
+              });
+              console.log("join5");
+            } 
+            function join6(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate6 : teammate,
+                },
+              });
+              console.log("join6");
+            } 
+            function join7(teammate){
+              $.ajax({
+                method : 'post',
+                url : './invite/teammate',
+                data : {
+                  teammate7 : teammate,
+                },
+              });
+              console.log("join7");
+            } 
+
             function gogaming(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
             }
@@ -244,52 +319,52 @@
         <div class="FriendList">
             <div class="ui middle aligned selection list">
                 <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/Glen.jpg" >
+                    <img class="OnlineDot"  src="images/Team/greendot.png">
+                    <img class="ui avatar image" id = "bighead1" >
                     <div class="content">
-                        <div class="header">Glen</div>
+                        <div class="header" id="name1"></div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png"  onclick = "friend1()">
+                    <img class="Invite" src="images/Team/invite.png"  onclick = "Friends(choose_friend[0])">
+                </div>
+                <div class="item">
+                    <img class="OnlineDot"  src="images/Team/graydot.png">
+                    <img class="ui avatar image"id = "bighead2" src="images/Team/Wang.jpg">
+                    <div class="content">
+                        <div class="header"id="name2"></div>
+                    </div>
+                    <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[1])">
+                </div>
+                <div class="item">
+                    <img class="OnlineDot" src="images/Team/greendot.png">
+                    <img class="ui avatar image" id = "bighead3"src="images/Team/HsiHan.jpg">
+                    <div class="content">
+                        <div class="header"id="name3"></div>
+                    </div>
+                    <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[2])">
                 </div>
                 <div class="item">
                     <img class="OnlineDot" src="images/Team/graydot.png">
-                    <img class="ui avatar image" src="images/Team/Wang.jpg">
+                    <img class="ui avatar image" id = "bighead4"src="images/Team/Chia.jpg">
                     <div class="content">
-                        <div class="header">KennyWang</div>
+                        <div class="header"id="name4"></div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png">
+                    <img class="Invite" src="images/Team/invite.png"  onclick = "Friends(choose_friend[3])">
                 </div>
                 <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/HsiHan.jpg">
+                    <img class="OnlineDot"  src="images/Team/greendot.png">
+                    <img class="ui avatar image" id = "bighead5"src="images/Team/Andy.jpg">
                     <div class="content">
-                        <div class="header">Han Chen</div>
+                        <div class="header"id="name5"></div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png" id="Shihan" onclick = "friend3()">
+                    <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[4])">
                 </div>
                 <div class="item">
-                    <img class="OnlineDot" src="images/Team/graydot.png">
-                    <img class="ui avatar image" src="images/Team/Chia.jpg">
+                    <img class="OnlineDot"  src="images/Team/greendot.png">
+                    <img class="ui avatar image" id = "bighead6"src="images/Team/Lewis.jpg">
                     <div class="content">
-                        <div class="header">Chia Lin</div>
+                        <div class="header"id="name6"></div>
                     </div>
-                    <img class="Invite" src="images/Team/invite.png" onclick = "friend4()">
-                </div>
-                <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/Andy.jpg">
-                    <div class="content">
-                        <div class="header">Andy Shih</div>
-                    </div>
-                    <img class="Invite" src="images/Team/invite.png">
-                </div>
-                <div class="item">
-                    <img class="OnlineDot" src="images/Team/greendot.png">
-                    <img class="ui avatar image" src="images/Team/Lewis.jpg">
-                    <div class="content">
-                        <div class="header">Luwis</div>
-                    </div>
-                    <img class="Invite" src="images/Team/invite.png">
+                    <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[5])">
                 </div>
                 <div class="item">
                     <img class="OnlineDot" src="images/Team/greendot.png">
@@ -318,7 +393,7 @@
             </div>
         </div>
         <div id="StartGame">
-                <img src="images/Team/StartTheGame.png" id="StartGameIcon" onclick = "starting()">
+            <img src="images/Team/StartTheGame.png" id="StartGameIcon" onclick = "starting()">
         </div>
         <div id="Bottom">
                 <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
