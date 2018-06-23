@@ -60,6 +60,7 @@ html, body {
 
 #facebook_id{
   visibility: hidden;
+  display: gone;
 }
 
 #team_name{
