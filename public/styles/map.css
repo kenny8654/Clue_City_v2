@@ -382,11 +382,21 @@ html, body {
 #btn_share{
   position: absolute;
   height: 4%;
-  left: 72%;
+  left: 74%;
   top:83%;
   z-index: 8;
   visibility: hidden;
 }
+
+#btn_share_submit{
+  position: absolute;
+  height: 8%;
+  left: 38%;
+  top:82%;
+  z-index: 8;
+  visibility: hidden;
+}
+
 
 #share_word{
   position: absolute;
