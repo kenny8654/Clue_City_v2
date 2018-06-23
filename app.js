@@ -43,9 +43,5 @@ app.use('/score', scoreRouter);
 app.use('/friend', friendRouter);
 app.use('/gallery', galleryRouter);
 
-app.post("/createAlbum", urlencoderParser, function (req, res) {
-    ID = req.body.ID;
-    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(__dirname+'/public/'+ID+'/1.jpg'));
-})
 
 module.exports = app;

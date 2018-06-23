@@ -676,7 +676,7 @@ function onSubmitButtonClicked() {
       console.log(data)
       facebook_id = document.getElementById("facebook_id").textContent;
       $.ajax({
-        url: './createAlbum',
+        url: './map/createAlbum',
         type: 'post',
         data: {ID :　facebook_id},
         dataType: 'text',
