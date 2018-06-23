@@ -637,9 +637,6 @@ function onSubmitButtonClicked() {
   //創建formdata對象
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
-  formData.sender = {
-    facebookID : document.getElementById("facebook_id").textContent
-  }
   console.log(formData.sender.facebookID);
   formData.append('file', file.files[0]);
   console.log('開始圖片上傳');
