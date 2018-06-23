@@ -1,6 +1,4 @@
 eqfeed_callback({"type":"FeatureCollection","features":[
-    {"type":"Feature","properties":{"mag":6},"geometry":{"type":"Point","coordinates":[ 120.2196,22.9968,0]}},
-    {"type":"Feature","properties":{"mag":6},"geometry":{"type":"Point","coordinates":[ 120.2210,22.9942,0]}},
     {"type":"Feature","properties":{"mag":6},"geometry":{"type":"Point","coordinates":[ 120.206108,22.989296,0]}},//德化堂
     {"type":"Feature","properties":{"mag":6},"geometry":{"type":"Point","coordinates":[ 120.204216,22.989049,0]}},//愛國婦人會館(台南創意中心)
     {"type":"Feature","properties":{"mag":6},"geometry":{"type":"Point","coordinates":[ 120.202682,22.989701,0]}},//原台南神社休憩所
