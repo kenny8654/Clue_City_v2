@@ -103,6 +103,16 @@ router.post('/tellscore', urlencoderParser, function (req, res) {
   mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
+router.post('/update_score',urlencoderParser,function(req,res){     
+  let mongoCollection = "team";
+  let team = req.body.name ;
+
+  let object = mongoOperation.mongoGetScore( mongoCollection ,team );
+  object.then((val)=>{
+    res.send(val);
+  });
+})
+
 router.post("/upload", urlencoderParser, function (req, res) {
   console.log("Server receive request...")
   req.setEncoding('binary');

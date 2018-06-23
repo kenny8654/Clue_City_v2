@@ -764,3 +764,18 @@ $(document).ready(function () {
     //do some other stuff here
   });
 })
+
+function update_score(){
+  $.ajax ({
+    type : 'post',
+    url : './map/update_score',
+    data : {
+      name:document.getElementById("team_name").textContent,
+    },
+    success : function(data){
+      
+    }
+  });
+}
+
+
