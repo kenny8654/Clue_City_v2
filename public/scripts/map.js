@@ -241,6 +241,7 @@ function btn_share_onclick(){
   console.log("click share")
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'visible'
+  document.getElementById('btn_share_submit').style.visibility = 'visible'
 
 }
 
@@ -726,8 +727,7 @@ function onSelectClicked() {
   }, 2500);
 }
 
-function btn_share_onclick(){
-  Message = document.getElementById("share_word").value;
+Message = document.getElementById("share_word").value;
   facebook_id = document.getElementById("facebook_id").textContent;
   $.ajax({
     url: './map/createAlbum',
@@ -744,7 +744,6 @@ function btn_share_onclick(){
       console.log("album_error!!!!!!!!!");
     }
   })
-}
 
 
 $(document).ready(function () {
