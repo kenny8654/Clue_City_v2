@@ -398,6 +398,14 @@
                         id  : responseData.id,
                       }
                   });
+                  $.ajax({
+                      type: 'post',
+                      url: './map/team',
+                      data:{
+                        name : $("input[name='team_id']").val(),
+                        id  : responseData.id,
+                      }
+                  });
                   gotoinvite();
               }
       </script>

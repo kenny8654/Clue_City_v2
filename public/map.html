@@ -1,84 +1,163 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Clue City</title>
-    <meta name="viewport" content="initial-scale=1.0 , width=device-width, user-scalable=no">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./styles/map.css" href="semantic/out/semantic.min.css">
 
-    <link rel="manifest" href="/manifest.json">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
-    <meta name="apple-mobile-web-app-title" content="Clue City">
-    <link rel="apple-touch-icon" href="images/logo.png">
-    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#2F3BA2">
-  </head>
-  
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<head>
+  <title>Clue City</title>
+  <meta name="viewport" content="initial-scale=1.0 , width=device-width, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles/map.css" href="semantic/out/semantic.min.css">
 
-    <div id="title_bar">
-      <img id="title" src="./images/Map/clues_city.png">
-      <img id="user_pic" src="./images/Map/user.jpg">
-    </div>
-    
-    <div id="game_bar">
-      <img id="game_bar_background" src="./images/Map/game_bar.png">
-      <img id="decoration1" src="./images/Map/decoration.png">
-      <img id="decoration2" src="./images/Map/decoration.png">
-      <a id="team_name">吃飯睡覺懶惰蟲</a>
-      <img id="game_count" src="./images/Map/game_count.png">
-      <span id="time"></span>
-      <img id="game_score" src="./images/Map/game_score.png">
-    </div>
-    <div id="map"></div>
-    <img id="btn_camera" src="./images/Map/btn_camera.png" onclick="btn_camera_onclick()">
-    <div id="bottom_navigation">
-      <img id="bottom_navigation_background" src="./images/Map/button_bar.png">
-      <img id="nav_home" src="./images/Map/nav_home.png">
-      <img id="nav_gallery" src="./images/Map/nav_gallery.png">
-      <img id="nav_gallery" src="./images/Map/nav_gallery.png">
-      <img id="nav_group" src="./images/Map/nav_group.png">
-      <div id="time"></div>
-      <img id="nav_score" src="./images/Map/nav_score.png" onclick="ss()">
-    </div>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+  <meta name="apple-mobile-web-app-title" content="Clue City">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+</head>
 
-    <div id="big_clue">
-      <img id="big_clue_background" class="big_clue" src="./images/Map/big_clue_background.png">
-      <img id="btn_hide" class="big_clue" src="./images/Map/btn_hide.png" onclick="btn_hide_onclick()">
-      <img id="btn_clue" class="big_clue" src="./images/Map/btn_clue.png">
-      <img id="big_clues_picture" class="big_clue" src="./images/Map/clues_picture.jpg">
-      <img id="fb"src="./images/PhotoSharing/FB.png">
-      <img id="ig"src="./images/PhotoSharing/IG.png">
-      <img id="twitter"src="./images/PhotoSharing/twitter.png">
-      <img id="success" src="./images/PhotoSharing/success.png">
-    </div>
-
-    <div id="small_clue">
-      <img id="small_clue_background" class="small_clue" src="./images/Map/small_clue_background.png" onclick="small_clue_onclick()">
-      <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg" onclick="small_clue_onclick()">
-    </div>
-
-    <form id = "upload_form"  enctype="multipart/form-data">
-
-      <input id = "submit_image"type="file" name="image" accept="image/*" capture="user" >
-      <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button>
-
-      <!-- <label id="submit_image_label" >
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        
+                window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '177842309598524',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.0'
+              });
+                
+              FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+                
+            };
           
-      </label>
-      <label id="submit_button_label" >
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "https://connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        
+        
           
-      </label> -->
-    </form>
-    <!-- <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg" width="200"> -->
-    <h1 id = "upload_response">  </h1>
+         function statusChangeCallback(response){
+           if( response.status === 'connected' ){
+             console.log( 'Logged in and authenticated' );
+             getProfile();
+             GetTeamName();
+           } else {
+            console.log( 'Not authenticated' );
+           }
+         }
+        
+        
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+        function getProfile(){
+          FB.api('/me?fields=name,email',function(response){
+            if(response && !response.error){
+              let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+              getPicture(url);
+              console.log("has get profile");
+            }    
+          })
+        }
+        
+        var team_name ;
+        function GetTeamName()
+        {
+            $.ajax({
+                type: 'post',
+                url: './map/return_teamname',
+                data:{},
+                success : function(data){
+                  team_name = data ;
+                  $('#team_name').text(data);
+                }
+            });
+        }
+        
+        function gotomenu(){
+          document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        }
+        
+        function getPicture(url){
+          $('#user_pic').attr("src",url);
+        }
+        
+
+        </script>
+  <script>
     
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi5IZ6geUCsf8gaf2olTlfXDxZw4K340&callback=initMap"
-    async defer></script>
-    <script src="./scripts/map.js"></script>
-    <script src="../routes/map.js" > </script>
-    
-  </body>
+  </script>
+  <div id="title_bar">
+    <img id="title" src="./images/Map/clues_city.png">
+    <img id="user_pic" src="./images/Map/user.jpg">
+  </div>
+
+  <div id="game_bar">
+    <img id="game_bar_background" src="./images/Map/game_bar.png">
+    <img id="decoration1" src="./images/Map/decoration.png">
+    <img id="decoration2" src="./images/Map/decoration.png">
+    <a id="team_name">吃飯睡覺懶惰蟲</a>
+    <img id="game_count" src="./images/Map/game_count.png">
+    <span id="time"></span>
+    <img id="game_score" src="./images/Map/game_score.png">
+    <a id="score_text">0</a>
+  </div>
+  <div id="map"></div>
+  <img id="btn_camera" class="big_clue" src="./images/Map/btn_camera.png" onclick="btn_camera_onclick()">
+  <div id="bottom_navigation">
+    <img id="bottom_navigation_background" src="./images/Map/button_bar.png">
+    <img id="nav_home" src="./images/Map/nav_home.png">
+    <img id="nav_gallery" src="./images/Map/nav_gallery.png">
+    <img id="nav_gallery" src="./images/Map/nav_gallery.png">
+    <img id="nav_group" src="./images/Map/nav_group.png">
+    <div id="time"></div>
+    <img id="nav_score" src="./images/Map/nav_score.png">
+  </div>
+
+  <div id="big_clue">
+      <div id="loader"></div> 
+    <a id = "loader_message"></a>
+    <img id="big_clue_background" class="big_clue" src="./images/Map/big_clue_background.png">
+    <img id="btn_hide" class="big_clue" src="./images/Map/btn_hide.png" onclick="btn_hide_onclick()">
+    <img id="btn_clue" class="big_clue" src="./images/Map/btn_clue.png">
+    <img id="big_clue_picture" class="big_clue" src="./images/Map/clues_picture.jpg">
+    <img id="success" class="big_clue" src="./images/PhotoSharing/success.png">
+    <img id="success_message" class="big_clue" src="./images/PhotoSharing/success-1.png" onclick="success_message_onclick()">
+  </div>
+
+
+
+  <div id="small_clue">
+    <img id="small_clue_background" class="small_clue" src="./images/Map/small_clue_background.png" onclick="small_clue_onclick()">
+    <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg" onclick="small_clue_onclick()">
+  </div>
+
+  <form id="upload_form" enctype="multipart/form-data" method="POST" action="./map/NULL"> -->
+    <!-- <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button> -->
+    <label id="submit_image_label" class="big_clue" onclick="onSelectClicked()">
+      <input id="submit_image" type="file" class="big_clue" name="image" accept="image/*" capture="user">
+    </label>
+    <a id = "message" class="big_clue">已選擇圖片</a>
+    <label id="submit_button_label" class="big_clue">
+      <button id="submit_button" class="big_clue" onClick="onSubmitButtonClicked()">Upload </button>
+    </label>
+  </form>
+  <!-- <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg" width="200"> -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi5IZ6geUCsf8gaf2olTlfXDxZw4K340&callback=initMap" async
+    defer></script>
+  <script src="./scripts/map.js" type="text/javascript"></script>
+
+</body>
+
 </html>
