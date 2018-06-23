@@ -1,3 +1,12 @@
+#gg{
+    position:absolute;
+    overflow-y:auto;
+    overflow-x:hidden;
+    width:100vw;
+    height:150vw;
+    top:15vw;
+    left:2vw;
+}
 #background{
     position:absolute;
     z-index:-2;
@@ -46,12 +55,18 @@
     left:10vw;
     width: 80%;
 }
+.slides{
+    position:relative;
+    margin-top:10vw;
+    left:10vw;
+    width: 80vw;
+    display: none;
+}
 .photo{
     position:absolute;
-    margin-top:15vw;
+    margin-top:0vw;
     width:50%;
 }
-
 
 
 body {
@@ -64,16 +79,16 @@ body {
     display: none;
 }
 
-#slides .slidesjs-navigation {
+.slidesjs-navigation {
     margin-top:3px;
 }
 
-#slides .slidesjs-previous {
+.slidesjs-previous {
     margin-right: 5px;
     float: left;
 }
 
-#slides .slidesjs-next {
+.slidesjs-next {
     margin-right: 5px;
     float: left;
 }
@@ -107,16 +122,6 @@ body {
 
 .slidesjs-pagination li a:hover {
     background-position: 0 -26px
-}
-
-#slides a:link,
-#slides a:visited {
-    color: #333
-}
-
-#slides a:hover,
-#slides a:active {
-    color: #9e2020
 }
 
 .navbar {

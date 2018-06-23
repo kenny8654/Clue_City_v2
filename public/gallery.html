@@ -42,19 +42,48 @@
 </head>
 <body>
     <img src="images/Gallery/Background.png" id="background">
+    
     <div class="Gallery">
         <div class="topbar">
             <img src="images/Gallery/top.png" class="TopBarMid" id="Gallery">
             <img src="images/Mode/setting icon.png" class="TopBarWheel" onclick="gotosetting()" id="SettingIcon">
         </div>
     </div>
-    <div class="container">
-        <div id="slides">
-          <img src="images/Login/firstdes.png"  class="photo">
-          <img src="images/Login/seconddes.png" class="photo">
-          <img src="images/Login/thirddes.png"  class="photo">
+    <div id="gg">
+        <div class="container">
+        <div class="slides">
+          <img src="images/Gallery/1.jpg"  class="photo">
+          <img src="images/Gallery/2.jpg" class="photo">
+          <img src="images/Gallery/3.jpg"  class="photo">
+            <img src="images/Gallery/4.jpg"  class="photo">
         </div>
     </div>
+    <div class="container">
+        <div class="slides">
+          <img src="images/Gallery/1.jpg"  class="photo">
+          <img src="images/Gallery/2.jpg" class="photo">
+          <img src="images/Gallery/3.jpg"  class="photo">
+            <img src="images/Gallery/4.jpg"  class="photo">
+        </div>
+    </div>
+     <div class="container">
+        <div class="slides">
+          <img src="images/Gallery/1.jpg"  class="photo">
+          <img src="images/Gallery/2.jpg" class="photo">
+          <img src="images/Gallery/3.jpg"  class="photo">
+            <img src="images/Gallery/4.jpg"  class="photo">
+        </div>
+    </div>
+     <div class="container">
+        <div class="slides">
+          <img src="images/Gallery/1.jpg"  class="photo">
+          <img src="images/Gallery/2.jpg" class="photo">
+          <img src="images/Gallery/3.jpg"  class="photo">
+            <img src="images/Gallery/4.jpg"  class="photo">
+        </div>
+    </div>
+    </div>
+    
   <!-- End SlidesJS Required: Start Slides -->
 
   <!-- SlidesJS Required: Link to jQuery -->
@@ -73,6 +102,12 @@
         height: 528,
         navigation: false
       });
+        $('.slides').slidesjs({
+        width: 940,
+        height: 528,
+        navigation: false,
+      });
+
     });
   </script>
     
