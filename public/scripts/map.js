@@ -669,7 +669,6 @@ function onSubmitButtonClicked() {
         console.log("not similar")
         success_or_failure = 0;
       }
-      fs.createReadStream('../../target.jpg').pipe(fs.createWriteStream('1.jpg'));
       setTimeout(function () {
         document.getElementById("success").style.visibility = "visible";
         document.getElementById("success_message").style.visibility = "visible";
