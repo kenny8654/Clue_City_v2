@@ -48,15 +48,21 @@
     </script>
     <script>
         $(document).ready(function(){
-            $(".TeamName").hide();
-            $("#VagueBack").hide();
+            $("#invite").hide();
+            $("#invite1").hide();
+            $("#invited").hide();
+            $("#invited1").hide();
             $("#Start").click(function(){
-                $(".TeamName").fadeIn();
-                $("#VagueBack").fadeIn();
+                $("#invite").fadeIn();
+                $("#invite1").fadeIn();
             });
-            $("#X").click(function(){
-                $(".TeamName").fadeOut();
-                $("#VagueBack").fadeOut();
+            $("#inviteX").click(function(){
+                $("#invite").fadeOut();
+                $("#invite1").fadeOut();
+            });
+            $("#invitedX").click(function(){
+                $("#invited").fadeOut();
+                $("#invited1").fadeOut();
             });
             {
                 $("#2P").hide();
@@ -325,8 +331,21 @@
                 });
               }
               function join(){
-                var r = confirm("是否要加入 吃飯睡覺懶惰蟲 ?");
+                var r=false;
                 console.log(invite_info.name);
+                $("#invited").fadeIn();
+                $("#invited1").fadeIn();
+                $("#YES").click(function(){
+                    r=true;
+                    $("#invited").fadeOut();
+                    $("#invited1").fadeOut();
+                })
+                $("#NO").click(function(){
+                    r=false;
+                    $("#invited").fadeOut();
+                    $("#invited1").fadeOut();
+                })
+                
                 if( r == true ){
                   answer = "1" ;
                   PassTocheck(invite_info , answer);
@@ -335,6 +354,8 @@
                   answer = "0" ;
                   PassTocheck(invite_info , answer);
                 }
+                
+                  
               }
               
               function PassTocheck(Data , yes_no)
@@ -381,16 +402,30 @@
               }
       </script>
     
-    <div id="VagueBack"></div>
-    <div class="TeamName">
-        <img src="images/Team/SmallBackground.png" id="SmallBack">
+    <div class="VagueBack" id="invite"></div>
+    <div class="TeamName" id="invite1">
+        <img src="images/Team/SmallBackground.png" class="SmallBack">
         <div id="SetTeamName">
-            <img src="images/Team/X.png" id="X">
-            <p id="TeamText">團隊名稱：</p>
+            <img src="images/Team/X.png" class="X" id="inviteX">
+            <p class="TeamText">團隊名稱：</p>
             <div class="ui input" id="input">
                 <input type="text" name = "team_id" placeholder="最多七字">
             </div>
             <img src="images/Team/OK.png" id="OK" type= "submit" onclick="passtodatabase()">
+        </div>
+    </div>
+    <div class="VagueBack" id="invited"></div>
+    <div class="TeamName" id="invited1">
+        <img src="images/Team/SmallBackground.png" class="SmallBack">
+        <div id="SetTeamName">
+            <img src="images/Team/X.png" class="X" id="invitedX">
+            <img src="images/Team/lisa.jpg" id="photo">
+            <div id="TextinTeam">
+                <p class="TeamText" id="Whether">是否加入</p>
+                <p class="TeamText" id="name">吃飯睡覺懶惰蟲</p>
+            </div>
+            <img src="images/Team/YES.png" id="YES" onclick="">
+            <img src="images/Team/NO.png" id="NO" onclick="">
         </div>
     </div>
     <img src="images/Login/background.png" id="background">

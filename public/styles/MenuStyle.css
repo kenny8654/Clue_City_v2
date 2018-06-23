@@ -7,11 +7,11 @@
     top:70vw;
         
 }
-#SmallBack{
+.SmallBack{
     position:absolute;
     width:100%;
 }
-#VagueBack{
+.VagueBack{
     position:absolute;
     z-index:2;
     background-color:black;
@@ -30,7 +30,7 @@
 #SetTeamName{
     
 }
-#TeamText{
+.TeamText{
     position:absolute;
     top:17.5vw;
     left:9vw;
@@ -38,7 +38,7 @@
     font-family: Microsoft JhengHei;
     font-weight: 900;
 }
-#X{
+.X{
     position:absolute;
     width:7%;
     left:71vw;
@@ -50,7 +50,37 @@
     top:30vw;
     left:33vw;
 }
-
+#YES{
+    position:absolute;
+    width:28%;
+    top:30vw;
+    left:20vw;
+}
+#NO{
+    position:absolute;
+    width:28%;
+    top:30vw;
+    left:45vw;
+}
+#photo{
+    position:absolute;
+    width:15vw;
+    left:10vw;
+    top:10vw;
+    z-index:5;
+}
+#TextinTeam{
+    display:inline;
+}
+#Whether{
+    position:absolute;
+    left:28vw;
+    top:11vw;
+}
+#name{
+    position:absolute;
+    left:28vw;
+}
 #background{
     position:absolute;
     z-index:-2;
@@ -123,7 +153,7 @@ body{
 }
 #SingleMode{
     position:relative;
-    margin-top:5%;
+    top:3vw;
 }
 #Single{
     position:relative;
