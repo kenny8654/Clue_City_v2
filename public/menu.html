@@ -21,32 +21,7 @@
             crossorigin="anonymous">
     </script>
     <script>
-        function gogaming(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
-        }
-        function gotosetting(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
-        }
-         function gotoinvite(){
-             if(multi==1)
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
-             else
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"
-        }
-        function gotohome(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
-        }
-        function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
-        }
-        function gotofriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
-        }
-        function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
-        }
-    </script>
-    <script>
+        var multi=0;
         $(document).ready(function(){
             $("#invite").hide();
             $("#invite1").hide();
@@ -87,7 +62,6 @@
                     single=0;
                 }
             });
-        var multi=0;
             $("#MultiText").click(function(){
                 if(multi==0){
                     this.src="images/Mode/MultiTextG.png";
@@ -222,6 +196,30 @@
                 }
             });
         });
+        function gogaming(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
+        }
+        function gotosetting(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        }
+         function gotoinvite(){
+             if(multi==1)
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
+             else
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"
+        }
+        function gotohome(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        }
+        function gotogallery(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
+        }
+        function gotofriend(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        }
+        function gotoScore(){
+            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+        }
     </script>
     
 </head>
@@ -300,7 +298,11 @@
                     }else{
                       console.log("someone send me invitation");
                       invite_info = data ;
+                      console.log(data);
                       join();
+                      $("#name").text(invite_info.name);
+                      let url = `https://graph.facebook.com/${invite_info.sender}/picture?type-normal`;
+                      $("#photo").attr("src",url);
                       clearInterval(waitsignal);
                     }
                   }
@@ -316,7 +318,8 @@
                   data : {name : teamname},
                   success : function(data){
                     if( data == "" || data == null){
-                    }else{
+                    }
+                    else{
                       clearInterval(startsignal);
                       gogaming();
                     }
@@ -324,31 +327,26 @@
                 });
               }
               function join(){
-                var r=false;
                 console.log(invite_info.name);
+                teamname = invite_info.name;
                 $("#invited").fadeIn();
                 $("#invited1").fadeIn();
                 $("#YES").click(function(){
-                    r=true;
                     $("#invited").fadeOut();
                     $("#invited1").fadeOut();
                 })
                 $("#NO").click(function(){
-                    r=false;
                     $("#invited").fadeOut();
                     $("#invited1").fadeOut();
                 })
-                
-                if( r == true ){
-                  answer = "1" ;
-                  PassTocheck(invite_info , answer);
-                }
-                else{
-                  answer = "0" ;
-                  PassTocheck(invite_info , answer);
-                }
-                
-                  
+              }
+              function yes(){
+                    answer="1";
+                    PassTocheck(invite_info, answer);
+              }
+              function no(){
+                    answer="0";
+                    PassTocheck(invite_info, answer);
               }
               
               function PassTocheck(Data , yes_no)
@@ -425,8 +423,8 @@
                 <p class="TeamText" id="Whether">是否加入</p>
                 <p class="TeamText" id="name">吃飯睡覺懶惰蟲</p>
             </div>
-            <img src="images/Team/YES.png" id="YES" onclick="">
-            <img src="images/Team/NO.png" id="NO" onclick="">
+            <img src="images/Team/YES.png" id="YES" onclick="yes()">
+            <img src="images/Team/NO.png" id="NO" onclick="no()">
         </div>
     </div>
     <img src="images/Login/background.png" id="background">
@@ -439,10 +437,10 @@
         <div id="profile">
             <img src="" id="bighead">
             <div id="NameAndID">
-            <font size=4.5% class="text" id="Name"></font>
+            <font class="text" id="Name"></font>
             <font size=2% font color="#A9A9A9" class="text" id="ID"></font>
             </div>
-        </div>
+        </div>  
         <div id="ChooseMode">
             <div id="SingleMode">
                 <img src="images/Mode/單人圖示.png" class="ModeImg" id="Single">

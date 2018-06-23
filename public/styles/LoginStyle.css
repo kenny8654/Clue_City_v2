@@ -45,10 +45,11 @@
     margin-top:15vw;
 }
 
+
 body {
     -webkit-font-smoothing: antialiased;
     font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #232525;
+    color: #52a38b;
     padding-top:70px;
 }
 #slides {
@@ -70,8 +71,8 @@ body {
 }
 
 .slidesjs-pagination {
-    margin-tio:10vw;
-    margin-right:30vw;
+    margin-top:15vw;
+    margin-right:33vw;
     float: right;
     list-style:none;
 }
@@ -99,16 +100,6 @@ body {
 
 .slidesjs-pagination li a:hover {
     background-position: 0 -26px
-}
-
-#slides a:link,
-#slides a:visited {
-    color: #333
-}
-
-#slides a:hover,
-#slides a:active {
-    color: #9e2020
 }
 
 .navbar {

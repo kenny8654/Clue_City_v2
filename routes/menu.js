@@ -30,8 +30,10 @@ router.post('/teamstart', urlencodedParser,function(req,res){
 
     let mongoCollection = "team";
     let teamname = req.body.name ;
+   console.log("enter menu.js"); 
     let promise = mongoOperation.mongoFindstart( mongoCollection , teamname);
     promise.then((val)=>{
+      console.log(val);
       res.send(val);
     })
 });
