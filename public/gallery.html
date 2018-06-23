@@ -99,17 +99,10 @@
                         }
                       else{
                         image_size = data.image.length;
-                        for(let i=0;i<data.friend.length;i++){
-                            $("#gg").append(
-//                                '<p>Friend name : ' + data.firend[i].name + '</p>' +
-//                                '<img src = "./' + data.friend[i].id + '/0.jpg">'+
-//                                '<p>Friend img length:'+ data.friend[i].image.length+'</p>'
-                                '<a>'+data.friend[i].name +'</a>'+
-                                '<a>'+data.friend[i].id + '</a>'
-                                //'<a>'+data.friend[i].image.length +'</a>'
-                            );
-                            
                         }
+                      console.log(image_size);
+                      //--To-Do Update User gallery
+                      //--To-Do For call friendsData(Ids)
                       }
                     let url ;
 //                    for(let i = 0; i < data.friend.length ; i++){
@@ -119,6 +112,19 @@
 //                    }
                   }
                 })
+              }
+        function friendsData(ids){
+                $.ajax({
+                  type : 'post',
+                  url : './invite/friend',
+                  data : {
+                    id : ids , 
+                  },
+                  success : function(data){
+                    console.log(data);
+                      //--To-Do update friend's gallery
+                    
+                }})
               }
         var responseData;
         var myid;
