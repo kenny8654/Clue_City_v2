@@ -172,6 +172,11 @@
                   url : './invite/tellteam',
                   data : {name:teamname}
                 });
+                $.ajax ({
+                  type : 'post',
+                  url : './map/team',
+                  data : {name:teamname}
+                });
                 gogaming();
               }
 
