@@ -87,6 +87,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
   console.log(ID);
   let object = mongoOperation.GetFriend(mongoCollection, ID);
   object.then((value) => {
+    console.log(value);
     if (value.image == null) {
       image_size = 0;
     }
