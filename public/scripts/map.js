@@ -647,7 +647,7 @@ function onSubmitButtonClicked() {
     success: function (data) {
       //$('#upload_response').text(data);
       console.log(data)
-      facebook_id = document.getElementById("facebook_ID").textContent;
+      facebook_id = document.getElementById("facebook_id").textContent;
       $.ajax({
         url: './map/createAlbum',
         type: 'post',
