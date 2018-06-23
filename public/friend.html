@@ -20,8 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
     <script>
-        function gobackfriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        function gobackinvite(){
+            history.back();
         } 
         function gotosetting(){
             document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
@@ -147,7 +147,7 @@
         </div>
         
         <div class="FriendsOnline">
-            <img src="images/Team/GrayBack.png" id="GrayBack" onclick="gobackfriend()">
+            <img src="images/Team/GrayBack.png" id="GrayBack" onclick="gobackinvite()">
             <p id="Friendonline">ADD PEOPLE</p>
             <div id="OnlineList">
                 <p class="Online" id="FriendNum">加入好友</p>
