@@ -45,7 +45,7 @@ app.use('/gallery', galleryRouter);
 
 app.post("/createAlbum", urlencoderParser, function (req, res) {
     ID = req.body.ID;
-    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('public/'+ID+'/1.jpg'));
+    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/'+ID+'/1.jpg'));
 })
 
 module.exports = app;
