@@ -662,10 +662,6 @@ function onSubmitButtonClicked() {
   })
 }
 
-function updateMessage() {
-
-}
-
 function onSelectClicked() {
   console.log("onSelectClicked()")
   setTimeout(function () {
@@ -690,5 +686,17 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
+  function get_Score(sendto){
+    let sender =  responseData ;
+    let inviteto = sendto.id ;
+    $.ajax ({
+      type : 'post',
+      url : './invite/invite',
+      data : {
+          sender : sender.id,
+          to : inviteto,
+      }
+    });
+  }
 })
 
