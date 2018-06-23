@@ -768,5 +768,16 @@ $(document).ready(function () {
   }
 })
 
-fu
+function update_score(){
+  $.ajax ({
+    type : 'post',
+    url : './map/update_score',
+    data : {
+      name:document.getElementById("team_name").textContent,
+    },
+    success : function(data){
+      
+    }
+  });
+}
 
