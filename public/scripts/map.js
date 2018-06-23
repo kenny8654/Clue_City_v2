@@ -175,7 +175,14 @@ function success_message_onclick() {
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
-
+    for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
+      document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
+    for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
+      document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
+    document.getElementById('success_background').style.visibility = 'visible'
+    document.getElementById('btn_exit').style.visibility = 'visible'
+    document.getElementById('success_clue_picture').style.visibility = 'visible'
+    document.getElementById('success_paragraph').style.visibility = 'visible'
   }
   else {
     document.getElementById('submit_image_label').style.visibility = 'visible'

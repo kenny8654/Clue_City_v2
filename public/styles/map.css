@@ -313,3 +313,41 @@ html, body {
   z-index: 4;
   visibility: hidden;
 }
+
+#success_background{
+  position: absolute;
+  height: 70%;
+  left: 15%;
+  top:20%;
+  z-index: 5;
+  visibility: hidden;
+}
+
+#btn_exit{
+  position: absolute;
+  height: 4%;
+  left: 74.5%;
+  top:21%;
+  z-index: 6;
+  visibility: hidden;
+}
+
+#success_clue_picture{
+  position: absolute;
+  height: 23%;
+  left: 19%;
+  top:26%;
+  z-index: 6;
+  visibility: hidden;
+}
+
+#success_paragraph{
+  width: 62%;
+  position: absolute;
+  height: 80%;
+  left: 20%;
+  top:55%;
+  z-index: 7;
+  color: #000;
+  visibility: hidden;
+}
