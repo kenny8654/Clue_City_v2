@@ -133,7 +133,7 @@
                     for(let i = friendnumber; i < data.friend.length ; i++){
                         friendnumber=data.friend.length;
                       url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
-                        $(".ui middle aligned selection list").append(
+                        $("#FFlist").append(
                             `<div class="item">
 	                           <img class="ui avatar image" src=`+url+`>
                                 <div class="content">
@@ -358,7 +358,7 @@
             <img src="images/Team/Plus.png" id="Plus">
         </div>
         <div class="FriendList">
-            <div class="ui middle aligned selection list">
+            <div class="ui middle aligned selection list" id="FFlist">
                 <div class="item">
                     <img class="OnlineDot"  src="images/Team/greendot.png">
                     <img class="ui avatar image" id = "bighead1" >
