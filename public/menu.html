@@ -283,7 +283,7 @@
               function signal(){
                 $.ajax ({
                   type : 'post',
-                  url : './invite/signal',
+                  url : './menu/signal',
                   data : {
                       id : myId ,
                   },
@@ -305,7 +305,7 @@
               function teamstart(){
                 $.ajax ({
                   type : 'post',
-                  url : './invite/teamstart',
+                  url : './menu/teamstart',
                   data : {name : teamname},
                   success : function(data){
                     if( data == "" || data == null){

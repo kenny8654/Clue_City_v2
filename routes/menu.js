@@ -26,4 +26,29 @@ router.post('/check', urlencodedParser,function(req,res){
         req.body
     ); 
 });
+router.post('/teamstart', urlencodedParser,function(req,res){
+
+    let mongoCollection = "team";
+    let teamname = req.body.name ;
+    let promise = mongoOperation.mongoFindstart( mongoCollection , teamname);
+    promise.then((val)=>{
+      res.send(val);
+    })
+});
+router.post('/signal', urlencodedParser, function(req,res){
+    var mongoCollection = "user";
+    let myId = req.body.id ;
+    let object = mongoOperation.mongoFindinvite(mongoCollection, myId);
+    let hi ;
+    object.then((val)=>{
+      if(val == null){
+        res.send(val);
+      }
+      else{
+        hi = val ;
+        console.log(hi);
+        res.send(hi);
+      }
+    });
+});
 module.exports = router;
