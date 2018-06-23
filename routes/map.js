@@ -75,6 +75,12 @@ router.post("/return_teamname",urlencoderParser,function(req,res){
   res.send(teamname);
 })
 
+router.post("/createAlbum",urlencoderParser,function(req,res){
+  ID = req.body.ID;
+  fs.createReadStream('../target.jpg').pipe(fs.createWriteStream('../' + ID + '1.jpg'));
+  res.send(200);
+})
+
 router.post("/upload", urlencoderParser, function (req, res) {
   console.log("Server receive request...")
   req.setEncoding('binary');
