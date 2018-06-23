@@ -182,9 +182,10 @@ function success_message_onclick() {
     for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
       document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
     document.getElementById('success_background').style.visibility = 'visible'
-    document.getElementById('btn_exit').style.visibility = 'visible'
+    document.getElementById('btn_exit').style.visibility = 'hidden'
     document.getElementById('success_clue_picture').style.visibility = 'visible'
     document.getElementById('success_paragraph').style.visibility = 'visible'
+    document.getElementById('btn_share').style.visibility = 'visible'
   }
   else {
     document.getElementById('submit_image_label').style.visibility = 'visible'
