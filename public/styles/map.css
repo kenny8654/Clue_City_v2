@@ -371,12 +371,12 @@ html, body {
 #success_paragraph{
   width: 62%;
   position: absolute;
-  height: 80%;
+  height: 25%;
   left: 20%;
   top:55%;
   z-index: 7;
   color: #000;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 #btn_share{
