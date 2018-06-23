@@ -78,7 +78,6 @@ router.post("/return_teamname",urlencoderParser,function(req,res){
 router.post("/createAlbum",urlencoderParser,function(req,res){
   ID = req.body.ID;
   fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./' + ID + '/1.jpg'));
-  res.sendStatus(200);
 })
 router.post('/tellscore',urlencoderParser,function(req,res){     
   let mongoCollection = "user";
