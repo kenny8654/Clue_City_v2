@@ -80,7 +80,7 @@ router.post("/createAlbum",urlencoderParser,function(req,res){
   fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./' + ID + '/1.jpg'));
   res.sendStatus(200);
 })
-router.post('/tellscore',urlencodedParser,function(req,res){     
+router.post('/tellscore',urlencoderParser,function(req,res){     
   let mongoCollection = "user";
   let score = req.body.name ;
   let profile ={ id : req.body.id};
