@@ -77,7 +77,7 @@ router.post("/return_teamname", urlencoderParser, function (req, res) {
 
 router.post("/createAlbum", urlencoderParser, function (req, res) {
   ID = req.body.ID;
-  var dir = './public/gallery' + ID;
+  var dir = './public/' + ID;
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
