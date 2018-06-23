@@ -90,6 +90,7 @@
                   if(response && !response.error){
                     responseData = response ;
                     myid = response.id ;
+                    getPecture_team(1,myid);
                     waitsignal = setInterval(checkresponse , 1000);
                     friends();
                   }
@@ -177,7 +178,7 @@
               var be_invited = 0;
               var invite_info = 0;
               var answer ;
-              var num = 0;
+              var num = 1;
 
               function checkresponse(){ 
                   $.ajax ({
@@ -191,6 +192,8 @@
                         if( invite_info.accepted == "1" ){
                           console.log("agree join");
                           join(invite_info.to);
+                          num++;
+                          getPecture_team(num,invite_info.to);
                         }
                         else{
                           console.log("reject join");
@@ -228,7 +231,7 @@
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
             }
             function gotofriend(){
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend.html";
+                document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
             }
             function gotoScore(){
                 document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
@@ -261,7 +264,7 @@
                 <p class="Online" id="TotalNum">125</p>
                 <p class="Online" id="RightQuat">)</p>
             </div>
-            <img src="images/Team/Plus.png" id="Plus" onclick="gotoaddfriend()">
+            <img src="images/Team/Plus.png" id="Plus" onclick="gotofriend()">
         </div>
         <div class="FriendList">
             <div class="ui middle aligned selection list">
