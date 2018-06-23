@@ -371,7 +371,7 @@ html, body {
   top:55%;
   z-index: 7;
   color: #000;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 #btn_share{
