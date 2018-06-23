@@ -787,19 +787,19 @@ $(document).ready(function () {
   });
 })
 
-function update_score() {
-  $.ajax({
-    type: 'post',
-    url: './map/update_score',
-    data: {
-      name: document.getElementById("team_name").textContent,
-    },
-    success: function (data) {
+// function update_score() {
+//   $.ajax({
+//     type: 'post',
+//     url: './map/update_score',
+//     data: {
+//       name: document.getElementById("team_name").textContent,
+//     },
+//     success: function (data) {
 
-    }
-  });
-  setTimeout("update_score()", 1000);
-}
-update_score();
+//     }
+//   });
+//   setTimeout("update_score()", 1000);
+// }
+// update_score();
 
 
