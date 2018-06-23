@@ -84,6 +84,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
   let message = req.body.message;
   let image_size;
   let mongoCollection = "user";
+  console.log(ID);
   let object = mongoOperation.GetFriend(mongoCollection, ID);
   object.then((value) => {
     if (value.image == null) {
@@ -93,6 +94,7 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
       image_size = value.image.length;
     }
   })
+  console.log(image_size);
   fs.createReadStream('./target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
   mongoOperation.addimage(mongoCollection, ID, message)
 })
