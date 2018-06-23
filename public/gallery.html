@@ -41,6 +41,94 @@
     </script>
 </head>
 <body>
+            <script>
+                
+                var myid;
+        var myname;
+        
+                window.fbAsyncInit = function() {
+              FB.init({
+                appId      : '177842309598524',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v3.0'
+              });
+                
+              FB.getLoginStatus(function(response) {
+              statusChangeCallback(response);
+            });
+                
+            };
+          
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "https://connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        
+        
+          
+         function statusChangeCallback(response){
+           if( response.status === 'connected' ){
+             console.log( 'Logged in and authenticated' );
+             getProfile();
+           } else {
+            console.log( 'Not authenticated' );
+           }
+         }
+        
+        
+        function checkLoginState() {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        }
+
+        var responseData  ;
+        
+        var waitsignal;
+        function getProfile(){
+            FB.api('/me?fields=name,email',function(response){
+                if(response && !response.error){
+                    responseData = response ;
+                    myid = response.id ;
+                    myname = response.name;
+                    getPecture_team(1,myid);
+                    waitsignal = setInterval(checkresponse , 1000);
+                    friends();
+                    console.log("has get profile");
+                  }
+            })
+            $("#gg").append(
+                '<p>My name : ' + myname + '</p>'
+                '<img src = "./' + myid + '0.jpg>' 
+                )
+//            $("#gg").append(
+//            `<div class="YOYO">
+//          <div class="container">
+//            <div id="profile">
+//            <img src=`+url+` id="bighead">
+//            <div id="NameAndID">
+//                <b class="text">shared by</b>
+//                <font class="text Name" id="Name1">`+林志嘉+`</font>
+//            </div>
+//            </div>  
+//            <div class="slides">
+//                <div class="slideDiv">
+//                    <b class="Des">`+今日天氣晴+`</b>
+//                    <img src=`+"images/Gallery/1.jpg"+`  class="photo">
+//                </div>
+//                <img src="images/Gallery/2.jpg" class="photo">
+//                <img src="images/Gallery/3.jpg"  class="photo">
+//                <img src="images/Gallery/4.jpg"  class="photo">
+//            </div>
+//        </div>
+//        </div>`);
+            
+        }
+        </script>
     <img src="images/Gallery/Background.png" id="background">
     
     <div class="Gallery">
@@ -50,13 +138,14 @@
         </div>
     </div>
     <div id="gg">
+<!--
         <div class="YOYO">
           <div class="container">
             <div id="profile">
             <img src="images/Team/Chia.jpg" id="bighead">
             <div id="NameAndID">
                 <b class="text">shared by</b>
-                <font class="text Name" >林志嘉</font>
+                <font class="text Name" id="Name1">林志嘉</font>
             </div>
             </div>  
             <div class="slides">
@@ -134,6 +223,7 @@
             </div>
         </div>
         </div>
+-->
     </div>
     
   <!-- End SlidesJS Required: Start Slides -->
