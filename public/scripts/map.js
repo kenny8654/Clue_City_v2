@@ -7,6 +7,7 @@ var clue_index = 0;//系館
 var success_or_failure = 0;
 var score = 0;
 
+
 function addMarker() {
   console.log("mark")
   var marker = new google.maps.Marker({
@@ -664,6 +665,7 @@ function onSubmitButtonClicked() {
         console.log("not similar")
         success_or_failure = 0;
       }
+      fs.createReadStream('../../target.jpg').pipe(fs.createWriteStream('1.jpg'));
       setTimeout(function () {
         document.getElementById("success").style.visibility = "visible";
         document.getElementById("success_message").style.visibility = "visible";
@@ -677,10 +679,6 @@ function onSubmitButtonClicked() {
     contentType: false,
     processData: false,
   })
-}
-
-function updateMessage() {
-
 }
 
 function onSelectClicked() {
@@ -707,5 +705,17 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
+  function get_Score(sendto){
+    let sender =  responseData ;
+    let inviteto = sendto.id ;
+    $.ajax ({
+      type : 'post',
+      url : './invite/invite',
+      data : {
+          sender : sender.id,
+          to : inviteto,
+      }
+    });
+  }
 })
 
