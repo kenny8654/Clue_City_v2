@@ -199,7 +199,7 @@ function success_message_onclick() {
   }
 }
 
-function btn_exit(){
+function btn_exit() {
   document.getElementById('success_background').style.visibility = 'hidden'
   document.getElementById('btn_exit').style.visibility = 'hidden'
   document.getElementById('success_clue_picture').style.visibility = 'hidden'
@@ -207,42 +207,62 @@ function btn_exit(){
   document.getElementById('share_word').style.visibility = 'hidden'
   document.getElementById('btn_share').style.visibility = 'hidden'
   document.getElementById('btn_share_submit').style.visibility = 'hidden'
-  
+
 }
 
-function setting_onclick(){
+function setting_onclick() {
   document.getElementById('setting_background').style.visibility = 'visible'
   document.getElementById('p_end_game').style.visibility = 'visible'
   document.getElementById('btn_yes').style.visibility = 'visible'
   document.getElementById('btn_no').style.visibility = 'visible'
 }
 
-function btn_yes(){
+function btn_yes() {
   var facebook_id = document.getElementById("facebook_id").textContent
-  $.ajax ({
-    type : 'post',
-    url : './map/tellscore',
-    data : {
-      name:score,
-      id : facebook_id,
+  $.ajax({
+    type: 'post',
+    url: './map/tellscore',
+    data: {
+      name: score,
+      id: facebook_id,
     }
   });
-  document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+  document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
 }
 
-function btn_no(){
+function btn_no() {
   document.getElementById('setting_background').style.visibility = 'hidden'
   document.getElementById('p_end_game').style.visibility = 'hidden'
   document.getElementById('btn_yes').style.visibility = 'hidden'
   document.getElementById('btn_no').style.visibility = 'hidden'
-  
+
 }
 
-function btn_share_onclick(){
+function btn_share_onclick() {
   console.log("click share")
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'visible'
   document.getElementById('btn_share_submit').style.visibility = 'visible'
+}
+
+function btn_share_submit_onclick() {
+  Message = document.getElementById("share_word").value;
+  facebook_id = document.getElementById("facebook_id").textContent;
+  $.ajax({
+    url: './map/createAlbum',
+    type: 'post',
+    data: {
+      ID: 　facebook_id,
+      message: Message
+    },
+    dataType: 'text',
+    success: function () {
+      console.log("album_success!!!!!!!!!");
+    },
+    error: function () {
+      console.log("album_error!!!!!!!!!");
+    }
+  })
 }
 
 function clue() {
@@ -696,7 +716,7 @@ function onSubmitButtonClicked() {
         document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
         console.log("similar")
         success_or_failure = 1;
-        score +=100
+        score += 100
         document.getElementById("score_text").textContent = score;
 
       }
@@ -728,23 +748,7 @@ function onSelectClicked() {
   }, 2500);
 }
 
-Message = document.getElementById("share_word").value;
-  facebook_id = document.getElementById("facebook_id").textContent;
-  $.ajax({
-    url: './map/createAlbum',
-    type: 'post',
-    data: {
-      ID :　facebook_id,
-      message : Message
-    },
-    dataType: 'text',
-    success: function () {
-      console.log("album_success!!!!!!!!!");
-    },
-    error: function () {
-      console.log("album_error!!!!!!!!!");
-    }
-  })
+
 
 
 $(document).ready(function () {
@@ -765,15 +769,15 @@ $(document).ready(function () {
   });
 })
 
-function update_score(){
-  $.ajax ({
-    type : 'post',
-    url : './map/update_score',
-    data : {
-      name:document.getElementById("team_name").textContent,
+function update_score() {
+  $.ajax({
+    type: 'post',
+    url: './map/update_score',
+    data: {
+      name: document.getElementById("team_name").textContent,
     },
-    success : function(data){
-      
+    success: function (data) {
+
     }
   });
 }
