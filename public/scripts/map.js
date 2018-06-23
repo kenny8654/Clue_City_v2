@@ -238,6 +238,7 @@ function btn_no(){
 }
 
 function btn_share_onclick(){
+  console.log("click share")
   document.getElementById('success_paragraph').style.visibility = 'hidden'
   document.getElementById('share_word').style.visibility = 'visible'
 
