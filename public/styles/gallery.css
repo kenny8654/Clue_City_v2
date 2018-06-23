@@ -47,25 +47,66 @@
     margin-top:2%;
     margin-bottom:2%;
 }
+#ProfileBack{
+    position:absolute;
+    z-index:-1;
+    margin-top:1.5vw;
+    width:70vw;
+}
+#profile{
+    position:relative;
+    display:flex;
+    margin-left:10vw;
+}
+#bighead{
+    position:relative;
+    margin-top:3vw;
+    margin-left:2vw;
+    width:13%;
+    height:6%;
+}
+#NameAndID{
+    position:relative;
+    margin-top:4%;
+    margin-left:3%;
+}
+.text{
+    font-family: Microsoft JhengHei;
+}
+#Name{
+    position:absolute;
+    left:1vw;
+    font-weight:bold;
+    font-size: 5vw;
+    width:20vw;
+}
+#ID{
+    position:absolute;
+    left:20vw;
+    margin-top:2vw;
+    font-weight:500;
+    font-size: 3vw;
+}
 .container{
 }
-#slides{
-    position:absolute;
-    top:50vw;
-    left:10vw;
-    width: 80%;
-}
+
 .slides{
     position:relative;
-    margin-top:10vw;
+    margin-top:2vw;
     left:10vw;
     width: 80vw;
     display: none;
 }
+.slideDiv{
+    display:flex;
+}
+.Des{
+    position:absolute;
+}
 .photo{
     position:absolute;
-    margin-top:0vw;
-    width:50%;
+    margin-top:8vw;
+    width:90vw;
 }
 
 
