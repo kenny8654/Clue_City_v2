@@ -196,6 +196,13 @@ function success_message_onclick() {
   }
 }
 
+function btn_exit(){
+  document.getElementById('success_background').style.visibility = 'hidden'
+  document.getElementById('btn_exit').style.visibility = 'hidden'
+  document.getElementById('success_clue_picture').style.visibility = 'hidden'
+  document.getElementById('success_paragraph').style.visibility = 'hidden'
+}
+
 function clue() {
   console.log("clue")
   if (is_big_clue == 0) {

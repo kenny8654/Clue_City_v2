@@ -266,32 +266,23 @@
               }
     
               var responseData ;
-    
+
+              var myId;
+
               function getProfile(){
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     console.log("has get profile");
                   }
                   responseData = response ;
-                  PassToMain(responseData);
+                  myId = response.id ;
+                  $('#Name').text(response.name);
                   let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
                   getPicture(url);
                   getID(response.id);
                 })
               }
-    
-              function PassToMain(Data)
-              {
-                $.ajax({
-                  method : 'post',
-                  url: './menu/menu',
-                  data:Data,
-                  success: function(data){
-                    $('#Name').text(data);
-                  }
-                });
-              }
-              
+
               var waitsignal = setInterval(signal , 1000);
               var invite_info = 0;
               var answer ;
@@ -299,8 +290,10 @@
               function signal(){
                 $.ajax ({
                   type : 'post',
-                  url : './invite/signal',
-                  data : {},
+                  url : './menu/signal',
+                  data : {
+                      id : myId ,
+                  },
                   success : function(data){
                     if( data == "" || data == null){
                       console.log("listen whether has invitation");
@@ -315,12 +308,12 @@
               }
     
               var startsignal = setInterval(teamstart , 1000);
-    
+              var teamname = "0" ;
               function teamstart(){
                 $.ajax ({
                   type : 'post',
-                  url : './invite/teamstart',
-                  data : {},
+                  url : './menu/teamstart',
+                  data : {name : teamname},
                   success : function(data){
                     if( data == "" || data == null){
                     }else{
