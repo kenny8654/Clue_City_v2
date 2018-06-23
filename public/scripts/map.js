@@ -41,7 +41,7 @@ function initMap() {
   });
 
   google.maps.event.addListener(map, 'zoom_changed', function () {
-    console.log("zoom change", zoom)
+    console.log("zoom change")
     map.data.setStyle(function (feature) {
       var magnitude = feature.getProperty('mag');
       return {
@@ -203,6 +203,33 @@ function btn_exit(){
   document.getElementById('btn_exit').style.visibility = 'hidden'
   document.getElementById('success_clue_picture').style.visibility = 'hidden'
   document.getElementById('success_paragraph').style.visibility = 'hidden'
+}
+
+function setting_onclick(){
+  document.getElementById('setting_background').style.visibility = 'visible'
+  document.getElementById('p_end_game').style.visibility = 'visible'
+  document.getElementById('btn_yes').style.visibility = 'visible'
+  document.getElementById('btn_no').style.visibility = 'visible'
+}
+
+function btn_yes(){
+  var facebook_id = document.getElementById("facebook_id").textContent
+  $.ajax ({
+    type : 'post',
+    url : './map/tellscore',
+    data : {
+      name:score,
+      id : facebook_id,
+    }
+  });
+  document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+}
+
+function btn_no(){
+  document.getElementById('setting_background').style.visibility = 'hidden'
+  document.getElementById('p_end_game').style.visibility = 'hidden'
+  document.getElementById('btn_yes').style.visibility = 'hidden'
+  document.getElementById('btn_no').style.visibility = 'hidden'
 }
 
 function clue() {
