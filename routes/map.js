@@ -174,6 +174,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
     } else {
       console.log('只能上传图片文件');
     }
+    fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/target.jpg'));
     runPython(res);
 
   })
