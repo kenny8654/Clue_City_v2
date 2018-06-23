@@ -174,6 +174,9 @@ function small_clue_onclick() {
 }
 
 function success_message_onclick() {
+  setTimeout(function(){
+    document.getElementById("success_clue_picture").src = "./target.jpg";
+  },1000)
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
