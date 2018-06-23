@@ -28,9 +28,12 @@ router.post('/get_teamname', urlencodedParser,function(req,res){
 });
 router.post('/teammate', urlencodedParser,function(req,res){
     let mongoCollection = "team";
-    let teammate = req.body ;
-    mongoOperation.addteammate( mongoCollection , team , teammate);
-    res.send(team);
+    let teammate ={ id : req.body.id} ;
+    let teamname = req.body.name ;
+    console.log(teamname);
+    console.log("=========================");
+    console.log(teammate);
+    mongoOperation.addteammate( mongoCollection , teamname , teammate);
 });
 
 router.post('/signal', urlencodedParser, function(req,res){
@@ -69,7 +72,7 @@ router.post('/tellteam',urlencodedParser,function(req,res){
     let mongoCollection = "team";
     let entry = {clicked : '1'};
     let teamname = req.body.name ;
-    mongoOperation.addteammate( mongoCollection , teamname , entry);
+    mongoOperation.addclicked( mongoCollection , teamname , entry);
 })
 
 router.post('/teamstart', urlencodedParser,function(req,res){
@@ -85,7 +88,8 @@ router.post('/teamstart', urlencodedParser,function(req,res){
 router.post('/friend', urlencodedParser,function(req,res){
 
     let mongoCollection = "user";
-    let promise = mongoOperation.GetFriend(mongoCollection);
+    let me = req.body;
+    let promise = mongoOperation.GetFriend(mongoCollection,me);
     promise.then((val)=>{
       res.send(val);
     })
