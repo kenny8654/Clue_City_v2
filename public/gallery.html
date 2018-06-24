@@ -170,7 +170,7 @@
                     console.log(data);
                     //--To-Do update friend's gallery
                     let Url = `https://graph.facebook.com/${data.id}/picture?type-normal`;
-                    let Urll = './' + data.id + '/' + i + '.jpg';
+                    
                     if (data.image == null) {
                         image_size = 0;
                     }
@@ -178,6 +178,7 @@
                         image_size = data.image.length;
                 for(let i=0;i<data.image.length;i++)
                     {
+                        let Urll = './' + data.id + '/' + i + '.jpg';
                          $("#gg").append(
                         `<div class="YOYO">
                         <div class="container">
