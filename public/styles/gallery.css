@@ -61,14 +61,15 @@
 }
 #bighead{
     position:relative;
-    width:10vw;
-    height:10vw;
+    width:7vw;
+    height:7vw;
 }
 #NameAndID{
     position:relative;
 }
 .text{
     position:relative;
+    left:0.5vw;
     top:2vw;
     font-family: Microsoft JhengHei;
     color: #555556;
@@ -104,7 +105,7 @@
     margin-top:10vw;
     margin-left:2vw;
     width:66vw;
-    height:30vw;
+    height:34vw;
 }
 
 
@@ -113,9 +114,6 @@ body {
     font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #232525;
     padding-top:700px;
-}
-#slides {
-    display: none;
 }
 
 .slidesjs-navigation {
