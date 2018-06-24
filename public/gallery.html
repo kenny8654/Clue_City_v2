@@ -108,6 +108,8 @@
                     for(let i= 0;i<data.image.length;i++)
                         {
                             let Urll = './' + myid + '/' + i + '.jpg';
+                            let h = '<img src="'+ Urll + '"  class="photo">';
+                            console.log(h);
                             console.log("-------:" + Urll);
                             $("#gg").append(
                                 // `<div class="YOYO">
@@ -120,7 +122,6 @@
                                 //         </div>
                                 //     </div>  
                                 //     <div class="slides" id="Mygallery">`+
-                                    '<img src="./'+ myid + '/'+i+'.jpg"  class="photo">'
                                 //     </div>
                                 //     </div>
                                 // </div>`
