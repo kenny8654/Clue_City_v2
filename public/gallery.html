@@ -113,21 +113,19 @@
                             console.log(h);
                             console.log("-------:" + Urll);
                             $("#gg").append(
-                                 `<div class="YOYO">
-                                     <div class="container">
-                                         <div id="profile">
-                                             <img src="`+ Url + '">' +
-                                            '<div id="NameAndID">' +
-                                            '<b class="text">shared by</b>' +
-                                            '<font class="text Name" id="Name1">' + myname + `</font>
-                                         </div>
-                                     </div>  
-                                     <div class=\"slides\" id="Mygallery">`+
-                                        `
-                                     </div>
-                                     </div>
-                                 </div>`
-
+                                 "<div class='YOYO'>"+
+                                     "<div class='container'>"+
+                                         "<div id='profile'>"+
+                                            "<img src='"+ Url + "'>" +
+                                            "<div id='NameAndID'>" +
+                                            "<b class='text'>shared by</b>" +
+                                            "<font class='text Name' id='Name1'>" + myname + "</font>"+
+                                         "</div>" +
+                                     "</div>" +
+                                     "<div class='slides' id='Mygallery'>"+
+                                     "</div>"+
+                                     "</div>"+
+                                 "</div>"
                                 )
                         }
                     
@@ -136,11 +134,11 @@
                        let Url = './' + myid + '/' + i + '.jpg';
                        console.log(Url);
                        $("#Mygallery").append(
-                           `<img src="`+ Url + `"  class="photo">`
-                           `<div class=\"slideDiv\">
-                               <b class=\"Des\">`+ data.image[i] + `</b>
-                               <img src="`+ Url + `"  class=\"photo\">
-                               </div>`
+                           "<img src='"+ Url + "' class='photo'>"+
+                           "<div class='slideDi'>"+
+                               "<b class='Des'>"+ data.image[i] + "</b>"+
+                               "<img src='" + Url + "'  class='photo'>"+
+                               "</div>"
                        )
                    }
                     for (let i = 0; i < data.friend.length; i++) {
