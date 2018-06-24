@@ -61,15 +61,15 @@
 }
 #bighead{
     position:relative;
-    width:5vw;
-    height:5vw;
+    width:4vw;
+    height:4vw;
 }
 #NameAndID{
     position:relative;
 }
 .text{
     position:relative;
-    left:0.5vw;
+    left:2vw;
     top:2vw;
     font-family: Microsoft JhengHei;
     color: #555556;
