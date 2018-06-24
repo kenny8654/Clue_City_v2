@@ -59,10 +59,10 @@
     margin-top:1vw;
     margin-left:1vw;
 }
-#bighead{
+.bighead{
     position:relative;
-    width:4vw;
-    height:4vw;
+    width:8vw;
+    height:8vw;
 }
 #NameAndID{
     position:relative;
