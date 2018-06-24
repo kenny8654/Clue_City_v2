@@ -108,42 +108,29 @@
                     for(let i= 0;i<data.image.length;i++)
                         {
                             let Urll = './' + myid + '/' + i + '.jpg';
-<<<<<<< HEAD
-                            $("#gg").append(
-                                `<div class="YOYO">
-                                    <div class="container">
-                                        <div id="profile">
-                                            <img src="`+ Url + '">' +
-                                    '<div id="NameAndID">' +
-                                    '<b class="text">shared by</b>' +
-                                    '<font class="text Name" id="Name1">' + myname + `</font>
-                                        </div>
-                                    </div>  
-                                    <div class="slides" id="Mygallery">`+
-                                    `<img src="./`+ myid + `/`+i+`.jpg"  class="photo">`+`
-                                    </div>
-                                    </div>
-                                </div>`
-=======
+
                             let h = '<img src="'+ Urll + '"  class="photo">';
                             console.log(h);
                             console.log("-------:" + Urll);
-                            $('body').append(
-                                h
-                                // `<div class="YOYO">
-                                //     <div class="container">
-                                //         <div id="profile">
-                                //             <img src="`+ Url + '">' +
-                                //     '<div id="NameAndID">' +
-                                //     '<b class="text">shared by</b>' +
-                                //     '<font class="text Name" id="Name1">' + myname + `</font>
-                                //         </div>
-                                //     </div>  
-                                //     <div class="slides" id="Mygallery">`+
-                                //     </div>
-                                //     </div>
-                                // </div>`
->>>>>>> refs/remotes/origin/feature/storage
+                            $("#gg").append(
+                                 `<div class="YOYO">
+                                     <div class="container">
+                                         <div id="profile">
+                                             <img src="`+ Url + '">' +
+                                            '<div id="NameAndID">' +
+                                            '<b class="text">shared by</b>' +
+                                            '<font class="text Name" id="Name1">' + myname + `</font>
+                                         </div>
+                                     </div>  
+                                     <div id="Mygallery">`+
+                                        `<div class="slideDiv">
+                                            <b class="Des">`+ data.image[i] + `</b>
+                                            <img src="`+ Url + `"  class="photo">
+                                         </div>
+                                     </div>
+                                     </div>
+                                 </div>`
+
                                 )
                         }
                     
@@ -232,8 +219,8 @@
                     friends();
                     console.log(myid + "," + myname + "has get profile");
                     $("#gg").append(
-                        '<p>My name : ' + myname + '</p>' +
-                        '<img src = "./' + myid + '/0.jpg">'
+//                        '<p>My name : ' + myname + '</p>' +
+//                        '<img src = "./' + myid + '/0.jpg">'
                     )
                 }
             })
@@ -274,7 +261,7 @@
     </div>
     <div id="gg">
         
-        <!--
+        
         <div class="YOYO">
           <div class="container">
             <div id="profile">
@@ -359,7 +346,7 @@
             </div>
         </div>
         </div>
--->
+
     </div>
 
     <!-- End SlidesJS Required: Start Slides -->
