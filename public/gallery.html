@@ -123,10 +123,11 @@
                         let Url = './' + myid + '/' + i + '.jpg';
                         console.log(Url);
                         $("#Mygallery").append(
-                            `<div class="slideDiv">
-                                <b class="Des">`+ data.image[i] + `</b>
-                                <img src="`+ Url + `"  class="photo">
-                                </div>`
+                            `<img src="`+ Url + `"  class="photo">`
+//                            `<div class="slideDiv">
+//                                <b class="Des">`+ data.image[i] + `</b>
+//                                <img src="`+ Url + `"  class="photo">
+//                                </div>`
                         )
                     }
                     for (let i = 0; i < data.friend.length; i++) {
