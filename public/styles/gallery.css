@@ -69,6 +69,7 @@
 }
 .text{
     position:relative;
+    top:2vw;
     font-family: Microsoft JhengHei;
     color: #555556;
 }
@@ -95,13 +96,14 @@
 }
 .Des{
     position:absolute;
+    margin-left:3vw;
     margin-top:3vw;
-    margin-bottom: 3vw;
 }
 .photo{
     position:absolute;
     margin-top:10vw;
-    width:115vw;
+    margin-left:2vw;
+    width:66vw;
 }
 
 
