@@ -103,6 +103,36 @@
                       console.log(image_size);
                       //--To-Do Update User gallery
                       //--To-Do For call friendsData(Ids)
+                      let Url = `https://graph.facebook.com/${myid}/picture?type-normal`;
+                      $("#gg").append(
+                      `<div class="YOYO">
+                        <div class="container">
+                            <div id="profile">
+                                <img src="`+Url+'">'+
+                                '<div id="NameAndID">'+
+                                '<b class="text">shared by</b>'+
+                                '<font class="text Name" id="Name1">'+myname+`</font>
+                            </div>
+                        </div>  
+                        <div class="slides" id="Mygallery">
+                        </div>
+                        </div>
+                    </div>`
+                      )
+                      for(let i=0;i<data.image.length;i++)
+                          {     
+                              let Url='./'+myid+'/'+i+'.jpg';
+                              $("#Mygallery").append(
+                              `<div class="slideDiv">
+                                <b class="Des">`+data.image[i]+`</b>
+                                <img src=`+Url+`  class="photo">
+                                </div>`
+                              )
+                          }
+                      for(let i=0;i<data.friend.length;i++)
+                          {
+                              friendsData(data.friend[i].id,i);
+                          }
                       }
                     //let url ;
 //                    for(let i = 0; i < data.friend.length ; i++){
@@ -113,7 +143,7 @@
                   
                 })
               }
-        function friendsData(ids){
+        function friendsData(ids,num){
                 $.ajax({
                   type : 'post',
                   url : './invite/friend',
@@ -123,8 +153,35 @@
                   success : function(data){
                     console.log(data);
                       //--To-Do update friend's gallery
-                    
-                }})
+                    let Url = `https://graph.facebook.com/${data.id}/picture?type-normal`;
+                      $("#gg").append(
+                      `<div class="YOYO">
+                        <div class="container">
+                            <div id="profile">
+                                <img src=`+Url+'>'+
+                                '<div id="NameAndID">'+
+                                '<b class="text">shared by</b>'+
+                                '<font class="text Name" id="Name1">'+data.name+`</font>
+                            </div>
+                        </div>  
+                        <div class="slides" id="gallery`+num+`">
+                        </div>
+                        </div>
+                    </div>`
+                      )
+                      for(let i=0;i<data.image.length;i++)
+                          {
+                              let gal='#gallery'+num;
+                              let Url='./'+data.id+'/'+i+'.jpg';
+                              $(`#gallery${num}`).append(
+                              `<div class="slideDiv">
+                                <b class="Des">`+data.image[i]+`</b>
+                                <img src=`+Url+`  class="photo">
+                                </div>`
+                              )
+                          }
+                    }
+                })
               }
         var responseData;
         var myid;
@@ -145,27 +202,27 @@
                 }
             })
             
-            //            $("#gg").append(
-            //            `<div class="YOYO">
-            //          <div class="container">
-            //            <div id="profile">
-            //            <img src=`+url+` id="bighead">
-            //            <div id="NameAndID">
-            //                <b class="text">shared by</b>
-            //                <font class="text Name" id="Name1">`+林志嘉+`</font>
-            //            </div>
-            //            </div>  
-            //            <div class="slides">
-            //                <div class="slideDiv">
-            //                    <b class="Des">`+今日天氣晴+`</b>
-            //                    <img src=`+"images/Gallery/1.jpg"+`  class="photo">
-            //                </div>
-            //                <img src="images/Gallery/2.jpg" class="photo">
-            //                <img src="images/Gallery/3.jpg"  class="photo">
-            //                <img src="images/Gallery/4.jpg"  class="photo">
-            //            </div>
-            //        </div>
-            //        </div>`);
+                        $("#gg").append(
+                    `<div class="YOYO">
+                      <div class="container">
+                        <div id="profile">
+                            <img src=`+url+` id="bighead">
+                            <div id="NameAndID">
+                                <b class="text">shared by</b>
+                                <font class="text Name" id="Name1">`+林志嘉+`</font>
+                            </div>
+                        </div>  
+                        <div class="slides">
+                            <div class="slideDiv">
+                                <b class="Des">`+今日天氣晴+`</b>
+                                <img src=`+"images/Gallery/1.jpg"+`  class="photo">
+                            </div>
+                            <img src="images/Gallery/2.jpg" class="photo">
+                            <img src="images/Gallery/3.jpg"  class="photo">
+                            <img src="images/Gallery/4.jpg"  class="photo">
+                        </div>
+                     </div>
+                    </div>`);
 
         }
     </script>
@@ -182,11 +239,11 @@
         <div class="YOYO">
           <div class="container">
             <div id="profile">
-            <img src="images/Team/Chia.jpg" id="bighead">
-            <div id="NameAndID">
-                <b class="text">shared by</b>
-                <font class="text Name" id="Name1">林志嘉</font>
-            </div>
+                <img src="images/Team/Chia.jpg" id="bighead">
+                <div id="NameAndID">
+                    <b class="text">shared by</b>
+                    <font class="text Name" id="Name1">林志嘉</font>
+                </div>
             </div>  
             <div class="slides">
                 <div class="slideDiv">
@@ -197,7 +254,7 @@
                 <img src="images/Gallery/3.jpg"  class="photo">
                 <img src="images/Gallery/4.jpg"  class="photo">
             </div>
-        </div>
+            </div>
         </div>
       
          <div class="YOYO">
