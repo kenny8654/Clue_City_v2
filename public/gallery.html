@@ -121,10 +121,11 @@
                     )
                     for (let i = 0; i < data.image.length; i++) {
                         let Url = './' + myid + '/' + i + '.jpg';
+                        console.log(Url);
                         $("#Mygallery").append(
                             `<div class="slideDiv">
                                 <b class="Des">`+ data.image[i] + `</b>
-                                <img src=`+ Url + `  class="photo">
+                                <img src="`+ Url + `"  class="photo">
                                 </div>`
                         )
                     }
@@ -156,7 +157,7 @@
                         `<div class="YOYO">
                         <div class="container">
                             <div id="profile">
-                                <img src=`+ Url + '>' +
+                                <img src="`+ Url + '">' +
                         '<div id="NameAndID">' +
                         '<b class="text">shared by</b>' +
                         '<font class="text Name" id="Name1">' + data.name + `</font>
@@ -167,13 +168,21 @@
                         </div>
                     </div>`
                     )
-                    for (let i = 0; i < data.image.length; i++) {
+                    if (data.image == null) {
+                        image_size = 0;
+                    }
+                    else {
+                        image_size = data.image.length;
+                    }
+                    for (let i = 0; i < image_size; i++) {
                         let gal = '#gallery' + num;
+                        console.log(gal);
                         let Url = './' + data.id + '/' + i + '.jpg';
+                        console.log(Url);
                         $(`#gallery${num}`).append(
                             `<div class="slideDiv">
                                 <b class="Des">`+ data.image[i] + `</b>
-                                <img src=`+ Url + `  class="photo">
+                                <img src="`+ Url + `"  class="photo">
                                 </div>`
                         )
                     }
