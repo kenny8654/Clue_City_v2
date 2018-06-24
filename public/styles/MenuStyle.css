@@ -152,6 +152,7 @@ body{
 #ID{
     position:absolute;
     left:20vw;
+    width:auto;
     font-weight:500;
     font-size: 3vw;
 }
