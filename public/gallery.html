@@ -84,105 +84,102 @@
             });
         }
         var image_size;
-        function friends(){
-                $.ajax({
-                  type : 'post',
-                  url : './invite/friend',
-                  data : {
-                    id : myid , 
-                  },
-                  success : function(data){
+        function friends() {
+            $.ajax({
+                type: 'post',
+                url: './invite/friend',
+                data: {
+                    id: myid,
+                },
+                success: function (data) {
                     console.log(data);
-                    choose_friend = data.friend ;
-                        if(data.image == null){
-                            image_size =0;
-                        }
-                      else{
+                    choose_friend = data.friend;
+                    if (data.image == null) {
+                        image_size = 0;
+                    }
+                    else {
                         image_size = data.image.length;
-                        }
-                      console.log(image_size);
-                      //--To-Do Update User gallery
-                      //--To-Do For call friendsData(Ids)
-                      let Url = `https://graph.facebook.com/${myid}/picture?type-normal`;
-                      $("#gg").append(
-                      `<div class="YOYO">
+                    }
+                    console.log(image_size);
+                    //--To-Do Update User gallery
+                    //--To-Do For call friendsData(Ids)
+                    let Url = `https://graph.facebook.com/${myid}/picture?type-normal`;
+                    $("#gg").append(
+                        `<div class="YOYO">
                         <div class="container">
                             <div id="profile">
-                                <img src="`+Url+'">'+
-                                '<div id="NameAndID">'+
-                                '<b class="text">shared by</b>'+
-                                '<font class="text Name" id="Name1">'+myname+`</font>
+                                <img src="`+ Url + '">' +
+                        '<div id="NameAndID">' +
+                        '<b class="text">shared by</b>' +
+                        '<font class="text Name" id="Name1">' + myname + `</font>
                             </div>
                         </div>  
                         <div class="slides" id="Mygallery">
                         </div>
                         </div>
                     </div>`
-                      )
-                      for(let i=0;i<data.image.length;i++)
-                          {     
-                              let Url='./'+myid+'/'+i+'.jpg';
-                              $("#Mygallery").append(
-                              `<div class="slideDiv">
-                                <b class="Des">`+data.image[i]+`</b>
-                                <img src=`+Url+`  class="photo">
+                    )
+                    for (let i = 0; i < data.image.length; i++) {
+                        let Url = './' + myid + '/' + i + '.jpg';
+                        $("#Mygallery").append(
+                            `<div class="slideDiv">
+                                <b class="Des">`+ data.image[i] + `</b>
+                                <img src=`+ Url + `  class="photo">
                                 </div>`
-                              )
-                          }
-                      for(let i=0;i<data.friend.length;i++)
-                          {
-                              friendsData(data.friend[i].id,i);
-                          }
-                      }
-                    //let url ;
-//                    for(let i = 0; i < data.friend.length ; i++){
-//                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
-//                      getPicture(url,(i+1));
-//                      getName( data.friend[i].name,(i+1));
-//                    }
-                  
-                })
-              }
-        function friendsData(ids,num){
-                $.ajax({
-                  type : 'post',
-                  url : './invite/friend',
-                  data : {
-                    id : ids , 
-                  },
-                  success : function(data){
+                        )
+                    }
+                    for (let i = 0; i < data.friend.length; i++) {
+                        friendsData(data.friend[i].id, i);
+                    }
+                }
+                //let url ;
+                //                    for(let i = 0; i < data.friend.length ; i++){
+                //                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
+                //                      getPicture(url,(i+1));
+                //                      getName( data.friend[i].name,(i+1));
+                //                    }
+
+            })
+        }
+        function friendsData(ids, num) {
+            $.ajax({
+                type: 'post',
+                url: './invite/friend',
+                data: {
+                    id: ids,
+                },
+                success: function (data) {
                     console.log(data);
-                      //--To-Do update friend's gallery
+                    //--To-Do update friend's gallery
                     let Url = `https://graph.facebook.com/${data.id}/picture?type-normal`;
-                      $("#gg").append(
-                      `<div class="YOYO">
+                    $("#gg").append(
+                        `<div class="YOYO">
                         <div class="container">
                             <div id="profile">
-                                <img src=`+Url+'>'+
-                                '<div id="NameAndID">'+
-                                '<b class="text">shared by</b>'+
-                                '<font class="text Name" id="Name1">'+data.name+`</font>
+                                <img src=`+ Url + '>' +
+                        '<div id="NameAndID">' +
+                        '<b class="text">shared by</b>' +
+                        '<font class="text Name" id="Name1">' + data.name + `</font>
                             </div>
                         </div>  
-                        <div class="slides" id="gallery`+num+`">
+                        <div class="slides" id="gallery`+ num + `">
                         </div>
                         </div>
                     </div>`
-                      )
-                      for(let i=0;i<data.image.length;i++)
-                          {
-                              let gal='#gallery'+num;
-                              let Url='./'+data.id+'/'+i+'.jpg';
-                              $(`#gallery${num}`).append(
-                              `<div class="slideDiv">
-                                <b class="Des">`+data.image[i]+`</b>
-                                <img src=`+Url+`  class="photo">
+                    )
+                    for (let i = 0; i < data.image.length; i++) {
+                        let gal = '#gallery' + num;
+                        let Url = './' + data.id + '/' + i + '.jpg';
+                        $(`#gallery${num}`).append(
+                            `<div class="slideDiv">
+                                <b class="Des">`+ data.image[i] + `</b>
+                                <img src=`+ Url + `  class="photo">
                                 </div>`
-                              )
-                          }
+                        )
                     }
-                })
-              }
+                }
+            })
+        }
         var responseData;
         var myid;
         var myname;
@@ -196,26 +193,26 @@
                     friends();
                     console.log(myid + "," + myname + "has get profile");
                     $("#gg").append(
-                '<p>My name : ' + myname + '</p>' +
-                '<img src = "./' + myid + '/0.jpg">'
-            )
+                        '<p>My name : ' + myname + '</p>' +
+                        '<img src = "./' + myid + '/0.jpg">'
+                    )
                 }
             })
-            
-                        $("#gg").append(
-                    `<div class="YOYO">
+
+            $("#gg").append(
+                `<div class="YOYO">
                       <div class="container">
                         <div id="profile">
-                            <img src=`+url+` id="bighead">
+                            <img src=`+ url + ` id="bighead">
                             <div id="NameAndID">
                                 <b class="text">shared by</b>
-                                <font class="text Name" id="Name1">`+林志嘉+`</font>
+                                <font class="text Name" id="Name1">`+ 林志嘉 + `</font>
                             </div>
                         </div>  
                         <div class="slides">
                             <div class="slideDiv">
-                                <b class="Des">`+今日天氣晴+`</b>
-                                <img src=`+"images/Gallery/1.jpg"+`  class="photo">
+                                <b class="Des">`+ 今日天氣晴 + `</b>
+                                <img src=`+ "images/Gallery/1.jpg" + `  class="photo">
                             </div>
                             <img src="images/Gallery/2.jpg" class="photo">
                             <img src="images/Gallery/3.jpg"  class="photo">
