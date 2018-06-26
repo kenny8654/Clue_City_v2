@@ -728,7 +728,7 @@ function onSubmitButtonClicked() {
       $.ajax({
         url: './map/runPython',
         type: 'post',
-        data: { clueIndex: 0 },
+        data: { clueIndex: clue_index },
         dataType: 'text',
         success: function (data) {
           //$('#upload_response').text(data);
