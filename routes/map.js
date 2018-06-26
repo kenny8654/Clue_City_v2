@@ -12,6 +12,7 @@ const bodyParser = require('body-parser');
 const urlencoderParser = bodyParser.urlencoded({ extended: false });
 const multer = require('multer')
 var teamname = null;
+var clue_index;
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
 let mongoCollection = "user";
@@ -76,7 +77,7 @@ router.post("/return_teamname", urlencoderParser, function (req, res) {
 })
 
 router.post("/runPython", urlencoderParser, function (req, res) {
-  var clue_index = req.body.clueIndex;
+  clue_index = req.body.clueIndex;
   console.log(req.body);
   console.log('Python' + clue_index + ' is running')
   var spawn = require("child_process").spawn;
