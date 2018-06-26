@@ -85,7 +85,7 @@
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     responseData = response ;
-                    getMyScore();
+                    getMyScore(responseData);
                   }
                 })
               }
@@ -93,27 +93,14 @@
               function chooseMode(TeamOrPerson){
                     
                    if( TeamOrPerson == 0){
-                     choose = "user";
-                   //  getMyScore(responseData);
+                      choose = "user";
                    }
                    else{
-                     choose = "team"; 
-                   //  getTeamScore(responseData);
+                      choose = "team";
                    }
                    get_leaderboard(choose);
               }
-              function getMyScore(){
-                $.ajax({
-                  type : 'post',
-                  url : './score/Myscore',
-                  data : {},
-                  success : function(data){
-                    console.log(data);
-                    $("#myScore").text(data);
-                  }
-                });
-              }
-/*
+
               function getMyScore(myprofile){
                 $.ajax({
                   type : 'post',
@@ -125,18 +112,7 @@
                   }
                 });
               }
-              function getTeamScore(myprofile){
-                $.ajax({
-                  type : 'post',
-                  url : './score/teamscore',
-                  data : myprofile,
-                  success : function(data){
-                    console.log(data.score);
-                    $("#myScore").text(data.score);
-                  }
-                });
-              }
-*/             
+              
               var profile ;
 
               function get_leaderboard(team_or_person){
@@ -153,12 +129,7 @@
                       url = `https://graph.facebook.com/${profile[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
                       getName( profile[i].name,(i+1));
-                      if( profile[i].score != null ){
-                        getScore( profile[i].score,(i+1));
-                      }
-                      else{
-                        getScore("",(i+1));
-                      }
+                      getScore( profile[i].score,(i+1));
                     }
                   } 
                 });
@@ -268,9 +239,9 @@
       
 
     <div id="Bottom">
-            <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
             <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
             <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
-            <img src="images/Score/LEADERBOARDICON.png" class="BottomIcon" id="RankIcon">
+            <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon">
     </div>
 </body>

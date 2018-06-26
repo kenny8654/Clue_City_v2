@@ -67,69 +67,12 @@ router.post('/NULL', function (req, res) {
   // // console.log('redirect');
 });
 
-router.post("/team", urlencoderParser, function (req, res) {
+router.post("/team",urlencoderParser,function(req,res){
   teamname = req.body.name;
 })
 
-router.post("/return_teamname", urlencoderParser, function (req, res) {
+router.post("/return_teamname",urlencoderParser,function(req,res){
   res.send(teamname);
-})
-
-router.post("/createAlbum", urlencoderParser, function (req, res) {
-  ID = req.body.ID;
-  var dir = './public/' + ID;
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
-  }
-  let message = req.body.message;
-  let image_size;
-  let mongoCollection = "user";
-  console.log("facebookID : ");
-  console.log(ID);
-  let object = mongoOperation.GetFriend(mongoCollection, { id: ID });
-  object.then((value) => {
-    console.log("value : ");
-    console.log(value);
-    if (value.image == null) {
-      image_size = 0;
-    }
-    else {
-      image_size = value.image.length;
-    }
-    console.log("imageSize : ");
-    console.log(image_size);
-    fs.createReadStream('./public/target.jpg').pipe(fs.createWriteStream(dir + '/' + image_size + '.jpg'));
-    mongoOperation.addimage(mongoCollection, ID, message)
-  })
-
-})
-router.post('/tellscore', urlencoderParser, function (req, res) {
-  let mongoCollection = "user";
-  let score ={ score : req.body.score};
-  let profile = { id: req.body.id };
-  mongoOperation.updatescore(mongoCollection, profile, score);
-})
-
-router.post('/tellteamscore', urlencoderParser, function (req, res) {
-  let mongoCollection = "team";
-  let score ={ score : req.body.score};
-  let profile = { name: req.body.name };
-  console.log("====================================");
-  console.log(score);
-  console.log(profile);
-  mongoOperation.updatescore(mongoCollection, profile, score);
-})
-
-router.post('/update_score', urlencoderParser, function (req, res) {
-  let mongoCollection = "team";
-  let team = req.body.name;
-  console.log(team);
-  let object = mongoOperation.mongoGetScore(mongoCollection, team);
-  object.then((val) => {
-    console.log("----------------------------------");
-    console.log(val);
-    res.send(val);
-  });
 })
 
 router.post("/upload", urlencoderParser, function (req, res) {
@@ -153,10 +96,10 @@ router.post("/upload", urlencoderParser, function (req, res) {
       for (value in fileInfo) {
         if (fileInfo[value].indexOf("filename=") != -1) {
           //fileName = fileInfo[value].substring(10, fileInfo[value].length-1);
-          fileName = "./public/target.jpg"
+          fileName = "./target.jpg"
           if (fileName.indexOf('\\') != -1) {
             //fileName = fileName.substring(fileName.lastIndexOf('\\')+1);
-            fileName = "./public/target.jpg"
+            fileName = "./target.jpg"
           }
           console.log("File Name : " + fileName);
         }
@@ -186,7 +129,6 @@ router.post("/upload", urlencoderParser, function (req, res) {
     } else {
       console.log('只能上传图片文件');
     }
-    // fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/target.jpg'));
     runPython(res);
 
   })
@@ -195,7 +137,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
 function runPython(res) {
   console.log('Python is running')
   var spawn = require("child_process").spawn;
-  var process = spawn('python3', ["./compare0.py",]);
+  var process = spawn('python3', ["./compare.py",]);
   process.stdout.on('data', function (data) {
     console.log(data.toString());
     res.send(data.toString());

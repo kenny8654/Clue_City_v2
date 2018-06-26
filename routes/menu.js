@@ -41,12 +41,15 @@ router.post('/signal', urlencodedParser, function(req,res){
     var mongoCollection = "user";
     let myId = req.body.id ;
     let object = mongoOperation.mongoFindinvite(mongoCollection, myId);
+    let hi ;
     object.then((val)=>{
       if(val == null){
         res.send(val);
       }
       else{
-        res.send(val);
+        hi = val ;
+        console.log(hi);
+        res.send(hi);
       }
     });
 });
