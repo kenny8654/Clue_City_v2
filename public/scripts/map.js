@@ -803,7 +803,7 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
-  document.getElementById('index').textContent = 0;
+  document.getElementById('index').text = 0;
 })
 
 //------------------------------------------------------------------------------------------------------<3
