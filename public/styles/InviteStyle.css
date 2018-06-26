@@ -85,16 +85,15 @@ body{
     margin-bottom:1%;
 }
 #AdhocMode{
-    position:relative;
-    margin-left:0%;
-    width:75%;
+    position:fixed;
+    width:100%;
+    height:13vw;
 }
 #Wheel{
-    position:relative;
+    position:fixed;
+    top:4vw;
     width:6%;
-    margin-top:4%;
-    margin-bottom:2%;
-    margin-left:4%;
+    right:4vw;
 }
 .FriendsIn{
     margin-top:50%;
