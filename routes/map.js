@@ -75,6 +75,17 @@ router.post("/return_teamname", urlencoderParser, function (req, res) {
   res.send(teamname);
 })
 
+router.post("/runPython", urlencoderParser, function (req, res) {
+  index = req.body.index;
+  console.log('Python' + index + ' is running')
+  var spawn = require("child_process").spawn;
+  var process = spawn('python3', ["./compare" + index + ".py",]);
+  process.stdout.on('data', function (data) {
+    console.log(data.toString());
+    res.send(data.toString());
+  })
+})
+
 router.post("/createAlbum", urlencoderParser, function (req, res) {
   ID = req.body.ID;
   var dir = './public/' + ID;
@@ -105,14 +116,14 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
 })
 router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";
-  let score ={ score : req.body.score};
+  let score = { score: req.body.score };
   let profile = { id: req.body.id };
   mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
 router.post('/tellteamscore', urlencoderParser, function (req, res) {
   let mongoCollection = "team";
-  let score ={ score : req.body.score};
+  let score = { score: req.body.score };
   let profile = { name: req.body.name };
   console.log("====================================");
   console.log(score);
@@ -187,7 +198,7 @@ router.post("/upload", urlencoderParser, function (req, res) {
       console.log('只能上传图片文件');
     }
     // fs.createReadStream('./target.jpg').pipe(fs.createWriteStream('./public/target.jpg'));
-    runPython(res);
+    //runPython(res);
 
   })
 })
