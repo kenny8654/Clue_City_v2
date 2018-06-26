@@ -39,7 +39,7 @@ router.post('/teamscore', urlencodedParser,function(req,res){
 });
 */
 router.post('/getMyscore', urlencodedParser,function(req,res){
-  myscore = req.body; 
+  myscore = req.body.score; 
 });
 
 router.post('/Myscore', urlencodedParser,function(req,res){
