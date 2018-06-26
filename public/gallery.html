@@ -1,48 +1,262 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/gallery.css">
-  <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-  <!-- TODO add manifest here -->
-  <link rel="manifest" href="/manifest.json">
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
-  <meta name="apple-mobile-web-app-title" content="Clue City">
-  <link rel="apple-touch-icon" href="images/logo.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Clue City</title>
+    <link rel="stylesheet" type="text/css" href="styles/gallery.css">
+    <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-title" content="Clue City">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
     <!-- CSS for slidesjs.com example -->
-  <link rel="stylesheet" href="styles/example.css">
-  <link rel="stylesheet" href="styles/font-awesome.min.css">
-  <!-- End CSS for slidesjs.com example -->
+    <link rel="stylesheet" href="styles/example.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <!-- End CSS for slidesjs.com example -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
     <script>
-        function gotosetting(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        function gotosetting() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/setting";
         }
-        function gotohome(){
-           document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        function gotohome() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/menu";
         }
-        
-        function gotofriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+
+        function gotofriend() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/friend";
         }
-        function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+        function gotoScore() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
 </head>
+
 <body>
+    <script>
+
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '177842309598524',
+                cookie: true,
+                xfbml: true,
+                version: 'v3.0'
+            });
+
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+
+
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                console.log('Logged in and authenticated');
+                getProfile();
+            } else {
+                console.log('Not authenticated');
+            }
+        }
+
+
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+        var image_size;
+        function friends() {
+            $.ajax({
+                type: 'post',
+                url: './invite/friend',
+                data: {
+                    id: myid,
+                },
+                success: function (data) {
+                    console.log(data);
+                    choose_friend = data.friend;
+                    if (data.image == null) {
+                        image_size = 0;
+                    }
+                    else {
+                        image_size = data.image.length;
+                    }
+                    console.log(image_size);
+                    //--To-Do Update User gallery
+                    //--To-Do For call friendsData(Ids)
+                    let Url = `https://graph.facebook.com/${myid}/picture?type-normal`;
+                    
+                    for(let i= 0;i<data.image.length;i++)
+                        {
+                            let Urll = './' + myid + '/' + i + '.jpg';
+
+                            let h = '<img src="'+ Urll + '"  class="photo">';
+                            console.log(h);
+                            console.log("-------:" + Urll);
+                            $("#gg").append(
+                                 `<div class="YOYO">
+                                     <div class="container">
+                                         <div id="profile">
+                                             <img src="`+ Url + '" class="bighead">' +
+                                            '<div id="NameAndID">' +
+                                            '<b class="text">\rshared by</b>' +
+                                            '<font class="text Name" id="Name1">\r' + myname + `</font>
+                                         </div>
+                                     </div>  
+                                     <div id="Mygallery">`+
+                                        `<div class="slideDiv">
+                                            <b class="Des">`+ data.image[i] + `</b>
+                                            <img src="`+ Urll + `"  class="photo">
+                                         </div>
+                                     </div>
+                                     </div>
+                                 </div>`
+
+                                )
+                        }
+                    
+                    
+//                    for (let i = 0; i < data.image.length; i++) {
+//                        let Url = './' + myid + '/' + i + '.jpg';
+//                        console.log(Url);
+//                        $("#Mygallery").append(
+//                            `<img src="`+ Url + `"  class="photo">`
+////                            `<div class="slideDiv">
+////                                <b class="Des">`+ data.image[i] + `</b>
+////                                <img src="`+ Url + `"  class="photo">
+////                                </div>`
+//                        )
+//                    }
+                    for (let i = 0; i < data.friend.length; i++) {
+                        friendsData(data.friend[i].id, i);
+                    }
+                }
+                //let url ;
+                //                    for(let i = 0; i < data.friend.length ; i++){
+                //                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
+                //                      getPicture(url,(i+1));
+                //                      getName( data.friend[i].name,(i+1));
+                //                    }
+
+            })
+        }
+        function friendsData(ids, num) {
+            $.ajax({
+                type: 'post',
+                url: './invite/friend',
+                data: {
+                    id: ids,
+                },
+                success: function (data) {
+                    console.log(data);
+                    //--To-Do update friend's gallery
+                    let Url = `https://graph.facebook.com/${data.id}/picture?type-normal`;
+                    
+                    if (data.image == null) {
+                        image_size = 0;
+                    }
+                    else {
+                        image_size = data.image.length;
+                for(let i=0;i<data.image.length;i++)
+                    {
+                        let Urll = './' + data.id + '/' + i + '.jpg';
+                         $("#gg").append(
+                        `<div class="YOYO">
+                        <div class="container">
+                            <div id="profile">
+                                <img src="`+ Url + '" class="bighead">' +
+                        '<div id="NameAndID">' +
+                        '<b class="text">\rshared by</b>' +
+                        '<font class="text Name" id="Name1">\r' + data.name + `</font>
+                            </div>
+                        </div>  
+                        <div id="gallery`+ num + `">`+`<div class="slideDiv">
+                                <b class="Des">`+ data.image[i] + `</b>
+                                <img src="`+ Urll + `"  class="photo">
+                                </div>`+`
+                        </div>
+                        </div>
+                        </div>`
+                        )
+                    }
+                   
+                    
+                    }
+//                    for (let i = 0; i < image_size; i++) {
+//                        let gal = '#gallery' + num;
+//                        $(`#gallery${num}`).append(
+//                            
+//                        )
+//                    }
+                }
+            })
+        }
+        var responseData;
+        var myid;
+        var myname;
+        var waitsignal;
+        function getProfile() {
+            FB.api('/me?fields=name,email', function (response) {
+                if (response && !response.error) {
+                    responseData = response;
+                    myid = response.id;
+                    myname = response.name;
+                    friends();
+                    console.log(myid + "," + myname + "has get profile");
+                    $("#gg").append(
+//                        '<p>My name : ' + myname + '</p>' +
+//                        '<img src = "./' + myid + '/0.jpg">'
+                    )
+                }
+            })
+
+            
+//                        $("#gg").append(
+//                    `<div class="YOYO">
+//                      <div class="container">
+//                        <div id="profile">
+//                            <img src=`+url+` id="bighead">
+//                            <div id="NameAndID">
+//                                <b class="text">shared by</b>
+//                                <font class="text Name" id="Name1">`+林志嘉+`</font>
+//                            </div>
+//                        </div>  
+//                        <div class="slides">
+//                            <div class="slideDiv">
+//                                <b class="Des">`+今日天氣晴+`</b>
+//                                <img src=`+"images/Gallery/1.jpg"+`  class="photo">
+//                            </div>
+//                            <img src="images/Gallery/2.jpg" class="photo">
+//                            <img src="images/Gallery/3.jpg"  class="photo">
+//                            <img src="images/Gallery/4.jpg"  class="photo">
+//                        </div>
+//                     </div>
+//                    </div>`);
+
+
+        }
+    </script>
     <img src="images/Gallery/Background.png" id="background">
-    
+
     <div class="Gallery">
         <div class="topbar">
             <img src="images/Gallery/top.png" class="TopBarMid" id="Gallery">
@@ -50,16 +264,19 @@
         </div>
     </div>
     <div id="gg">
+        
+        
+<!--
         <div class="YOYO">
           <div class="container">
             <div id="profile">
-            <img src="images/Team/Chia.jpg" id="bighead">
-            <div id="NameAndID">
-                <b class="text">shared by</b>
-                <font class="text Name" >林志嘉</font>
-            </div>
+                <img src="images/Team/Chia.jpg" id="bighead">
+                <div id="NameAndID">
+                    <b class="text">shared by</b>
+                    <font class="text Name" id="Name1">林志嘉</font>
+                </div>
             </div>  
-            <div class="slides">
+            <div >
                 <div class="slideDiv">
                     <b class="Des">今日天氣晴</b>
                     <img src="images/Gallery/1.jpg"  class="photo">
@@ -68,7 +285,7 @@
                 <img src="images/Gallery/3.jpg"  class="photo">
                 <img src="images/Gallery/4.jpg"  class="photo">
             </div>
-        </div>
+            </div>
         </div>
       
          <div class="YOYO">
@@ -134,39 +351,41 @@
             </div>
         </div>
         </div>
+-->
+
     </div>
-    
-  <!-- End SlidesJS Required: Start Slides -->
 
-  <!-- SlidesJS Required: Link to jQuery -->
-  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-  <!-- End SlidesJS Required -->
+    <!-- End SlidesJS Required: Start Slides -->
 
-  <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="scripts/jquery.slides.min.js"></script>
-  <!-- End SlidesJS Required -->
+    <!-- SlidesJS Required: Link to jQuery -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- End SlidesJS Required -->
 
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-    $(function() {
-      $('#slides').slidesjs({
-        width: 940,
-        height: 528,
-        navigation: false
-      });
-        $('.slides').slidesjs({
-        width: 940,
-        height: 528,
-        navigation: false,
-      });
+    <!-- SlidesJS Required: Link to jquery.slides.js -->
+    <script src="scripts/jquery.slides.min.js"></script>
+    <!-- End SlidesJS Required -->
 
-    });
-  </script>
-    
+    <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+    <script>
+        $(function () {
+            $('#slides').slidesjs({
+                width: 940,
+                height: 528,
+                navigation: false
+            });
+            $('.slides').slidesjs({
+                width: 940,
+                height: 528,
+                navigation: false,
+            });
+
+        });
+    </script>
+
     <div id="Bottom">
-            <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
-            <img src="images/Gallery/Gallery.png" class="BottomIcon" id="GalleryIcon" >
-            <img src="images/Gallery/Friend.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()" >
-            <img src="images/Gallery/LeaderBoard.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
+        <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
+        <img src="images/Gallery/Gallery.png" class="BottomIcon" id="GalleryIcon">
+        <img src="images/Gallery/Friend.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+        <img src="images/Gallery/LeaderBoard.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
     </div>
 </body>

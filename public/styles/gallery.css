@@ -1,5 +1,5 @@
 #gg{
-    position:absolute;
+    position:relative;
     overflow-y:auto;
     overflow-x:hidden;
     width:100vw;
@@ -59,7 +59,7 @@
     margin-top:1vw;
     margin-left:1vw;
 }
-#bighead{
+.bighead{
     position:relative;
     width:10vw;
     height:10vw;
@@ -69,6 +69,8 @@
 }
 .text{
     position:relative;
+    left:2vw;
+    top:2vw;
     font-family: Microsoft JhengHei;
     color: #555556;
 }
@@ -95,13 +97,15 @@
 }
 .Des{
     position:absolute;
+    margin-left:3vw;
     margin-top:3vw;
-    margin-bottom: 3vw;
 }
 .photo{
     position:absolute;
     margin-top:10vw;
-    width:115vw;
+    margin-left:2vw;
+    width:66vw;
+    height:37vw;
 }
 
 
@@ -110,9 +114,6 @@ body {
     font: normal 15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #232525;
     padding-top:700px;
-}
-#slides {
-    display: none;
 }
 
 .slidesjs-navigation {

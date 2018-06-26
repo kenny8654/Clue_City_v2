@@ -123,7 +123,7 @@ router.post('/tellteamscore', urlencoderParser, function (req, res) {
 router.post('/update_score', urlencoderParser, function (req, res) {
   let mongoCollection = "team";
   let team = req.body.name;
-
+  console.log(team);
   let object = mongoOperation.mongoGetScore(mongoCollection, team);
   object.then((val) => {
     console.log("----------------------------------");
