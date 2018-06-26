@@ -132,9 +132,14 @@
         </script>
 
 
-  <script>
-    
-  </script>
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <img src="images/Login/background.png" id="background">
     <div class="login">
         <img src="images/Login/ClueCity.png" id="ClueCity">
@@ -154,7 +159,7 @@
                     data-button-type="login_with"  
                     data-show-faces="false" 
                     data-auto-logout-link="false" 
-                    data-use-continue-as="true"
+                    data-use-continue-as="false"
                     scope="public_profile,email"
                     onlogin="checkLoginState();">
                     </div>
