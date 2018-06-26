@@ -1,3 +1,6 @@
+html,body{
+    height:100%;
+}
 #background{
     position:absolute;
     z-index:-2;
@@ -25,7 +28,7 @@
     margin-bottom:2%;
 }
 #BigScore{
-    margin-top:32vw;
+    margin-top:25vw;
     margin-left:34vw;
     width:35vw;
 }
@@ -38,7 +41,7 @@
     position:absolute;
     font-size: 11vw;
     left:41.5vw;
-    top:59vw;
+    top:52vw;
     color:#4c4b4b;
 }
 #smallback{

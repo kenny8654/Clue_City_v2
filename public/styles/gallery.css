@@ -1,3 +1,6 @@
+html,body{
+    height:100%;
+}
 #gg{
     position:relative;
     overflow-y:auto;
