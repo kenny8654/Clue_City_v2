@@ -187,7 +187,7 @@
     margin-left:2vw;
 }
 #Bottom{
-    position:absolute;
+    position:fixed;
     background-color:#c4dcc9;
     bottom:0px;
     left:0px;

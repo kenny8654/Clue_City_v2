@@ -229,7 +229,7 @@ body{
     width:80%;
 }
 #Bottom{
-    position:fixed;
+    position:absolute;
     background-color:#c4dcc9;
     bottom:0px;
     left:0px;

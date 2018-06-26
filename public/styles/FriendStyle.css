@@ -123,7 +123,7 @@ body{
     width:6%;
 }
 #Bottom{
-    position:absolute;
+    position:fixed;
     background-color:#c4dcc9;
     bottom:0px;
     left:0px;

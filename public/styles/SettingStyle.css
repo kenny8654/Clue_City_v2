@@ -72,7 +72,7 @@ body{
     margin-left:2%;
 }
 #Bottom{
-    position:absolute;
+    position:fixed;
     background-color:#c4dcc9;
     bottom:0px;
     left:0px;
