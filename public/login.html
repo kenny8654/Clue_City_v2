@@ -101,8 +101,10 @@
         function setElements(isLogin){
           if(isLogin){
             document.getElementById('fb-btn').style.display = 'none';
+              $("#Start").show();
           }else{
             document.getElementById('fb-btn').style.display = 'show';
+              $("#Start").hide();
           }
         }
         function getProfile(){
@@ -152,7 +154,7 @@
                     data-max-rows="1" 
                     data-size="medium"
                     data-button-type="login_with"  
-                    data-show-faces="true" 
+                    data-show-faces="false" 
                     data-auto-logout-link="true" 
                     data-use-continue-as="true"
                     scope="public_profile,email"

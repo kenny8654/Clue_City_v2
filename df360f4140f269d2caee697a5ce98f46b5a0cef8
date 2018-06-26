@@ -1,0 +1,2819 @@
+[33mcommit 1cb0f14ecd2c434c5e97d0478aeb0ca7edf5e9e4[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m)[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Tue Jun 26 22:06:20 2018 +0800
+
+    login change
+
+[33mcommit 3c8c15afe182e3286852bd9027a22b0853eb10d8[m
+Merge: 73c5c29 0677654
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Tue Jun 26 22:05:51 2018 +0800
+
+    Merge branch 'develop' of github.com:bigsamtw/Clue_City_v2 into develop
+
+[33mcommit 73c5c2982a71b57d29d5b796ad706670ea3e8e82[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Tue Jun 26 22:01:06 2018 +0800
+
+    1
+
+[33mcommit 067765498c221988ef1f8e04ed610a9758c9f26f[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Tue Jun 26 21:53:05 2018 +0800
+
+    1
+
+[33mcommit 45f8d90726d72edec78b3050dd8f31be32c21cde[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Tue Jun 26 21:48:41 2018 +0800
+
+    1
+    
+    Signed-off-by: Chen Shih Han <bigsamtw@gmail.com>
+
+[33mcommit 5a1c51e25a2326132afb4603297a1a05e99d5a0e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Tue Jun 26 21:43:25 2018 +0800
+
+    1
+
+[33mcommit 799e9a510afecf9411583150970c09a614db12b3[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Tue Jun 26 21:39:22 2018 +0800
+
+    1
+
+[33mcommit 809353551738af5923b8681f66a98a4abc343ed0[m[33m ([m[1;31morigin/feature/gallery[m[33m)[m
+Merge: 4951c0b 82d18fa
+Author: kenny <kenny8654@gmail.com>
+Date:   Tue Jun 26 20:33:49 2018 +0800
+
+    Merge branch 'develop' into feature/gallery
+
+[33mcommit 82d18fa9a2400a68709c9df3395b62ce94015c34[m[33m ([m[1;31morigin/feature/map[m[33m)[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Tue Jun 26 20:30:11 2018 +0800
+
+    score to server
+
+[33mcommit 4951c0baf82b0d44a6d9afef558bf03fe214193d[m[33m ([m[1;32mfeature/gallery[m[33m)[m
+Merge: 224c96c 690d420
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 26 20:01:46 2018 +0800
+
+    11
+
+[33mcommit 224c96ceddb956972a96fe577778e61f489be7ef[m[33m ([m[1;31morigin/backend[m[33m)[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 26 19:48:18 2018 +0800
+
+    team score finish
+
+[33mcommit 14cf55ca9baccd0a1637904cbea4e0bf7e3eec9c[m
+Merge: 64a6bd1 e7f9c2a
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 26 17:45:48 2018 +0800
+
+    Merge branch 'develop' into backend
+
+[33mcommit 64a6bd1581cbf49eb367747a9e6e80a242ed6e6f[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 26 17:15:27 2018 +0800
+
+    22
+
+[33mcommit 9be98fb34fb6517bc093b53a8e77dfdab3b7bacc[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 26 17:01:52 2018 +0800
+
+    score has fixed
+
+[33mcommit 690d420f414db69f4771dd7ebdeff8b2053ddf91[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 16:08:34 2018 +0800
+
+    1
+
+[33mcommit 0acbcb9d95a6a1e87545a535e560bbc2da2d3c0e[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 16:02:04 2018 +0800
+
+    1
+
+[33mcommit df360f4140f269d2caee697a5ce98f46b5a0cef8[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:57:58 2018 +0800
+
+    1
+
+[33mcommit b8937e5dde9475017d196ae6549d035e48a80b8b[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:49:39 2018 +0800
+
+    1
+
+[33mcommit ad44d1c195cb9a27c43442e238580dedf6c01c1f[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:46:01 2018 +0800
+
+    1
+
+[33mcommit efb96941d8450722d73af45580e11c205378af60[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:44:48 2018 +0800
+
+    1
+
+[33mcommit f6b5073a9c50a9cf319b8b40efe8b68fd23160fe[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:43:54 2018 +0800
+
+    1
+
+[33mcommit 5647e0046b598348c5465476a2e262eb63456313[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:42:59 2018 +0800
+
+    1
+
+[33mcommit 8a46541cc358eb995478267801a7ee7145b11eba[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:38:55 2018 +0800
+
+    1
+
+[33mcommit ea4bc31c252d9acf6be6e45d0663d9bd8e29b38c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:37:29 2018 +0800
+
+    1
+
+[33mcommit 32e7951b47a223bedb28808a0136ced02b1ed30c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:35:21 2018 +0800
+
+    1
+
+[33mcommit 16c2a6f91b03b6e4315b66b992ab52228b5ced19[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:30:58 2018 +0800
+
+    1
+
+[33mcommit ef7ed2d8a879dd80366db789da2c262c63c37b60[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:29:54 2018 +0800
+
+    1
+
+[33mcommit 5b48d30aeb65b4909ae845264415c4309be9983d[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:27:23 2018 +0800
+
+    1
+
+[33mcommit 9e4a13f65b956f7c16ecd510bef875a359fc3b52[m[33m ([m[1;32mfeature/storage[m[33m)[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:20:48 2018 +0800
+
+    7
+    
+    Signed-off-by: glengogo <glengogo@users.noreply.github.com>
+
+[33mcommit 60ca2f2ddd078f25c54796b94243ec1757691f67[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:11:35 2018 +0800
+
+    1
+
+[33mcommit f40c20674c95ffb391b16712ac2ec2d86324b5be[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:11:02 2018 +0800
+
+    1
+
+[33mcommit 7ae183a9fb896ba3ab9713c893b0ae4fb6cf30b7[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 15:10:31 2018 +0800
+
+    1
+
+[33mcommit 938c9f13208c695894cf54d60ca843eb4aa5b80a[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:59:46 2018 +0800
+
+    1
+
+[33mcommit bf2a25e47823dbcaae40933ba6206a6325f08009[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:58:08 2018 +0800
+
+    1
+
+[33mcommit f046619545b1936b412c3c10e713f1b3d4e18ac4[m
+Merge: 39eff59 08e6fe3
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:48:01 2018 +0800
+
+    1
+
+[33mcommit 39eff59240a526a540b70b87270bd006233f757a[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:47:09 2018 +0800
+
+    11
+
+[33mcommit 08e6fe37b8c0bfc5786e281a03ebb63937f9c5d4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:45:48 2018 +0800
+
+    1
+
+[33mcommit 74d6e7ccc3725903ef7aa8d136f79147bf11f047[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:44:52 2018 +0800
+
+    1
+
+[33mcommit 28540d5a5008cd67029e410ad1715e698ad2abdd[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:43:40 2018 +0800
+
+    1
+
+[33mcommit fb222937d32037f84c2d3fef0a7408865379cbce[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:42:03 2018 +0800
+
+    1
+
+[33mcommit 6fb5ecbbe91649f21b146f3ccba0513579f92b44[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:40:38 2018 +0800
+
+    1
+
+[33mcommit aa191152569c177310a4f2322b466b47ed5dee5c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:39:11 2018 +0800
+
+    1
+
+[33mcommit 0da05b7bef87d3776e33df7f6e85a9d1a1bfec75[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:34:47 2018 +0800
+
+    1
+
+[33mcommit f07ab2e95a4378dda923f5fa5c0f3b062f1d6f07[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:33:42 2018 +0800
+
+    1
+
+[33mcommit 77036bb9bbc556145393734cc32833080b349271[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:32:05 2018 +0800
+
+    1
+
+[33mcommit 8c6160e30bc365a8eb623456079331a2441d867f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 14:30:22 2018 +0800
+
+    1
+
+[33mcommit 5d0490ce27b929e37becd0ecfd6854b74348b0c7[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:29:07 2018 +0800
+
+    1
+
+[33mcommit 48d37ffa815a1dd06c06b78a8d8b15c42eaf7526[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:24:23 2018 +0800
+
+    1
+
+[33mcommit a8af2bc308c994ca84424ff012e56fa22e24174d[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:18:08 2018 +0800
+
+    1
+
+[33mcommit 341433450566ef7b69714ea0f0b0989e70f52177[m
+Merge: fda50d5 101983b
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:09:28 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit fda50d5b4a581d6d20ad811bd44fde7a24c7ac40[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 14:06:59 2018 +0800
+
+    gallery change
+
+[33mcommit 101983b5b9710235e24dbb222a7ba6eb14f34a1e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 12:35:45 2018 +0800
+
+    1
+
+[33mcommit 39e534f91a20786ddaa9aa520b9c78c6dfa1610f[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 11:36:06 2018 +0800
+
+    1
+
+[33mcommit ba9c29436e3f9dd1b055ba4e24b50e05155b9a07[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:16:46 2018 +0800
+
+    1
+
+[33mcommit dff8e0c9d4bf64970f8c48cf43c87284cae98311[m
+Merge: 80f5e7f 1d59236
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:15:34 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 80f5e7fd21b5e4fa6ca59961194aaba43386a993[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:14:51 2018 +0800
+
+    1
+
+[33mcommit 1d5923644ecaaa5b5067a3c3474168cd36f1a9a9[m
+Merge: 6ee1889 eee086b
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 03:13:50 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit eee086b8ff233d7b79d319a7d6aea8596e69f4dd[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:13:43 2018 +0800
+
+    1
+
+[33mcommit 6ee1889f63a8b4c262792bd587e58e4dece213bc[m
+Merge: d9d9a92 4d85609
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 03:07:14 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 4d85609420dd32adb571ed23ed3043c8d070fe14[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:07:06 2018 +0800
+
+    1
+
+[33mcommit d9d9a92a01c96951414fc414f58ede98e370b1f8[m
+Merge: bf7ac6b 3ce3da3
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 03:04:52 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 3ce3da3e50effd460a272f89ba58d0eb51d39b2c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:04:34 2018 +0800
+
+    1
+
+[33mcommit bf7ac6b24650a381c0244cf5a002252cecdac25a[m
+Merge: aa9c8fa bd20843
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 03:03:53 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit bd208439dee358a7c6828c88212c7faacdca30bc[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:03:34 2018 +0800
+
+    1
+
+[33mcommit aa9c8fa20937177523332ad95fb2ca4a95255084[m
+Merge: 247ea29 86c43ad
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 03:01:15 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 86c43ad5a0d07cbd22b48ed0f77553d5de3f6e99[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 03:01:02 2018 +0800
+
+    1
+
+[33mcommit 247ea29fd2e301ed60bcd4e88ab01d9cc7376d3b[m
+Merge: 68c5a36 5f84be8
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:58:25 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 5f84be82bd01cde4ee496d71047964f5663a754a[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:58:13 2018 +0800
+
+    1
+
+[33mcommit 68c5a36b637b76780f6eec2aceaf78cd71421dad[m
+Merge: 770ff42 48bb816
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:56:59 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 48bb816bfa8eef20a6dea94ae71bd4375e44fa3c[m
+Merge: a121b03 ce79985
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:56:42 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit a121b030348ab153a0fab692750149d37afb6e04[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:56:19 2018 +0800
+
+    1
+
+[33mcommit 770ff42569dac7f39e92d804622de5559b0fffdd[m
+Merge: 955cc1c ce79985
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:52:26 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit ce7998566110b2280c849f0776c84040835ca6ba[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 02:52:09 2018 +0800
+
+    dd
+
+[33mcommit 290e43a19c0d209b711837afdf9941b08368f4d4[m
+Merge: 0f8f462 f87fe9b
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 02:50:23 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 0f8f462836f8cebd644f3bb5430b252930aef9e3[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 02:50:02 2018 +0800
+
+    dd
+
+[33mcommit 955cc1ce0c0bc63d550e98b25158c3f15cd5d35b[m
+Merge: 9243335 f87fe9b
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:44:10 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit f87fe9b14fec2c706e2ebbfd3b688c8129a74a85[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:43:01 2018 +0800
+
+    1
+
+[33mcommit 9243335f3509c80b00bad9e6fff14076ad2cea27[m
+Merge: bfb30f0 6847b55
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:40:18 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 6847b55d80b22c2bd2b4792ddf21da764aca9e72[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:39:30 2018 +0800
+
+    1
+
+[33mcommit bfb30f066e2f75e2b14e39c66ae11f0d49d8adca[m
+Merge: be49586 200a4db
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:37:52 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 200a4db29b390743c47daf55540ec7ffbced354f[m
+Merge: dca7717 29fa929
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:37:17 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit be495866634bab577dee3378bc3af7e317e9c156[m
+Merge: 0e58cb9 29fa929
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:37:09 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit dca7717b208729d757fa001e5b2018d7b65af3fd[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:37:07 2018 +0800
+
+    1
+
+[33mcommit 29fa929e2676aba7b92caad5d1856a0c6cd32a4b[m
+Merge: 39a49cb 5ae4fba
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 02:36:44 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 39a49cb1f8c0ce67159433031bd5c7cdefde0e56[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 02:36:08 2018 +0800
+
+    dd
+
+[33mcommit 0e58cb9631d36c9da2248fb2036a11a245e3eebb[m
+Merge: 8b06535 5ae4fba
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:33:46 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 5ae4fba40b0d8b5809b21b49585a54401addb1ce[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:33:29 2018 +0800
+
+    1
+
+[33mcommit 8b0653553765af213daa1512b0aec0b49dfd4f42[m
+Merge: 8a2547b 1bb265e
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:27:10 2018 +0800
+
+    Merge branch 'backend' into feature/storage
+
+[33mcommit 8a2547bcc390f4a0fe20b2bf580b7e85b89c5f66[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:17:12 2018 +0800
+
+    1
+
+[33mcommit 1805bf07b6882fd41a0825ec1c88afe3dfeba35f[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:16:35 2018 +0800
+
+    1
+
+[33mcommit e139cf8c98c8045e223a2f6f4ec7586e7e79d9f6[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:15:40 2018 +0800
+
+    1
+
+[33mcommit 99789a3d8f082375939a485e8ff10f4687cff6de[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 02:15:00 2018 +0800
+
+    ddd
+
+[33mcommit 00c8b354984ebea84b2157b458b89e02ad68408f[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:13:53 2018 +0800
+
+    1
+
+[33mcommit 8bc2e7362e66f3c0dcd1855ca0564e9b08fa308c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:13:03 2018 +0800
+
+    1
+
+[33mcommit c9d02121bca44600a36bac3dddd83bc003ba6cb7[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:11:12 2018 +0800
+
+    1
+
+[33mcommit 1d1f5d81e46b22dd92dc343efdb19f2655265936[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:10:09 2018 +0800
+
+    1
+
+[33mcommit f179ae07044eb0fb22ed934d7eeb4bd678ff2d97[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:08:36 2018 +0800
+
+    1
+
+[33mcommit ce72a12f3120fd3a4032b444129e9c2fb83bc6cf[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:05:52 2018 +0800
+
+    1
+
+[33mcommit 59f4502f4f0ea21de77b1f2e999810cf9430965c[m
+Merge: a401faf e7f9c2a
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:03:02 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit a401faf251d4a11372371853402cc58b856c6b05[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sun Jun 24 02:02:34 2018 +0800
+
+    1
+
+[33mcommit e7f9c2aa3fa61c432b7b26fae6f2ca55ec387235[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:56:09 2018 +0800
+
+    dd
+
+[33mcommit 8f2b3220769dd42b23fc2e67a76e43469a9a6906[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:51:51 2018 +0800
+
+    l
+
+[33mcommit c9cf075499964e2052f8c97e0f9d3b2561b7ba0b[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:44:21 2018 +0800
+
+    l
+
+[33mcommit 2225d460fb345fb9668fe04b837a9f79446f5067[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:38:21 2018 +0800
+
+    l
+
+[33mcommit fdd16f568ec5465f7b593e9763889e35275598b7[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:32:34 2018 +0800
+
+    0
+
+[33mcommit 35452027bef919a908f332c5e1b0ea0f95841e80[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:28:21 2018 +0800
+
+    1
+
+[33mcommit d29d74ac91ca9e602f03de90aae1e22d3ca69b33[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:20:22 2018 +0800
+
+    8
+
+[33mcommit 19c662501e1309ee223b3f79f7ad53a7dc4047b8[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:18:37 2018 +0800
+
+    1
+
+[33mcommit 3cc35877a24af74718184a059d1b5daea2ec6a0b[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:17:31 2018 +0800
+
+    1
+
+[33mcommit a7956d09845c37fc75ae0d4841226f74a69c79a9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:15:22 2018 +0800
+
+    1
+
+[33mcommit 29cb80bedd528e67c37cb12f326b23670cb25b7e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:06:05 2018 +0800
+
+    1
+
+[33mcommit c20fff0c38708ed14f5e032f0217678c0b9c70d2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 01:00:34 2018 +0800
+
+    1
+
+[33mcommit 84c3f801ee7ad56e5d39466b4cb062c80773a374[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:54:32 2018 +0800
+
+    1
+
+[33mcommit 5cb938d6a4042eda46003daaab2b35c55fb90970[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:52:30 2018 +0800
+
+    1
+
+[33mcommit f4fbfe2f3284bde5072481b749882d837839e403[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:48:44 2018 +0800
+
+    1
+
+[33mcommit c441e3110f96b42dc0d7ac77230c182838bd89f4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:43:25 2018 +0800
+
+    1
+
+[33mcommit cadf9fc20bba6395349966ae1e6a12a9816774b7[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sun Jun 24 00:40:39 2018 +0800
+
+    22
+
+[33mcommit 7b2d8e1496dd458327739fe6c4b81aaafd108002[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:40:13 2018 +0800
+
+    1
+
+[33mcommit 5dc5d1ad9cd48f3a0bfb8269b0323d9baf0494fc[m
+Merge: ebd5312 c689081
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:38:53 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit ebd53128868934b62897942b18bb9db85288f5c0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:37:53 2018 +0800
+
+    1
+
+[33mcommit c6890811c73c7cdedea01c686580de1a9c5d69dc[m
+Merge: 02a325a 12d4812
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:33:43 2018 +0800
+
+    Merge branch 'feature/map' into feature/storage
+
+[33mcommit 12d481247f8167e743402f03699a74c37d68d39a[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 00:31:41 2018 +0800
+
+    dd
+
+[33mcommit 02a325a965ddb779f23b0bf89371d641d25a1a03[m
+Merge: 0b7eeb1 d043ab2
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:20:56 2018 +0800
+
+    Merge branch 'feature/map' into feature/storage
+
+[33mcommit d043ab2ef6661b34a017a1de9e0eb252b75d77fe[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 00:20:14 2018 +0800
+
+    dd
+
+[33mcommit 4d5040be2a56042c994db0797c36368c2cb5e2c7[m
+Merge: 2040493 0b7eeb1
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:19:35 2018 +0800
+
+    Merge branch 'feature/storage' of github.com:bigsamtw/Clue_City_v2 into feature/storage
+
+[33mcommit 0b7eeb1aa5c122b8e4fa0e3d98e0dd982ab3f9d7[m
+Merge: 4928c17 f8a17b2
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:18:18 2018 +0800
+
+    Merge branch 'feature/map' into feature/storage
+
+[33mcommit f8a17b287f3989d7b869337cbe79a6c0a41564a2[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 00:17:17 2018 +0800
+
+    dd
+
+[33mcommit 204049306a9e256d2ee167eeeab44ed9137c8521[m
+Merge: 4928c17 79a37eb
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:13:09 2018 +0800
+
+    Merge branch 'feature/map' into feature/storage
+
+[33mcommit 79a37eb5bb3c60c2bb66877cef695caeca44401a[m
+Merge: 644cac3 f11bc7c
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 00:12:33 2018 +0800
+
+    dd
+
+[33mcommit 644cac391d8e0709ccfdc9333f1412677a4b16c5[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sun Jun 24 00:10:34 2018 +0800
+
+    asdfsa
+
+[33mcommit 4928c17aafa05f5f15e55bb609c7bb20f469e4c1[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sun Jun 24 00:03:03 2018 +0800
+
+    add
+
+[33mcommit eb47cc394015e856345efc6ed4f8e9e2482741b8[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:59:46 2018 +0800
+
+    dd
+
+[33mcommit a203fe608dc593c6e353f300badb0c05b52306f9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:54:45 2018 +0800
+
+    gg
+
+[33mcommit a4c45c1b79340cb6b142f54a9f30074c611f5394[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:50:11 2018 +0800
+
+    1
+
+[33mcommit c49f123558bf04fc81cad91f5ed9f641f356a2d3[m
+Merge: b2441df f11bc7c
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:47:48 2018 +0800
+
+    Merge branch 'feature/map' into feature/storage
+
+[33mcommit f11bc7c33352f8780bb489254cc225557e540b21[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:46:32 2018 +0800
+
+    q
+
+[33mcommit 22fdf61623d63285ce298094fc071d481c1fa74d[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 23:44:19 2018 +0800
+
+    bug
+
+[33mcommit b2441df58641425f71a24536296605f77d1e8229[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:43:04 2018 +0800
+
+    1
+
+[33mcommit 84f9b4c5ae6f4821b11bc1408403229f0d2c48ba[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:39:40 2018 +0800
+
+    1
+
+[33mcommit e60812b89d1b65ac454c7c21dd6e7d329592350a[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:34:48 2018 +0800
+
+    1
+
+[33mcommit 2435cccd93f39404607e7248985468885a58adfe[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:33:11 2018 +0800
+
+    1
+
+[33mcommit 8edf95556ac91c500812acff22159a652072d17c[m
+Merge: 7714779 cd236ee
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:26:08 2018 +0800
+
+    Merge branch 'feature/map' into develop
+
+[33mcommit cd236eeb4f2a23c7261ec4d6e93b40d9b915b33c[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 23:25:24 2018 +0800
+
+    share
+
+[33mcommit 7714779f1df41e86914bc3ecb1f08b8779cad3b5[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:24:26 2018 +0800
+
+    1
+
+[33mcommit 0f73fe94372977a927ac5164d762481ec5cdd84c[m
+Merge: 66f9072 6b81b5c
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:23:58 2018 +0800
+
+    Merge branch 'feature/storage' into develop
+
+[33mcommit 6b81b5c87ac51fa27fcdaac3534b5f854ccc9865[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:20:14 2018 +0800
+
+    1
+
+[33mcommit 1bb265e9904a6ac96b17538d0f8c2649a84c5a84[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 23:05:44 2018 +0800
+
+    yoyo
+
+[33mcommit f54f0575c547f4c524b26b76f7c721f9a70b1500[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 23:00:00 2018 +0800
+
+    1
+
+[33mcommit 66f9072071afa472ee4992e25c6375f368e97165[m
+Merge: 4d1ff1f a6f1f26
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 22:49:24 2018 +0800
+
+    Merge branch 'feature/map' into develop
+
+[33mcommit a6f1f26e1b45d2c91fb3d0997fa8c5312966b026[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 22:41:49 2018 +0800
+
+    pic
+
+[33mcommit d0547fa23f2d682f55b4baf6d5e3d50ba29d371e[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 22:38:51 2018 +0800
+
+    my part is finish
+
+[33mcommit 0d7be8180806b86f65f9c6180b65ea415d2921c2[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:28:54 2018 +0800
+
+    11111111111
+
+[33mcommit b360e8a22bcd05ce73df8d0ea6f83c32990c219e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:27:54 2018 +0800
+
+    1
+
+[33mcommit 105099fdd2bc61434e52cc8ba215f3639d718402[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:26:39 2018 +0800
+
+    1
+
+[33mcommit 5c5b8e42767a4b42e2089cd771dec47fb8b44b66[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:24:13 2018 +0800
+
+    1
+
+[33mcommit 8830f77e751485bc1390b921d214d182ab043595[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:23:14 2018 +0800
+
+    1
+
+[33mcommit e6e20c899739389d306529bb041a9ab5ee024e23[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:20:05 2018 +0800
+
+    1
+
+[33mcommit 6355c703b7c29841cc69e5d84b286468a92b5d45[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:18:57 2018 +0800
+
+    1
+
+[33mcommit fb654352fc04ce7f05b9480787e48d311a23a689[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:17:33 2018 +0800
+
+    1
+
+[33mcommit 41f971ce6399e91b83453331513a9bffbb71073f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:16:28 2018 +0800
+
+    1
+
+[33mcommit 8fd133fa7808c8f6ccc22744e1389323a7c87670[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:13:14 2018 +0800
+
+    q
+
+[33mcommit 3db8540587096fc37eb9f754fb6c0c6fa56b4570[m
+Merge: 592fd94 a7e16ab
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 22:12:13 2018 +0800
+
+    Merge branch 'feature/framework' into backend
+
+[33mcommit 7985b009e4387775e68c0e8976467f80fc17ec88[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:10:47 2018 +0800
+
+    1
+
+[33mcommit a7e16ab6414de4ffe9bec3163eb7ad21f9234366[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 22:08:20 2018 +0800
+
+    Invite adding
+
+[33mcommit 5d2ab0fca05364a97c29d2edb6f120fd751708d6[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:08:12 2018 +0800
+
+    1
+
+[33mcommit 300868e9fa604b1f344501f14f1301b69a352f5d[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:06:41 2018 +0800
+
+    1
+
+[33mcommit 28cf1cfe6e5067c3da233688929082bcfab0d719[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:05:08 2018 +0800
+
+    1
+
+[33mcommit 0ea395e8ca83206bba22db0a1958ed95c9db212f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:03:46 2018 +0800
+
+    1
+
+[33mcommit 61540bc16f07b3f6ecacb5bb69b6df8ce62abb1f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 22:01:05 2018 +0800
+
+    1
+
+[33mcommit 7bc1dfd94eda390f9fe0719d89c53440c0e87b43[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:56:06 2018 +0800
+
+    1
+
+[33mcommit 83ff403c9c5e6dfe80a5b967363b710920e13c6f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:54:09 2018 +0800
+
+    1
+
+[33mcommit 592fd94a74576998e33f2e44367de71ff47d9ce7[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 21:50:00 2018 +0800
+
+    javascript can't overflow
+
+[33mcommit dabce695e59686232e3397b7f7ff533d92695733[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:41:50 2018 +0800
+
+    1
+
+[33mcommit 803c7ce7c0a81d29440e1295aa33d408624f3f12[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:39:42 2018 +0800
+
+    1
+
+[33mcommit 4d1ff1fe03ac5e9c7cb26ada9893f2b329d8d5d5[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:37:51 2018 +0800
+
+    1
+
+[33mcommit 049b7bbc2da612fcbcdaba113ff48b3a7fb6f35a[m
+Merge: 7984327 2de03c9
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:35:52 2018 +0800
+
+    Merge branch 'develop' into feature/storage
+
+[33mcommit 2de03c92d36c7d811233cc39149eb92e6dc4b6f3[m
+Merge: d885bb2 9c25545
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:33:53 2018 +0800
+
+    Merge branch 'develop' of github.com:bigsamtw/Clue_City_v2 into develop
+
+[33mcommit 798432707a7615f9dc0f511a8bbc6276300667e2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:33:19 2018 +0800
+
+    1
+
+[33mcommit 268397db76d661f625ab4d9573960d83604f8bbf[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:30:37 2018 +0800
+
+    1
+
+[33mcommit 9c25545ada01f1a8f05f5c5b8a0221ad88a1b46d[m
+Merge: da7deda 6aa9e19
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 21:29:39 2018 +0800
+
+    Merge branch 'feature/map' into develop
+
+[33mcommit 6632ece1e766e8a9572440e23c15e73efa108ece[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:28:59 2018 +0800
+
+    1
+
+[33mcommit 6aa9e19419d579597e40d9bac69511be2955035c[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 21:28:56 2018 +0800
+
+    score
+
+[33mcommit d885bb2a1c10ae7f36a4f45cec8c2021a48f18e2[m
+Merge: 6761d43 42b097c
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:24:17 2018 +0800
+
+    Merge branch 'backend' into feature/framework
+
+[33mcommit 6761d43fe461f662aa062f15191df9c04d919888[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 21:22:15 2018 +0800
+
+    gallery fix
+
+[33mcommit 022a7dcaf39fe347c2f19e35a3d87021fe07ef44[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:12:12 2018 +0800
+
+    1
+
+[33mcommit e3489e0d35e47e4950440597500969a6fe8a2619[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:11:01 2018 +0800
+
+    1
+
+[33mcommit 73fc4877cbdd7240d74b63b97a78bb55a1ede9b2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:08:40 2018 +0800
+
+    1
+
+[33mcommit 0737c65491562498e40d923df4c17e08128888ac[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:06:23 2018 +0800
+
+    1
+
+[33mcommit 42b097c45e49c9963ab920c6c8d160b62b909b23[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 21:06:00 2018 +0800
+
+    from friend to invite
+
+[33mcommit 80b7eaf59daa9fb7cfc121c3880aae947f4e6372[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 21:03:09 2018 +0800
+
+    1
+
+[33mcommit 679f519cfee3dc1d49f96453cd26373f55e1cb15[m
+Merge: 2b30dc5 da7deda
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 20:47:01 2018 +0800
+
+    Merge branch 'develop' into backend
+
+[33mcommit 2b30dc5adc5464579ae3b6d682f4ce694c036af5[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 20:45:54 2018 +0800
+
+    merge
+
+[33mcommit da7deda6828836f13712e253b952a562abd7d992[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 20:42:06 2018 +0800
+
+    1
+
+[33mcommit 071c0520e580603d6a55bbfeabfd0c1bda825da6[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 20:40:32 2018 +0800
+
+    1
+
+[33mcommit 71ac3442130681d24f7853ab660b4888f7002cf8[m
+Merge: 407aa24 874b561
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 20:36:56 2018 +0800
+
+    Merge branch 'develop' into backend
+
+[33mcommit 407aa24bb742ae1f53b3e813ddf11511cdeb1f64[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 20:35:40 2018 +0800
+
+    merge
+
+[33mcommit 8c6e8275ded89171a1e5d23ca79bd9402083109e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 20:12:58 2018 +0800
+
+    !
+
+[33mcommit 874b561e8bd72e6e844033467a947a17057bb9f9[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 20:06:14 2018 +0800
+
+    !
+
+[33mcommit 1cac3ebb1237224e31f9c3cd648c17ddbbc6588b[m
+Merge: 6bc9cbb acbe3d8
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 19:54:39 2018 +0800
+
+    Merge branch 'feature/framework' into develop
+
+[33mcommit acbe3d88bc4919fa6f1eee69d7501db37e94148b[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 19:45:29 2018 +0800
+
+    aaa
+
+[33mcommit 6bc9cbba3c02432ac25de996039e27365f09ff09[m
+Merge: 8405f86 e251d58
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 19:43:18 2018 +0800
+
+    Merge branch 'develop' of github.com:bigsamtw/Clue_City_v2 into develop
+
+[33mcommit 8405f86bf910e2a36feaba1723549071dffa0d00[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 19:40:49 2018 +0800
+
+    ok
+
+[33mcommit e251d583b65f28d2a2487d1457a2b1a727dcda8f[m
+Merge: 62debdd 297bd75
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 18:51:20 2018 +0800
+
+    merge
+
+[33mcommit 62debddc17dcd7bafdcfdc52330a83819d2d226b[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 18:49:07 2018 +0800
+
+    score
+
+[33mcommit 297bd75ed43871410f32a0607ade7fb120e92bf1[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:39:41 2018 +0800
+
+    1
+
+[33mcommit 37c037a7b6c5ad29226bb290033c993ab24ee2bb[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:36:36 2018 +0800
+
+    1
+
+[33mcommit 6943e63b8143c14fd2961d43014435a2d9091e95[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:33:46 2018 +0800
+
+    1
+
+[33mcommit 92a8410c1a4c22621879d28ea603d3cea2141a56[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:30:52 2018 +0800
+
+    1
+
+[33mcommit 5fc08aa0b33d665ee763b63d3aa901fefa6ee424[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:29:43 2018 +0800
+
+    1
+
+[33mcommit c9956acf63e56d76dd714f48d176815a0649b8d0[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 18:27:29 2018 +0800
+
+    yoyo
+
+[33mcommit 630eda6d3930245c1a6393b256b10fb826014038[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 18:24:04 2018 +0800
+
+    1
+
+[33mcommit c67bf59df02a21b4b8c7a23b118547cc22b53960[m
+Merge: 8bc1e9a e596a21
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 17:15:59 2018 +0800
+
+    Merge branch 'develop' into feature/image_process
+
+[33mcommit e596a21aaba6763b47d9f8e6f281d477756bff79[m
+Merge: 49db138 2b62bef
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 17:15:04 2018 +0800
+
+    Merge branch 'backend' into develop
+
+[33mcommit 8bc1e9a89c24f7acead5f880c4264fa21c2e6777[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 17:09:40 2018 +0800
+
+    1
+
+[33mcommit 2b62bef1131d7d01d412c08c81a5e2d78463e74b[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 17:09:28 2018 +0800
+
+    11
+
+[33mcommit 49db1385ffb284a7f3cc44b3fe930aae66ae3e52[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 16:45:09 2018 +0800
+
+    exit
+
+[33mcommit dcbc846a201fd8a7921b8b3023f021527a59abf5[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 16:12:33 2018 +0800
+
+    1
+
+[33mcommit a47f37b88aefdc3184b8c9c226b44c209d9900c7[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 23 16:12:28 2018 +0800
+
+    addfriend has finished
+
+[33mcommit d4fe302806c90470409d5b72eb066c7cd7dd8772[m
+Merge: b6ac724 e15657b
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 16:09:23 2018 +0800
+
+    Merge branch 'develop' into feature/image_process
+
+[33mcommit b6ac7247eb72b424b6003f621f7b0e9e870e5e5f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 16:07:36 2018 +0800
+
+    1
+
+[33mcommit e15657bb7988b122a25f54f965547bfc48d26849[m
+Merge: ce07fff 85bc82d
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 16:06:55 2018 +0800
+
+    Merge branch 'develop' of github.com:bigsamtw/Clue_City_v2 into develop
+
+[33mcommit ce07fffe5bd909a56a530709fb9360d70e17e454[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 16:05:37 2018 +0800
+
+    success
+
+[33mcommit 85bc82da458a60c40861b8f7669b6dc1db5a4bb7[m
+Merge: 3ac7d02 8e0c9c2
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 15:46:30 2018 +0800
+
+    Merge branch 'develop' into feature/framework
+
+[33mcommit 3ac7d02a20e86778ef98d3651a2c1a885b25b0ec[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 23 15:45:41 2018 +0800
+
+    1
+
+[33mcommit 8e0c9c2b1ea9d41ad96da3316c298fe90640bce3[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 15:43:14 2018 +0800
+
+    12
+
+[33mcommit b7c0da503769d67bc6fb978f0723427914ae4101[m
+Merge: dbe0587 01101fa
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 15:24:14 2018 +0800
+
+    Merge branch 'feature/map' into feature/image_process
+
+[33mcommit 01101fa0efa5e9d013701273a17255ae07a3e645[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 15:22:27 2018 +0800
+
+    fail
+
+[33mcommit dbe05874ca6c64120f5a7e2fc40d49dbdc9e7406[m
+Merge: 95a0dcc b5f5ac0
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 15:09:59 2018 +0800
+
+    Merge branch 'feature/map' into feature/image_process
+
+[33mcommit 95a0dcc7daad099f476d2aaf79da8b4fe72ab525[m
+Merge: 491792f 025a5a3
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 15:07:44 2018 +0800
+
+    Merge branch 'feature/image_process' of github.com:bigsamtw/Clue_City_v2 into feature/image_process
+
+[33mcommit 491792f81289b9d98e9657460f330a0c275c79ec[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 23 15:07:18 2018 +0800
+
+    1
+
+[33mcommit b5f5ac0aa11fd45779f16535812c552c03ccd100[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 23 15:04:26 2018 +0800
+
+    map scale
+
+[33mcommit 1b1178ac8b497207aa4e6d06d6ecbd9c547fc4b8[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Fri Jun 22 23:06:03 2018 +0800
+
+    separate
+
+[33mcommit 025a5a3c7b73525374c4672d803e42bdf4a33b25[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Fri Jun 22 20:12:11 2018 +0800
+
+    map get teamname
+
+[33mcommit 04e86e3a9694fb93a27e4447b26fe869c67a085b[m
+Merge: dbfcddc fca7453
+Author: ire33164 <ire33164@gmail.com>
+Date:   Fri Jun 22 19:19:35 2018 +0800
+
+    Merge branch 'feature/image_process' of github.com:bigsamtw/Clue_City_v2 into feature/image_process
+
+[33mcommit fca74531354031a8e91cb48c0d9915e84f717d21[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:35:11 2018 +0800
+
+    1
+
+[33mcommit 1daafe10e8af57991b0200ed2c2268dd002c4772[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:32:09 2018 +0800
+
+    1
+
+[33mcommit e1948bf371e16d870d8157820406a33b4ee814d0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:31:02 2018 +0800
+
+    1
+
+[33mcommit 059e51ce454e50e3f2eba957f5ef8e52b661c551[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:26:04 2018 +0800
+
+    1
+
+[33mcommit ca709578146818d06daf7d2fea0481e58f3d7237[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:23:56 2018 +0800
+
+    1
+
+[33mcommit bbd4f3e2c417e65ebd5df9889c0b9fcf71e60719[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:21:42 2018 +0800
+
+    1
+
+[33mcommit 25cbee3004826e795668f507d13cdaf50a61a817[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:19:42 2018 +0800
+
+    1
+
+[33mcommit ca421543fc3dafea7fe07e4c60d43f9a4b37e6c5[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:05:25 2018 +0800
+
+    1
+
+[33mcommit 453242743d03e5654f870ee460b54b87e89dfd23[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Thu Jun 21 00:02:43 2018 +0800
+
+    1
+
+[33mcommit 401dd37d5f8fc071f4846821bf5169239340df3f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:58:38 2018 +0800
+
+    1
+
+[33mcommit 79ef4a0c965cfee4e9ace5ae83495c25ff65c6a5[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:53:48 2018 +0800
+
+    1
+
+[33mcommit ac925cd707b42f462391cd264d414ed0364af4c4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:50:46 2018 +0800
+
+    1
+
+[33mcommit d44b739abdc388d302a11110a0206664fca96d83[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:42:22 2018 +0800
+
+    1
+
+[33mcommit 39a9fde329bb746536f261242f63fdc674a9c98f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:40:13 2018 +0800
+
+    1
+
+[33mcommit 3da312cd9ec55616a3c3d768d1efca1cbf6824ad[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:38:25 2018 +0800
+
+    1
+
+[33mcommit 5f50c17761d23de42b801eebabf9a6f1fd7064f2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 23:33:51 2018 +0800
+
+    1
+
+[33mcommit e3358dec4744860ea62c6cf96b990e1ec5ed40f0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:47:35 2018 +0800
+
+    1
+
+[33mcommit 394eccbe7a05276d119c78dc9a2206f6a61589fa[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:45:01 2018 +0800
+
+    1
+
+[33mcommit 78c19b3d51b3e13bb8e266bd65c7b94f209528df[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:28:02 2018 +0800
+
+    1
+
+[33mcommit 3fe769366874fb23a3add5da6aaf80cf44c48eae[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:24:32 2018 +0800
+
+    1
+
+[33mcommit c2f8d69f596d145096b104e7c88748a39a225fe7[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:18:14 2018 +0800
+
+    1
+
+[33mcommit 52412d87e227b82e256375aa4e22fe5d7125affa[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:16:43 2018 +0800
+
+    1
+
+[33mcommit 3a2e89df3a8331b38f0135dd503586ccb410c5e0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:15:04 2018 +0800
+
+    1
+
+[33mcommit e009e8adff546540e6c44919c3965dda7d434b20[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:13:58 2018 +0800
+
+    1
+
+[33mcommit a91b2dc68859714fda6b9430230716801cfe8698[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:10:41 2018 +0800
+
+    1
+
+[33mcommit b8c97fb3c979ad18a53cdfa2f961c61904671e7c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:07:57 2018 +0800
+
+    1
+
+[33mcommit 526e409e7bc63d2eeb49265474d1113c0987957c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 22:00:13 2018 +0800
+
+    1
+
+[33mcommit 08ad770c9c89888f9dc35ffb1943cae8da6d9c2a[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 21:55:48 2018 +0800
+
+    1
+
+[33mcommit d3198649afc5cbc047c521e114f85f41d04e8469[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 21:51:58 2018 +0800
+
+    1
+
+[33mcommit 7df323562752602952256db3964c29d2460003aa[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 21:49:59 2018 +0800
+
+    1
+
+[33mcommit 9c81176bb8b4fcaf8589b7e6f32ff6518774049f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 21:46:11 2018 +0800
+
+    1
+
+[33mcommit 751aeb8db2a675325fed70ad40e355a3450aa15f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 19:06:23 2018 +0800
+
+    1
+
+[33mcommit cc2f98ce9fd616de39e6cdeb5dd41ef0dac76b75[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 19:04:07 2018 +0800
+
+    1
+
+[33mcommit 96c101e7ecdadb7c73ee35ac1bbea08fa71607a2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 18:58:51 2018 +0800
+
+    1
+
+[33mcommit a24c19e7d3679a26dc92a68d21bebe899b17138b[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 18:56:46 2018 +0800
+
+    1
+
+[33mcommit 565bec575bada5fa9e54387a47e93f06729d57c1[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 18:53:39 2018 +0800
+
+    1
+
+[33mcommit 40a8ec811354a14927604a349fea733519219df2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 18:49:20 2018 +0800
+
+    1
+
+[33mcommit 3e613df7211e753bd5bf891c345f26e42d0249cd[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed Jun 20 17:16:30 2018 +0800
+
+    label
+
+[33mcommit df4230a20e99aa09770881cb2dcd6e35692e8e90[m
+Merge: 4ee628a e02ea14
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed Jun 20 16:59:13 2018 +0800
+
+    merge
+
+[33mcommit 4ee628aebaa71ff55260aeb232412822ef0239a4[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed Jun 20 16:53:35 2018 +0800
+
+    add pic
+
+[33mcommit fe903c70ffbc45a99bd31fca632c06bb10bc44d3[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed Jun 20 16:45:46 2018 +0800
+
+    add lan lag
+
+[33mcommit bfeb81dc735a3fafefbbd2a25401a84aa2cce0b8[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed Jun 20 16:24:04 2018 +0800
+
+    2018/6/20 change
+
+[33mcommit e02ea1419d84e50eb848e95c98654468ce970a11[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 14:29:06 2018 +0800
+
+    1
+
+[33mcommit b6b7630c69ea4f221b2d71aa37d06096d2c4a223[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 14:05:45 2018 +0800
+
+    1
+
+[33mcommit 6ec11b4f6158ebc1394e6f926c070b505949ce44[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 14:03:53 2018 +0800
+
+    1
+
+[33mcommit eba00b69aa41a1272023c1bbc47b566b58957bf9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 14:02:29 2018 +0800
+
+    1
+
+[33mcommit b0087159266078bb20d95a1689a1daffca54075a[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 14:01:14 2018 +0800
+
+    1
+
+[33mcommit ad4d91c87b3053ea09c01eff70fcf8acd008dea4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 13:59:33 2018 +0800
+
+    1
+
+[33mcommit 4ece8f151d5d6be19eed5f5ad60e7a5b8c3cc5a8[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 13:57:27 2018 +0800
+
+    1
+
+[33mcommit c7ded1688bab1e4bae35242404727eafc2be3c36[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 13:55:56 2018 +0800
+
+    1
+
+[33mcommit afc1aacf9d49074a144971e9074abd9dfb4cc43c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed Jun 20 13:43:18 2018 +0800
+
+    1
+
+[33mcommit dbfcddc7f8c974407259693c368989e1f97edbc8[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 19 23:17:17 2018 +0800
+
+    nothing
+
+[33mcommit a2bc6e4cfc49bcc11ca08dd975be5b40534292bc[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 19 23:08:21 2018 +0800
+
+    invite friend list has finish
+
+[33mcommit bebc82cbca73001c2692cd9a86da1a1978867188[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sun Jun 17 16:02:41 2018 +0800
+
+    team_person leaderboard
+
+[33mcommit 2b74288af2f4b85e6880d5e73e219dcb984f7a3b[m
+Merge: 19e0c15 bb7975c
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sun Jun 17 15:33:51 2018 +0800
+
+    merge
+
+[33mcommit 3943365747f19c81c18590838d19e7bb9b3494fb[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:59:51 2018 +0800
+
+    s
+
+[33mcommit 132a70e1af1829edb7074ada06b9ba8374a84101[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:56:40 2018 +0800
+
+    s
+
+[33mcommit c3e28dc4b0dc071bc525933b4eaf444fe5186048[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:55:44 2018 +0800
+
+    s
+
+[33mcommit 691dae8906fac934c094d42cf8801cadafd155a6[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:54:03 2018 +0800
+
+    s
+
+[33mcommit 076ba846a7db5203d6616c701a99f041caa939b9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:52:59 2018 +0800
+
+    s
+
+[33mcommit 2ec67223c584f8eebd11ddf1ebb0bd55a6b2e983[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:51:35 2018 +0800
+
+    s
+
+[33mcommit c84755d88b0af7b7efa9d387925f50deb3f83af2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:49:31 2018 +0800
+
+    s
+
+[33mcommit 732c0680e4b674069d03b9197ce55fcd14fd11fa[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:41:19 2018 +0800
+
+    s
+
+[33mcommit f9999052c9595afa64dc3988f51052d6e9d38c73[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:35:32 2018 +0800
+
+    s
+
+[33mcommit 12dd8c10cd27deeb4f0ac2c57ae88da7579e23ec[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:32:55 2018 +0800
+
+    s
+
+[33mcommit d3bc5f3a7b37ceae1ae734e0959b8101318ee7c4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:29:34 2018 +0800
+
+    s
+
+[33mcommit 1407f6c9213d81c47d6a88d5d7ae1eb14f68faa9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:03:18 2018 +0800
+
+    s
+
+[33mcommit bb7975c9f2a256de0703fee85a43b8b3f53bea9b[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 16 21:03:05 2018 +0800
+
+    FrameWork edit
+
+[33mcommit 3810760f667102d2c4f93c50142f4f33b0916df5[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 21:01:20 2018 +0800
+
+    s
+
+[33mcommit 5c69d9dc9bb5d0c189bd7a116c4c877d331f7cb7[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:59:23 2018 +0800
+
+    s
+
+[33mcommit 9dd489999fd400a2debf77cc2c629412ed7813f8[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:58:18 2018 +0800
+
+    s
+
+[33mcommit 5f188d797c1a6797577e9abe20cf2cbf06aaa44c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:57:31 2018 +0800
+
+    s
+
+[33mcommit 1312f5b5d1caa71c8951dfc7ca82261c3eb6a676[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:55:49 2018 +0800
+
+    s
+
+[33mcommit 600e3a26824f642f7d7b918b18b8d290f69f64a7[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 20:30:32 2018 +0800
+
+    add 28 places
+
+[33mcommit 3a2988634f32cb7e2348bcd681beb16b76a5b87a[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:23:30 2018 +0800
+
+    s
+
+[33mcommit 3955331913b9d164a9ce535898e8e8f13cb9fd7c[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:21:13 2018 +0800
+
+    s
+
+[33mcommit 4dfab6a4baa788760060f000dc3fbf2e5729f914[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:17:20 2018 +0800
+
+    1
+
+[33mcommit a524f2f32bebe712f95c8d12cac8a9da9341242f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:06:31 2018 +0800
+
+    s
+
+[33mcommit 516e716127bd204b1a7eb28171ea675adca6a4c0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:04:36 2018 +0800
+
+    s
+
+[33mcommit 1552476af5666117cb5cb9080c1f6e8e84cb9edf[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 20:02:10 2018 +0800
+
+    1
+
+[33mcommit 53a8573b7fad1b80e0fb645f7a835694f4d91b55[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 19:53:04 2018 +0800
+
+    1
+
+[33mcommit a5bf900533f41d9571f130902064604dc2f7fddf[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 19:47:10 2018 +0800
+
+    1
+
+[33mcommit ea12805e9acfdf3560111d1bbfb6cc8e3abb3759[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 19:40:35 2018 +0800
+
+    [Finish] Finish upload Feature For Computers
+
+[33mcommit eeed66f6a9ddf8c500683b05c64342a399b63c90[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 19:28:23 2018 +0800
+
+    q
+
+[33mcommit 7c994b204b7a71be384432e0914bdf0ee3d1b902[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 19:23:08 2018 +0800
+
+    1
+
+[33mcommit e872f8b087aa47a11c3d86bdfc045fbabfafe45a[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:51:55 2018 +0800
+
+    1
+
+[33mcommit d0d2cf1c8405893c6f49849afcef93660b3bf08b[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:45:42 2018 +0800
+
+    1
+
+[33mcommit 3a90555018f28fd454fc5cb214dd72498d15b795[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:42:36 2018 +0800
+
+    !
+
+[33mcommit 3a9abbcb7faf0ef84ddf18ee162cb4b931e178a9[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:40:33 2018 +0800
+
+    1
+
+[33mcommit c4abe85d2d3d1917f2bcf8aafa27d103fb8cbeca[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:39:49 2018 +0800
+
+    quick commit
+
+[33mcommit 263f6cfcb96050ac42b7fcd4172ba5fe7af94d55[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:34:50 2018 +0800
+
+    1
+
+[33mcommit cf64e532bcf52a0837afe050ece4688f91cb66f4[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:30:00 2018 +0800
+
+    quick commit
+
+[33mcommit 4dc81fd8bce157533b1f57c809533613f0918400[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:25:32 2018 +0800
+
+    quick commit
+
+[33mcommit edecf529b29e4c370aac08915f1dceec1a33edfc[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:23:37 2018 +0800
+
+    quick commit
+
+[33mcommit 4b56bd41500ee6671615e76dd903b283df13504b[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:22:23 2018 +0800
+
+    quick commit
+
+[33mcommit b56b07bcf656bc51d66a25f61443b23f2452eb83[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:20:14 2018 +0800
+
+    quick commit
+
+[33mcommit 70b5accf314cc77aaefb545c8f5e5ad5dee2c4f5[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:08:23 2018 +0800
+
+    quick commit
+
+[33mcommit f630e8f60f4f34364736e7471994697cce3b5754[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 18:06:05 2018 +0800
+
+    quick commit
+
+[33mcommit 67815d194a988d5e0e60261c127e89df48242b7f[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:58:52 2018 +0800
+
+    quick commit
+
+[33mcommit 6b3f0d7cc51d7c061b50190847953449be4e037d[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:43:16 2018 +0800
+
+    quick commit
+
+[33mcommit bef1d72313f421425b4789c310077ca3cf109a07[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:34:27 2018 +0800
+
+    quick commit
+
+[33mcommit 56514a011285e2edcdd68290473aa3b3d4025bee[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:30:34 2018 +0800
+
+    quick commit
+
+[33mcommit 19e0c15c0607fa407c9d6f439b875e9dca529b15[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 16 17:28:10 2018 +0800
+
+    leader board team or person
+
+[33mcommit 53332029eeaaa8c7ef9283407ad8e856444df732[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:24:36 2018 +0800
+
+    quick commit
+
+[33mcommit aea577f7e16f5219d006ba6c9e586feaa292977e[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 17:11:36 2018 +0800
+
+    quick commit
+
+[33mcommit 492cbef2e35498280ac37160b98564958f4662ec[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 16:52:30 2018 +0800
+
+    quick commit
+
+[33mcommit ce1f1e2c18cc1f4705da8898ac0fce9a51a62f6e[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 16 16:43:27 2018 +0800
+
+    team start
+
+[33mcommit 6d4d98b0f22ea63423c00205adcc8802770b6150[m
+Merge: ecd0bb6 ecc97e6
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 16 16:11:29 2018 +0800
+
+    merge
+
+[33mcommit ecd0bb6143722950510efe592a2b8fcfc96bcad1[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 16 16:08:35 2018 +0800
+
+    start finish
+
+[33mcommit 6ab2e01c9c771dfb1abf33676926ce0ec8548a28[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 16:00:03 2018 +0800
+
+    quick commit
+
+[33mcommit e7096b0807434fc8ec722f57c5a99cd45bdd52f6[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:57:40 2018 +0800
+
+    quick commit
+
+[33mcommit 099f2e9d176bb68496a93884b4fcbccea8ad05f9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:52:04 2018 +0800
+
+    quick commit
+
+[33mcommit 85b3e009f51bb0d94d2e76f8ae286416c5e39800[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:41:23 2018 +0800
+
+    quick commit
+
+[33mcommit 3939af74b70aec23eb7711f3262ab55c2159edf0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:36:43 2018 +0800
+
+    quick commit
+
+[33mcommit e4c20f5a7ac435c865c495ab8af5eaab5bfb1cd9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:33:40 2018 +0800
+
+    quick commit
+
+[33mcommit 90b407482feafa5cdd908a8baec555bb29a426ba[m
+Merge: 63712d0 ecc97e6
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 16 15:32:30 2018 +0800
+
+    merge
+
+[33mcommit 63712d0c55159cba228273d8a6a8152571112763[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Sat Jun 16 15:29:12 2018 +0800
+
+    fast
+
+[33mcommit a68faf4f5826ab9e2616f3aecd8a7f8ba2d6c004[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:27:32 2018 +0800
+
+    quick commit
+
+[33mcommit e315f7cc57a2d15427d4f4cc76332eeee76a1ab1[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:22:55 2018 +0800
+
+    quick commit
+
+[33mcommit 083f34b011d116e6ee16b67b213a6ff57bc4fbbb[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:17:55 2018 +0800
+
+    quick commit
+
+[33mcommit 2a20dd4dbace7c04fccd03a0a019547e9f1966d7[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 15:13:08 2018 +0800
+
+    quick commit
+
+[33mcommit ecc97e6e5fa3a0a72f2e6c55c62179d67f2d48d9[m[33m ([m[1;32mbackend[m[33m)[m
+Merge: a28854f 9f0538b
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 14:33:08 2018 +0800
+
+    merge
+
+[33mcommit 9f0538bd240c6c3c07a022923e375ed40efd0cb8[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 14:17:06 2018 +0800
+
+    fast
+
+[33mcommit 2eea009db781a8177a3d56675dcc77b6a657caf0[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 13:18:00 2018 +0800
+
+    fix time
+
+[33mcommit a28854f0d9f03538a27379cd5d39dab4117da50a[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 16 13:13:59 2018 +0800
+
+    building team
+
+[33mcommit 45e11742ab345e27a09d2f6d0e2915b4fe738db7[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 13:08:27 2018 +0800
+
+    fix map bug
+
+[33mcommit b2de7088bc9a79bbdc26ff0b8fb53b8d1c312913[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 12:36:27 2018 +0800
+
+    fix bug
+
+[33mcommit 0a976bc7dd4c494032996a303c6a15edb77f6d32[m
+Merge: 4552bf5 53414c2
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 12:29:58 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 4552bf51358253616d9938c33f636d1f6c51282a[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 12:29:17 2018 +0800
+
+    fix bug
+
+[33mcommit 53414c23c02fa2ec2959024f6a07e0735f00d069[m
+Merge: 44b487f 1b4821c
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Sat Jun 16 12:17:34 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 1b4821cd17e94245c9426602ab9ca6301dd2911e[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 12:01:24 2018 +0800
+
+    fix bugs
+
+[33mcommit 29f71d3f225fec7850d35b58fe0ca384e632b766[m
+Merge: 15bfd06 85acf80
+Author: kenny <kenny8654@gmail.com>
+Date:   Sat Jun 16 10:00:50 2018 +0800
+
+    Merge branch 'backend' into feature/framework
+
+[33mcommit 15bfd067a2f8b2e459b26363d47f4549bd15788f[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed Jun 13 18:03:42 2018 +0800
+
+    edit at 6/13
+
+[33mcommit 85acf8040d74a079e597d3d6b38925541887c085[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sun Jun 10 20:21:08 2018 +0800
+
+    team score
+
+[33mcommit 99278db40ac166089ad54f6579e59f5b0419522e[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Sat Jun 9 02:01:12 2018 +0800
+
+    leaderboard has finished
+
+[33mcommit c2dceb60f3c6beef22c1138ada418549b00c2c1c[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Thu Jun 7 12:18:18 2018 +0800
+
+    invite has finished
+
+[33mcommit 03f1c95b9c15d56317847841a93d04b75f36768c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed Jun 6 17:35:04 2018 +0800
+
+    update public/menu.html
+
+[33mcommit 4bdc6e84e790b738b7250304eca54b13f5cfb971[m
+Merge: 313d562 ac04739
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed Jun 6 16:54:38 2018 +0800
+
+    Merge branch 'feature/framework' of github.com:bigsamtw/Clue_City_v2 into feature/framework
+
+[33mcommit 313d562645afb358fcb13d529c28d472a5b80364[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed Jun 6 16:53:21 2018 +0800
+
+    modified friend.html and hard.html
+
+[33mcommit ac047392a54a14b64a89e44c3c20e605f830a8fb[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Wed Jun 6 14:30:34 2018 +0800
+
+    the top of menu has added user's bighead and name
+
+[33mcommit 198e528c6e4212dd59e0fcc255c5bd42b4b71667[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 5 20:57:36 2018 +0800
+
+    make logout work
+
+[33mcommit 77d1c05343746637b4322076db044578283d766e[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Tue Jun 5 00:53:03 2018 +0800
+
+    1
+
+[33mcommit a9466a13d2a7db15f96b39db65b7ca3377ecdb08[m
+Author: ire33164 <ire33164@gmail.com>
+Date:   Mon Jun 4 21:58:08 2018 +0800
+
+    checked
+
+[33mcommit 44b487fae1114322f10c0196d88f3ea3cd98ad02[m
+Merge: e09c7ff ff3391c
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Mon Jun 4 17:53:05 2018 +0800
+
+    Merge branch 'develop' into feature/map
+
+[33mcommit ff3391c02e0ab0678d9883a1d78a7a1f9e6b2ba9[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Mon Jun 4 17:50:01 2018 +0800
+
+    v2
+
+[33mcommit 305a2bfe6e88280c7a2fcde6fbc3ad4c445927e0[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Mon Jun 4 17:47:55 2018 +0800
+
+    V2
+
+[33mcommit e09c7ff6e14bae59511d0d7047dbd3ec9382c2a1[m
+Merge: a938dc4 45a4047
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 15:08:30 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit a938dc4fb35873f2b794ae6e4baa32b6d0fc2a08[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 15:08:24 2018 +0800
+
+    1
+
+[33mcommit 45a404762884ef2fe431e42d00d1e12046817347[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:51:47 2018 +0800
+
+    jj
+
+[33mcommit f6ce1b330577f4256ca9af3d585ac7285c5c47f8[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:30:51 2018 +0800
+
+    ii
+
+[33mcommit bb0f9db2ef65e943107eba12d1f59a475243c23f[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:21:03 2018 +0800
+
+    ii
+
+[33mcommit 928565b347b940bfd89f09f26dc38ab896330728[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:18:09 2018 +0800
+
+    uu
+
+[33mcommit 27f549a4c3a05a3300f44bcda602babc17f27385[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:08:05 2018 +0800
+
+    uu
+
+[33mcommit 85f8c01992b077ac7613191290091c9b42ccef94[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 14:02:42 2018 +0800
+
+    kk
+
+[33mcommit 82d8e279150d71b131b16fcb0bc4ce8c1e7ccb6f[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:54:39 2018 +0800
+
+    1
+
+[33mcommit 21d559baf7e7a13bb7f4c88b697e7b47cf8a158e[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:46:38 2018 +0800
+
+    11
+
+[33mcommit 963624260c4b3c1a344718d64f85740ad02b6a45[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:44:49 2018 +0800
+
+    11
+
+[33mcommit ab91d9b13fe9c781d527b0ee383f0764f086d3b8[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:43:12 2018 +0800
+
+    11
+
+[33mcommit 563adf4f3b293ca3a2a6fa07e610613933de2b27[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:41:16 2018 +0800
+
+    11
+
+[33mcommit 801cdc255bf112614ab39eb705c461fceecd72d6[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:38:04 2018 +0800
+
+    q
+
+[33mcommit 3feeeed898a0c591acf7342b28b7608be69a602b[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:36:05 2018 +0800
+
+    1
+
+[33mcommit 2f20740d71541291e0aedee4527698e4763bd841[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:29:57 2018 +0800
+
+    1
+
+[33mcommit 812cb5fab49fa47d7fa0990a981525fbc789977e[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:28:04 2018 +0800
+
+    1
+
+[33mcommit f7fbbee500278e0f0ed5053b4886423d73f505c9[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:25:19 2018 +0800
+
+    !!
+
+[33mcommit 5a2382b3dcd906f931097fe43b2d009b775bac8b[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:24:34 2018 +0800
+
+    jj
+
+[33mcommit 847070ddb95c3e44759a4f7985581e3ae7c26041[m
+Merge: b621295 894fed0
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:17:12 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit b62129580a80b981e8cbcf4f0d6b2a872c3b56cc[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:16:27 2018 +0800
+
+    uu
+
+[33mcommit 894fed0b94df8d443b7df64155e6056379354898[m
+Merge: 467cd91 d3b3de5
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:13:40 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 467cd91d011b23caf0906dcfd65c76a969398d14[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:13:32 2018 +0800
+
+    1
+
+[33mcommit d3b3de5bec24377c0a52c2178c87248d43e3fea1[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:11:57 2018 +0800
+
+    dd
+
+[33mcommit c37e98fefa5e92de82d0287ec4d29b4c7770962f[m
+Merge: 8d8f120 18b07a6
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:04:58 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 8d8f1200114e4115938bb33e5ec4d6ea9909cdde[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 13:04:37 2018 +0800
+
+    1
+
+[33mcommit 18b07a6921d2a21d802b005026ec07b8b241be10[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 13:01:17 2018 +0800
+
+    kk
+
+[33mcommit 9dff33f42356fd18bb3128ed3cbe7e48b9ffdbc9[m
+Merge: 653c6a3 6473317
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 12:56:54 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 653c6a3f149b07f575a8930875291e61c34d39d9[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 12:56:49 2018 +0800
+
+    1
+
+[33mcommit 647331742b1a7fafc9c546a13acdb96602b33202[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 12:54:37 2018 +0800
+
+    mm
+
+[33mcommit ce4cc2934baeddb50a39d8c5c26ea01674d9a26e[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 12:21:26 2018 +0800
+
+    <
+
+[33mcommit ceb4bd7f4118e75cd45b7f539ebacee993682d6a[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 12:03:19 2018 +0800
+
+    ////
+
+[33mcommit 45651bae42ef66e92152a0d9e61557dc09cdc56d[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 12:02:23 2018 +0800
+
+    ...
+
+[33mcommit 5f62bf1fccb7de10795cc3ac864f7804df954df4[m
+Merge: bc152f6 671014c
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 11:49:59 2018 +0800
+
+    1
+
+[33mcommit 671014c7e69ff1780e3b5eba7afa572aeb407bd5[m
+Merge: 21cbe72 20ae2af
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 11:47:36 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 21cbe72a5aa3cb408e465747a5e68414b752977a[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 11:41:45 2018 +0800
+
+    debug
+
+[33mcommit bc152f6ca58d961515039462fe8887690977c0bd[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 10:19:35 2018 +0800
+
+    add SetTeamName in friend.html and FriendStyle.css
+
+[33mcommit 26832df8fe6d4ffb91121e42f8f9cac07acc435c[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 09:21:37 2018 +0800
+
+    modified: CluesCity/hard.html
+
+[33mcommit 29a69d95790d8051cc14e350138cc97ffc60783b[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 09:14:11 2018 +0800
+
+    fixing Mode.css
+
+[33mcommit 01ea311feec0e3475a5f8b034643605fa5a2bafd[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 06:25:48 2018 +0800
+
+    i
+
+[33mcommit 1fe4f4875b47025732adca98ed319507d26241be[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 06:19:10 2018 +0800
+
+    0619
+
+[33mcommit 5217357a50e5eebf0f194afbf6151700ec3c8957[m
+Merge: 7e7009d bd6aaa2
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 05:38:38 2018 +0800
+
+    Merge branch 'feature/framework' of github.com:bigsamtw/Clue_City_v2 into feature/framework
+
+[33mcommit 7e7009d911311ad0bbfad1650574b886e38bf83b[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 05:34:29 2018 +0800
+
+    11
+
+[33mcommit bd6aaa217103e94a50a46dbb59d7d840006f8373[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed May 30 05:26:51 2018 +0800
+
+    1
+
+[33mcommit b2d0df263618e6f29f54edd9cfdf68d0bcef863c[m
+Merge: 5d2f773 2e642ac
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed May 30 05:16:35 2018 +0800
+
+    1
+
+[33mcommit 5d2f77331b71424f4f9874597aa9f28483398382[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed May 30 05:10:09 2018 +0800
+
+    1
+
+[33mcommit 2e642ac1cda82fa46ba1bf43740d6d47206087da[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 05:08:07 2018 +0800
+
+    q
+
+[33mcommit 5265d492a9edb464bc91e2a5eff75f47405ca8d0[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 04:53:30 2018 +0800
+
+    i want to sleep!!!!!!!!!!!!!!!!!
+
+[33mcommit e04938c98be888387b77715fba52ba44edc62498[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 04:31:07 2018 +0800
+
+    1
+
+[33mcommit d3962d56cdfe7db812061d1111d6bc6ceaeda2b0[m
+Merge: ff66805 20ae2af
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 04:16:12 2018 +0800
+
+    Merge branch 'feature/map' into feature/framework
+
+[33mcommit 20ae2af93d93e2db5038155bea54266751e7a58f[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 04:15:30 2018 +0800
+
+    1
+
+[33mcommit fee86b9b8a9b234d1aa1b060456b0be2d68c8917[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 04:14:26 2018 +0800
+
+    1
+
+[33mcommit ff66805dd67520f4ae16b6c8fc112b6387ac93a6[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 04:08:33 2018 +0800
+
+    fast
+    
+    Signed-off-by: glengogo <glengogo@users.noreply.github.com>
+
+[33mcommit b500a857f0996f610dd79f042aa4d2cf20ea1b1e[m
+Merge: 4d33352 9f6e9c5
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:58:30 2018 +0800
+
+    Merge branch 'feature/map' of github.com:bigsamtw/Clue_City_v2 into feature/map
+
+[33mcommit 4d33352bfe6ebe7aeae2b3bb4ab5344954c371e3[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:58:03 2018 +0800
+
+    2
+
+[33mcommit 9f6e9c5445692f78496dfaa927724d9730ece619[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 03:46:44 2018 +0800
+
+    add pic
+
+[33mcommit 7ec630be5a03f9ec5d227a2e6ed9ef134d05065c[m
+Merge: 946cfba 105e052
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:40:46 2018 +0800
+
+    Merge branch 'feature/framework' into feature/map
+
+[33mcommit 946cfba05a3dc46180573e8c87eaeb3c0cb4774b[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 03:40:02 2018 +0800
+
+    debug
+
+[33mcommit 105e052ffa67b10a1a3f500c6d485488b2f52f63[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:29:42 2018 +0800
+
+    1
+
+[33mcommit e517dcf99a3b9cec709e3d8d903893aed9e5d50f[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:20:54 2018 +0800
+
+    fix
+
+[33mcommit 22ee280b101180c40904a7beebc58504acdd8eb5[m
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:17:56 2018 +0800
+
+    fix
+
+[33mcommit 784f0abedf207898b35cbab15ed9c34d46e16c30[m
+Merge: 565d059 3d94b11
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:11:00 2018 +0800
+
+    Merge branch 'feature/map' into feature/framework
+
+[33mcommit 3d94b11b0e30fb01b4fb47af2da85f8407b1d30a[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 03:10:29 2018 +0800
+
+    fuck
+    
+    Signed-off-by: kenny <kenny8654@gmail.com>
+
+[33mcommit 565d05985396e7852846cbfb8b922134fe4f8ea1[m
+Merge: 32f6363 6ada016
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:09:10 2018 +0800
+
+    Merge branch 'feature/map' into feature/framework
+
+[33mcommit 6ada016f541f214ea935f5ec45c2155e449673db[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 03:08:05 2018 +0800
+
+    ><
+
+[33mcommit 32f636384e8cfe77e8c05ff3c6284461c137abbb[m
+Merge: 832d65c 042d6d2
+Author: Chen Shih Han <bigsamtw@gmail.com>
+Date:   Wed May 30 03:05:58 2018 +0800
+
+    Merge branch 'feature/map' into feature/framework
+
+[33mcommit 042d6d26ff8d34f4764a3afc72987b8203b763d5[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 03:04:35 2018 +0800
+
+    add opencv
+
+[33mcommit 832d65c48dbb44afd23291788b87955802ec7e68[m
+Author: glengogo <glengogo@users.noreply.github.com>
+Date:   Wed May 30 03:02:23 2018 +0800
+
+    1
+
+[33mcommit b42bd292203ab0667a0722e56154b03fa4bf214c[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 01:22:43 2018 +0800
+
+    third commit
+
+[33mcommit 3f353a76dfe41b500ea4d7c0307ce181793d7b30[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 01:18:50 2018 +0800
+
+    second commit
+
+[33mcommit e07d887e67ca79ff783de98a4df3f45b241f6a9a[m
+Merge: 16c12e9 4d2ed2e
+Author: kenny8654 <37100988+kenny8654@users.noreply.github.com>
+Date:   Wed May 30 00:49:12 2018 +0800
+
+    Merge pull request #1 from bigsamtw/feature/map
+    
+    fast commit
+
+[33mcommit 4d2ed2eec3e88b550e535a59ec8a5a48c918b2c2[m
+Author: kenny <kenny8654@gmail.com>
+Date:   Wed May 30 00:46:19 2018 +0800
+
+    fast commit
+
+[33mcommit 16c12e96172d8f1b18f898c645d94c06a4b7c0a2[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Wed May 30 00:22:28 2018 +0800
+
+    Add lost files in v1
+
+[33mcommit a7d8fa9e78184f5e9e5ed31a5c60be4c2f869edd[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Han <bigsamtw@gmail.com>
+Date:   Tue May 29 23:50:26 2018 +0800
+
+    [Commit] First Commit
+    
+    [Description]
+    
+            First commit.
