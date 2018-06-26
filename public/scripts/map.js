@@ -718,6 +718,7 @@ function onSubmitButtonClicked() {
   formData.append('file', file.files[0]);
   var clue_index = document.getElementById('index').textContent;
   console.log('開始圖片上傳');
+  console.log('index : ' + clue_index)
   $.ajax({
     url: './map/upload',
     type: 'post',
