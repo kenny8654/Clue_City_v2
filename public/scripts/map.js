@@ -716,6 +716,7 @@ function onSubmitButtonClicked() {
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
   formData.append('file', file.files[0]);
+  var clue_index = document.getElementById('index').textContent;
   console.log('開始圖片上傳');
   $.ajax({
     url: './map/upload',
@@ -726,7 +727,7 @@ function onSubmitButtonClicked() {
       $.ajax({
         url: './map/runPython',
         type: 'post',
-        data: {index : document.getElementById('index').textContent},
+        data: {index : clue_index },
         dataType: 'text',
         success: function (data) {
           //$('#upload_response').text(data);
