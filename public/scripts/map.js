@@ -174,9 +174,9 @@ function small_clue_onclick() {
 }
 
 function success_message_onclick() {
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("success_clue_picture").src = "./target.jpg";
-  },1000)
+  }, 1000)
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
@@ -264,7 +264,7 @@ function btn_share_submit_onclick() {
     document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
   for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
     document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
-  
+
   $.ajax({
     url: './map/createAlbum',
     type: 'post',
@@ -722,35 +722,50 @@ function onSubmitButtonClicked() {
     type: 'post',
     data: formData,
     dataType: 'text',
-    success: function (data) {
-      //$('#upload_response').text(data);
-      console.log(data)
-      document.getElementById("loader").style.visibility = "hidden";
-      // document.getElementById("btn_hide").style.visibility = "visible";
-      document.getElementById("loader_message").style.visibility = "hidden";
+    success: function () {
+      $.ajax({
+        url: './map/runPython',
+        type: 'post',
+        data: {index : clue_index},
+        dataType: 'text',
+        success: function (data) {
+          //$('#upload_response').text(data);
+          console.log(data)
+          document.getElementById("loader").style.visibility = "hidden";
+          // document.getElementById("btn_hide").style.visibility = "visible";
+          document.getElementById("loader_message").style.visibility = "hidden";
 
-      if (data.trim() == "similar") {
-        document.getElementById("success").src = "./images/PhotoSharing/success.png"
-        document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
-        console.log("similar")
-        success_or_failure = 1;
-        score += 100
-        document.getElementById("score_text").textContent = score;
+          if (data.trim() == "similar") {
+            document.getElementById("success").src = "./images/PhotoSharing/success.png"
+            document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
+            console.log("similar")
+            success_or_failure = 1;
+            score += 100
+            document.getElementById("score_text").textContent = score;
 
-        team_score();
-        
+            team_score();
 
-      }
-      else {
-        document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
-        document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
-        console.log("not similar")
-        success_or_failure = 0;
-      }
-      setTimeout(function () {
-        document.getElementById("success").style.visibility = "visible";
-        document.getElementById("success_message").style.visibility = "visible";
-      }, 800);
+
+          }
+          else {
+            document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
+            document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
+            console.log("not similar")
+            success_or_failure = 0;
+          }
+          setTimeout(function () {
+            document.getElementById("success").style.visibility = "visible";
+            document.getElementById("success_message").style.visibility = "visible";
+          }, 800);
+        },
+        error: function () {
+          console.log("error!!!!!!!!!")
+          onSubmitButtonClicked();
+        },
+        cache: false,
+        contentType: false,
+        processData: false,
+      })
     },
     error: function () {
       console.log("error!!!!!!!!!")
@@ -807,7 +822,7 @@ $(document).ready(function () {
 // }
 // update_score();
 
-function team_score(){
+function team_score() {
   let score = document.getElementById("score_text").text;
   $.ajax({
     type: 'post',
