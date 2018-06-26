@@ -221,25 +221,18 @@ function setting_onclick() {
 }
 
 function btn_yes() {
-  let teamname = document.getElementById("team_name").textContent
-  PassScore();
-  if(teamname == null){
-    user_score();
-  }
-  else{}
+  var facebook_id = document.getElementById("facebook_id").textContent
+  $.ajax({
+    type: 'post',
+    url: './map/tellscore',
+    data: {
+      name: score,
+      id: facebook_id,
+    }
+  });
   document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
 }
 
-function PassScore() {
-     let score = document.getElementById("score_text").text;
-      $.ajax({
-        type: 'post',
-        url: './score/getMyscore',
-        data: {
-          score : score,
-        },
-      });
-}
 function btn_no() {
   document.getElementById('setting_background').style.visibility = 'hidden'
   document.getElementById('p_end_game').style.visibility = 'hidden'
@@ -744,6 +737,9 @@ function onSubmitButtonClicked() {
         score += 100
         document.getElementById("score_text").textContent = score;
 
+        team_score();
+        
+
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
@@ -794,4 +790,31 @@ $(document).ready(function () {
   });
 })
 
+//------------------------------------------------------------------------------------------------------<3
 
+// function update_score() {
+//   $.ajax({
+//     type: 'post',
+//     url: './map/update_score',
+//     data: {
+//       name: document.getElementById("team_name").textContent,
+//     },
+//     success: function (data) {
+
+//     }
+//   });
+//   setTimeout("update_score()", 1000);
+// }
+// update_score();
+
+function team_score(){
+  let score = document.getElementById("score_text").text;
+  $.ajax({
+    type: 'post',
+    url: './map/tellteamscore',
+    data: {
+      score: score,
+      name: document.getElementById("team_name").textContent,
+    }
+  });
+}  
