@@ -80,6 +80,12 @@
         success: function (data) {
           team_name = data;
           $('#team_name').text(data);
+          if( document.getElementById("team_name").textContent == null || document.getElementById("team_name").textContent == ""){
+          }
+          else{
+            var updatesignal = setInterval(update_score , 1000);
+            team_score();
+          }
         }
       });
     }
@@ -101,6 +107,43 @@
     function getPicture(url) {
       $('#user_pic').attr("src", url);
     }
+function update_score() {
+  $.ajax({
+    type: 'post',
+    url: './map/update_score',
+    data: {
+      name: document.getElementById("team_name").textContent,
+    },
+    success: function (data) {
+      console.log(data);
+      $("#score_text").text(data);
+    }
+  });
+}
+
+function team_score(){
+  let score = document.getElementById("score_text").text;
+  $.ajax({
+    type: 'post',
+    url: './map/tellteamscore',
+    data: {
+      score: score,
+      name: document.getElementById("team_name").textContent,
+    }
+  });
+}  
+function user_score(){
+  let score = document.getElementById("score_text").text;
+  var facebook_id = document.getElementById("facebook_id").textContent;
+  $.ajax({
+    type: 'post',
+    url: './map/tellscore',
+    data: {
+      score: score,
+      id: facebook_id,
+    }
+  });
+}
 
 
   </script>
@@ -120,7 +163,7 @@
     <img id="game_bar_background" src="./images/Map/game_bar.png">
     <img id="decoration1" src="./images/Map/decoration.png">
     <img id="decoration2" src="./images/Map/decoration.png">
-    <a id="team_name">吃飯睡覺懶惰蟲</a>
+    <a id="team_name"></a>
     <img id="game_count" src="./images/Map/game_count.png">
     <span id="time"></span>
     <img id="game_score" src="./images/Map/game_score.png">

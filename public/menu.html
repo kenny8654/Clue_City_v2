@@ -298,7 +298,6 @@
                     }else{
                       console.log("someone send me invitation");
                       invite_info = data ;
-                      console.log(data);
                       join();
                       $("#name").text(invite_info.name);
                       let url = `https://graph.facebook.com/${invite_info.sender}/picture?type-normal`;

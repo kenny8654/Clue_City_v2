@@ -105,8 +105,18 @@ router.post("/createAlbum", urlencoderParser, function (req, res) {
 })
 router.post('/tellscore', urlencoderParser, function (req, res) {
   let mongoCollection = "user";
-  let score = req.body.name;
+  let score ={ score : req.body.score};
   let profile = { id: req.body.id };
+  mongoOperation.updatescore(mongoCollection, profile, score);
+})
+
+router.post('/tellteamscore', urlencoderParser, function (req, res) {
+  let mongoCollection = "team";
+  let score ={ score : req.body.score};
+  let profile = { name: req.body.name };
+  console.log("====================================");
+  console.log(score);
+  console.log(profile);
   mongoOperation.updatescore(mongoCollection, profile, score);
 })
 
@@ -116,6 +126,8 @@ router.post('/update_score', urlencoderParser, function (req, res) {
 
   let object = mongoOperation.mongoGetScore(mongoCollection, team);
   object.then((val) => {
+    console.log("----------------------------------");
+    console.log(val);
     res.send(val);
   });
 })
