@@ -5,6 +5,7 @@ let bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
 let mongoOperation = require("../../cluescity/mongo-express/main.js");
+var myscore = "" ;
 
 router.get('/',function(req,res){
   res.sendFile('Score.html', {
@@ -19,7 +20,7 @@ router.post('/getscore', urlencodedParser,function(req,res){
       res.send(val);
     });
 });
-
+/*
 router.post('/myscore', urlencodedParser,function(req,res){
     let myProfile = req.body;
     databaseCollection = "user";
@@ -35,5 +36,15 @@ router.post('/teamscore', urlencodedParser,function(req,res){
     object.then((val)=>{
       res.send(val);
     });
+});
+*/
+router.post('/getMyscore', urlencodedParser,function(req,res){
+  myscore = req.body; 
+});
+
+router.post('/Myscore', urlencodedParser,function(req,res){
+  res.send(myscore);
+
+  myscore = "" ;
 });
 module.exports = router;

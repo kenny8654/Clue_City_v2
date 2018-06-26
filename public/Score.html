@@ -85,7 +85,7 @@
                 FB.api('/me?fields=name,email',function(response){
                   if(response && !response.error){
                     responseData = response ;
-                    getMyScore(responseData);
+                    getMyScore();
                   }
                 })
               }
@@ -94,15 +94,26 @@
                     
                    if( TeamOrPerson == 0){
                      choose = "user";
-                     getMyScore(responseData);
+                   //  getMyScore(responseData);
                    }
                    else{
                      choose = "team"; 
-                     getTeamScore(responseData);
+                   //  getTeamScore(responseData);
                    }
                    get_leaderboard(choose);
               }
-
+              function getMyScore(){
+                $.ajax({
+                  type : 'post',
+                  url : './score/Myscore',
+                  data : {},
+                  success : function(data){
+                    console.log(data);
+                    $("#myScore").text(data);
+                  }
+                });
+              }
+/*
               function getMyScore(myprofile){
                 $.ajax({
                   type : 'post',
@@ -125,7 +136,7 @@
                   }
                 });
               }
-              
+*/             
               var profile ;
 
               function get_leaderboard(team_or_person){
@@ -142,7 +153,12 @@
                       url = `https://graph.facebook.com/${profile[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
                       getName( profile[i].name,(i+1));
-                      getScore( profile[i].score,(i+1));
+                      if( profile[i].score != null ){
+                        getScore( profile[i].score,(i+1));
+                      }
+                      else{
+                        getScore("",(i+1));
+                      }
                     }
                   } 
                 });
