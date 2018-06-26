@@ -34,14 +34,13 @@ app.use(express.static(__dirname + '/public/scripts'));
 
 
 app.use('/about', aboutRouter);
-app.use('/', loginRouter);
-app.use('/menu', menuRouter);
-app.use('/invite', inviteRouter);
-app.use('/setting', settingRouter);
-app.use('/map', mapRouter);
-app.use('/score', scoreRouter);
-app.use('/friend', friendRouter);
-app.use('/gallery', galleryRouter);
-
+app.use('/',loginRouter);
+app.use('/menu',menuRouter);
+app.use('/invite',inviteRouter);
+app.use('/setting',settingRouter);
+app.use('/map',mapRouter);
+app.use('/score',scoreRouter);
+app.use('/friend',friendRouter);
+app.use('/gallery',galleryRouter);
 
 module.exports = app;

@@ -1,6 +1,3 @@
-html,body{
-    height:30%;
-}
 .TeamName{
     position:absolute;
     z-index:3;
@@ -35,8 +32,8 @@ html,body{
 }
 .TeamText{
     position:absolute;
-    top:20vw;
-    margin-left:10vw;
+    top:17.5vw;
+    left:9vw;
     font-size: large;
     font-family: Microsoft JhengHei;
     font-weight: 900;
@@ -80,9 +77,9 @@ html,body{
     left:28vw;
     top:11vw;
 }
-#nameee{
+#name{
     position:absolute;
-    left:20vw;
+    left:28vw;
 }
 #background{
     position:absolute;
@@ -155,7 +152,6 @@ body{
 #ID{
     position:absolute;
     left:20vw;
-    width:50%;
     font-weight:500;
     font-size: 3vw;
 }

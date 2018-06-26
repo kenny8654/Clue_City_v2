@@ -8,13 +8,8 @@
   visibility: hidden;
 }
 
-#share_message{
-  display: none;
-  visibility: hidden;
-}
-
 #map {
-  height: 84%;
+  height: 77%;
   z-index: 0;
 }
 /* Optional: Makes the sample page fill the window. */
@@ -43,16 +38,8 @@ html, body {
   position: absolute;
   height: 5%;
   top:1.5%;
-  left: 3%;
+  right: 3%;
 }
-
-#setting{
-  position: absolute;
-  height: 4%;
-  top:2%;
-  right: 4%;
-}
-
 #game_bar{
   height: 8%;
 }
@@ -128,7 +115,6 @@ html, body {
   bottom: 1.5%;
   height: 4%;
   left: 10%;
-  visibility: hidden;
 }
 
 #nav_gallery{
@@ -136,7 +122,6 @@ html, body {
   bottom: 1.5%;
   height: 4%;
   left: 33%;
-  visibility: hidden;
 }
 
 #nav_group{
@@ -144,7 +129,6 @@ html, body {
   bottom: 1%;
   height: 4.5%;
   left: 60%;
-  visibility: hidden;
 }
 
 #nav_score{
@@ -152,11 +136,6 @@ html, body {
   bottom: 1%;
   height: 4.5%;
   right: 10%;
-  visibility: hidden;
-}
-
-#bottom_navigation_background{
-  visibility: hidden;
 }
 
 #big_clue_background{
@@ -195,14 +174,14 @@ html, body {
   position: absolute;
   height: 20%;
   left: 2%;
-  top:73%;
+  top:63%;
 }
 
 #small_clue_picture{
   position: absolute;
   height: 15.5%;
   left: 5%;
-  top:75.5%;
+  top:65.5%;
 }
 
 .small_clue{
@@ -371,76 +350,10 @@ html, body {
 #success_paragraph{
   width: 62%;
   position: absolute;
-  height: 25%;
+  height: 80%;
   left: 20%;
   top:55%;
   z-index: 7;
   color: #000;
-  visibility: hidden;
-}
-
-#btn_share{
-  position: absolute;
-  height: 4%;
-  left: 74%;
-  top:83%;
-  z-index: 8;
-  visibility: hidden;
-}
-
-#btn_share_submit{
-  position: absolute;
-  height: 8%;
-  left: 38%;
-  top:82%;
-  z-index: 8;
-  visibility: hidden;
-}
-
-
-#share_word{
-  position: absolute;
-  height: 28%;
-  left: 20%;
-  top:53%;
-  z-index: 6;
-  width: 60%;
-  opacity: 0.5;
-  visibility: hidden;
-}
-
-#setting_background{
-  position: absolute;
-  height: 25%;
-  left: 13%;
-  top:40%;
-  z-index: 6;
-  visibility: hidden;
-}
-
-#p_end_game{
-  position: absolute;
-  height: 25%;
-  left: 36.5%;
-  top:45%;
-  z-index: 6;
-  visibility: hidden;
-}
-
-#btn_yes{
-  position: absolute;
-  height: 10%;
-  left: 20%;
-  top:53%;
-  z-index: 7;
-  visibility: hidden;
-}
-
-#btn_no{
-  position: absolute;
-  height: 10%;
-  left: 55%;
-  top:53.25%;
-  z-index: 7;
   visibility: hidden;
 }

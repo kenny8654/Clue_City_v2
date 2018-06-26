@@ -41,7 +41,7 @@ function initMap() {
   });
 
   google.maps.event.addListener(map, 'zoom_changed', function () {
-    console.log("zoom change")
+    console.log("zoom change", zoom)
     map.data.setStyle(function (feature) {
       var magnitude = feature.getProperty('mag');
       return {
@@ -174,9 +174,6 @@ function small_clue_onclick() {
 }
 
 function success_message_onclick() {
-  setTimeout(function(){
-    document.getElementById("success_clue_picture").src = "./target.jpg";
-  },1000)
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
@@ -188,7 +185,6 @@ function success_message_onclick() {
     document.getElementById('btn_exit').style.visibility = 'visible'
     document.getElementById('success_clue_picture').style.visibility = 'visible'
     document.getElementById('success_paragraph').style.visibility = 'visible'
-    document.getElementById('btn_share').style.visibility = 'visible'
   }
   else {
     document.getElementById('submit_image_label').style.visibility = 'visible'
@@ -202,85 +198,11 @@ function success_message_onclick() {
   }
 }
 
-function btn_exit() {
+function btn_exit(){
   document.getElementById('success_background').style.visibility = 'hidden'
   document.getElementById('btn_exit').style.visibility = 'hidden'
   document.getElementById('success_clue_picture').style.visibility = 'hidden'
   document.getElementById('success_paragraph').style.visibility = 'hidden'
-  document.getElementById('share_word').style.visibility = 'hidden'
-  document.getElementById('btn_share').style.visibility = 'hidden'
-  document.getElementById('btn_share_submit').style.visibility = 'hidden'
-
-}
-
-function setting_onclick() {
-  document.getElementById('setting_background').style.visibility = 'visible'
-  document.getElementById('p_end_game').style.visibility = 'visible'
-  document.getElementById('btn_yes').style.visibility = 'visible'
-  document.getElementById('btn_no').style.visibility = 'visible'
-}
-
-function btn_yes() {
-  var facebook_id = document.getElementById("facebook_id").textContent
-  $.ajax({
-    type: 'post',
-    url: './map/tellscore',
-    data: {
-      name: score,
-      id: facebook_id,
-    }
-  });
-  document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
-}
-
-function btn_no() {
-  document.getElementById('setting_background').style.visibility = 'hidden'
-  document.getElementById('p_end_game').style.visibility = 'hidden'
-  document.getElementById('btn_yes').style.visibility = 'hidden'
-  document.getElementById('btn_no').style.visibility = 'hidden'
-
-}
-
-function btn_share_onclick() {
-  console.log("click share")
-  document.getElementById('success_paragraph').style.visibility = 'hidden'
-  document.getElementById('share_word').style.visibility = 'visible'
-  document.getElementById('btn_share_submit').style.visibility = 'visible'
-}
-
-function btn_share_submit_onclick() {
-  Message = document.getElementById("share_word").value;
-  facebook_id = document.getElementById("facebook_id").textContent;
-  document.getElementById('success_paragraph').style.visibility = 'hidden'
-  document.getElementById('share_word').style.visibility = 'hidden'
-  document.getElementById('btn_share_submit').style.visibility = 'hidden'
-  document.getElementById('btn_exit').style.visibility = 'hidden'
-  document.getElementById('success_clue_picture').style.visibility = 'hidden'
-  document.getElementById('btn_share').style.visibility = 'hidden'
-  document.getElementById('success_background').style.visibility = 'hidden'
-
-
-  for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
-    document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
-  for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
-    document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
-  
-  $.ajax({
-    url: './map/createAlbum',
-    type: 'post',
-    data: {
-      ID: facebook_id,
-      message: Message
-    },
-    dataType: 'text',
-    success: function () {
-      console.log("album_success!!!!!!!!!");
-    },
-    error: function () {
-      console.log("album_error!!!!!!!!!");
-    }
-  })
-
 }
 
 function clue() {
@@ -715,6 +637,10 @@ function onSubmitButtonClicked() {
   //創建formdata對象
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
+  formData.sender = {
+    facebookID : document.getElementById("facebook_id").textContent
+  }
+  console.log(formData.sender.facebookID);
   formData.append('file', file.files[0]);
   console.log('開始圖片上傳');
   $.ajax({
@@ -726,7 +652,7 @@ function onSubmitButtonClicked() {
       //$('#upload_response').text(data);
       console.log(data)
       document.getElementById("loader").style.visibility = "hidden";
-      // document.getElementById("btn_hide").style.visibility = "visible";
+      document.getElementById("btn_hide").style.visibility = "visible";
       document.getElementById("loader_message").style.visibility = "hidden";
 
       if (data.trim() == "similar") {
@@ -734,12 +660,8 @@ function onSubmitButtonClicked() {
         document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
         console.log("similar")
         success_or_failure = 1;
-        score += 100
+        score +=100
         document.getElementById("score_text").textContent = score;
-
-        team_score();
-        
-
       }
       else {
         document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
@@ -770,8 +692,6 @@ function onSelectClicked() {
 }
 
 
-
-
 $(document).ready(function () {
   $('submit_button').on('click', function (e) {
     e.preventDefault();
@@ -788,33 +708,17 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
+  function get_Score(sendto){
+    let sender =  responseData ;
+    let inviteto = sendto.id ;
+    $.ajax ({
+      type : 'post',
+      url : './invite/invite',
+      data : {
+          sender : sender.id,
+          to : inviteto,
+      }
+    });
+  }
 })
 
-//------------------------------------------------------------------------------------------------------<3
-
-// function update_score() {
-//   $.ajax({
-//     type: 'post',
-//     url: './map/update_score',
-//     data: {
-//       name: document.getElementById("team_name").textContent,
-//     },
-//     success: function (data) {
-
-//     }
-//   });
-//   setTimeout("update_score()", 1000);
-// }
-// update_score();
-
-function team_score(){
-  let score = document.getElementById("score_text").text;
-  $.ajax({
-    type: 'post',
-    url: './map/tellteamscore',
-    data: {
-      score: score,
-      name: document.getElementById("team_name").textContent,
-    }
-  });
-}  

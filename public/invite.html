@@ -118,7 +118,6 @@
               }
 
               var choose_friend;
-              var friendnumber = 0 ;
 
               function friends(){
                 $.ajax({
@@ -128,10 +127,10 @@
                     id : myid , 
                   },
                   success : function(data){
+                    console.log(data);
                     choose_friend = data.friend ;
                     let url ;
-                    for(let i = friendnumber ; i < data.friend.length ; i++){
-                      friendnumber = data.friend.length;
+                    for(let i = 0; i < data.friend.length ; i++){
                       url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
                       getPicture(url,(i+1));
                       getName( data.friend[i].name,(i+1));
@@ -148,15 +147,13 @@
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
               }
-
-              function getpicture(url){
+              function getPicture(url){
                 $("#bighead").attr("src",url);
               }
-
               function getID(id){
                 $("#ID").text(`ID: ${id}`);
               }
-              function getname(name){
+              function getName(name){
                 $("#name").text(`${name}`);
               }
                 
@@ -287,8 +284,8 @@
                         if(data != null || data != ""){
                           console.log("find this one");
                           let url =  `https://graph.facebook.com/${data.id}/picture?type-normal`;
-                          getpicture(url);
-                          getname(data.name);
+                          getPicture(url);
+                          getName(data.name);
                           getID(data.id);
                           friend_id = data.id;
                           friend_name= data.name;
@@ -303,7 +300,7 @@
     <div class="TeamName" id="invite1">
         <img src="images/Team/SmallBackground.png" class="SmallBack">
         <div id="SetTeamName">
-            <img src="images/Team/X.png" class="X" id="inviteX" onclick="friends()">
+            <img src="images/Team/X.png" class="X" id="inviteX">
             <div class="ui search" id="Search">
                 <div class="ui icon input" id="Search1">
                     <input class="prompt" name = "friend_id" type="text" placeholder="Search By Name or ID" id="Search2">
@@ -313,10 +310,10 @@
             </div>
             <div class="ui celled list">
                 <div class="item" id="Seeee">
-                    <img class="ui avatar image" id= "bighead" src="">
+                    <img class="ui avatar image" id= "bighead" src="images/Team/Glen.jpg">
                     <div class="content">
-                        <div class="header" id = "name"></div>
-                        <p class="ID" id="ID" ></p>
+                        <div class="header" id = "name">Glen</div>
+                        <p class="ID" id="ID" >glen84910</p>
                     </div>
                     <img class="Add" src="images/Team/Plus.png" onclick= "addfriend()">
                 </div>
@@ -326,6 +323,7 @@
     
     <div class="team">
         <div class="topbar">
+            <img src="images/Team/WhiteBack.png" id="WhiteBack" onclick="gobackmode()">
             <img src="images/Team/adhoc mode.png" class="TopBarMid" id="AdhocMode">
             <img src="images/Team/wheel.png" class="TopBarWheel" id="Wheel" onclick="gotosetting()">
         </div>

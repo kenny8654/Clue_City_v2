@@ -1,6 +1,3 @@
-html,body{
-    height:100%;
-}
 .TeamName{
     position:absolute;
     z-index:3;
@@ -88,15 +85,16 @@ body{
     margin-bottom:1%;
 }
 #AdhocMode{
-    position:fixed;
-    width:100%;
-    height:13vw;
+    position:relative;
+    margin-left:0%;
+    width:75%;
 }
 #Wheel{
-    position:fixed;
-    top:4vw;
+    position:relative;
     width:6%;
-    right:4vw;
+    margin-top:4%;
+    margin-bottom:2%;
+    margin-left:4%;
 }
 .FriendsIn{
     margin-top:50%;
