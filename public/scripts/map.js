@@ -763,10 +763,7 @@ function onSubmitButtonClicked() {
         error: function () {
           console.log("error!!!!!!!!!")
           onSubmitButtonClicked();
-        },
-        cache: false,
-        contentType: false,
-        processData: false,
+        }
       })
     },
     error: function () {
