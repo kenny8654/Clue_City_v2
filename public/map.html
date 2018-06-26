@@ -106,11 +106,14 @@
   </script>
 
   <a id="facebook_id" visibility="hidden"></a>
+  <a id="share_message" visibility="hidden"></a>
+
 
 
   <div id="title_bar">
     <img id="title" src="./images/Map/clues_city.png">
     <img id="user_pic" src="./images/Map/user.jpg">
+    <img id="setting" src="./images/Map/setting_exit.png" onclick="setting_onclick()">
   </div>
 
   <div id="game_bar">
@@ -146,8 +149,13 @@
     <img id="success_message" class="big_clue" src="./images/PhotoSharing/success-1.png" onclick="success_message_onclick()">
     <img id="success_background" src="./images/Map/success_background.png">
     <img id="btn_exit" src="./images/Map/exit.png" onclick="btn_exit()">
-    <img id="success_clue_picture" src="./images/Map/clues_picture.jpg">
+    <img id="success_clue_picture" src="./target.jpg">
     <a id="success_paragraph">國立成功大學電機資訊學院源自成立於1931年之電氣工程學系，承擔培育電機、電子、資訊與電信方面之產業及研究界極為殷切之高科技人才的重責大任，培育一萬多位優秀畢業生，貢獻台灣經濟奇蹟的創造</a>
+    <img id="btn_share_submit" src="./images/PhotoSharing/OK.png" onclick="btn_share_submit_onclick()">
+    <form>
+      <input placeholder="在想甚麼?" id="share_word" type="text">
+    </form>
+    <img id="btn_share" src="./images/Map/btn_share.png" onclick="btn_share_onclick()">
   </div>
 
 
@@ -157,7 +165,7 @@
     <img id="small_clue_picture" class="small_clue" src="./images/Map/clues_picture.jpg" onclick="small_clue_onclick()">
   </div>
 
-  <form id="upload_form" enctype="multipart/form-data" method="POST" action="./map/NULL"> -->
+  <form id="upload_form" enctype="multipart/form-data" method="POST" action="./map/NULL">
     <!-- <button id = "submit_button"  onClick = "onSubmitButtonClicked()">Upload </button> -->
     <label id="submit_image_label" class="big_clue" onclick="onSelectClicked()">
       <input id="submit_image" type="file" class="big_clue" name="image" accept="image/*" capture="user">
@@ -167,6 +175,17 @@
       <button id="submit_button" class="big_clue" onClick="onSubmitButtonClicked()">Upload </button>
     </label>
   </form>
+
+  <div class="Setting" id="invited1">
+    <img src="images/Team/SmallBackground.png" id="setting_background" class="Setting">
+    <div id="SetTeamName">
+        <div id="TextinTeam">
+            <p class="Setting" id="p_end_game">提早結束遊戲?</p>
+        </div>
+        <img src="images/Team/YES.png" id="btn_yes" onclick="btn_yes()">
+        <img src="images/Team/NO.png" id="btn_no" onclick="btn_no()">
+    </div>
+</div>
   <!-- <image id="uploaded_image" src="http://luffy.ee.ncku.edu.tw:10048/target.jpg" width="200"> -->
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsi5IZ6geUCsf8gaf2olTlfXDxZw4K340&callback=initMap" async
