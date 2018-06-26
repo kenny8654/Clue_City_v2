@@ -77,6 +77,7 @@ router.post("/return_teamname", urlencoderParser, function (req, res) {
 
 router.post("/runPython", urlencoderParser, function (req, res) {
   clue_index = req.body.index;
+  console.log(req.body);
   console.log('Python' + clue_index + ' is running')
   var spawn = require("child_process").spawn;
   var process = spawn('python3', ["./compare" + clue_index + ".py",]);
