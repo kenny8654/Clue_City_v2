@@ -174,9 +174,9 @@ function small_clue_onclick() {
 }
 
 function success_message_onclick() {
-  setTimeout(function(){
+  setTimeout(function () {
     document.getElementById("success_clue_picture").src = "./target.jpg";
-  },1000)
+  }, 1000)
   document.getElementById('success').style.visibility = 'hidden'
   document.getElementById('success_message').style.visibility = 'hidden'
   if (success_or_failure == 1) {
@@ -264,7 +264,7 @@ function btn_share_submit_onclick() {
     document.getElementsByClassName('small_clue')[i].style.visibility = 'hidden'
   for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
     document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
-  
+
   $.ajax({
     url: './map/createAlbum',
     type: 'post',
@@ -294,6 +294,7 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clues0.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clues0.jpg"
       clue_index = 0;
+
     }
     else if (current.lng <= 120.206608 && current.lng >= 120.205608 && current.lat <= 22.989796 && current.lat >= 22.988796) {//德化堂120.206108,22.989296
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -302,7 +303,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue1.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue1.jpg"
-      clue_index = 1
+      document.getElementById('index').text = 1
     }
     else if (current.lng <= 120.204716 && current.lng >= 120.203716 && current.lat <= 22.989549 && current.lat >= 22.988549) {//愛國婦人會館(台南創意中心)120.204216,22.989049
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -311,7 +312,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue2.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue2.jpg"
-      clue_index = 2
+      document.getElementById('index').text = 2
     }
     else if (current.lng <= 120.203182 && current.lng >= 120.202182 && current.lat <= 22.990201 && current.lat >= 22.989201) {//原台南神社休憩所120.202682,22.989701
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -320,7 +321,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue3.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue3.jpg"
-      clue_index = 3
+      document.getElementById('index').text = 3
     }
     else if (current.lng <= 120.201433 && current.lng >= 120.200433 && current.lat <= 22.990112 && current.lat >= 22.989112) {//台南司法博物館120.200933,22.989612
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -329,7 +330,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue4.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue4.jpg"
-      clue_index = 4
+      document.getElementById('index').text = 4
     }
     else if (current.lng <= 120.203952 && current.lng >= 120.202952 && current.lat <= 22.991147 && current.lat >= 22.990147) {//原台南武德殿120.203452,22.990647
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -338,7 +339,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue5.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue5.jpg"
-      clue_index = 5
+      document.getElementById('index').text = 5
     }
     else if (current.lng <= 120.204995 && current.lng >= 120.203995 && current.lat <= 22.990784 && current.lat >= 22.989784) {//台南孔廟120.204495,22.990284
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -347,7 +348,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue6.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue6.jpg"
-      clue_index = 6
+      document.getElementById('index').text = 6
     }
     else if (current.lng <= 120.204135 && current.lng >= 120.203135 && current.lat <= 22.991620 && current.lat >= 22.990620) {//台南山林事務所120.203635,22.991120
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -356,7 +357,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue7.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue7.jpg"
-      clue_index = 7
+      document.getElementById('index').text = 7
     }
     else if (current.lng <= 120.203797 && current.lng >= 120.202797 && current.lat <= 22.991474 && current.lat >= 22.990474) {//友愛天主堂120.203297,22.990974
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -365,7 +366,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue8.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue8.jpg"
-      clue_index = 8
+      document.getElementById('index').text = 8
     }
     else if (current.lng <= 120.203678 && current.lng >= 120.202678 && current.lat <= 22.991875 && current.lat >= 22.990875) {//擇賢堂120.203178,22.991375
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -374,7 +375,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue9.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue9.jpg"
-      clue_index = 9
+      document.getElementById('index').text = 9
     }
     else if (current.lng <= 120.204036 && current.lng >= 120.203036 && current.lat <= 22.992137 && current.lat >= 22.991137) {//重慶寺120.203536,22.991637
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -383,7 +384,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue10.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue10.jpg"
-      clue_index = 10
+      document.getElementById('index').text = 10
     }
     else if (current.lng <= 120.204376 && current.lng >= 120.203376 && current.lat <= 22.992541 && current.lat >= 22.991541) {//原台南州會120.203876,22.992041
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -392,7 +393,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue11.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue11.jpg"
-      clue_index = 11
+      document.getElementById('index').text = 11
     }
     else if (current.lng <= 120.204976 && current.lng >= 120.203976 && current.lat <= 22.992504 && current.lat >= 22.991504) {//台文館120.204476,22.992004
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -401,7 +402,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue12.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue12.jpg"
-      clue_index = 12
+      document.getElementById('index').text = 12
     }
     else if (current.lng <= 120.203995 && current.lng >= 120.202995 && current.lat <= 22.992897 && current.lat >= 22.991897) {//報恩堂120.203495,22.992397
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -410,7 +411,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue13.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue13.jpg"
-      clue_index = 13
+      document.getElementById('index').text = 13
     }
     else if (current.lng <= 120.203437 && current.lng >= 120.202437 && current.lat <= 22.992574 && current.lat >= 22.991574) {//台灣土地銀行120.202937,22.992074
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -419,7 +420,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue14.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue14.jpg"
-      clue_index = 14
+      document.getElementById('index').text = 14
     }
     else if (current.lng <= 120.202979 && current.lng >= 120.201979 && current.lat <= 22.992269 && current.lat >= 22.991269) {//林百貨120.202479,22.991769
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -428,7 +429,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue15.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue15.jpg"
-      clue_index = 15
+      document.getElementById('index').text = 15
     }
     else if (current.lng <= 120.201604 && current.lng >= 120.200604 && current.lat <= 22.991946 && current.lat >= 22.990946) {//八吉境道署關帝廳120.201104,22.991446
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -437,7 +438,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue16.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue16.jpg"
-      clue_index = 16
+      document.getElementById('index').text = 16
     }
     else if (current.lng <= 120.200623 && current.lng >= 120.199623 && current.lat <= 22.991162 && current.lat >= 22.990162) {//鰻丼作120.200123,22.990662
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -446,7 +447,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue17.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue17.jpg"
-      clue_index = 17
+      document.getElementById('index').text = 17
     }
     else if (current.lng <= 120.200100 && current.lng >= 120.199100 && current.lat <= 22.991939 && current.lat >= 22.990939) {//友愛市場120.199600,22.991439
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -455,7 +456,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue18.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue18.jpg"
-      clue_index = 18
+      document.getElementById('index').text = 18
     }
     else if (current.lng <= 120.200359 && current.lng >= 120.199359 && current.lat <= 22.992484 && current.lat >= 22.991484) {//總趕宮120.199859,22.991984
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -464,7 +465,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue19.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue19.jpg"
-      clue_index = 19
+      document.getElementById('index').text = 19
     }
     else if (current.lng <= 120.200205 && current.lng >= 120.199205 && current.lat <= 22.992901 && current.lat >= 22.991901) {//雙全紅茶120.199705,22.992401
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -473,7 +474,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue20.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue20.jpg"
-      clue_index = 20
+      document.getElementById('index').text = 20
     }
     else if (current.lng <= 120.199402 && current.lng >= 120.198402 && current.lat <= 22.991082 && current.lat >= 22.990082) {//蕭氏節孝坊120.198902,22.990582
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -482,7 +483,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue21.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue21.jpg"
-      clue_index = 21
+      document.getElementById('index').text = 21
     }
     else if (current.lng <= 120.198429 && current.lng >= 120.197429 && current.lat <= 22.990547 && current.lat >= 22.989547) {//阿堂鹹粥120.197929,22.990047
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -491,7 +492,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue22.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue22.jpg"
-      clue_index = 22
+      document.getElementById('index').text = 22
     }
     else if (current.lng <= 120.196339 && current.lng >= 120.195339 && current.lat <= 22.988641 && current.lat >= 22.987641) {//南南美術館120.195839,22.988141
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -500,7 +501,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue23.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue23.jpg"
-      clue_index = 23
+      document.getElementById('index').text = 23
     }
     else if (current.lng <= 120.197208 && current.lng >= 120.196208 && current.lat <= 22.991800 && current.lat >= 22.990800) {//銀波布丁120.196708,22.991300
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -509,7 +510,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue24.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue24.jpg"
-      clue_index = 24
+      document.getElementById('index').text = 24
     }
     else if (current.lng <= 120.195704 && current.lng >= 120.194704 && current.lat <= 22.992783 && current.lat >= 22.991783) {//南台影城120.195204,22.992283
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -518,7 +519,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue25.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue25.jpg"
-      clue_index = 25
+      document.getElementById('index').text = 25
     }
     else if (current.lng <= 120.197986 && current.lng >= 120.196986 && current.lat <= 22.994061 && current.lat >= 22.993061) {//邱家小卷米粉120.197486,22.993561
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -527,7 +528,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue26.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue26.jpg"
-      clue_index = 26
+      document.getElementById('index').text = 26
     }
     else if (current.lng <= 120.198224 && current.lng >= 120.197224 && current.lat <= 22.993832 && current.lat >= 22.992832) {//江水號120.197724,22.993332
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -536,7 +537,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue27.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue27.jpg"
-      clue_index = 27
+      document.getElementById('index').text = 27
     }
     else if (current.lng <= 120.197378 && current.lng >= 120.196378 && current.lat <= 22.993445 && current.lat >= 22.992445) {//今日戲院120.196878,22.992945
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -545,7 +546,7 @@ function clue() {
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
       document.getElementById('small_clue_picture').src = "./images/Map/clue28.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue28.jpg"
-      clue_index = 28
+      document.getElementById('index').text = 28
     }
 
 
@@ -716,41 +717,55 @@ function onSubmitButtonClicked() {
   var formData = new FormData();
   //給formdata對象中放入數據(鍵值對的方式)
   formData.append('file', file.files[0]);
+  var clue_index = document.getElementById('index').textContent;
   console.log('開始圖片上傳');
+  console.log('index : ' + clue_index)
   $.ajax({
     url: './map/upload',
     type: 'post',
     data: formData,
     dataType: 'text',
-    success: function (data) {
-      //$('#upload_response').text(data);
-      console.log(data)
-      document.getElementById("loader").style.visibility = "hidden";
-      // document.getElementById("btn_hide").style.visibility = "visible";
-      document.getElementById("loader_message").style.visibility = "hidden";
+    success: function () {
+      $.ajax({
+        url: './map/runPython',
+        type: 'post',
+        data: { clueIndex: clue_index },
+        dataType: 'text',
+        success: function (data) {
+          //$('#upload_response').text(data);
+          console.log(data)
+          document.getElementById("loader").style.visibility = "hidden";
+          // document.getElementById("btn_hide").style.visibility = "visible";
+          document.getElementById("loader_message").style.visibility = "hidden";
 
-      if (data.trim() == "similar") {
-        document.getElementById("success").src = "./images/PhotoSharing/success.png"
-        document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
-        console.log("similar")
-        success_or_failure = 1;
-        score += 100
-        document.getElementById("score_text").textContent = score;
+          if (data.trim() == "similar") {
+            document.getElementById("success").src = "./images/PhotoSharing/success.png"
+            document.getElementById("success_message").src = "./images/PhotoSharing/success-1.png"
+            console.log("similar")
+            success_or_failure = 1;
+            score += 100
+            document.getElementById("score_text").textContent = score;
 
-        team_score();
-        
+            team_score();
 
-      }
-      else {
-        document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
-        document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
-        console.log("not similar")
-        success_or_failure = 0;
-      }
-      setTimeout(function () {
-        document.getElementById("success").style.visibility = "visible";
-        document.getElementById("success_message").style.visibility = "visible";
-      }, 800);
+
+          }
+          else {
+            document.getElementById("success").src = "./images/PhotoSharing/try_again.png"
+            document.getElementById("success_message").src = "./images/PhotoSharing/try_again-1.png"
+            console.log("not similar")
+            success_or_failure = 0;
+          }
+          setTimeout(function () {
+            document.getElementById("success").style.visibility = "visible";
+            document.getElementById("success_message").style.visibility = "visible";
+          }, 800);
+        },
+        error: function () {
+          console.log("error!!!!!!!!!")
+          onSubmitButtonClicked();
+        }
+      })
     },
     error: function () {
       console.log("error!!!!!!!!!")
@@ -788,6 +803,7 @@ $(document).ready(function () {
     e.preventDefault();
     //do some other stuff here
   });
+  document.getElementById('index').text = 0;
 })
 
 //------------------------------------------------------------------------------------------------------<3
@@ -807,7 +823,7 @@ $(document).ready(function () {
 // }
 // update_score();
 
-function team_score(){
+function team_score() {
   let score = document.getElementById("score_text").text;
   $.ajax({
     type: 'post',

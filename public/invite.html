@@ -118,8 +118,7 @@
               }
 
               var choose_friend;
-              var friendnumber = 0 ;
-
+                var friendnumber=0;
               function friends(){
                 $.ajax({
                   type : 'post',
@@ -128,13 +127,22 @@
                     id : myid , 
                   },
                   success : function(data){
+                    console.log(data);
                     choose_friend = data.friend ;
                     let url ;
-                    for(let i = friendnumber ; i < data.friend.length ; i++){
-                      friendnumber = data.friend.length;
+                    for(let i = friendnumber; i < data.friend.length ; i++){
+                        friendnumber=data.friend.length;
                       url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
-                      getPicture(url,(i+1));
-                      getName( data.friend[i].name,(i+1));
+                        $("#lisst").append(
+                            `<div class="item">
+	                           <img class="ui avatar image" src=`+url+`>
+                                <div class="content">
+                                    <div class="header">data.friend[`+i+`].name</div>
+                                </div>
+                                <img class="Invite" src="images/Team/invite.png"  onclick = "Friends(choose_friend[`+i+`])">
+                            </div>`);
+                      //getPicture(url,(i+1));
+                      //getName( data.friend[i].name,(i+1));
                     }
                   }
                 })
@@ -148,15 +156,13 @@
               function getPicture(url,num){
                 $(`#bighead${num}`).attr("src",url);
               }
-
-              function getpicture(url){
+              function getPicture(url){
                 $("#bighead").attr("src",url);
               }
-
               function getID(id){
                 $("#ID").text(`ID: ${id}`);
               }
-              function getname(name){
+              function getName(name){
                 $("#name").text(`${name}`);
               }
                 
@@ -287,8 +293,8 @@
                         if(data != null || data != ""){
                           console.log("find this one");
                           let url =  `https://graph.facebook.com/${data.id}/picture?type-normal`;
-                          getpicture(url);
-                          getname(data.name);
+                          getPicture(url);
+                          getName(data.name);
                           getID(data.id);
                           friend_id = data.id;
                           friend_name= data.name;
@@ -303,7 +309,7 @@
     <div class="TeamName" id="invite1">
         <img src="images/Team/SmallBackground.png" class="SmallBack">
         <div id="SetTeamName">
-            <img src="images/Team/X.png" class="X" id="inviteX" onclick="friends()">
+            <img src="images/Team/X.png" class="X" id="inviteX">
             <div class="ui search" id="Search">
                 <div class="ui icon input" id="Search1">
                     <input class="prompt" name = "friend_id" type="text" placeholder="Search By Name or ID" id="Search2">
@@ -313,7 +319,7 @@
             </div>
             <div class="ui celled list">
                 <div class="item" id="Seeee">
-                    <img class="ui avatar image" id= "bighead" src="">
+                    <img class="ui avatar image" id= "bighead" src="images/Team/Blankhead.png">
                     <div class="content">
                         <div class="header" id = "name"></div>
                         <p class="ID" id="ID" ></p>
@@ -341,17 +347,11 @@
         </div>
         <div class="FriendsOnline">
             <p id="Friendonline">MY FRIENDS</p>
-            <div id="OnlineList">
-                <p class="Online" id="FriendNum">好友在線(</p>
-                <p class="Online" id="OnlineNum">12</p>
-                <p class="Online" id="Dash">/</p>
-                <p class="Online" id="TotalNum">125</p>
-                <p class="Online" id="RightQuat">)</p>
-            </div>
             <img src="images/Team/Plus.png" id="Plus">
         </div>
         <div class="FriendList">
-            <div class="ui middle aligned selection list">
+            <div class="ui middle aligned selection list" id="lisst">
+<!--
                 <div class="item">
                     <img class="OnlineDot"  src="images/Team/greendot.png">
                     <img class="ui avatar image" id = "bighead1" >
@@ -400,6 +400,7 @@
                     </div>
                     <img class="Invite" src="images/Team/invite.png" onclick = "Friends(choose_friend[5])">
                 </div>
+-->
             </div>
         </div>
         <div id="StartGame">
