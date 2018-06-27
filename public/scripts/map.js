@@ -291,8 +291,8 @@ function clue() {
         document.getElementsByClassName('small_clue')[i].style.visibility = 'visible'
       for (var i = 0; i < document.getElementsByClassName('big_clue').length; i++)
         document.getElementsByClassName('big_clue')[i].style.visibility = 'hidden'
-      document.getElementById('small_clue_picture').src = "./images/Map/clues_picture.jpg"
-      document.getElementById('big_clue_picture').src = "./images/Map/clues_picture.jpg"
+      document.getElementById('small_clue_picture').src = "./images/Map/clues0.jpg"
+      document.getElementById('big_clue_picture').src = "./images/Map/clues0.jpg"
       clue_index = 0;
     }
     else if (current.lng <= 120.206608 && current.lng >= 120.205608 && current.lat <= 22.989796 && current.lat >= 22.988796) {//德化堂120.206108,22.989296
