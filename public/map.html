@@ -125,6 +125,17 @@ function user_score(){
   });
 }
 
+function team_score() {
+  let score = document.getElementById("score_text").text;
+  $.ajax({
+    type: 'post',
+    url: './map/tellteamscore',
+    data: {
+      score: score,
+      name: document.getElementById("team_name").textContent,
+    }
+  });
+}  
 
   </script>
 
