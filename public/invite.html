@@ -34,14 +34,18 @@
         $("#Plus").click(function(){
             $(".TeamName").fadeIn();
             $(".VagueBack").fadeIn();
-        })
+        });
         $(".X").click(function(){
             $(".TeamName").fadeOut();
             $(".VagueBack").fadeOut();
         });
         $("#Searching").click(function(){
             $("#Seeee").show();
-        })
+        });
+        $("#add").click(function(){
+            $(".TeamName").fadeOut();
+            $(".VagueBack").fadeOut();
+        });
     });
     </script>
 <body>
@@ -324,7 +328,7 @@
                         <div class="header" id = "name"></div>
                         <p class="ID" id="ID" ></p>
                     </div>
-                    <img class="Add" src="images/Team/Plus.png" onclick= "addfriend()">
+                    <img class="Add" src="images/Team/Plus.png" id="add" onclick= "addfriend()">
                 </div>
             </div>
         </div>
