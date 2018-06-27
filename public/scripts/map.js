@@ -231,6 +231,7 @@ function btn_yes() {
       id: facebook_id,
     }
   });
+  user_score();
   PassScore();
   document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
 }
@@ -853,4 +854,16 @@ $.ajax({
     score : score,
   },
 });
+}
+function user_score(){
+  let score = document.getElementById("score_text").text;
+  var facebook_id = document.getElementById("facebook_id").textContent;
+  $.ajax({
+    type: 'post',
+    url: './map/tellscore',
+    data: {
+      score: score,
+      id: facebook_id,
+    }
+  });
 }
