@@ -1,3 +1,6 @@
+body,html{
+    height:100%;
+}
 body{
     overflow:hidden;
 }
@@ -27,16 +30,15 @@ body{
     margin-bottom:1%;
 }
 #AdhocMode{
-    position:relative;
-    margin-left:0%;
-    width:75%;
+    position:fixed;
+    width:100vw;
+    height:12vw;
 }
 #Wheel{
-    position:relative;
+    position:fixed;
     width:6%;
-    margin-top:4%;
-    margin-bottom:2%;
-    margin-left:4%;
+    right:3vw;
+    top:3vw;
 }
 .FriendsIn{
     margin-top:50%;

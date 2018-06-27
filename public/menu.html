@@ -24,8 +24,8 @@
             //document.documentElement.requestFullscreen();
             $("#invite").hide();
             $("#invite1").hide();
-            //$("#invited").hide();
-            //$("#invited1").hide();
+            $("#invited").hide();
+            $("#invited1").hide();
             $("#Start").click(function () {
                 $("#invite").fadeIn();
                 $("#invite1").fadeIn();
@@ -341,6 +341,7 @@
         }
         function yes() {
             answer = "1";
+            $("#Start").hide();
             PassTocheck(invite_info, answer);
         }
         function no() {

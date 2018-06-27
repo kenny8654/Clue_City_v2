@@ -1,3 +1,6 @@
+body,html{
+    height:100%;
+}
 #background{
     position:absolute;
     z-index:-1;
@@ -26,7 +29,7 @@
 #Start{
     position:absolute;
     width:55%;
-    margin-top:40vw;
+    margin-top:20vw;
     margin-left:22vw;
 }
 #fb-btn{
