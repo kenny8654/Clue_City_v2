@@ -137,10 +137,9 @@
                             `<div class="item">
 	                           <img class="ui avatar image" src=`+url+`>
                                 <div class="content">
-                                    <div class="header">data.friend[`+i+`].name</div>
+                                    <div class="header">`+data.friend[i].name+`</div>
                                 </div>
-                                <img class="Invite" src="images/Team/invite.png"  onclick = "`+Friends(choose_friend[i])+`">
-                            </div>`);
+                                <img class="Invite" src="images/Team/invite.png"  onclick = "Friends(choose_friend[`+i+`])">`);
                       //getPicture(url,(i+1));
                       //getName( data.friend[i].name,(i+1));
                     }
