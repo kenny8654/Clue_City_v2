@@ -134,29 +134,11 @@
                                 )
                         }
                     
-                    
-//                    for (let i = 0; i < data.image.length; i++) {
-//                        let Url = './' + myid + '/' + i + '.jpg';
-//                        console.log(Url);
-//                        $("#Mygallery").append(
-//                            `<img src="`+ Url + `"  class="photo">`
-////                            `<div class="slideDiv">
-////                                <b class="Des">`+ data.image[i] + `</b>
-////                                <img src="`+ Url + `"  class="photo">
-////                                </div>`
-//                        )
-//                    }
+            
                     for (let i = 0; i < data.friend.length; i++) {
                         friendsData(data.friend[i].id, i);
                     }
                 }
-                //let url ;
-                //                    for(let i = 0; i < data.friend.length ; i++){
-                //                      url = `https://graph.facebook.com/${data.friend[i].id}/picture?type-normal`;
-                //                      getPicture(url,(i+1));
-                //                      getName( data.friend[i].name,(i+1));
-                //                    }
-
             })
         }
         function friendsData(ids, num) {
@@ -229,30 +211,6 @@
                 }
             })
 
-            
-//                        $("#gg").append(
-//                    `<div class="YOYO">
-//                      <div class="container">
-//                        <div id="profile">
-//                            <img src=`+url+` id="bighead">
-//                            <div id="NameAndID">
-//                                <b class="text">shared by</b>
-//                                <font class="text Name" id="Name1">`+林志嘉+`</font>
-//                            </div>
-//                        </div>  
-//                        <div class="slides">
-//                            <div class="slideDiv">
-//                                <b class="Des">`+今日天氣晴+`</b>
-//                                <img src=`+"images/Gallery/1.jpg"+`  class="photo">
-//                            </div>
-//                            <img src="images/Gallery/2.jpg" class="photo">
-//                            <img src="images/Gallery/3.jpg"  class="photo">
-//                            <img src="images/Gallery/4.jpg"  class="photo">
-//                        </div>
-//                     </div>
-//                    </div>`);
-
-
         }
     </script>
     <img src="images/Gallery/Background.png" id="background">
@@ -264,94 +222,6 @@
         </div>
     </div>
     <div id="gg">
-        
-        
-<!--
-        <div class="YOYO">
-          <div class="container">
-            <div id="profile">
-                <img src="images/Team/Chia.jpg" id="bighead">
-                <div id="NameAndID">
-                    <b class="text">shared by</b>
-                    <font class="text Name" id="Name1">林志嘉</font>
-                </div>
-            </div>  
-            <div >
-                <div class="slideDiv">
-                    <b class="Des">今日天氣晴</b>
-                    <img src="images/Gallery/1.jpg"  class="photo">
-                </div>
-                <img src="images/Gallery/2.jpg" class="photo">
-                <img src="images/Gallery/3.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-            </div>
-            </div>
-        </div>
-      
-         <div class="YOYO">
-          <div class="container">
-            <div id="profile">
-            <img src="images/Team/Chia.jpg" id="bighead">
-            <div id="NameAndID">
-                <b class="text">shared by</b>
-                <font class="text Name" >林志嘉</font>
-            </div>
-            </div>  
-            <div class="slides">
-                <div class="slideDiv">
-                    <b class="Des">今日天氣晴</b>
-                    <img src="images/Gallery/1.jpg"  class="photo">
-                </div>
-                <img src="images/Gallery/2.jpg" class="photo">
-                <img src="images/Gallery/3.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-            </div>
-        </div>
-        </div>
-        <div class="YOYO">
-          <div class="container">
-            <div id="profile">
-            <img src="images/Team/Chia.jpg" id="bighead">
-            <div id="NameAndID">
-                <b class="text">shared by</b>
-                <font class="text Name" >林志嘉</font>
-            </div>
-            </div>  
-            <div class="slides">
-                <div class="slideDiv">
-                    <b class="Des">今日天氣晴</b>
-                    <img src="images/Gallery/1.jpg"  class="photo">
-                </div>
-                <img src="images/Gallery/2.jpg" class="photo">
-                <img src="images/Gallery/3.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-            </div>
-        </div>
-        </div>
-        <div class="YOYO">
-          <div class="container">
-            <div id="profile">
-            <img src="images/Team/Chia.jpg" id="bighead">
-            <div id="NameAndID">
-                <b class="text">shared by</b>
-                <font class="text Name" >林志嘉</font>
-            </div>
-            </div>  
-            <div class="slides">
-                <div class="slideDiv">
-                    <b class="Des">今日天氣晴</b>
-                    <img src="images/Gallery/1.jpg"  class="photo">
-                </div>
-                <img src="images/Gallery/2.jpg" class="photo">
-                <img src="images/Gallery/3.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-                <img src="images/Gallery/4.jpg"  class="photo">
-            </div>
-        </div>
-        </div>
--->
 
     </div>
 
@@ -366,21 +236,7 @@
     <!-- End SlidesJS Required -->
 
     <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-    <script>
-        $(function () {
-            $('#slides').slidesjs({
-                width: 940,
-                height: 528,
-                navigation: false
-            });
-            $('.slides').slidesjs({
-                width: 940,
-                height: 528,
-                navigation: false,
-            });
 
-        });
-    </script>
 
     <div id="Bottom">
         <img src="images/Gallery/Home.png" class="BottomIcon" id="HomeIcon" onclick="gotohome()">
