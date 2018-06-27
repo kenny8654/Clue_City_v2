@@ -89,17 +89,7 @@
         }
       });
     }
-    function PassScore() {
-        let score = document.getElementById("score_text").text;
-      $.ajax({
-        type: 'post',
-        url: './score/getMyscore',
-        data: {
-          score : score,
-        },
-      });
-    }
-
+   
     function gotomenu() {
       document.location.href = "https://luffy.ee.ncku.edu.tw:10047/menu";
     }
