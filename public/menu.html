@@ -1,43 +1,41 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Clue City</title>
-  <link rel="stylesheet" type="text/css" href="styles/MenuStyle.css">
-  <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-  <!-- TODO add manifest here -->
-  <link rel="manifest" href="/manifest.json">
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
-  <meta name="apple-mobile-web-app-title" content="Clue City">
-  <link rel="apple-touch-icon" href="images/logo.png">
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Clue City</title>
+    <link rel="stylesheet" type="text/css" href="styles/MenuStyle.css">
+    <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
+    <!-- TODO add manifest here -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-title" content="Clue City">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
     <script>
-        var multi=0;
-        $(document).ready(function(){
+        var multi = 0;
+        $(document).ready(function () {
             document.documentElement.requestFullscreen();
             //$("#invite").hide();
             //$("#invite1").hide();
             //$("#invited").hide();
             //$("#invited1").hide();
             alert("YY");
-            $("#Start").click(function(){
+            $("#Start").click(function () {
                 $("#invite").fadeIn();
                 $("#invite1").fadeIn();
             });
-            $("#inviteX").click(function(){
+            $("#inviteX").click(function () {
                 $("#invite").fadeOut();
                 $("#invite1").fadeOut();
             });
-            $("#invitedX").click(function(){
+            $("#invitedX").click(function () {
                 $("#invited").fadeOut();
                 $("#invited1").fadeOut();
             });
@@ -47,361 +45,361 @@
                 $("#6P").hide();
                 $("#8P").hide();
             }
-        var single=0;    
-        $("#SingleText").click(function(){
-                if(single==0){
-                    this.src="images/Mode/SingleTextG.png";
-                    single=1;
-                    $("#MultiText").attr("src","images/Mode/MultiText.png");
+            var single = 0;
+            $("#SingleText").click(function () {
+                if (single == 0) {
+                    this.src = "images/Mode/SingleTextG.png";
+                    single = 1;
+                    $("#MultiText").attr("src", "images/Mode/MultiText.png");
                     $("#2P").fadeOut(900);
                     $("#4P").fadeOut(700);
                     $("#6P").fadeOut(500);
                     $("#8P").fadeOut(300);
-                    multi=0;
+                    multi = 0;
                 }
-                else{
-                    this.src="images/Mode/SingleText.png";
-                    single=0;
+                else {
+                    this.src = "images/Mode/SingleText.png";
+                    single = 0;
                 }
             });
-            $("#MultiText").click(function(){
-                if(multi==0){
-                    this.src="images/Mode/MultiTextG.png";
+            $("#MultiText").click(function () {
+                if (multi == 0) {
+                    this.src = "images/Mode/MultiTextG.png";
                     $("#2P").fadeIn(300);
                     $("#4P").fadeIn(500);
                     $("#6P").fadeIn(700);
                     $("#8P").fadeIn(900);
-                    multi=1;
-                    $("#SingleText").attr("src","images/Mode/SingleText.png");
-                    single=0;
+                    multi = 1;
+                    $("#SingleText").attr("src", "images/Mode/SingleText.png");
+                    single = 0;
                 }
-                else{
-                    this.src="images/Mode/MultiText.png";
+                else {
+                    this.src = "images/Mode/MultiText.png";
                     $("#2P").fadeOut(900);
                     $("#4P").fadeOut(700);
                     $("#6P").fadeOut(500);
                     $("#8P").fadeOut(300);
-                    multi=0;
+                    multi = 0;
                 }
             });
-        var twoP=0;
-            $("#2P").click(function(){
-                if(twoP==0){
-                    this.src="images/Mode/2PG.png";
-                    twoP=1;
-                    $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=0;
-                    $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=0;
-                    $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=0;
+            var twoP = 0;
+            $("#2P").click(function () {
+                if (twoP == 0) {
+                    this.src = "images/Mode/2PG.png";
+                    twoP = 1;
+                    $("#4P").attr("src", "images/Mode/4P.png");
+                    fourP = 0;
+                    $("#6P").attr("src", "images/Mode/6P.png");
+                    sixP = 0;
+                    $("#8P").attr("src", "images/Mode/8P.png");
+                    eightP = 0;
                 }
-                else{
-                    this.src="images/Mode/2P.png";
-                    twoP=0;
-                }
-            });
-        var fourP=0;
-            $("#4P").click(function(){
-                if(fourP==0){
-                    this.src="images/Mode/4PG.png";
-                    fourP=1;
-                    $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=0;
-                    $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=0;
-                    $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=0;
-                }
-                else{
-                    this.src="images/Mode/4P.png";
-                    fourP=0;
+                else {
+                    this.src = "images/Mode/2P.png";
+                    twoP = 0;
                 }
             });
-        var sixP=0;
-            $("#6P").click(function(){
-                if(sixP==0){
-                    this.src="images/Mode/6PG.png";
-                    sixP=1;
-                    $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=0;
-                    $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=0;
-                    $("#8P").attr("src","images/Mode/8P.png");
-                    eightP=0;
+            var fourP = 0;
+            $("#4P").click(function () {
+                if (fourP == 0) {
+                    this.src = "images/Mode/4PG.png";
+                    fourP = 1;
+                    $("#2P").attr("src", "images/Mode/2P.png");
+                    twoP = 0;
+                    $("#6P").attr("src", "images/Mode/6P.png");
+                    sixP = 0;
+                    $("#8P").attr("src", "images/Mode/8P.png");
+                    eightP = 0;
                 }
-                else{
-                    this.src="images/Mode/6P.png";
-                    sixP=0;
-                }
-            });
-        var eightP=0;
-            $("#8P").click(function(){
-                if(eightP==0){
-                    this.src="images/Mode/8PG.png";
-                    eightP=1;
-                    $("#2P").attr("src","images/Mode/2P.png");
-                    twoP=0;
-                    $("#4P").attr("src","images/Mode/4P.png");
-                    fourP=0;
-                    $("#6P").attr("src","images/Mode/6P.png");
-                    sixP=0;
-                }
-                else{
-                    this.src="images/Mode/8P.png";
-                    eightP=0;
+                else {
+                    this.src = "images/Mode/4P.png";
+                    fourP = 0;
                 }
             });
-        var easy=0;
-            $("#EasyText").click(function(){
-                if(easy==0){
-                    this.src="images/Mode/EasyTextG.png";
-                    easy=1;
-                    $("#NormalText").attr("src","images/Mode/NormalText.png");
-                    normal=0;
-                    $("#HardText").attr("src","images/Mode/HardText.png");
-                    hard=0;
+            var sixP = 0;
+            $("#6P").click(function () {
+                if (sixP == 0) {
+                    this.src = "images/Mode/6PG.png";
+                    sixP = 1;
+                    $("#2P").attr("src", "images/Mode/2P.png");
+                    twoP = 0;
+                    $("#4P").attr("src", "images/Mode/4P.png");
+                    fourP = 0;
+                    $("#8P").attr("src", "images/Mode/8P.png");
+                    eightP = 0;
                 }
-                else{
-                    this.src="images/Mode/EasyText.png";
-                    easy=0;
-                }
-            });
-        var normal=0;
-            $("#NormalText").click(function(){
-                if(normal==0){
-                    this.src="images/Mode/NormalTextG.png";
-                    normal=1;
-                    $("#EasyText").attr("src","images/Mode/EasyText.png");
-                    easy=0;
-                    $("#HardText").attr("src","images/Mode/HardText.png");
-                    hard=0;
-                }
-                else{
-                    this.src="images/Mode/NormalText.png";
-                    normal=0;
+                else {
+                    this.src = "images/Mode/6P.png";
+                    sixP = 0;
                 }
             });
-        var hard=0;
-            $("#HardText").click(function(){
-                if(hard==0){
-                    this.src="images/Mode/HardTextG.png";
-                    hard=1;
-                    $("#NormalText").attr("src","images/Mode/NormalText.png");
-                    normal=0;
-                    $("#EasyText").attr("src","images/Mode/EasyText.png");
-                    easy=0;
+            var eightP = 0;
+            $("#8P").click(function () {
+                if (eightP == 0) {
+                    this.src = "images/Mode/8PG.png";
+                    eightP = 1;
+                    $("#2P").attr("src", "images/Mode/2P.png");
+                    twoP = 0;
+                    $("#4P").attr("src", "images/Mode/4P.png");
+                    fourP = 0;
+                    $("#6P").attr("src", "images/Mode/6P.png");
+                    sixP = 0;
                 }
-                else{
-                    this.src="images/Mode/HardText.png";
-                    hard=0;
+                else {
+                    this.src = "images/Mode/8P.png";
+                    eightP = 0;
+                }
+            });
+            var easy = 0;
+            $("#EasyText").click(function () {
+                if (easy == 0) {
+                    this.src = "images/Mode/EasyTextG.png";
+                    easy = 1;
+                    $("#NormalText").attr("src", "images/Mode/NormalText.png");
+                    normal = 0;
+                    $("#HardText").attr("src", "images/Mode/HardText.png");
+                    hard = 0;
+                }
+                else {
+                    this.src = "images/Mode/EasyText.png";
+                    easy = 0;
+                }
+            });
+            var normal = 0;
+            $("#NormalText").click(function () {
+                if (normal == 0) {
+                    this.src = "images/Mode/NormalTextG.png";
+                    normal = 1;
+                    $("#EasyText").attr("src", "images/Mode/EasyText.png");
+                    easy = 0;
+                    $("#HardText").attr("src", "images/Mode/HardText.png");
+                    hard = 0;
+                }
+                else {
+                    this.src = "images/Mode/NormalText.png";
+                    normal = 0;
+                }
+            });
+            var hard = 0;
+            $("#HardText").click(function () {
+                if (hard == 0) {
+                    this.src = "images/Mode/HardTextG.png";
+                    hard = 1;
+                    $("#NormalText").attr("src", "images/Mode/NormalText.png");
+                    normal = 0;
+                    $("#EasyText").attr("src", "images/Mode/EasyText.png");
+                    easy = 0;
+                }
+                else {
+                    this.src = "images/Mode/HardText.png";
+                    hard = 0;
                 }
             });
         });
-        function gogaming(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/map";
+        function gogaming() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/map";
         }
-        function gotosetting(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/setting";
+        function gotosetting() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/setting";
         }
-         function gotoinvite(){
-             if(multi==1)
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/invite";
-             else
-                document.location.href="https://luffy.ee.ncku.edu.tw:10047/map"
+        function gotoinvite() {
+            if (multi == 1)
+                document.location.href = "https://luffy.ee.ncku.edu.tw:10047/invite";
+            else
+                document.location.href = "https://luffy.ee.ncku.edu.tw:10047/map"
         }
-        function gotohome(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/menu";
+        function gotohome() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/menu";
         }
-        function gotogallery(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/gallery";
+        function gotogallery() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/gallery";
         }
-        function gotofriend(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/friend";
+        function gotofriend() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/friend";
         }
-        function gotoScore(){
-            document.location.href="https://luffy.ee.ncku.edu.tw:10047/score";
+        function gotoScore() {
+            document.location.href = "https://luffy.ee.ncku.edu.tw:10047/score";
         }
     </script>
-    
+
 </head>
+
 <body>
-        <script>
+    <script>
 
-                window.fbAsyncInit = function() {
-                  FB.init({
-                    appId      : '177842309598524',
-                    cookie     : true,
-                    xfbml      : true,
-                    version    : 'v3.0'
-                  });
-                              
-                  FB.getLoginStatus(function(response) {
-                    statusChangeCallback(response);
-                  });
-                              
-                };
-                        
-                (function(d, s, id){
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) {return;}
-                  js = d.createElement(s); js.id = id;
-                  js.src = "https://connect.facebook.net/en_US/sdk.js";
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-              
-               function statusChangeCallback(response){
-                 if( response.status === 'connected' ){
-                   console.log( 'Logged in and authenticated' );
-                  getProfile();
-                 } else {
-                  console.log( 'Not authenticated' );
-                 }
-               }
-              
-              function checkLoginState() {
-                FB.getLoginStatus(function(response) {
-                  statusChangeCallback(response);
-                });
-              }
-    
-              var responseData ;
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '177842309598524',
+                cookie: true,
+                xfbml: true,
+                version: 'v3.0'
+            });
 
-              var myId;
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
 
-              function getProfile(){
-                FB.api('/me?fields=name,email',function(response){
-                  if(response && !response.error){
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function statusChangeCallback(response) {
+            if (response.status === 'connected') {
+                console.log('Logged in and authenticated');
+                getProfile();
+            } else {
+                console.log('Not authenticated');
+            }
+        }
+
+        function checkLoginState() {
+            FB.getLoginStatus(function (response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        var responseData;
+
+        var myId;
+
+        function getProfile() {
+            FB.api('/me?fields=name,email', function (response) {
+                if (response && !response.error) {
                     console.log("has get profile");
-                  }
-                  responseData = response ;
-                  myId = response.id ;
-                  $('#Name').text(response.name);
-                  let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
-                  getPicture(url);
-                  getID(response.id);
-                })
-              }
+                }
+                responseData = response;
+                myId = response.id;
+                $('#Name').text(response.name);
+                let url = `https://graph.facebook.com/${response.id}/picture?type-normal`;
+                getPicture(url);
+                getID(response.id);
+            })
+        }
 
-              var waitsignal = setInterval(signal , 1000);
-              var invite_info = 0;
-              var answer ;
-    
-              function signal(){
-                $.ajax ({
-                  type : 'post',
-                  url : './menu/signal',
-                  data : {
-                      id : myId ,
-                  },
-                  success : function(data){
-                    if( data == "" || data == null){
-                      console.log("listen whether has invitation");
-                    }else{
-                      console.log("someone send me invitation");
-                      invite_info = data ;
-                      join();
-                      $("#name").text(invite_info.name);
-                      let url = `https://graph.facebook.com/${invite_info.sender}/picture?type-normal`;
-                      $("#photo").attr("src",url);
-                      clearInterval(waitsignal);
-                    }
-                  }
-                });
-              }
-    
-              var startsignal = setInterval(teamstart , 1000);
-              var teamname = "0" ;
-              function teamstart(){
-                $.ajax ({
-                  type : 'post',
-                  url : './menu/teamstart',
-                  data : {name : teamname},
-                  success : function(data){
-                    if( data == "" || data == null){
-                    }
-                    else{
-                      clearInterval(startsignal);
-                      gogaming();
-                    }
-                  }
-                });
-              }
-              function join(){
-                console.log(invite_info.name);
-                teamname = invite_info.name;
-                $("#invited").fadeIn();
-                $("#invited1").fadeIn();
-                $("#YES").click(function(){
-                    $("#invited").fadeOut();
-                    $("#invited1").fadeOut();
-                })
-                $("#NO").click(function(){
-                    $("#invited").fadeOut();
-                    $("#invited1").fadeOut();
-                })
-              }
-              function yes(){
-                    answer="1";
-                    PassTocheck(invite_info, answer);
-              }
-              function no(){
-                    answer="0";
-                    PassTocheck(invite_info, answer);
-              }
-              
-              function PassTocheck(Data , yes_no)
-              {
-                let sender = Data.sender;
-                let inviteto = Data.to;
-                let accepted = yes_no ;
-                $.ajax({
-                  method : 'post',
-                  url: './menu/check',
-                  data:{
-                      sender : sender ,
-                      to : inviteto,
-                      accepted : accepted
-                  }
-                });
-              }
-              function getPicture(url){
-                $("#bighead").attr("src",url);
-              }
-              function getID(id){
-                $("#ID").text(`ID:${id}`);
-              }
+        var waitsignal = setInterval(signal, 1000);
+        var invite_info = 0;
+        var answer;
 
-              function passtodatabase(){
-                  $.ajax({
-                      type: 'post',
-                      url: './menu/team',
-                      data:{
-                        name : $("input[name='team_id']").val(),
-                        id  : responseData.id,
-                      }
-                  });
+        function signal() {
+            $.ajax({
+                type: 'post',
+                url: './menu/signal',
+                data: {
+                    id: myId,
+                },
+                success: function (data) {
+                    if (data == "" || data == null) {
+                        console.log("listen whether has invitation");
+                    } else {
+                        console.log("someone send me invitation");
+                        invite_info = data;
+                        join();
+                        $("#name").text(invite_info.name);
+                        let url = `https://graph.facebook.com/${invite_info.sender}/picture?type-normal`;
+                        $("#photo").attr("src", url);
+                        clearInterval(waitsignal);
+                    }
+                }
+            });
+        }
 
-                  $.ajax({
-                      type: 'post',
-                      url: './invite/team',
-                      data:{
-                        name : $("input[name='team_id']").val(),
-                        id  : responseData.id,
-                      }
-                  });
-                  $.ajax({
-                      type: 'post',
-                      url: './map/team',
-                      data:{
-                        name : $("input[name='team_id']").val(),
-                        id  : responseData.id,
-                      }
-                  });
-                  gotoinvite();
-              }
-      </script>
-    
+        var startsignal = setInterval(teamstart, 1000);
+        var teamname = "0";
+        function teamstart() {
+            $.ajax({
+                type: 'post',
+                url: './menu/teamstart',
+                data: { name: teamname },
+                success: function (data) {
+                    if (data == "" || data == null) {
+                    }
+                    else {
+                        clearInterval(startsignal);
+                        gogaming();
+                    }
+                }
+            });
+        }
+        function join() {
+            console.log(invite_info.name);
+            teamname = invite_info.name;
+            $("#invited").fadeIn();
+            $("#invited1").fadeIn();
+            $("#YES").click(function () {
+                $("#invited").fadeOut();
+                $("#invited1").fadeOut();
+            })
+            $("#NO").click(function () {
+                $("#invited").fadeOut();
+                $("#invited1").fadeOut();
+            })
+        }
+        function yes() {
+            answer = "1";
+            PassTocheck(invite_info, answer);
+        }
+        function no() {
+            answer = "0";
+            PassTocheck(invite_info, answer);
+        }
+
+        function PassTocheck(Data, yes_no) {
+            let sender = Data.sender;
+            let inviteto = Data.to;
+            let accepted = yes_no;
+            $.ajax({
+                method: 'post',
+                url: './menu/check',
+                data: {
+                    sender: sender,
+                    to: inviteto,
+                    accepted: accepted
+                }
+            });
+        }
+        function getPicture(url) {
+            $("#bighead").attr("src", url);
+        }
+        function getID(id) {
+            $("#ID").text(`ID:${id}`);
+        }
+
+        function passtodatabase() {
+            $.ajax({
+                type: 'post',
+                url: './menu/team',
+                data: {
+                    name: $("input[name='team_id']").val(),
+                    id: responseData.id,
+                }
+            });
+
+            $.ajax({
+                type: 'post',
+                url: './invite/team',
+                data: {
+                    name: $("input[name='team_id']").val(),
+                    id: responseData.id,
+                }
+            });
+            $.ajax({
+                type: 'post',
+                url: './map/team',
+                data: {
+                    name: $("input[name='team_id']").val(),
+                    id: responseData.id,
+                }
+            });
+            gotoinvite();
+        }
+    </script>
+
     <div class="VagueBack" id="invite"></div>
     <div class="TeamName" id="invite1">
         <img src="images/Team/SmallBackground.png" class="SmallBack">
@@ -409,9 +407,9 @@
             <img src="images/Team/X.png" class="X" id="inviteX">
             <p class="TeamText">團隊名稱：</p>
             <div class="ui input" id="input">
-                <input type="text" name = "team_id" placeholder="最多七字">
+                <input type="text" name="team_id" placeholder="最多七字">
             </div>
-            <img src="images/Team/OK.png" id="OK" type= "submit" onclick="passtodatabase()">
+            <img src="images/Team/OK.png" id="OK" type="submit" onclick="passtodatabase()">
         </div>
     </div>
     <div class="VagueBack" id="invited"></div>
@@ -438,10 +436,10 @@
         <div id="profile">
             <img src="images/Team/Chia.jpg" id="bighead">
             <div id="NameAndID">
-            <font class="text" id="Name">陳仕翰</font>
-            <font font color="#A9A9A9" class="text" id="ID">ID:123456789123456223123</font>
+                <font class="text" id="Name">陳仕翰</font>
+                <font font color="#A9A9A9" class="text" id="ID">ID:123456789123456223123</font>
             </div>
-        </div>  
+        </div>
         <div id="ChooseMode">
             <div id="SingleMode">
                 <img src="images/Mode/單人圖示.png" class="ModeImg" id="Single">
@@ -451,10 +449,10 @@
                 <img src="images/Mode/多人圖示.png" class="ModeImg" id="Multi">
                 <img src="images/Mode/MultiText.png" class="ModeText" id="MultiText">
                 <div id="PlayerNum">
-                <img src="images/Mode/2P.png" class="PlayNum" id="2P">
-                <img src="images/Mode/4P.png" class="PlayNum" id="4P">
-                <img src="images/Mode/6P.png" class="PlayNum" id="6P">
-                <img src="images/Mode/8P.png" class="PlayNum" id="8P">
+                    <img src="images/Mode/2P.png" class="PlayNum" id="2P">
+                    <img src="images/Mode/4P.png" class="PlayNum" id="4P">
+                    <img src="images/Mode/6P.png" class="PlayNum" id="6P">
+                    <img src="images/Mode/8P.png" class="PlayNum" id="8P">
                 </div>
             </div>
             <div id="Difficulty">
@@ -472,15 +470,15 @@
                 </div>
             </div>
 
-            <div id="Start" >
-                <img src="images/Mode/start.png" id="StartIcon" >
+            <div id="Start">
+                <img src="images/Mode/start.png" id="StartIcon">
             </div>
         </div>
         <div id="Bottom">
-                <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon" >
-                <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
-                <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
-                <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
-            </div>
+            <img src="images/Mode/home icon.png" class="BottomIcon" id="HomeIcon">
+            <img src="images/Mode/gallery icon.png" class="BottomIcon" id="GalleryIcon" onclick="gotogallery()">
+            <img src="images/Mode/group icon.png" class="BottomIcon" id="GroupIcon" onclick="gotofriend()">
+            <img src="images/Mode/leaderboard icon.png" class="BottomIcon" id="RankIcon" onclick="gotoScore()">
+        </div>
     </div>
 </body>
