@@ -306,6 +306,8 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clue1.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue1.jpg"
       document.getElementById('index').text = 1
+      document.getElementById('success_paragraph').text = "龍華派齋友便至安平傳教，建立化善堂。而到了嘉慶十九年（1814年），門徒黃丑集資又建德善堂於臺灣府城內的覆頂金進入日治時期後，德化堂為求自保，與其他許多臺灣寺院一樣加入日本佛教曹洞宗。之後德善堂因開新路而被拆除，遂併入德化堂中。而五年後，德化堂也因為開闢今天的府前路一段而拆除了第一進的部分，將凹字型頭門移到中進，後進的宅居則改為正堂，堂前建四垂亭。"
+        
     }
     else if (current.lng <= 120.204716 && current.lng >= 120.203716 && current.lat <= 22.989549 && current.lat >= 22.988549) {//愛國婦人會館(台南創意中心)120.204216,22.989049
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -315,6 +317,8 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clue2.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue2.jpg"
       document.getElementById('index').text = 2
+      document.getElementById('success_paragraph').text = "日治時期日本愛國婦人會在臺灣臺南之分部，在當時是主要之婦女團體，成員都是具有一定社會地位之婦女，其宗旨為關心地方建設、從事社會服務、倡導社會團結等，並宣揚大日本帝國愛國思想直到日本戰敗投降為止，在戰後陸續有美國新聞處、紅十字會、市立藝術中心圖書室等，近幾年全面整修過後成為文創中心，繼續靜靜地矗立在府城的一隅。"
+        
     }
     else if (current.lng <= 120.203182 && current.lng >= 120.202182 && current.lat <= 22.990201 && current.lat >= 22.989201) {//原台南神社休憩所120.202682,22.989701
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -324,6 +328,7 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clue3.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue3.jpg"
       document.getElementById('index').text = 3
+      document.getElementById('success_paragraph').text = "原臺南神社事務所位於忠義國小內，用材造型同似武德殿，座南朝北，呈「」」形平面，外環繞「ㄇ」字型迴廊，一層樓高，屬鋼筋混凝土造，表面皆洗石子處理為主，屋頂為入母屋式。整體由仿階條石洗石子基座、採仿木構造設計屋身及屋頂三部分所組成。南向立面有仿石條窗開口；室內有一小型集會空間。 民國96年進行修護工程，修復團隊在整修工程中發現，布紋面磚的運用已相當少見，神社事務所的地磚是無縫的彩色水泥地磚，是全市古蹟僅有的地磚"
     }
     else if (current.lng <= 120.201433 && current.lng >= 120.200433 && current.lat <= 22.990112 && current.lat >= 22.989112) {//台南司法博物館120.200933,22.989612
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -333,6 +338,7 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clue4.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue4.jpg"
       document.getElementById('index').text = 4
+      document.getElementById('success_paragraph').text = "為日本人在1912年所興建，有日治時期臺灣三大代表建築之美譽，是全臺現存歷史最久的大型法院建築，巴洛克式的風格彷彿置身國外，其在戰後仍繼續當作法院來使用，直到2001年搬遷至安平，而原有之建築則展開整修為司法博物館，開放給大眾共享。"
     }
     else if (current.lng <= 120.203952 && current.lng >= 120.202952 && current.lat <= 22.991147 && current.lat >= 22.990147) {//原台南武德殿120.203452,22.990647
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
@@ -342,6 +348,7 @@ function clue() {
       document.getElementById('small_clue_picture').src = "./images/Map/clue5.jpg"
       document.getElementById('big_clue_picture').src = "./images/Map/clue5.jpg"
       document.getElementById('index').text = 5
+      document.getElementById('success_paragraph').text = "原臺南武德殿的建築式樣為日本傳統的社殿建築，但材料則為新式材料（鋼筋混凝土、洗石子）。其坐北朝南，二層樓高，左右各寬四開間，而主入口則位於二樓，須爬樓梯方能進入。一樓是各種附屬服務空間，兩側有次入口，而二樓西邊為武道場，東邊為劍道場，而北邊則突出做為祭壇。"
     }
     else if (current.lng <= 120.204995 && current.lng >= 120.203995 && current.lat <= 22.990784 && current.lat >= 22.989784) {//台南孔廟120.204495,22.990284
       for (var i = 0; i < document.getElementsByClassName('small_clue').length; i++)
