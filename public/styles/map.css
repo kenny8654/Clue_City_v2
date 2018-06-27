@@ -12,6 +12,10 @@
   display: none;
   visibility: hidden;
 }
+#index{
+  display: none;
+  visibility: hidden;
+}
 
 #map {
   height: 84%;
