@@ -29,6 +29,14 @@
             $("#Start").click(function () {
                 if(single==1)
                     {
+                        $.ajax({
+                            type: 'post',
+                            url: './map/team',
+                            data: {
+                                name: "",
+                                id: responseData.id,
+                            }
+                        });
                         gogaming();
                     }
                 $("#invite").fadeIn();
